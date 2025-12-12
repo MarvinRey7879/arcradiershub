@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
+// WICHTIG: Stelle sicher, dass die loot_data.json korrekt importiert wird
 import lootData from '../../loot_data.json';
 
 // --- State ---
@@ -7,12 +8,14 @@ const searchQuery = ref('');
 const currentLang = ref('de');
 const selectedRarities = ref([]);
 const selectedActions = ref([]);
-const itemsPerRow = ref('auto');
+
+// Standardwert wird gleich in updateDimensions überschrieben, 
+// aber wir setzen hier 7 als Fallback für Desktop.
+const itemsPerRow = ref(7);
 
 // Für Responsive Logic
 const windowWidth = ref(1200);
-const gridRef = ref(null); // NEU: Referenz auf das Grid-HTML-Element
-const calculatedAutoCols = ref(1); // NEU: Speichert die aktuelle Auto-Spaltenzahl
+const gridRef = ref(null);
 
 const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legendary': 5 };
 const sortOrder = ref('name_asc');
@@ -24,28 +27,26 @@ const actions = [
     { value: 'sell', label: 'Verkaufen (Sell)', color: '#f1c40f' }
 ];
 
-// --- Window Resize & Auto-Column Calculation ---
+// --- Window Resize & Default Column Logic ---
 const updateDimensions = () => {
     if (typeof window !== 'undefined') {
         windowWidth.value = window.innerWidth;
 
-        // NEU: Berechnen, wie viele Spalten bei "Auto" reinpassen
-        if (gridRef.value) {
-            const containerWidth = gridRef.value.offsetWidth;
-            const minCardWidth = 250; // Muss mit CSS minmax(250px...) übereinstimmen
-            const gap = 15; // Muss mit CSS gap: 15px übereinstimmen
-
-            // Formel: Wie oft passt (Karte + Gap) in die Breite?
-            // Wir addieren einmal Gap zur Breite, um die Rechnung zu vereinfachen 
-            // (da es n Karten und n-1 Gaps sind)
-            const cols = Math.floor((containerWidth + gap) / (minCardWidth + gap));
-            calculatedAutoCols.value = Math.max(1, cols);
+        // "Standardmäßig": Wir setzen den Wert hart, wenn die Größe sich ändert.
+        // Handy (< 768px) -> 3
+        // Tablet (< 1200px) -> 4
+        // Desktop (>= 1200px) -> 7
+        if (windowWidth.value < 768) {
+            itemsPerRow.value = 3;
+        } else if (windowWidth.value < 1200) {
+            itemsPerRow.value = 4;
+        } else {
+            itemsPerRow.value = 7;
         }
     }
 };
 
 onMounted(() => {
-    // nextTick sorgt dafür, dass das HTML fertig gerendert ist, bevor wir messen
     nextTick(() => {
         updateDimensions();
         window.addEventListener('resize', updateDimensions);
@@ -56,38 +57,34 @@ onUnmounted(() => {
     window.removeEventListener('resize', updateDimensions);
 });
 
-// --- Computed: Dynamische Spalten-Optionen ---
+// --- Computed: Einfache Zahlen-Optionen ---
 const columnOptions = computed(() => {
-    // Label für Auto generieren: "Auto (3)"
-    const autoLabelText = `Auto (${calculatedAutoCols.value})`;
-
-    const opts = [{ value: 'auto', label: autoLabelText }];
-    let numbers = [];
-
-    if (windowWidth.value < 768) {
-        numbers = [1, 2, 3, 4, 5];
-    } else if (windowWidth.value < 1200) {
-        numbers = [2, 3, 4, 5, 6];
-    } else {
-        numbers = [3, 4, 5, 6, 7, 8, 9, 12, 15];
-    }
+    const opts = [];
+    // Einfache Liste an Auswahlmöglichkeiten
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15];
 
     numbers.forEach(n => {
-
         opts.push({ value: n, label: String(n) });
     });
 
     return opts;
 });
 
+// --- Helper: Yield Sprache wählen ---
+const getYield = (item) => {
+    return currentLang.value === 'de' ? item.yield_de : item.yield_en;
+};
+
 // --- Computed: Filter & Sortierung ---
 const filteredItems = computed(() => {
     let result = lootData.filter(item => {
         const nameToSearch = currentLang.value === 'de' ? item.name_de : item.name_en;
         if (!nameToSearch) return false;
+
         const matchesSearch = nameToSearch.toLowerCase().includes(searchQuery.value.toLowerCase());
         const matchesRarity = selectedRarities.value.length === 0 || selectedRarities.value.includes(item.rarity);
         const matchesAction = selectedActions.value.length === 0 || selectedActions.value.includes(item.action);
+
         return matchesSearch && matchesRarity && matchesAction;
     });
 
@@ -104,10 +101,8 @@ const filteredItems = computed(() => {
     });
 });
 
+// Grid Style nutzt jetzt direkt den ausgewählten Wert
 const gridStyle = computed(() => {
-    if (itemsPerRow.value === 'auto') {
-        return {};
-    }
     return { 'grid-template-columns': `repeat(${itemsPerRow.value}, 1fr)` };
 });
 
@@ -150,7 +145,7 @@ const t = (key) => {
                 <select v-model="itemsPerRow" class="control-select columns-select">
                     <option v-for="opt in columnOptions" :key="opt.value" :value="opt.value">
                         {{ opt.label }}
-                        {{ opt.value !== 'auto' ? (currentLang === 'de' ? 'Spalten' : 'Cols') : '' }}
+                        {{ currentLang === 'de' ? 'Spalten' : 'Cols' }}
                     </option>
                 </select>
 
@@ -202,9 +197,9 @@ const t = (key) => {
                         <span class="value-tag">💰 {{ item.value }}</span>
                     </div>
 
-                    <div v-if="item.action === 'recycle' && item.yield" class="yield-box">
+                    <div v-if="item.action === 'recycle' && getYield(item)" class="yield-box">
                         <span class="label">{{ t('yieldLabel') }}</span>
-                        <p class="yield-text">{{ item.yield }}</p>
+                        <p class="yield-text">{{ getYield(item) }}</p>
                     </div>
 
                     <div v-else class="yield-box simple">
@@ -342,7 +337,7 @@ const t = (key) => {
 /* --- GRID SYSTEM --- */
 .grid {
     display: grid;
-    /* CSS Grid mit minmax 250px + gap */
+    /* CSS Grid Fallback - wird durch :style überschrieben */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
 }

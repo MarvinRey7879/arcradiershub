@@ -6,9 +6,8 @@
     "rarity": "Common",
     "category": "Topside Material",
     "action": "keep",
-    "value": 270,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 270
   },
   {
     "id": "assorted_seeds",
@@ -17,9 +16,8 @@
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
-    "value": 100,
-    "yield_en": "Currency for Celeste",
-    "yield_de": "Währung für Celeste"
+    "yield": "Currency for Celeste",
+    "value": 100
   },
   {
     "id": "bloated_tuna",
@@ -28,9 +26,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "cat_bed",
@@ -39,9 +36,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "1x Scrappy",
-    "yield_de": "1x Scrappy"
+    "yield": "1x Scrappy",
+    "value": 1000
   },
   {
     "id": "chemicals",
@@ -50,9 +46,8 @@
     "rarity": "Common",
     "category": "Basic Material",
     "action": "keep",
-    "value": 50,
-    "yield_en": "50x Workshop",
-    "yield_de": "50x Werkstatt"
+    "yield": "50x Workshop",
+    "value": 50
   },
   {
     "id": "coffee_pot",
@@ -61,9 +56,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "damaged_arc_powercell",
@@ -72,9 +66,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 293,
-    "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC Legierung"
+    "yield": "1x ARC Legierung",
+    "value": 293
   },
   {
     "id": "damaged_fireball_burner",
@@ -83,9 +76,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC Legierung"
+    "yield": "1x ARC Legierung",
+    "value": 270
   },
   {
     "id": "damaged_hornet_driver",
@@ -94,9 +86,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC Legierung"
+    "yield": "2x ARC Legierung",
+    "value": 640
   },
   {
     "id": "damaged_rocketeer_driver",
@@ -105,9 +96,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "3x ARC Alloy",
-    "yield_de": "3x ARC Legierung"
+    "yield": "3x ARC Legierung",
+    "value": 2000
   },
   {
     "id": "damaged_snitch_scanner",
@@ -116,9 +106,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 659,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 659
   },
   {
     "id": "damaged_tick_pod",
@@ -127,9 +116,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC Legierung"
+    "yield": "1x ARC Legierung",
+    "value": 270
   },
   {
     "id": "damaged_wasp_driver",
@@ -138,9 +126,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC Legierung"
+    "yield": "1x ARC Legierung",
+    "value": 270
   },
   {
     "id": "empty_wine_bottle",
@@ -149,9 +136,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "expired_pasta",
@@ -160,9 +146,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "fabric",
@@ -171,9 +156,8 @@
     "rarity": "Common",
     "category": "Basic Material",
     "action": "keep",
-    "value": 50,
-    "yield_en": "80x Workshop",
-    "yield_de": "80x Werkstatt"
+    "yield": "80x Workshop",
+    "value": 50
   },
   {
     "id": "faded_photograph",
@@ -182,9 +166,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "keep",
-    "value": 640,
-    "yield_en": "2x Quest",
-    "yield_de": "2x Quest"
+    "yield": "2x Quest",
+    "value": 640
   },
   {
     "id": "lemon",
@@ -193,9 +176,8 @@
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
-    "value": 640,
-    "yield_en": "3x Scrappy",
-    "yield_de": "3x Scrappy"
+    "yield": "3x Scrappy",
+    "value": 640
   },
   {
     "id": "metal_parts",
@@ -204,9 +186,8 @@
     "rarity": "Common",
     "category": "Basic Material",
     "action": "keep",
-    "value": 75,
-    "yield_en": "80x Workshop, 150x Expedition",
-    "yield_de": "80x Werkstatt, 150x Expedition"
+    "yield": "80x Workshop, 150x Expedition",
+    "value": 75
   },
   {
     "id": "olives",
@@ -215,9 +196,8 @@
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
-    "value": 640,
-    "yield_en": "6x Scrappy",
-    "yield_de": "6x Scrappy"
+    "yield": "6x Scrappy",
+    "value": 640
   },
   {
     "id": "painted_box",
@@ -226,9 +206,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "plastic_parts",
@@ -237,9 +216,8 @@
     "rarity": "Common",
     "category": "Basic Material",
     "action": "keep",
-    "value": 60,
-    "yield_en": "75x Workshop",
-    "yield_de": "75x Werkstatt"
+    "yield": "75x Workshop",
+    "value": 60
   },
   {
     "id": "pop_trigger",
@@ -248,9 +226,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "keep",
-    "value": 640,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 640
   },
   {
     "id": "prickly_pear",
@@ -259,9 +236,8 @@
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
-    "value": 640,
-    "yield_en": "6x Scrappy",
-    "yield_de": "6x Scrappy"
+    "yield": "6x Scrappy",
+    "value": 640
   },
   {
     "id": "resin",
@@ -270,9 +246,8 @@
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "rosary",
@@ -281,9 +256,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "rubber_duck",
@@ -292,9 +266,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "rubber_parts",
@@ -303,9 +276,8 @@
     "rarity": "Common",
     "category": "Basic Material",
     "action": "keep",
-    "value": 50,
-    "yield_en": "30x Workshop, 200x Expedition",
-    "yield_de": "30x Werkstatt, 200x Expedition"
+    "yield": "30x Workshop, 200x Expedition",
+    "value": 50
   },
   {
     "id": "ruined_augment",
@@ -314,9 +286,8 @@
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "2x Plastic Parts, 2x Rubber Parts",
-    "yield_de": "2x Plastikteile, 2x Gummiteile"
+    "yield": "2x Plastikteile, 2x Gummiteile",
+    "value": 270
   },
   {
     "id": "silver_teaspoon_set",
@@ -325,9 +296,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "statuette",
@@ -336,9 +306,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "torn_book",
@@ -347,9 +316,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "very_comfortable_pillow",
@@ -358,9 +326,8 @@
     "rarity": "Common",
     "category": "Trinket",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Scrappy",
-    "yield_de": "3x Scrappy"
+    "yield": "3x Scrappy",
+    "value": 2000
   },
   {
     "id": "volcanic_rock",
@@ -369,9 +336,8 @@
     "rarity": "Common",
     "category": "Misc",
     "action": "keep",
-    "value": 270,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 270
   },
   {
     "id": "bastion_cell",
@@ -380,9 +346,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
-    "value": 5000,
-    "yield_en": "6x Workshop",
-    "yield_de": "6x Werkstatt"
+    "yield": "6x Workshop",
+    "value": 5000
   },
   {
     "id": "key_blue_gate_confiscation",
@@ -391,9 +356,8 @@
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "bombardier_cell",
@@ -402,9 +366,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
-    "value": 5000,
-    "yield_en": "6x Workshop",
-    "yield_de": "6x Werkstatt"
+    "yield": "6x Workshop",
+    "value": 5000
   },
   {
     "id": "snow_globe",
@@ -413,9 +376,8 @@
     "rarity": "Epic",
     "category": "Trinket",
     "action": "sell",
-    "value": 7000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 7000
   },
   {
     "id": "key_buried_city_town_hall",
@@ -424,9 +386,8 @@
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "complex_gun_parts",
@@ -435,9 +396,8 @@
     "rarity": "Epic",
     "category": "Topside Material",
     "action": "keep",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "key_dam_control_tower",
@@ -446,9 +406,8 @@
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "exodus_modules",
@@ -457,9 +416,8 @@
     "rarity": "Epic",
     "category": "Topside Material",
     "action": "keep",
-    "value": 2750,
-    "yield_en": "1x Expedition",
-    "yield_de": "1x Expedition"
+    "yield": "1x Expedition",
+    "value": 2750
   },
   {
     "id": "geiger_counter",
@@ -468,9 +426,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3500,
-    "yield_en": "3x Battery, 1x Exodus Modules",
-    "yield_de": "3x Batterie, 1x Exodus Module"
+    "yield": "3x Batterie, 1x Exodus Module",
+    "value": 3500
   },
   {
     "id": "ion_sputter",
@@ -479,9 +436,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 6000,
-    "yield_en": "4x Voltage Converter, 1x Exodus Modules",
-    "yield_de": "4x Spannungswandler, 1x Exodus Module"
+    "yield": "4x Spannungswandler, 1x Exodus Module",
+    "value": 6000
   },
   {
     "id": "lances_mixtape",
@@ -490,9 +446,8 @@
     "rarity": "Epic",
     "category": "Trinket",
     "action": "sell",
-    "value": 10000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 10000
   },
   {
     "id": "leaper_pulse_unit",
@@ -501,9 +456,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
-    "value": 5000,
-    "yield_en": "3x Expedition, 4x Workshop",
-    "yield_de": "3x Expedition, 4x Werkstatt"
+    "yield": "3x Expedition, 4x Workshop",
+    "value": 5000
   },
   {
     "id": "magnetic_accelerator",
@@ -512,9 +466,8 @@
     "rarity": "Epic",
     "category": "Refined Material",
     "action": "keep",
-    "value": 5500,
-    "yield_en": "3x Expedition",
-    "yield_de": "3x Expedition"
+    "yield": "3x Expedition",
+    "value": 5500
   },
   {
     "id": "magnetron",
@@ -523,9 +476,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
-    "value": 6000,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 6000
   },
   {
     "id": "mod_components",
@@ -534,9 +486,8 @@
     "rarity": "Epic",
     "category": "Advanced Material",
     "action": "keep",
-    "value": 1750,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1750
   },
   {
     "id": "power_rod",
@@ -545,9 +496,8 @@
     "rarity": "Epic",
     "category": "Advanced Material",
     "action": "keep",
-    "value": 5000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 5000
   },
   {
     "id": "rocketeer_driver",
@@ -556,9 +506,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
-    "value": 5000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 5000
   },
   {
     "id": "spectrum_analyzer",
@@ -567,9 +516,8 @@
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3500,
-    "yield_en": "1x Sensors, 1x Exodus Modules",
-    "yield_de": "1x Sensoren, 1x Exodus Module"
+    "yield": "1x Sensoren, 1x Exodus Module",
+    "value": 3500
   },
   {
     "id": "key_stella_montis_archives",
@@ -578,9 +526,8 @@
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "matriarch_reactor",
@@ -589,9 +536,8 @@
     "rarity": "Legendary",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 13000,
-    "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
-    "yield_de": "1x Energiestab, 1x Magnetbeschleuniger"
+    "yield": "1x Power Rod, 1x Magnetbeschleuniger",
+    "value": 13000
   },
   {
     "id": "queen_reactor",
@@ -600,9 +546,8 @@
     "rarity": "Legendary",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 13000,
-    "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
-    "yield_de": "1x Energiestab, 1x Magnetbeschleuniger"
+    "yield": "1x Power Rod, 1x Magnetbeschleuniger",
+    "value": 13000
   },
   {
     "id": "adv_arc_powercell",
@@ -611,9 +556,8 @@
     "rarity": "Rare",
     "category": "Misc",
     "action": "keep",
-    "value": 640,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 640
   },
   {
     "id": "adv_elec_comp",
@@ -622,9 +566,8 @@
     "rarity": "Rare",
     "category": "Advanced Material",
     "action": "keep",
-    "value": 1750,
-    "yield_en": "5x Workshop, 5x Expedition",
-    "yield_de": "5x Werkstatt, 5x Expedition"
+    "yield": "5x Workshop, 5x Expedition",
+    "value": 1750
   },
   {
     "id": "adv_mech_comp",
@@ -633,9 +576,8 @@
     "rarity": "Rare",
     "category": "Advanced Material",
     "action": "keep",
-    "value": 1750,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 1750
   },
   {
     "id": "alarm_clock",
@@ -644,9 +586,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "1x Processor, 6x Plastic Parts",
-    "yield_de": "1x Prozessor, 6x Plastikteile"
+    "yield": "1x Prozessor, 6x Plastikteile",
+    "value": 1000
   },
   {
     "id": "antiseptic",
@@ -655,9 +596,8 @@
     "rarity": "Rare",
     "category": "Refined Material",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "8x Workshop, 2x Quest",
-    "yield_de": "8x Werkstatt, 2x Quest"
+    "yield": "8x Workshop, 2x Quest",
+    "value": 1000
   },
   {
     "id": "arc_circuitry",
@@ -666,9 +606,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "10x Workshop",
-    "yield_de": "10x Werkstatt"
+    "yield": "10x Workshop",
+    "value": 1000
   },
   {
     "id": "arc_coolant",
@@ -677,9 +616,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "16x Chemicals",
-    "yield_de": "16x Chemikalien"
+    "yield": "16x Chemikalien",
+    "value": 1000
   },
   {
     "id": "arc_flex_rubber",
@@ -688,9 +626,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "16x Rubber Parts",
-    "yield_de": "16x Gummiteile"
+    "yield": "16x Gummiteile",
+    "value": 1000
   },
   {
     "id": "arc_motion_core",
@@ -699,9 +636,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 1000
   },
   {
     "id": "arc_perf_steel",
@@ -710,9 +646,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "12x Metal Parts",
-    "yield_de": "12x Metallteile"
+    "yield": "12x Metallteile",
+    "value": 1000
   },
   {
     "id": "arc_synth_resin",
@@ -721,9 +656,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "14x Plastic Parts",
-    "yield_de": "14x Plastikteile"
+    "yield": "14x Plastikteile",
+    "value": 1000
   },
   {
     "id": "arc_thermo_lining",
@@ -732,9 +666,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "16x Fabric",
-    "yield_de": "16x Stoff"
+    "yield": "16x Stoff",
+    "value": 1000
   },
   {
     "id": "bicycle_pump",
@@ -743,9 +676,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "4x Canister, 10x Metal Parts",
-    "yield_de": "4x Kanister, 10x Metallteile"
+    "yield": "4x Kanister, 10x Metallteile",
+    "value": 2000
   },
   {
     "id": "key_blue_gate_comm",
@@ -754,9 +686,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "broken_flashlight",
@@ -765,9 +696,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Battery, 6x Metal Parts",
-    "yield_de": "2x Batterie, 6x Metallteile"
+    "yield": "2x Batterie, 6x Metallteile",
+    "value": 1000
   },
   {
     "id": "broken_guidance",
@@ -776,9 +706,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "4x Processor",
-    "yield_de": "4x Prozessor"
+    "yield": "4x Prozessor",
+    "value": 2000
   },
   {
     "id": "broken_radio",
@@ -787,9 +716,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "3x Sensors, 3x Wires",
-    "yield_de": "3x Sensoren, 3x Drähte"
+    "yield": "3x Sensoren, 3x Drähte",
+    "value": 2000
   },
   {
     "id": "broken_taser",
@@ -798,9 +726,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Battery, 2x Wires",
-    "yield_de": "2x Batterie, 2x Drähte"
+    "yield": "2x Batterie, 2x Drähte",
+    "value": 1000
   },
   {
     "id": "key_buried_city_hospital",
@@ -809,9 +736,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "coolant",
@@ -820,9 +746,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "5x Chemicals, 2x Oil",
-    "yield_de": "5x Chemikalien, 2x Öl"
+    "yield": "5x Chemikalien, 2x Öl",
+    "value": 1000
   },
   {
     "id": "cooling_coil",
@@ -831,9 +756,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "6x Chemicals, 2x Steel Spring",
-    "yield_de": "6x Chemikalien, 2x Stahlfeder"
+    "yield": "6x Chemikalien, 2x Stahlfeder",
+    "value": 1000
   },
   {
     "id": "cooling_fan",
@@ -842,9 +766,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "5x Expedition",
-    "yield_de": "5x Expedition"
+    "yield": "5x Expedition",
+    "value": 2000
   },
   {
     "id": "cracked_bioscanner",
@@ -853,9 +776,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "2x Workshop",
-    "yield_de": "2x Werkstatt"
+    "yield": "2x Workshop",
+    "value": 1000
   },
   {
     "id": "key_dam_testing_annex",
@@ -864,9 +786,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "damaged_heat_sink",
@@ -875,9 +796,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "2x Workshop",
-    "yield_de": "2x Werkstatt"
+    "yield": "2x Workshop",
+    "value": 1000
   },
   {
     "id": "diving_goggles",
@@ -886,9 +806,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "12x Rubber Parts",
-    "yield_de": "12x Gummiteile"
+    "yield": "12x Gummiteile",
+    "value": 640
   },
   {
     "id": "dog_collar",
@@ -897,9 +816,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 640,
-    "yield_en": "1x Scrappy",
-    "yield_de": "1x Scrappy"
+    "yield": "1x Scrappy",
+    "value": 640
   },
   {
     "id": "expired_respirator",
@@ -908,9 +826,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Rubber Parts, 4x Fabric",
-    "yield_de": "8x Gummiteile, 4x Stoff"
+    "yield": "8x Gummiteile, 4x Stoff",
+    "value": 640
   },
   {
     "id": "explosive_compound",
@@ -919,9 +836,8 @@
     "rarity": "Rare",
     "category": "Refined Material",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 1000
   },
   {
     "id": "film_reel",
@@ -930,9 +846,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 2000
   },
   {
     "id": "fine_wristwatch",
@@ -941,9 +856,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "frequency_modulation_box",
@@ -952,9 +866,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "1x Advanced Electrical Components, 1x Speaker Component",
-    "yield_de": "1x Fortschr. elektr. Komp., 1x Lautsprecherkomp."
+    "yield": "1x Fortschr. elektr. Komp., 1x Lautsprecherkomp.",
+    "value": 3000
   },
   {
     "id": "fried_motherboard",
@@ -963,9 +876,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 2000
   },
   {
     "id": "frying_pan",
@@ -974,9 +886,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "headphones",
@@ -985,9 +896,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "6x Rubber Parts, 2x Speaker Component",
-    "yield_de": "6x Gummiteile, 2x Lautsprecherkomp."
+    "yield": "6x Gummiteile, 2x Lautsprecherkomp.",
+    "value": 1000
   },
   {
     "id": "heavy_gun_parts",
@@ -996,9 +906,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 700,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 700
   },
   {
     "id": "hornet_driver",
@@ -1007,9 +916,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "5x Workshop, 2x Quest",
-    "yield_de": "5x Werkstatt, 2x Quest"
+    "yield": "5x Workshop, 2x Quest",
+    "value": 2000
   },
   {
     "id": "humidifier",
@@ -1018,9 +926,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "5x Expedition",
-    "yield_de": "5x Expedition"
+    "yield": "5x Expedition",
+    "value": 1000
   },
   {
     "id": "industrial_battery",
@@ -1029,9 +936,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 1000
   },
   {
     "id": "industrial_charger",
@@ -1040,9 +946,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "5x Metal Parts, 1x Voltage Converter",
-    "yield_de": "5x Metallteile, 1x Spannungswandler"
+    "yield": "5x Metallteile, 1x Spannungswandler",
+    "value": 1000
   },
   {
     "id": "industrial_magnet",
@@ -1051,9 +956,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Magnet, 4x Metal Parts",
-    "yield_de": "2x Magnet, 4x Metallteile"
+    "yield": "2x Magnet, 4x Metallteile",
+    "value": 1000
   },
   {
     "id": "lab_reagents",
@@ -1062,9 +966,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 2000
   },
   {
     "id": "light_gun_parts",
@@ -1073,9 +976,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 700,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 700
   },
   {
     "id": "medium_gun_parts",
@@ -1084,9 +986,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 700,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 700
   },
   {
     "id": "microscope",
@@ -1095,9 +996,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "1x Advanced Mechanical Components, 3x Magnet",
-    "yield_de": "1x Fortschr. mech. Komp., 3x Magnet"
+    "yield": "1x Fortschr. mech. Komp., 3x Magnet",
+    "value": 3000
   },
   {
     "id": "mini_centrifuge",
@@ -1106,9 +1006,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "1x Advanced Mechanical Components, 2x Canister",
-    "yield_de": "1x Fortschr. mech. Komp., 2x Kanister"
+    "yield": "1x Fortschr. mech. Komp., 2x Kanister",
+    "value": 3000
   },
   {
     "id": "moss",
@@ -1117,9 +1016,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 500
   },
   {
     "id": "motor",
@@ -1128,9 +1026,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 2000
   },
   {
     "id": "music_album",
@@ -1139,9 +1036,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "music_box",
@@ -1150,9 +1046,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 5000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 5000
   },
   {
     "id": "playing_cards",
@@ -1161,9 +1056,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 5000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 5000
   },
   {
     "id": "polluted_air_filter",
@@ -1172,9 +1066,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "6x Fabric, 2x Oil",
-    "yield_de": "6x Stoff, 2x Öl"
+    "yield": "6x Stoff, 2x Öl",
+    "value": 1000
   },
   {
     "id": "portable_tv",
@@ -1183,9 +1076,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "2x Battery, 6x Wires",
-    "yield_de": "2x Batterie, 6x Drähte"
+    "yield": "2x Batterie, 6x Drähte",
+    "value": 2000
   },
   {
     "id": "power_bank",
@@ -1194,9 +1086,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Battery, 2x Wires",
-    "yield_de": "2x Batterie, 2x Drähte"
+    "yield": "2x Batterie, 2x Drähte",
+    "value": 1000
   },
   {
     "id": "power_cable",
@@ -1205,9 +1096,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 1000
   },
   {
     "id": "processor",
@@ -1216,9 +1106,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 500
   },
   {
     "id": "projector",
@@ -1227,9 +1116,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "1x Processor, 2x Wires",
-    "yield_de": "1x Prozessor, 2x Drähte"
+    "yield": "1x Prozessor, 2x Drähte",
+    "value": 1000
   },
   {
     "id": "radio",
@@ -1238,9 +1126,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "1x Speaker Component, 1x Sensors",
-    "yield_de": "1x Lautsprecherkomp., 1x Sensoren"
+    "yield": "1x Lautsprecherkomp., 1x Sensoren",
+    "value": 1000
   },
   {
     "id": "radio_relay",
@@ -1249,9 +1136,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "2x Speaker Component, 2x Sensors",
-    "yield_de": "2x Lautsprecherkomp., 2x Sensoren"
+    "yield": "2x Lautsprecherkomp., 2x Sensoren",
+    "value": 3000
   },
   {
     "id": "key_raider_hatch",
@@ -1260,9 +1146,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 1000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 1000
   },
   {
     "id": "red_coral_jewelry",
@@ -1271,9 +1156,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 5000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 5000
   },
   {
     "id": "rocket_thruster",
@@ -1282,9 +1166,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "2x Synthesized Fuel, 6x Metal Parts",
-    "yield_de": "2x Synth. Treibstoff, 6x Metallteile"
+    "yield": "2x Synth. Treibstoff, 6x Metallteile",
+    "value": 2000
   },
   {
     "id": "rope",
@@ -1293,9 +1176,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 500
   },
   {
     "id": "rotary_encoder",
@@ -1304,9 +1186,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "2x Electrical Components, 2x Processor",
-    "yield_de": "2x Elektr. Komp., 2x Prozessor"
+    "yield": "2x Elektr. Komp., 2x Prozessor",
+    "value": 3000
   },
   {
     "id": "rubber_pad",
@@ -1315,9 +1196,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "18x Rubber Parts",
-    "yield_de": "18x Gummiteile"
+    "yield": "18x Gummiteile",
+    "value": 1000
   },
   {
     "id": "ruined_accordion",
@@ -1326,9 +1206,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "18x Rubber Parts, 3x Steel Spring",
-    "yield_de": "18x Gummiteile, 3x Stahlfeder"
+    "yield": "18x Gummiteile, 3x Stahlfeder",
+    "value": 2000
   },
   {
     "id": "ruined_riot_shield",
@@ -1337,9 +1216,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "10x Plastic Parts, 6x Rubber Parts",
-    "yield_de": "10x Plastikteile, 6x Gummiteile"
+    "yield": "10x Plastikteile, 6x Gummiteile",
+    "value": 1000
   },
   {
     "id": "rusted_gear",
@@ -1348,9 +1226,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 2000
   },
   {
     "id": "rusted_shut_medkit",
@@ -1359,9 +1236,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 2000
   },
   {
     "id": "rusted_tools",
@@ -1370,9 +1246,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 1000
   },
   {
     "id": "sample_cleaner",
@@ -1381,9 +1256,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "2x Electrical Components, 14x Assorted Seeds",
-    "yield_de": "2x Elektr. Komp., 14x Verschiedene Samen"
+    "yield": "2x Elektr. Komp., 14x Verschiedene Samen",
+    "value": 3000
   },
   {
     "id": "sensors",
@@ -1392,9 +1266,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": "20x Expedition",
-    "yield_de": "20x Expedition"
+    "yield": "20x Expedition",
+    "value": 500
   },
   {
     "id": "sentinel_firing_core",
@@ -1403,9 +1276,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 3000,
-    "yield_en": "4x Workshop",
-    "yield_de": "4x Werkstatt"
+    "yield": "4x Workshop",
+    "value": 3000
   },
   {
     "id": "signal_amplifier",
@@ -1414,9 +1286,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "2x Electrical Components, 2x Voltage Converter",
-    "yield_de": "2x Elektr. Komp., 2x Spannungswandler"
+    "yield": "2x Elektr. Komp., 2x Spannungswandler",
+    "value": 3000
   },
   {
     "id": "key_spaceport_container",
@@ -1425,9 +1296,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_spaceport_control",
@@ -1436,9 +1306,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 100
   },
   {
     "id": "speaker_component",
@@ -1447,9 +1316,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 500
   },
   {
     "id": "spectrometer",
@@ -1458,9 +1326,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "1x Advanced Electrical Components, 1x Sensors",
-    "yield_de": "1x Fortschr. elektr. Komp., 1x Sensoren"
+    "yield": "1x Fortschr. elektr. Komp., 1x Sensoren",
+    "value": 3000
   },
   {
     "id": "spring_cushion",
@@ -1469,9 +1336,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "2x Durable Cloth, 2x Steel Spring",
-    "yield_de": "2x Robuster Stoff, 2x Stahlfeder"
+    "yield": "2x Robuster Stoff, 2x Stahlfeder",
+    "value": 2000
   },
   {
     "id": "key_stella_montis_security",
@@ -1480,9 +1346,8 @@
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "surveyor_vault",
@@ -1491,9 +1356,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "5x Workshop, 1x Quest",
-    "yield_de": "5x Werkstatt, 1x Quest"
+    "yield": "5x Workshop, 1x Quest",
+    "value": 2000
   },
   {
     "id": "synthesized_fuel",
@@ -1502,9 +1366,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 700,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 700
   },
   {
     "id": "syringe",
@@ -1513,9 +1376,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 500
   },
   {
     "id": "telemetry_transceiver",
@@ -1524,9 +1386,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "1x Advanced Electrical Components, 1x Processor",
-    "yield_de": "1x Fortschr. elektr. Komp., 1x Prozessor"
+    "yield": "1x Fortschr. elektr. Komp., 1x Prozessor",
+    "value": 3000
   },
   {
     "id": "thermostat",
@@ -1535,9 +1396,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "6x Rubber Parts, 2x Sensors",
-    "yield_de": "6x Gummiteile, 2x Sensoren"
+    "yield": "6x Gummiteile, 2x Sensoren",
+    "value": 1000
   },
   {
     "id": "toaster",
@@ -1546,9 +1406,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "3x Workshop",
-    "yield_de": "3x Werkstatt"
+    "yield": "3x Workshop",
+    "value": 1000
   },
   {
     "id": "torn_blanket",
@@ -1557,9 +1416,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "12x Fabric",
-    "yield_de": "12x Stoff"
+    "yield": "12x Stoff",
+    "value": 640
   },
   {
     "id": "turbo_pump",
@@ -1568,9 +1426,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "1x Mechanical Components, 3x Oil",
-    "yield_de": "1x Mech. Komp., 3x Öl"
+    "yield": "1x Mech. Komp., 3x Öl",
+    "value": 2000
   },
   {
     "id": "unusable_weapon",
@@ -1579,9 +1436,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "4x Metal Parts, 5x Simple Gun Parts",
-    "yield_de": "4x Metallteile, 5x Einfache Waffenteile"
+    "yield": "4x Metallteile, 5x Einfache Waffenteile",
+    "value": 2000
   },
   {
     "id": "vase",
@@ -1590,9 +1446,8 @@
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
-    "value": 3000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 3000
   },
   {
     "id": "voltage_converter",
@@ -1601,9 +1456,8 @@
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
-    "value": 500,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 500
   },
   {
     "id": "wasp_driver",
@@ -1612,9 +1466,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "8x Workshop",
-    "yield_de": "8x Werkstatt"
+    "yield": "8x Workshop",
+    "value": 1000
   },
   {
     "id": "water_filter",
@@ -1623,9 +1476,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Rubber Parts, 3x Canister",
-    "yield_de": "2x Gummiteile, 3x Kanister"
+    "yield": "2x Gummiteile, 3x Kanister",
+    "value": 1000
   },
   {
     "id": "water_pump",
@@ -1634,9 +1486,8 @@
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 1000
   },
   {
     "id": "agave",
@@ -1645,9 +1496,8 @@
     "rarity": "Uncommon",
     "category": "Nature",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 1000
   },
   {
     "id": "air_freshener",
@@ -1656,9 +1506,8 @@
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "apricot",
@@ -1667,9 +1516,8 @@
     "rarity": "Uncommon",
     "category": "Nature",
     "action": "keep",
-    "value": 640,
-    "yield_en": "15x Scrappy",
-    "yield_de": "15x Scrappy"
+    "yield": "15x Scrappy",
+    "value": 640
   },
   {
     "id": "arc_alloy",
@@ -1678,9 +1526,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 200,
-    "yield_en": "18x Workshop, 80x Expedition",
-    "yield_de": "18x Werkstatt, 80x Expedition"
+    "yield": "18x Workshop, 80x Expedition",
+    "value": 200
   },
   {
     "id": "battery",
@@ -1689,9 +1536,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 250,
-    "yield_en": "30x Expedition",
-    "yield_de": "30x Expedition"
+    "yield": "30x Expedition",
+    "value": 250
   },
   {
     "id": "key_blue_gate_cellar",
@@ -1700,9 +1546,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_blue_gate_village",
@@ -1711,9 +1556,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_buried_city_employee",
@@ -1722,9 +1566,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_buried_city_residential",
@@ -1733,9 +1576,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "burned_arc_circuitry",
@@ -1744,9 +1586,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC Legierung"
+    "yield": "2x ARC Legierung",
+    "value": 640
   },
   {
     "id": "camera_lens",
@@ -1755,9 +1596,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Plastic Parts",
-    "yield_de": "8x Plastikteile"
+    "yield": "8x Plastikteile",
+    "value": 640
   },
   {
     "id": "candle_holder",
@@ -1766,9 +1606,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "canister",
@@ -1777,9 +1616,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 300
   },
   {
     "id": "crude_explosives",
@@ -1788,9 +1626,8 @@
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
-    "value": 270,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 270
   },
   {
     "id": "crumpled_plastic_bottle",
@@ -1799,9 +1636,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "3x Plastic Parts",
-    "yield_de": "3x Plastikteile"
+    "yield": "3x Plastikteile",
+    "value": 270
   },
   {
     "id": "key_dam_staff",
@@ -1810,9 +1646,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_dam_surveillance",
@@ -1821,9 +1656,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_dam_utility",
@@ -1832,9 +1666,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "damaged_arc_motion_core",
@@ -1843,9 +1676,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC Legierung"
+    "yield": "2x ARC Legierung",
+    "value": 640
   },
   {
     "id": "dart_board",
@@ -1854,9 +1686,8 @@
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "deflated_football",
@@ -1865,9 +1696,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "15x Rubber Parts",
-    "yield_de": "15x Gummiteile"
+    "yield": "15x Gummiteile",
+    "value": 1000
   },
   {
     "id": "degraded_arc_rubber",
@@ -1876,9 +1706,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "11x Rubber Parts",
-    "yield_de": "11x Gummiteile"
+    "yield": "11x Gummiteile",
+    "value": 640
   },
   {
     "id": "dried_out_arc_resin",
@@ -1887,9 +1716,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "9x Plastic Parts",
-    "yield_de": "9x Plastikteile"
+    "yield": "9x Plastikteile",
+    "value": 640
   },
   {
     "id": "duct_tape",
@@ -1898,9 +1726,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 300
   },
   {
     "id": "durable_cloth",
@@ -1909,9 +1736,8 @@
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
-    "value": 640,
-    "yield_en": "5x Workshop, 35x Expedition, 1x Quest",
-    "yield_de": "5x Werkstatt, 35x Expedition, 1x Quest"
+    "yield": "5x Workshop, 35x Expedition, 1x Quest",
+    "value": 640
   },
   {
     "id": "electrical_components",
@@ -1920,9 +1746,8 @@
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
-    "value": 640,
-    "yield_en": "10x Workshop, 30x Expedition",
-    "yield_de": "10x Werkstatt, 30x Expedition"
+    "yield": "10x Workshop, 30x Expedition",
+    "value": 640
   },
   {
     "id": "fertilizer",
@@ -1931,9 +1756,8 @@
     "rarity": "Uncommon",
     "category": "Nature",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 1000
   },
   {
     "id": "fireball_burner",
@@ -1942,9 +1766,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "keep",
-    "value": 640,
-    "yield_en": "8x Workshop",
-    "yield_de": "8x Werkstatt"
+    "yield": "8x Workshop",
+    "value": 640
   },
   {
     "id": "garlic_press",
@@ -1953,9 +1776,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "12x Metal Parts",
-    "yield_de": "12x Metallteile"
+    "yield": "12x Metallteile",
+    "value": 1000
   },
   {
     "id": "great_mullein",
@@ -1964,9 +1786,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 300
   },
   {
     "id": "household_cleaner",
@@ -1975,9 +1796,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "13x Chemicals",
-    "yield_de": "13x Chemikalien"
+    "yield": "13x Chemikalien",
+    "value": 640
   },
   {
     "id": "ice_cream_scooper",
@@ -1986,9 +1806,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "7x Metal Parts",
-    "yield_de": "7x Metallteile"
+    "yield": "7x Metallteile",
+    "value": 640
   },
   {
     "id": "impure_arc_coolant",
@@ -1997,9 +1816,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "13x Chemicals",
-    "yield_de": "13x Chemikalien"
+    "yield": "13x Chemikalien",
+    "value": 640
   },
   {
     "id": "light_bulb",
@@ -2008,9 +1826,8 @@
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "5x Expedition",
-    "yield_de": "5x Expedition"
+    "yield": "5x Expedition",
+    "value": 2000
   },
   {
     "id": "magnet",
@@ -2019,9 +1836,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 300
   },
   {
     "id": "mechanical_components",
@@ -2030,9 +1846,8 @@
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
-    "value": 640,
-    "yield_en": "5x Workshop",
-    "yield_de": "5x Werkstatt"
+    "yield": "5x Workshop",
+    "value": 640
   },
   {
     "id": "metal_brackets",
@@ -2041,9 +1856,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "mushroom",
@@ -2052,9 +1866,8 @@
     "rarity": "Uncommon",
     "category": "Nature",
     "action": "keep",
-    "value": 1000,
-    "yield_en": "12x Scrappy",
-    "yield_de": "12x Scrappy"
+    "yield": "12x Scrappy",
+    "value": 1000
   },
   {
     "id": "number_plate",
@@ -2063,9 +1876,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 270,
-    "yield_en": "3x Metal Parts",
-    "yield_de": "3x Metallteile"
+    "yield": "3x Metallteile",
+    "value": 270
   },
   {
     "id": "oil",
@@ -2074,9 +1886,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 300
   },
   {
     "id": "key_patrol_car",
@@ -2085,9 +1896,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "poster_natural_wonders",
@@ -2096,9 +1906,8 @@
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "pottery",
@@ -2107,9 +1916,8 @@
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
-    "value": 2000,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 2000
   },
   {
     "id": "remote_control",
@@ -2118,9 +1926,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "2x Plastic Parts, 1x Sensors",
-    "yield_de": "2x Plastikteile, 1x Sensoren"
+    "yield": "2x Plastikteile, 1x Sensoren",
+    "value": 1000
   },
   {
     "id": "ripped_safety_vest",
@@ -2129,9 +1936,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 1000,
-    "yield_en": "1x Magnet, 1x Durable Cloth",
-    "yield_de": "1x Magnet, 1x Robuster Stoff"
+    "yield": "1x Magnet, 1x Robuster Stoff",
+    "value": 1000
   },
   {
     "id": "roots",
@@ -2140,9 +1946,8 @@
     "rarity": "Uncommon",
     "category": "Nature",
     "action": "keep",
-    "value": 640,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 640
   },
   {
     "id": "ruined_baton",
@@ -2151,9 +1956,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "6x Metal Parts, 3x Rubber Parts",
-    "yield_de": "6x Metallteile, 3x Gummiteile"
+    "yield": "6x Metallteile, 3x Gummiteile",
+    "value": 640
   },
   {
     "id": "ruined_handcuffs",
@@ -2162,9 +1966,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "ruined_parachute",
@@ -2173,9 +1976,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "10x Fabric",
-    "yield_de": "10x Stoff"
+    "yield": "10x Stoff",
+    "value": 640
   },
   {
     "id": "ruined_tactical_vest",
@@ -2184,9 +1986,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "5x Fabric, 1x Magnet",
-    "yield_de": "5x Stoff, 1x Magnet"
+    "yield": "5x Stoff, 1x Magnet",
+    "value": 640
   },
   {
     "id": "rusted_bolts",
@@ -2195,9 +1996,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "rusty_arc_steel",
@@ -2206,9 +2006,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "8x Metal Parts",
-    "yield_de": "8x Metallteile"
+    "yield": "8x Metallteile",
+    "value": 640
   },
   {
     "id": "shredder_gyro",
@@ -2217,9 +2016,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 3000,
-    "yield_en": "3x Mechanical Components, 3x ARC Alloy",
-    "yield_de": "3x Mech. Komp., 3x ARC Legierung"
+    "yield": "3x Mech. Komp., 3x ARC Legierung",
+    "value": 3000
   },
   {
     "id": "simple_gun_parts",
@@ -2228,9 +2026,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 330,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 330
   },
   {
     "id": "snitch_scanner",
@@ -2239,9 +2036,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "keep",
-    "value": 2000,
-    "yield_en": "6x Workshop",
-    "yield_de": "6x Werkstatt"
+    "yield": "6x Workshop",
+    "value": 2000
   },
   {
     "id": "key_spaceport_trench",
@@ -2250,9 +2046,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": "1x Quest",
-    "yield_de": "1x Quest"
+    "yield": "1x Quest",
+    "value": 100
   },
   {
     "id": "key_spaceport_warehouse",
@@ -2261,9 +2056,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "spotter_relay",
@@ -2272,9 +2066,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 2000,
-    "yield_en": "2x Electrical Components, 1x ARC Alloy",
-    "yield_de": "2x Elektr. Komp., 1x ARC Legierung"
+    "yield": "2x Elektr. Komp., 1x ARC Legierung",
+    "value": 2000
   },
   {
     "id": "steel_spring",
@@ -2283,9 +2076,8 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 300,
-    "yield_en": "15x Expedition",
-    "yield_de": "15x Expedition"
+    "yield": "15x Expedition",
+    "value": 300
   },
   {
     "id": "key_stella_montis_admin",
@@ -2294,9 +2086,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "key_stella_montis_medical",
@@ -2305,9 +2096,8 @@
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
-    "value": 100,
-    "yield_en": null,
-    "yield_de": null
+    "yield": null,
+    "value": 100
   },
   {
     "id": "tattered_arc_lining",
@@ -2316,9 +2106,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "12x Fabric",
-    "yield_de": "12x Stoff"
+    "yield": "12x Stoff",
+    "value": 640
   },
   {
     "id": "tattered_clothes",
@@ -2327,9 +2116,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
-    "value": 640,
-    "yield_en": "11x Fabric",
-    "yield_de": "11x Stoff"
+    "yield": "11x Stoff",
+    "value": 640
   },
   {
     "id": "tick_pod",
@@ -2338,9 +2126,8 @@
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "keep",
-    "value": 640,
-    "yield_en": "8x Workshop",
-    "yield_de": "8x Werkstatt"
+    "yield": "8x Workshop",
+    "value": 640
   },
   {
     "id": "wires",
@@ -2349,8 +2136,7 @@
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
-    "value": 200,
-    "yield_en": "30x Expedition, 3x Quest",
-    "yield_de": "30x Expedition, 3x Quest"
+    "yield": "30x Expedition, 3x Quest",
+    "value": 200
   }
 ]

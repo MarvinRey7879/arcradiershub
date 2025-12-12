@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-
+import { getAnalytics } from "firebase/analytics";
 // Deine Web App Konfiguration aus der Firebase Console
 const firebaseConfig = {
     apiKey: "AIzaSyDSfWL948J-1MEBN8FSh3Z0er4Q99zQzNk",
@@ -17,6 +17,7 @@ const firebaseConfig = {
 // Firebase initialisieren
 const app = initializeApp(firebaseConfig);
 
+export const analytics = getAnalytics(app);
 // Dienste exportieren, damit du sie in Komponenten nutzen kannst
 export const auth = getAuth(app);
 export const db = getFirestore(app);
