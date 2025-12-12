@@ -1,0 +1,2142 @@
+[
+  {
+    "id": "arc_powercell",
+    "name_en": "ARC Powercell",
+    "name_de": "ARC Energiezelle",
+    "rarity": "Common",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 270
+  },
+  {
+    "id": "assorted_seeds",
+    "name_en": "Assorted Seeds",
+    "name_de": "Verschiedene Samen",
+    "rarity": "Common",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "Currency for Celeste",
+    "value": 100
+  },
+  {
+    "id": "bloated_tuna",
+    "name_en": "Bloated Tuna Can",
+    "name_de": "Aufgeblähte Thunfischdose",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "cat_bed",
+    "name_en": "Cat Bed",
+    "name_de": "Katzenbett",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "keep",
+    "yield": "1x Scrappy",
+    "value": 1000
+  },
+  {
+    "id": "chemicals",
+    "name_en": "Chemicals",
+    "name_de": "Chemikalien",
+    "rarity": "Common",
+    "category": "Basic Material",
+    "action": "keep",
+    "yield": "50x Workshop",
+    "value": 50
+  },
+  {
+    "id": "coffee_pot",
+    "name_en": "Coffee Pot",
+    "name_de": "Kaffeekanne",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "damaged_arc_powercell",
+    "name_en": "Damaged ARC Powercell",
+    "name_de": "Beschäd. ARC Energiezelle",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x ARC Legierung",
+    "value": 293
+  },
+  {
+    "id": "damaged_fireball_burner",
+    "name_en": "Damaged Fireball Burner",
+    "name_de": "Beschäd. Feuerball Brenner",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x ARC Legierung",
+    "value": 270
+  },
+  {
+    "id": "damaged_hornet_driver",
+    "name_en": "Damaged Hornet Driver",
+    "name_de": "Beschäd. Hornet Treiber",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x ARC Legierung",
+    "value": 640
+  },
+  {
+    "id": "damaged_rocketeer_driver",
+    "name_en": "Damaged Rocketeer Driver",
+    "name_de": "Beschäd. Rocketeer Treiber",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x ARC Legierung",
+    "value": 2000
+  },
+  {
+    "id": "damaged_snitch_scanner",
+    "name_en": "Damaged Snitch Scanner",
+    "name_de": "Beschäd. Snitch Scanner",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": null,
+    "value": 659
+  },
+  {
+    "id": "damaged_tick_pod",
+    "name_en": "Damaged Tick Pod",
+    "name_de": "Beschäd. Zeckenkapsel",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x ARC Legierung",
+    "value": 270
+  },
+  {
+    "id": "damaged_wasp_driver",
+    "name_en": "Damaged Wasp Driver",
+    "name_de": "Beschäd. Wasp Treiber",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x ARC Legierung",
+    "value": 270
+  },
+  {
+    "id": "empty_wine_bottle",
+    "name_en": "Empty Wine Bottle",
+    "name_de": "Leere Weinflasche",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "expired_pasta",
+    "name_en": "Expired Pasta",
+    "name_de": "Abgelaufene Pasta",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "fabric",
+    "name_en": "Fabric",
+    "name_de": "Stoff",
+    "rarity": "Common",
+    "category": "Basic Material",
+    "action": "keep",
+    "yield": "80x Workshop",
+    "value": 50
+  },
+  {
+    "id": "faded_photograph",
+    "name_en": "Faded Photograph",
+    "name_de": "Verblasstes Foto",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "keep",
+    "yield": "2x Quest",
+    "value": 640
+  },
+  {
+    "id": "lemon",
+    "name_en": "Lemon",
+    "name_de": "Zitrone",
+    "rarity": "Common",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "3x Scrappy",
+    "value": 640
+  },
+  {
+    "id": "metal_parts",
+    "name_en": "Metal Parts",
+    "name_de": "Metallteile",
+    "rarity": "Common",
+    "category": "Basic Material",
+    "action": "keep",
+    "yield": "80x Workshop, 150x Expedition",
+    "value": 75
+  },
+  {
+    "id": "olives",
+    "name_en": "Olives",
+    "name_de": "Oliven",
+    "rarity": "Common",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "6x Scrappy",
+    "value": 640
+  },
+  {
+    "id": "painted_box",
+    "name_en": "Painted Box",
+    "name_de": "Bemalte Schachtel",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "plastic_parts",
+    "name_en": "Plastic Parts",
+    "name_de": "Plastikteile",
+    "rarity": "Common",
+    "category": "Basic Material",
+    "action": "keep",
+    "yield": "75x Workshop",
+    "value": 60
+  },
+  {
+    "id": "pop_trigger",
+    "name_en": "Pop Trigger",
+    "name_de": "Pop Trigger",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 640
+  },
+  {
+    "id": "prickly_pear",
+    "name_en": "Prickly Pear",
+    "name_de": "Kaktusfeige",
+    "rarity": "Common",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "6x Scrappy",
+    "value": 640
+  },
+  {
+    "id": "resin",
+    "name_en": "Resin",
+    "name_de": "Harz",
+    "rarity": "Common",
+    "category": "Nature",
+    "action": "keep",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "rosary",
+    "name_en": "Rosary",
+    "name_de": "Rosenkranz",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "rubber_duck",
+    "name_en": "Rubber Duck",
+    "name_de": "Quietscheente",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "rubber_parts",
+    "name_en": "Rubber Parts",
+    "name_de": "Gummiteile",
+    "rarity": "Common",
+    "category": "Basic Material",
+    "action": "keep",
+    "yield": "30x Workshop, 200x Expedition",
+    "value": 50
+  },
+  {
+    "id": "ruined_augment",
+    "name_en": "Ruined Augment",
+    "name_de": "Ruiniertes Augment",
+    "rarity": "Common",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Plastikteile, 2x Gummiteile",
+    "value": 270
+  },
+  {
+    "id": "silver_teaspoon_set",
+    "name_en": "Silver Teaspoon Set",
+    "name_de": "Silbernes Teelöffelset",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "statuette",
+    "name_en": "Statuette",
+    "name_de": "Statuette",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "torn_book",
+    "name_en": "Torn Book",
+    "name_de": "Zerrissenes Buch",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "very_comfortable_pillow",
+    "name_en": "Very Comfortable Pillow",
+    "name_de": "Sehr bequemes Kissen",
+    "rarity": "Common",
+    "category": "Trinket",
+    "action": "keep",
+    "yield": "3x Scrappy",
+    "value": 2000
+  },
+  {
+    "id": "volcanic_rock",
+    "name_en": "Volcanic Rock",
+    "name_de": "Vulkangestein",
+    "rarity": "Common",
+    "category": "Misc",
+    "action": "keep",
+    "yield": null,
+    "value": 270
+  },
+  {
+    "id": "bastion_cell",
+    "name_en": "Bastion Cell",
+    "name_de": "Bastion Zelle",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "6x Workshop",
+    "value": 5000
+  },
+  {
+    "id": "key_blue_gate_confiscation",
+    "name_en": "Blue Gate Confiscation Room Key",
+    "name_de": "Blue Gate Beschlagnahmungsschlüssel",
+    "rarity": "Epic",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "bombardier_cell",
+    "name_en": "Bombardier Cell",
+    "name_de": "Bombardier Zelle",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "6x Workshop",
+    "value": 5000
+  },
+  {
+    "id": "snow_globe",
+    "name_en": "Breathtaking Snow Globe",
+    "name_de": "Atemberaubende Schneekugel",
+    "rarity": "Epic",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 7000
+  },
+  {
+    "id": "key_buried_city_town_hall",
+    "name_en": "Buried City Town Hall Key",
+    "name_de": "Versunkene Stadt Rathaus Schlüssel",
+    "rarity": "Epic",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "complex_gun_parts",
+    "name_en": "Complex Gun Parts",
+    "name_de": "Komplexe Waffenteile",
+    "rarity": "Epic",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "key_dam_control_tower",
+    "name_en": "Dam Control Tower Key",
+    "name_de": "Staudamm Kontrollturm Schlüssel",
+    "rarity": "Epic",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "exodus_modules",
+    "name_en": "Exodus Modules",
+    "name_de": "Exodus Module",
+    "rarity": "Epic",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "1x Expedition",
+    "value": 2750
+  },
+  {
+    "id": "geiger_counter",
+    "name_en": "Geiger Counter",
+    "name_de": "Geigerzähler",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x Batterie, 1x Exodus Module",
+    "value": 3500
+  },
+  {
+    "id": "ion_sputter",
+    "name_en": "Ion Sputter",
+    "name_de": "Ionenzerstäuber",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "4x Spannungswandler, 1x Exodus Module",
+    "value": 6000
+  },
+  {
+    "id": "lances_mixtape",
+    "name_en": "Lance's Mixtape (5th Edition)",
+    "name_de": "Lance's Mixtape (5. Aufl.)",
+    "rarity": "Epic",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 10000
+  },
+  {
+    "id": "leaper_pulse_unit",
+    "name_en": "Leaper Pulse Unit",
+    "name_de": "Leaper Impulseinheit",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Expedition, 4x Workshop",
+    "value": 5000
+  },
+  {
+    "id": "magnetic_accelerator",
+    "name_en": "Magnetic Accelerator",
+    "name_de": "Magnetbeschleuniger",
+    "rarity": "Epic",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "3x Expedition",
+    "value": 5500
+  },
+  {
+    "id": "magnetron",
+    "name_en": "Magnetron",
+    "name_de": "Magnetron",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 6000
+  },
+  {
+    "id": "mod_components",
+    "name_en": "Mod Components",
+    "name_de": "Mod Komponenten",
+    "rarity": "Epic",
+    "category": "Advanced Material",
+    "action": "keep",
+    "yield": null,
+    "value": 1750
+  },
+  {
+    "id": "power_rod",
+    "name_en": "Power Rod",
+    "name_de": "Energiestab",
+    "rarity": "Epic",
+    "category": "Advanced Material",
+    "action": "keep",
+    "yield": null,
+    "value": 5000
+  },
+  {
+    "id": "rocketeer_driver",
+    "name_en": "Rocketeer Driver",
+    "name_de": "Rocketeer Treiber",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 5000
+  },
+  {
+    "id": "spectrum_analyzer",
+    "name_en": "Spectrum Analyzer",
+    "name_de": "Spektrumanalysator",
+    "rarity": "Epic",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Sensoren, 1x Exodus Module",
+    "value": 3500
+  },
+  {
+    "id": "key_stella_montis_archives",
+    "name_en": "Stella Montis Archives Key",
+    "name_de": "Stella Montis Archiv Schlüssel",
+    "rarity": "Epic",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "matriarch_reactor",
+    "name_en": "Matriarch Reactor",
+    "name_de": "Matriarchin Reaktor",
+    "rarity": "Legendary",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Power Rod, 1x Magnetbeschleuniger",
+    "value": 13000
+  },
+  {
+    "id": "queen_reactor",
+    "name_en": "Queen Reactor",
+    "name_de": "Königinnen Reaktor",
+    "rarity": "Legendary",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Power Rod, 1x Magnetbeschleuniger",
+    "value": 13000
+  },
+  {
+    "id": "adv_arc_powercell",
+    "name_en": "Advanced ARC Powercell",
+    "name_de": "Fortschr. ARC Energiezelle",
+    "rarity": "Rare",
+    "category": "Misc",
+    "action": "keep",
+    "yield": null,
+    "value": 640
+  },
+  {
+    "id": "adv_elec_comp",
+    "name_en": "Advanced Electrical Components",
+    "name_de": "Fortschr. elektrische Komponenten",
+    "rarity": "Rare",
+    "category": "Advanced Material",
+    "action": "keep",
+    "yield": "5x Workshop, 5x Expedition",
+    "value": 1750
+  },
+  {
+    "id": "adv_mech_comp",
+    "name_en": "Advanced Mechanical Components",
+    "name_de": "Fortschr. mech. Komponenten",
+    "rarity": "Rare",
+    "category": "Advanced Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 1750
+  },
+  {
+    "id": "alarm_clock",
+    "name_en": "Alarm Clock",
+    "name_de": "Wecker",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Prozessor, 6x Plastikteile",
+    "value": 1000
+  },
+  {
+    "id": "antiseptic",
+    "name_en": "Antiseptic",
+    "name_de": "Antiseptikum",
+    "rarity": "Rare",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "8x Workshop, 2x Quest",
+    "value": 1000
+  },
+  {
+    "id": "arc_circuitry",
+    "name_en": "ARC Circuitry",
+    "name_de": "ARC Schaltkreise",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "10x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "arc_coolant",
+    "name_en": "ARC Coolant",
+    "name_de": "ARC Kühlmittel",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "16x Chemikalien",
+    "value": 1000
+  },
+  {
+    "id": "arc_flex_rubber",
+    "name_en": "ARC Flex Rubber",
+    "name_de": "ARC Flex-Gummi",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "16x Gummiteile",
+    "value": 1000
+  },
+  {
+    "id": "arc_motion_core",
+    "name_en": "ARC Motion Core",
+    "name_de": "ARC Bewegungskern",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "arc_perf_steel",
+    "name_en": "ARC Performance Steel",
+    "name_de": "ARC Leistungsstahl",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "12x Metallteile",
+    "value": 1000
+  },
+  {
+    "id": "arc_synth_resin",
+    "name_en": "ARC Synthetic Resin",
+    "name_de": "ARC Kunstharz",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "14x Plastikteile",
+    "value": 1000
+  },
+  {
+    "id": "arc_thermo_lining",
+    "name_en": "ARC Thermo Lining",
+    "name_de": "ARC Thermofutter",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "16x Stoff",
+    "value": 1000
+  },
+  {
+    "id": "bicycle_pump",
+    "name_en": "Bicycle Pump",
+    "name_de": "Fahrradpumpe",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "4x Kanister, 10x Metallteile",
+    "value": 2000
+  },
+  {
+    "id": "key_blue_gate_comm",
+    "name_en": "Blue Gate Communication Tower Key",
+    "name_de": "Blue Gate Funkturm Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "broken_flashlight",
+    "name_en": "Broken Flashlight",
+    "name_de": "Kaputte Taschenlampe",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Batterie, 6x Metallteile",
+    "value": 1000
+  },
+  {
+    "id": "broken_guidance",
+    "name_en": "Broken Guidance System",
+    "name_de": "Defektes Leitsystem",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "4x Prozessor",
+    "value": 2000
+  },
+  {
+    "id": "broken_radio",
+    "name_en": "Broken Handheld Radio",
+    "name_de": "Kaputtes Funkgerät",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x Sensoren, 3x Drähte",
+    "value": 2000
+  },
+  {
+    "id": "broken_taser",
+    "name_en": "Broken Taser",
+    "name_de": "Kaputter Taser",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Batterie, 2x Drähte",
+    "value": 1000
+  },
+  {
+    "id": "key_buried_city_hospital",
+    "name_en": "Buried City Hospital Key",
+    "name_de": "Versunkene Stadt Krankenhaus Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "coolant",
+    "name_en": "Coolant",
+    "name_de": "Kühlmittel",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "5x Chemikalien, 2x Öl",
+    "value": 1000
+  },
+  {
+    "id": "cooling_coil",
+    "name_en": "Cooling Coil",
+    "name_de": "Kühlspirale",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "6x Chemikalien, 2x Stahlfeder",
+    "value": 1000
+  },
+  {
+    "id": "cooling_fan",
+    "name_en": "Cooling Fan",
+    "name_de": "Lüfter",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "5x Expedition",
+    "value": 2000
+  },
+  {
+    "id": "cracked_bioscanner",
+    "name_en": "Cracked Bioscanner",
+    "name_de": "Gesprungener Bioscanner",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "2x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "key_dam_testing_annex",
+    "name_en": "Dam Testing Annex Key",
+    "name_de": "Staudamm Testanbau Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "damaged_heat_sink",
+    "name_en": "Damaged Heat Sink",
+    "name_de": "Beschäd. Kühlkörper",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "2x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "diving_goggles",
+    "name_en": "Diving Goggles",
+    "name_de": "Taucherbrille",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "12x Gummiteile",
+    "value": 640
+  },
+  {
+    "id": "dog_collar",
+    "name_en": "Dog Collar",
+    "name_de": "Hundehalsband",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "1x Scrappy",
+    "value": 640
+  },
+  {
+    "id": "expired_respirator",
+    "name_en": "Expired Respirator",
+    "name_de": "Abgelaufene Atemschutzmaske",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Gummiteile, 4x Stoff",
+    "value": 640
+  },
+  {
+    "id": "explosive_compound",
+    "name_en": "Explosive Compound",
+    "name_de": "Sprengstoffmischung",
+    "rarity": "Rare",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "film_reel",
+    "name_en": "Film Reel",
+    "name_de": "Filmrolle",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 2000
+  },
+  {
+    "id": "fine_wristwatch",
+    "name_en": "Fine Wristwatch",
+    "name_de": "Feine Armbanduhr",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "frequency_modulation_box",
+    "name_en": "Frequency Modulation Box",
+    "name_de": "Frequenzmodulations-Box",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Fortschr. elektr. Komp., 1x Lautsprecherkomp.",
+    "value": 3000
+  },
+  {
+    "id": "fried_motherboard",
+    "name_en": "Fried Motherboard",
+    "name_de": "Durchgebranntes Mainboard",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "frying_pan",
+    "name_en": "Frying Pan",
+    "name_de": "Bratpfanne",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "headphones",
+    "name_en": "Headphones",
+    "name_de": "Kopfhörer",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "6x Gummiteile, 2x Lautsprecherkomp.",
+    "value": 1000
+  },
+  {
+    "id": "heavy_gun_parts",
+    "name_en": "Heavy Gun Parts",
+    "name_de": "Schwere Waffenteile",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 700
+  },
+  {
+    "id": "hornet_driver",
+    "name_en": "Hornet Driver",
+    "name_de": "Hornet Treiber",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "5x Workshop, 2x Quest",
+    "value": 2000
+  },
+  {
+    "id": "humidifier",
+    "name_en": "Humidifier",
+    "name_de": "Luftbefeuchter",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "5x Expedition",
+    "value": 1000
+  },
+  {
+    "id": "industrial_battery",
+    "name_en": "Industrial Battery",
+    "name_de": "Industriebatterie",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "industrial_charger",
+    "name_en": "Industrial Charger",
+    "name_de": "Industrieladegerät",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "5x Metallteile, 1x Spannungswandler",
+    "value": 1000
+  },
+  {
+    "id": "industrial_magnet",
+    "name_en": "Industrial Magnet",
+    "name_de": "Industriemagnet",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Magnet, 4x Metallteile",
+    "value": 1000
+  },
+  {
+    "id": "lab_reagents",
+    "name_en": "Laboratory Reagents",
+    "name_de": "Laborreagenzien",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "light_gun_parts",
+    "name_en": "Light Gun Parts",
+    "name_de": "Leichte Waffenteile",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 700
+  },
+  {
+    "id": "medium_gun_parts",
+    "name_en": "Medium Gun Parts",
+    "name_de": "Mittlere Waffenteile",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 700
+  },
+  {
+    "id": "microscope",
+    "name_en": "Microscope",
+    "name_de": "Mikroskop",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Fortschr. mech. Komp., 3x Magnet",
+    "value": 3000
+  },
+  {
+    "id": "mini_centrifuge",
+    "name_en": "Mini Centrifuge",
+    "name_de": "Minizentrifuge",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Fortschr. mech. Komp., 2x Kanister",
+    "value": 3000
+  },
+  {
+    "id": "moss",
+    "name_en": "Moss",
+    "name_de": "Moos",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 500
+  },
+  {
+    "id": "motor",
+    "name_en": "Motor",
+    "name_de": "Motor",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "music_album",
+    "name_en": "Music Album",
+    "name_de": "Musikalbum",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "music_box",
+    "name_en": "Music Box",
+    "name_de": "Musikbox",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 5000
+  },
+  {
+    "id": "playing_cards",
+    "name_en": "Playing Cards",
+    "name_de": "Spielkarten",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 5000
+  },
+  {
+    "id": "polluted_air_filter",
+    "name_en": "Polluted Air Filter",
+    "name_de": "Verschmutzter Luftfilter",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "6x Stoff, 2x Öl",
+    "value": 1000
+  },
+  {
+    "id": "portable_tv",
+    "name_en": "Portable TV",
+    "name_de": "Tragbarer TV",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Batterie, 6x Drähte",
+    "value": 2000
+  },
+  {
+    "id": "power_bank",
+    "name_en": "Power Bank",
+    "name_de": "Powerbank",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Batterie, 2x Drähte",
+    "value": 1000
+  },
+  {
+    "id": "power_cable",
+    "name_en": "Power Cable",
+    "name_de": "Stromkabel",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "processor",
+    "name_en": "Processor",
+    "name_de": "Prozessor",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 500
+  },
+  {
+    "id": "projector",
+    "name_en": "Projector",
+    "name_de": "Projektor",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Prozessor, 2x Drähte",
+    "value": 1000
+  },
+  {
+    "id": "radio",
+    "name_en": "Radio",
+    "name_de": "Radio",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Lautsprecherkomp., 1x Sensoren",
+    "value": 1000
+  },
+  {
+    "id": "radio_relay",
+    "name_en": "Radio Relay",
+    "name_de": "Funkrelais",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Lautsprecherkomp., 2x Sensoren",
+    "value": 3000
+  },
+  {
+    "id": "key_raider_hatch",
+    "name_en": "Raider Hatch Key",
+    "name_de": "Raider Luke Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 1000
+  },
+  {
+    "id": "red_coral_jewelry",
+    "name_en": "Red Coral Jewelry",
+    "name_de": "Roter Korallenschmuck",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 5000
+  },
+  {
+    "id": "rocket_thruster",
+    "name_en": "Rocket Thruster",
+    "name_de": "Raketentriebwerk",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Synth. Treibstoff, 6x Metallteile",
+    "value": 2000
+  },
+  {
+    "id": "rope",
+    "name_en": "Rope",
+    "name_de": "Seil",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 500
+  },
+  {
+    "id": "rotary_encoder",
+    "name_en": "Rotary Encoder",
+    "name_de": "Drehgeber",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Elektr. Komp., 2x Prozessor",
+    "value": 3000
+  },
+  {
+    "id": "rubber_pad",
+    "name_en": "Rubber Pad",
+    "name_de": "Gummimatte",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "18x Gummiteile",
+    "value": 1000
+  },
+  {
+    "id": "ruined_accordion",
+    "name_en": "Ruined Accordion",
+    "name_de": "Ruiniertes Akkordeon",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "18x Gummiteile, 3x Stahlfeder",
+    "value": 2000
+  },
+  {
+    "id": "ruined_riot_shield",
+    "name_en": "Ruined Riot Shield",
+    "name_de": "Ruinierter Schutzschild",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "10x Plastikteile, 6x Gummiteile",
+    "value": 1000
+  },
+  {
+    "id": "rusted_gear",
+    "name_en": "Rusted Gear",
+    "name_de": "Verrostetes Zahnrad",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "rusted_shut_medkit",
+    "name_en": "Rusted Shut Medical Kit",
+    "name_de": "Verrostetes Medikit",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "rusted_tools",
+    "name_en": "Rusted Tools",
+    "name_de": "Verrostete Werkzeuge",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "sample_cleaner",
+    "name_en": "Sample Cleaner",
+    "name_de": "Probenreiniger",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Elektr. Komp., 14x Verschiedene Samen",
+    "value": 3000
+  },
+  {
+    "id": "sensors",
+    "name_en": "Sensors",
+    "name_de": "Sensoren",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "20x Expedition",
+    "value": 500
+  },
+  {
+    "id": "sentinel_firing_core",
+    "name_en": "Sentinel Firing Core",
+    "name_de": "Wächter Feuerkern",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "4x Workshop",
+    "value": 3000
+  },
+  {
+    "id": "signal_amplifier",
+    "name_en": "Signal Amplifier",
+    "name_de": "Signalverstärker",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Elektr. Komp., 2x Spannungswandler",
+    "value": 3000
+  },
+  {
+    "id": "key_spaceport_container",
+    "name_en": "Spaceport Container Storage Key",
+    "name_de": "Raumhafen Containerlager Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_spaceport_control",
+    "name_en": "Spaceport Control Tower Key",
+    "name_de": "Raumhafen Kontrollturm Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 100
+  },
+  {
+    "id": "speaker_component",
+    "name_en": "Speaker Component",
+    "name_de": "Lautsprecher Komponente",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 500
+  },
+  {
+    "id": "spectrometer",
+    "name_en": "Spectrometer",
+    "name_de": "Spektrometer",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Fortschr. elektr. Komp., 1x Sensoren",
+    "value": 3000
+  },
+  {
+    "id": "spring_cushion",
+    "name_en": "Spring Cushion",
+    "name_de": "Federkissen",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Robuster Stoff, 2x Stahlfeder",
+    "value": 2000
+  },
+  {
+    "id": "key_stella_montis_security",
+    "name_en": "Stella Montis Security Checkpoint Key",
+    "name_de": "Stella Montis Sicherheitskontrolle Schlüssel",
+    "rarity": "Rare",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "surveyor_vault",
+    "name_en": "Surveyor Vault",
+    "name_de": "Vermesser Tresor",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "5x Workshop, 1x Quest",
+    "value": 2000
+  },
+  {
+    "id": "synthesized_fuel",
+    "name_en": "Synthesized Fuel",
+    "name_de": "Synthetischer Treibstoff",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 700
+  },
+  {
+    "id": "syringe",
+    "name_en": "Syringe",
+    "name_de": "Spritze",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 500
+  },
+  {
+    "id": "telemetry_transceiver",
+    "name_en": "Telemetry Transceiver",
+    "name_de": "Telemetrie Sendeempfänger",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Fortschr. elektr. Komp., 1x Prozessor",
+    "value": 3000
+  },
+  {
+    "id": "thermostat",
+    "name_en": "Thermostat",
+    "name_de": "Thermostat",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "6x Gummiteile, 2x Sensoren",
+    "value": 1000
+  },
+  {
+    "id": "toaster",
+    "name_en": "Toaster",
+    "name_de": "Toaster",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "3x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "torn_blanket",
+    "name_en": "Torn Blanket",
+    "name_de": "Zerrissene Decke",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "12x Stoff",
+    "value": 640
+  },
+  {
+    "id": "turbo_pump",
+    "name_en": "Turbo Pump",
+    "name_de": "Turbopumpe",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Mech. Komp., 3x Öl",
+    "value": 2000
+  },
+  {
+    "id": "unusable_weapon",
+    "name_en": "Unusable Weapon",
+    "name_de": "Unbrauchbare Waffe",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "4x Metallteile, 5x Einfache Waffenteile",
+    "value": 2000
+  },
+  {
+    "id": "vase",
+    "name_en": "Vase",
+    "name_de": "Vase",
+    "rarity": "Rare",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 3000
+  },
+  {
+    "id": "voltage_converter",
+    "name_en": "Voltage Converter",
+    "name_de": "Spannungswandler",
+    "rarity": "Rare",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 500
+  },
+  {
+    "id": "wasp_driver",
+    "name_en": "Wasp Driver",
+    "name_de": "Wasp Treiber",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "8x Workshop",
+    "value": 1000
+  },
+  {
+    "id": "water_filter",
+    "name_en": "Water Filter",
+    "name_de": "Wasserfilter",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Gummiteile, 3x Kanister",
+    "value": 1000
+  },
+  {
+    "id": "water_pump",
+    "name_en": "Water Pump",
+    "name_de": "Wasserpumpe",
+    "rarity": "Rare",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 1000
+  },
+  {
+    "id": "agave",
+    "name_en": "Agave",
+    "name_de": "Agave",
+    "rarity": "Uncommon",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 1000
+  },
+  {
+    "id": "air_freshener",
+    "name_en": "Air Freshener",
+    "name_de": "Lufterfrischer",
+    "rarity": "Uncommon",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "apricot",
+    "name_en": "Apricot",
+    "name_de": "Aprikose",
+    "rarity": "Uncommon",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "15x Scrappy",
+    "value": 640
+  },
+  {
+    "id": "arc_alloy",
+    "name_en": "ARC Alloy",
+    "name_de": "ARC Legierung",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "18x Workshop, 80x Expedition",
+    "value": 200
+  },
+  {
+    "id": "battery",
+    "name_en": "Battery",
+    "name_de": "Batterie",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "30x Expedition",
+    "value": 250
+  },
+  {
+    "id": "key_blue_gate_cellar",
+    "name_en": "Blue Gate Cellar Key",
+    "name_de": "Blue Gate Keller Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_blue_gate_village",
+    "name_en": "Blue Gate Village Key",
+    "name_de": "Blue Gate Dorf Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_buried_city_employee",
+    "name_en": "Buried City JKV Employee Access Card",
+    "name_de": "Versunkene Stadt JKV Mitarbeiterkarte",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_buried_city_residential",
+    "name_en": "Buried City Residential Mastery Key",
+    "name_de": "Versunkene Stadt Wohngebiet Hauptschlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "burned_arc_circuitry",
+    "name_en": "Burned ARC Circuitry",
+    "name_de": "Verbrannte ARC Schaltkreise",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x ARC Legierung",
+    "value": 640
+  },
+  {
+    "id": "camera_lens",
+    "name_en": "Camera Lens",
+    "name_de": "Kameraobjektiv",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Plastikteile",
+    "value": 640
+  },
+  {
+    "id": "candle_holder",
+    "name_en": "Candle Holder",
+    "name_de": "Kerzenhalter",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "canister",
+    "name_en": "Canister",
+    "name_de": "Kanister",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 300
+  },
+  {
+    "id": "crude_explosives",
+    "name_en": "Crude Explosives",
+    "name_de": "Einfacher Sprengstoff",
+    "rarity": "Uncommon",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 270
+  },
+  {
+    "id": "crumpled_plastic_bottle",
+    "name_en": "Crumpled Plastic Bottle",
+    "name_de": "Zerknüllte Plastikflasche",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x Plastikteile",
+    "value": 270
+  },
+  {
+    "id": "key_dam_staff",
+    "name_en": "Dam Staff Room Key",
+    "name_de": "Staudamm Personalraum Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_dam_surveillance",
+    "name_en": "Dam Surveillance Key",
+    "name_de": "Staudamm Überwachung Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_dam_utility",
+    "name_en": "Dam Utility Key",
+    "name_de": "Staudamm Wartungsschlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "damaged_arc_motion_core",
+    "name_en": "Damaged ARC Motion Core",
+    "name_de": "Beschäd. ARC Bewegungskern",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x ARC Legierung",
+    "value": 640
+  },
+  {
+    "id": "dart_board",
+    "name_en": "Dart Board",
+    "name_de": "Dartscheibe",
+    "rarity": "Uncommon",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "deflated_football",
+    "name_en": "Deflated Football",
+    "name_de": "Platter Fußball",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "15x Gummiteile",
+    "value": 1000
+  },
+  {
+    "id": "degraded_arc_rubber",
+    "name_en": "Degraded ARC Rubber",
+    "name_de": "Zersetztes ARC Gummi",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "11x Gummiteile",
+    "value": 640
+  },
+  {
+    "id": "dried_out_arc_resin",
+    "name_en": "Dried-Out ARC Resin",
+    "name_de": "Ausgetrocknetes ARC Harz",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "9x Plastikteile",
+    "value": 640
+  },
+  {
+    "id": "duct_tape",
+    "name_en": "Duct Tape",
+    "name_de": "Klebeband",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 300
+  },
+  {
+    "id": "durable_cloth",
+    "name_en": "Durable Cloth",
+    "name_de": "Robuster Stoff",
+    "rarity": "Uncommon",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "5x Workshop, 35x Expedition, 1x Quest",
+    "value": 640
+  },
+  {
+    "id": "electrical_components",
+    "name_en": "Electrical Components",
+    "name_de": "Elektrische Komponenten",
+    "rarity": "Uncommon",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "10x Workshop, 30x Expedition",
+    "value": 640
+  },
+  {
+    "id": "fertilizer",
+    "name_en": "Fertilizer",
+    "name_de": "Dünger",
+    "rarity": "Uncommon",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 1000
+  },
+  {
+    "id": "fireball_burner",
+    "name_en": "Fireball Burner",
+    "name_de": "Feuerball Brenner",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "8x Workshop",
+    "value": 640
+  },
+  {
+    "id": "garlic_press",
+    "name_en": "Garlic Press",
+    "name_de": "Knoblauchpresse",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "12x Metallteile",
+    "value": 1000
+  },
+  {
+    "id": "great_mullein",
+    "name_en": "Great Mullein",
+    "name_de": "Königskerze",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 300
+  },
+  {
+    "id": "household_cleaner",
+    "name_en": "Household Cleaner",
+    "name_de": "Haushaltsreiniger",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "13x Chemikalien",
+    "value": 640
+  },
+  {
+    "id": "ice_cream_scooper",
+    "name_en": "Ice Cream Scooper",
+    "name_de": "Eisportionierer",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "7x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "impure_arc_coolant",
+    "name_en": "Impure ARC Coolant",
+    "name_de": "Verunreinigtes ARC Kühlmittel",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "13x Chemikalien",
+    "value": 640
+  },
+  {
+    "id": "light_bulb",
+    "name_en": "Light Bulb",
+    "name_de": "Glühbirne",
+    "rarity": "Uncommon",
+    "category": "Trinket",
+    "action": "keep",
+    "yield": "5x Expedition",
+    "value": 2000
+  },
+  {
+    "id": "magnet",
+    "name_en": "Magnet",
+    "name_de": "Magnet",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 300
+  },
+  {
+    "id": "mechanical_components",
+    "name_en": "Mechanical Components",
+    "name_de": "Mechanische Komponenten",
+    "rarity": "Uncommon",
+    "category": "Refined Material",
+    "action": "keep",
+    "yield": "5x Workshop",
+    "value": 640
+  },
+  {
+    "id": "metal_brackets",
+    "name_en": "Metal Brackets",
+    "name_de": "Metallklammern",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "mushroom",
+    "name_en": "Mushroom",
+    "name_de": "Pilz",
+    "rarity": "Uncommon",
+    "category": "Nature",
+    "action": "keep",
+    "yield": "12x Scrappy",
+    "value": 1000
+  },
+  {
+    "id": "number_plate",
+    "name_en": "Number Plate",
+    "name_de": "Nummernschild",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x Metallteile",
+    "value": 270
+  },
+  {
+    "id": "oil",
+    "name_en": "Oil",
+    "name_de": "Öl",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 300
+  },
+  {
+    "id": "key_patrol_car",
+    "name_en": "Patrol Car Key",
+    "name_de": "Streifenwagen Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "poster_natural_wonders",
+    "name_en": "Poster of Natural Wonders",
+    "name_de": "Poster von Naturwundern",
+    "rarity": "Uncommon",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "pottery",
+    "name_en": "Pottery",
+    "name_de": "Töpferware",
+    "rarity": "Uncommon",
+    "category": "Trinket",
+    "action": "sell",
+    "yield": null,
+    "value": 2000
+  },
+  {
+    "id": "remote_control",
+    "name_en": "Remote Control",
+    "name_de": "Fernbedienung",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Plastikteile, 1x Sensoren",
+    "value": 1000
+  },
+  {
+    "id": "ripped_safety_vest",
+    "name_en": "Ripped Safety Vest",
+    "name_de": "Zerrissene Warnweste",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "1x Magnet, 1x Robuster Stoff",
+    "value": 1000
+  },
+  {
+    "id": "roots",
+    "name_en": "Roots",
+    "name_de": "Wurzeln",
+    "rarity": "Uncommon",
+    "category": "Nature",
+    "action": "keep",
+    "yield": null,
+    "value": 640
+  },
+  {
+    "id": "ruined_baton",
+    "name_en": "Ruined Baton",
+    "name_de": "Ruinierter Schlagstock",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "6x Metallteile, 3x Gummiteile",
+    "value": 640
+  },
+  {
+    "id": "ruined_handcuffs",
+    "name_en": "Ruined Handcuffs",
+    "name_de": "Ruinierte Handschellen",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "ruined_parachute",
+    "name_en": "Ruined Parachute",
+    "name_de": "Ruinierter Fallschirm",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "10x Stoff",
+    "value": 640
+  },
+  {
+    "id": "ruined_tactical_vest",
+    "name_en": "Ruined Tactical Vest",
+    "name_de": "Ruinierte Taktische Weste",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "5x Stoff, 1x Magnet",
+    "value": 640
+  },
+  {
+    "id": "rusted_bolts",
+    "name_en": "Rusted Bolts",
+    "name_de": "Verrostete Bolzen",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "rusty_arc_steel",
+    "name_en": "Rusty ARC Steel",
+    "name_de": "Rostiger ARC Stahl",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "8x Metallteile",
+    "value": 640
+  },
+  {
+    "id": "shredder_gyro",
+    "name_en": "Shredder Gyro",
+    "name_de": "Schredder Gyro",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "3x Mech. Komp., 3x ARC Legierung",
+    "value": 3000
+  },
+  {
+    "id": "simple_gun_parts",
+    "name_en": "Simple Gun Parts",
+    "name_de": "Einfache Waffenteile",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": null,
+    "value": 330
+  },
+  {
+    "id": "snitch_scanner",
+    "name_en": "Snitch Scanner",
+    "name_de": "Snitch Scanner",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "6x Workshop",
+    "value": 2000
+  },
+  {
+    "id": "key_spaceport_trench",
+    "name_en": "Spaceport Trench Tower Key",
+    "name_de": "Raumhafen Graben Turm Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": "1x Quest",
+    "value": 100
+  },
+  {
+    "id": "key_spaceport_warehouse",
+    "name_en": "Spaceport Warehouse Key",
+    "name_de": "Raumhafen Lagerhaus Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "spotter_relay",
+    "name_en": "Spotter Relay",
+    "name_de": "Späher Relais",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "2x Elektr. Komp., 1x ARC Legierung",
+    "value": 2000
+  },
+  {
+    "id": "steel_spring",
+    "name_en": "Steel Spring",
+    "name_de": "Stahlfeder",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "15x Expedition",
+    "value": 300
+  },
+  {
+    "id": "key_stella_montis_admin",
+    "name_en": "Stella Montis Assembly Admin Key",
+    "name_de": "Stella Montis Montage Admin Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "key_stella_montis_medical",
+    "name_en": "Stella Montis Medical Storage Key",
+    "name_de": "Stella Montis Medizinlager Schlüssel",
+    "rarity": "Uncommon",
+    "category": "Key",
+    "action": "keep",
+    "yield": null,
+    "value": 100
+  },
+  {
+    "id": "tattered_arc_lining",
+    "name_en": "Tattered ARC Lining",
+    "name_de": "Zerfetztes ARC Futter",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "12x Stoff",
+    "value": 640
+  },
+  {
+    "id": "tattered_clothes",
+    "name_en": "Tattered Clothes",
+    "name_de": "Zerfetzte Kleidung",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "recycle",
+    "yield": "11x Stoff",
+    "value": 640
+  },
+  {
+    "id": "tick_pod",
+    "name_en": "Tick Pod",
+    "name_de": "Zeckenkapsel",
+    "rarity": "Uncommon",
+    "category": "Recyclable",
+    "action": "keep",
+    "yield": "8x Workshop",
+    "value": 640
+  },
+  {
+    "id": "wires",
+    "name_en": "Wires",
+    "name_de": "Drähte",
+    "rarity": "Uncommon",
+    "category": "Topside Material",
+    "action": "keep",
+    "yield": "30x Expedition, 3x Quest",
+    "value": 200
+  }
+]
