@@ -13,7 +13,7 @@
   {
     "id": "assorted_seeds",
     "name_en": "Assorted Seeds",
-    "name_de": "Verschiedenes Saatgut",
+    "name_de": "Verschiedene Samen",
     "rarity": "Common",
     "category": "Nature",
     "action": "keep",
@@ -68,51 +68,51 @@
   {
     "id": "damaged_arc_powercell",
     "name_en": "Damaged ARC Powercell",
-    "name_de": "Beschädigte ARC-Energiezelle",
+    "name_de": "Beschäd. ARC Energiezelle",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 293,
     "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC-Legierung"
+    "yield_de": "1x ARC Legierung"
   },
   {
     "id": "damaged_fireball_burner",
     "name_en": "Damaged Fireball Burner",
-    "name_de": "Beschädigter Feuerball-Brenner",
+    "name_de": "Beschäd. Feuerball Brenner",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 270,
     "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC-Legierung"
+    "yield_de": "1x ARC Legierung"
   },
   {
     "id": "damaged_hornet_driver",
     "name_en": "Damaged Hornet Driver",
-    "name_de": "Beschädigter Hornissentreiber",
+    "name_de": "Beschäd. Hornet Treiber",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 640,
     "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC-Legierung"
+    "yield_de": "2x ARC Legierung"
   },
   {
     "id": "damaged_rocketeer_driver",
     "name_en": "Damaged Rocketeer Driver",
-    "name_de": "Beschädigter Raketenkanoniertreiber",
+    "name_de": "Beschäd. Rocketeer Treiber",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 2000,
     "yield_en": "3x ARC Alloy",
-    "yield_de": "3x ARC-Legierung"
+    "yield_de": "3x ARC Legierung"
   },
   {
     "id": "damaged_snitch_scanner",
     "name_en": "Damaged Snitch Scanner",
-    "name_de": "Beschädigter Snitch-Scanner",
+    "name_de": "Beschäd. Snitch Scanner",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
@@ -123,24 +123,24 @@
   {
     "id": "damaged_tick_pod",
     "name_en": "Damaged Tick Pod",
-    "name_de": "Beschädigte Zeckenkapsel",
+    "name_de": "Beschäd. Zeckenkapsel",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 270,
     "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC-Legierung"
+    "yield_de": "1x ARC Legierung"
   },
   {
     "id": "damaged_wasp_driver",
     "name_en": "Damaged Wasp Driver",
-    "name_de": "Beschädigter Wespen-Treiber",
+    "name_de": "Beschäd. Wasp Treiber",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
     "value": 270,
     "yield_en": "1x ARC Alloy",
-    "yield_de": "1x ARC-Legierung"
+    "yield_de": "1x ARC Legierung"
   },
   {
     "id": "empty_wine_bottle",
@@ -156,7 +156,7 @@
   {
     "id": "expired_pasta",
     "name_en": "Expired Pasta",
-    "name_de": "Abgelaufene Nudeln",
+    "name_de": "Abgelaufene Pasta",
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
@@ -178,7 +178,7 @@
   {
     "id": "faded_photograph",
     "name_en": "Faded Photograph",
-    "name_de": "Verblichenes Foto",
+    "name_de": "Verblasstes Foto",
     "rarity": "Common",
     "category": "Trinket",
     "action": "keep",
@@ -222,7 +222,7 @@
   {
     "id": "painted_box",
     "name_en": "Painted Box",
-    "name_de": "Bemalte Kiste",
+    "name_de": "Bemalte Schachtel",
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
@@ -244,7 +244,7 @@
   {
     "id": "pop_trigger",
     "name_en": "Pop Trigger",
-    "name_de": "Direktabzug",
+    "name_de": "Pop Trigger",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "keep",
@@ -310,7 +310,7 @@
   {
     "id": "ruined_augment",
     "name_en": "Ruined Augment",
-    "name_de": "Kaputte Verstärkung",
+    "name_de": "Ruiniertes Augment",
     "rarity": "Common",
     "category": "Recyclable",
     "action": "recycle",
@@ -321,7 +321,7 @@
   {
     "id": "silver_teaspoon_set",
     "name_en": "Silver Teaspoon Set",
-    "name_de": "Silberne Teelöffel",
+    "name_de": "Silbernes Teelöffelset",
     "rarity": "Common",
     "category": "Trinket",
     "action": "sell",
@@ -354,7 +354,7 @@
   {
     "id": "very_comfortable_pillow",
     "name_en": "Very Comfortable Pillow",
-    "name_de": "Ultragemütliches Kissen",
+    "name_de": "Sehr bequemes Kissen",
     "rarity": "Common",
     "category": "Trinket",
     "action": "keep",
@@ -376,7 +376,7 @@
   {
     "id": "bastion_cell",
     "name_en": "Bastion Cell",
-    "name_de": "Bastionzelle",
+    "name_de": "Bastion Zelle",
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
@@ -387,7 +387,7 @@
   {
     "id": "key_blue_gate_confiscation",
     "name_en": "Blue Gate Confiscation Room Key",
-    "name_de": "Schlüssel zum Beschlagnahmungsraum des Blauen Tors",
+    "name_de": "Blue Gate Beschlagnahmungsschlüssel",
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
@@ -398,7 +398,7 @@
   {
     "id": "bombardier_cell",
     "name_en": "Bombardier Cell",
-    "name_de": "Bombardier-Zelle",
+    "name_de": "Bombardier Zelle",
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
@@ -409,7 +409,7 @@
   {
     "id": "snow_globe",
     "name_en": "Breathtaking Snow Globe",
-    "name_de": "Entzückende Schneekugel",
+    "name_de": "Atemberaubende Schneekugel",
     "rarity": "Epic",
     "category": "Trinket",
     "action": "sell",
@@ -420,7 +420,7 @@
   {
     "id": "key_buried_city_town_hall",
     "name_en": "Buried City Town Hall Key",
-    "name_de": "Rathausschlüssel (Begrabene Stadt)",
+    "name_de": "Versunkene Stadt Rathaus Schlüssel",
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
@@ -442,7 +442,7 @@
   {
     "id": "key_dam_control_tower",
     "name_en": "Dam Control Tower Key",
-    "name_de": "Schlüssel zum Damm-Kontrollturm",
+    "name_de": "Staudamm Kontrollturm Schlüssel",
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
@@ -453,7 +453,7 @@
   {
     "id": "exodus_modules",
     "name_en": "Exodus Modules",
-    "name_de": "Exodus-Module",
+    "name_de": "Exodus Module",
     "rarity": "Epic",
     "category": "Topside Material",
     "action": "keep",
@@ -470,7 +470,7 @@
     "action": "recycle",
     "value": 3500,
     "yield_en": "3x Battery, 1x Exodus Modules",
-    "yield_de": "3x Akku, 1x Exodus-Module"
+    "yield_de": "3x Batterie, 1x Exodus Module"
   },
   {
     "id": "ion_sputter",
@@ -481,12 +481,12 @@
     "action": "recycle",
     "value": 6000,
     "yield_en": "4x Voltage Converter, 1x Exodus Modules",
-    "yield_de": "4x Spannungswandler, 1x Exodus-Module"
+    "yield_de": "4x Spannungswandler, 1x Exodus Module"
   },
   {
     "id": "lances_mixtape",
     "name_en": "Lance's Mixtape (5th Edition)",
-    "name_de": "Lances Mixtape (5. Auflage)",
+    "name_de": "Lance's Mixtape (5. Aufl.)",
     "rarity": "Epic",
     "category": "Trinket",
     "action": "sell",
@@ -497,7 +497,7 @@
   {
     "id": "leaper_pulse_unit",
     "name_en": "Leaper Pulse Unit",
-    "name_de": "Springer-Pulseinheit",
+    "name_de": "Leaper Impulseinheit",
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
@@ -508,7 +508,7 @@
   {
     "id": "magnetic_accelerator",
     "name_en": "Magnetic Accelerator",
-    "name_de": "Magnetischer Beschleuniger",
+    "name_de": "Magnetbeschleuniger",
     "rarity": "Epic",
     "category": "Refined Material",
     "action": "keep",
@@ -530,7 +530,7 @@
   {
     "id": "mod_components",
     "name_en": "Mod Components",
-    "name_de": "Mod-Komponenten",
+    "name_de": "Mod Komponenten",
     "rarity": "Epic",
     "category": "Advanced Material",
     "action": "keep",
@@ -552,7 +552,7 @@
   {
     "id": "rocketeer_driver",
     "name_en": "Rocketeer Driver",
-    "name_de": "Raketenkanoniertreiber",
+    "name_de": "Rocketeer Treiber",
     "rarity": "Epic",
     "category": "Recyclable",
     "action": "keep",
@@ -569,12 +569,12 @@
     "action": "recycle",
     "value": 3500,
     "yield_en": "1x Sensors, 1x Exodus Modules",
-    "yield_de": "1x Sensoren, 1x Exodus-Module"
+    "yield_de": "1x Sensoren, 1x Exodus Module"
   },
   {
     "id": "key_stella_montis_archives",
     "name_en": "Stella Montis Archives Key",
-    "name_de": "Stella Montis Archivschlüssel",
+    "name_de": "Stella Montis Archiv Schlüssel",
     "rarity": "Epic",
     "category": "Key",
     "action": "keep",
@@ -585,29 +585,29 @@
   {
     "id": "matriarch_reactor",
     "name_en": "Matriarch Reactor",
-    "name_de": "Matriarchenreaktor",
+    "name_de": "Matriarchin Reaktor",
     "rarity": "Legendary",
     "category": "Recyclable",
     "action": "recycle",
     "value": 13000,
     "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
-    "yield_de": "1x Energiestab, 1x Magnetischer Beschleuniger"
+    "yield_de": "1x Energiestab, 1x Magnetbeschleuniger"
   },
   {
     "id": "queen_reactor",
     "name_en": "Queen Reactor",
-    "name_de": "Königin-Reaktor",
+    "name_de": "Königinnen Reaktor",
     "rarity": "Legendary",
     "category": "Recyclable",
     "action": "recycle",
     "value": 13000,
     "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
-    "yield_de": "1x Energiestab, 1x Magnetischer Beschleuniger"
+    "yield_de": "1x Energiestab, 1x Magnetbeschleuniger"
   },
   {
     "id": "adv_arc_powercell",
     "name_en": "Advanced ARC Powercell",
-    "name_de": "Fortschrittliche ARC-Energiezelle",
+    "name_de": "Fortschr. ARC Energiezelle",
     "rarity": "Rare",
     "category": "Misc",
     "action": "keep",
@@ -618,7 +618,7 @@
   {
     "id": "adv_elec_comp",
     "name_en": "Advanced Electrical Components",
-    "name_de": "Fortschrittliche elektrische Komponenten",
+    "name_de": "Fortschr. elektrische Komponenten",
     "rarity": "Rare",
     "category": "Advanced Material",
     "action": "keep",
@@ -629,7 +629,7 @@
   {
     "id": "adv_mech_comp",
     "name_en": "Advanced Mechanical Components",
-    "name_de": "Fortschrittliche mechanische Komponenten",
+    "name_de": "Fortschr. mech. Komponenten",
     "rarity": "Rare",
     "category": "Advanced Material",
     "action": "keep",
@@ -662,7 +662,7 @@
   {
     "id": "arc_circuitry",
     "name_en": "ARC Circuitry",
-    "name_de": "ARC-Schaltkreise",
+    "name_de": "ARC Schaltkreise",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -673,7 +673,7 @@
   {
     "id": "arc_coolant",
     "name_en": "ARC Coolant",
-    "name_de": "ARC-Kühlmittel",
+    "name_de": "ARC Kühlmittel",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -684,7 +684,7 @@
   {
     "id": "arc_flex_rubber",
     "name_en": "ARC Flex Rubber",
-    "name_de": "ARC-Flexgummi",
+    "name_de": "ARC Flex-Gummi",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -695,7 +695,7 @@
   {
     "id": "arc_motion_core",
     "name_en": "ARC Motion Core",
-    "name_de": "ARC-Bewegungskern",
+    "name_de": "ARC Bewegungskern",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -706,7 +706,7 @@
   {
     "id": "arc_perf_steel",
     "name_en": "ARC Performance Steel",
-    "name_de": "ARC-Hochleistungsstahl",
+    "name_de": "ARC Leistungsstahl",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -717,7 +717,7 @@
   {
     "id": "arc_synth_resin",
     "name_en": "ARC Synthetic Resin",
-    "name_de": "ARC-Kunstharz",
+    "name_de": "ARC Kunstharz",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -728,7 +728,7 @@
   {
     "id": "arc_thermo_lining",
     "name_en": "ARC Thermo Lining",
-    "name_de": "ARC-Thermofütterung",
+    "name_de": "ARC Thermofutter",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -750,7 +750,7 @@
   {
     "id": "key_blue_gate_comm",
     "name_en": "Blue Gate Communication Tower Key",
-    "name_de": "Schlüssel zum Kommunikationsturm am Blauen Tor",
+    "name_de": "Blue Gate Funkturm Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -767,7 +767,7 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "2x Battery, 6x Metal Parts",
-    "yield_de": "2x Akku, 6x Metallteile"
+    "yield_de": "2x Batterie, 6x Metallteile"
   },
   {
     "id": "broken_guidance",
@@ -789,7 +789,7 @@
     "action": "recycle",
     "value": 2000,
     "yield_en": "3x Sensors, 3x Wires",
-    "yield_de": "3x Sensoren, 3x Kabel"
+    "yield_de": "3x Sensoren, 3x Drähte"
   },
   {
     "id": "broken_taser",
@@ -800,12 +800,12 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "2x Battery, 2x Wires",
-    "yield_de": "2x Akku, 2x Kabel"
+    "yield_de": "2x Batterie, 2x Drähte"
   },
   {
     "id": "key_buried_city_hospital",
     "name_en": "Buried City Hospital Key",
-    "name_de": "Krankenhausschlüssel (Begrabene Stadt)",
+    "name_de": "Versunkene Stadt Krankenhaus Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -827,7 +827,7 @@
   {
     "id": "cooling_coil",
     "name_en": "Cooling Coil",
-    "name_de": "Kühlspule",
+    "name_de": "Kühlspirale",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -838,7 +838,7 @@
   {
     "id": "cooling_fan",
     "name_en": "Cooling Fan",
-    "name_de": "Kühlungslüfter",
+    "name_de": "Lüfter",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -849,7 +849,7 @@
   {
     "id": "cracked_bioscanner",
     "name_en": "Cracked Bioscanner",
-    "name_de": "Angeschlagener Bioscanner",
+    "name_de": "Gesprungener Bioscanner",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -860,7 +860,7 @@
   {
     "id": "key_dam_testing_annex",
     "name_en": "Dam Testing Annex Key",
-    "name_de": "Testanbauschlüssel (Damm)",
+    "name_de": "Staudamm Testanbau Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -871,7 +871,7 @@
   {
     "id": "damaged_heat_sink",
     "name_en": "Damaged Heat Sink",
-    "name_de": "Beschädigter Kühlkörper",
+    "name_de": "Beschäd. Kühlkörper",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -904,7 +904,7 @@
   {
     "id": "expired_respirator",
     "name_en": "Expired Respirator",
-    "name_de": "Abgelaufenes Atemgerät",
+    "name_de": "Abgelaufene Atemschutzmaske",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -915,7 +915,7 @@
   {
     "id": "explosive_compound",
     "name_en": "Explosive Compound",
-    "name_de": "Explosive Substanz",
+    "name_de": "Sprengstoffmischung",
     "rarity": "Rare",
     "category": "Refined Material",
     "action": "keep",
@@ -937,7 +937,7 @@
   {
     "id": "fine_wristwatch",
     "name_en": "Fine Wristwatch",
-    "name_de": "Edle Armbanduhr",
+    "name_de": "Feine Armbanduhr",
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
@@ -948,18 +948,18 @@
   {
     "id": "frequency_modulation_box",
     "name_en": "Frequency Modulation Box",
-    "name_de": "Frequenzmodulationsbox",
+    "name_de": "Frequenzmodulations-Box",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 3000,
     "yield_en": "1x Advanced Electrical Components, 1x Speaker Component",
-    "yield_de": "1x Fortschrittliche elektrische Komponenten, 1x Lautsprecher-Komponente"
+    "yield_de": "1x Fortschr. elektr. Komp., 1x Lautsprecherkomp."
   },
   {
     "id": "fried_motherboard",
     "name_en": "Fried Motherboard",
-    "name_de": "Durchgebranntes Motherboard",
+    "name_de": "Durchgebranntes Mainboard",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -987,12 +987,12 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "6x Rubber Parts, 2x Speaker Component",
-    "yield_de": "6x Gummiteile, 2x Lautsprecher-Komponente"
+    "yield_de": "6x Gummiteile, 2x Lautsprecherkomp."
   },
   {
     "id": "heavy_gun_parts",
     "name_en": "Heavy Gun Parts",
-    "name_de": "Teile für Waffe mit schwerer Munition",
+    "name_de": "Schwere Waffenteile",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -1003,7 +1003,7 @@
   {
     "id": "hornet_driver",
     "name_en": "Hornet Driver",
-    "name_de": "Hornissentreiber",
+    "name_de": "Hornet Treiber",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1025,7 +1025,7 @@
   {
     "id": "industrial_battery",
     "name_en": "Industrial Battery",
-    "name_de": "Industrie-Akku",
+    "name_de": "Industriebatterie",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1036,7 +1036,7 @@
   {
     "id": "industrial_charger",
     "name_en": "Industrial Charger",
-    "name_de": "Industrie-Ladegerät",
+    "name_de": "Industrieladegerät",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -1047,7 +1047,7 @@
   {
     "id": "industrial_magnet",
     "name_en": "Industrial Magnet",
-    "name_de": "Industrie-Magnet",
+    "name_de": "Industriemagnet",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -1058,7 +1058,7 @@
   {
     "id": "lab_reagents",
     "name_en": "Laboratory Reagents",
-    "name_de": "Laboringredienzien",
+    "name_de": "Laborreagenzien",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1069,7 +1069,7 @@
   {
     "id": "light_gun_parts",
     "name_en": "Light Gun Parts",
-    "name_de": "Teile für Waffe mit leichter Munition",
+    "name_de": "Leichte Waffenteile",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -1080,7 +1080,7 @@
   {
     "id": "medium_gun_parts",
     "name_en": "Medium Gun Parts",
-    "name_de": "Teile für Waffe mit mittlerer Munition",
+    "name_de": "Mittlere Waffenteile",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -1097,7 +1097,7 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "1x Advanced Mechanical Components, 3x Magnet",
-    "yield_de": "1x Fortschrittliche mechanische Komponenten, 3x Magnet"
+    "yield_de": "1x Fortschr. mech. Komp., 3x Magnet"
   },
   {
     "id": "mini_centrifuge",
@@ -1108,7 +1108,7 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "1x Advanced Mechanical Components, 2x Canister",
-    "yield_de": "1x Fortschrittliche mechanische Komponenten, 2x Kanister"
+    "yield_de": "1x Fortschr. mech. Komp., 2x Kanister"
   },
   {
     "id": "moss",
@@ -1146,7 +1146,7 @@
   {
     "id": "music_box",
     "name_en": "Music Box",
-    "name_de": "Spieluhr",
+    "name_de": "Musikbox",
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
@@ -1168,7 +1168,7 @@
   {
     "id": "polluted_air_filter",
     "name_en": "Polluted Air Filter",
-    "name_de": "Verunreinigter Luftfilter",
+    "name_de": "Verschmutzter Luftfilter",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -1179,13 +1179,13 @@
   {
     "id": "portable_tv",
     "name_en": "Portable TV",
-    "name_de": "Tragbarer Fernseher",
+    "name_de": "Tragbarer TV",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 2000,
     "yield_en": "2x Battery, 6x Wires",
-    "yield_de": "2x Akku, 6x Kabel"
+    "yield_de": "2x Batterie, 6x Drähte"
   },
   {
     "id": "power_bank",
@@ -1196,7 +1196,7 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "2x Battery, 2x Wires",
-    "yield_de": "2x Akku, 2x Kabel"
+    "yield_de": "2x Batterie, 2x Drähte"
   },
   {
     "id": "power_cable",
@@ -1229,7 +1229,7 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "1x Processor, 2x Wires",
-    "yield_de": "1x Prozessor, 2x Kabel"
+    "yield_de": "1x Prozessor, 2x Drähte"
   },
   {
     "id": "radio",
@@ -1240,23 +1240,23 @@
     "action": "recycle",
     "value": 1000,
     "yield_en": "1x Speaker Component, 1x Sensors",
-    "yield_de": "1x Lautsprecher-Komponente, 1x Sensoren"
+    "yield_de": "1x Lautsprecherkomp., 1x Sensoren"
   },
   {
     "id": "radio_relay",
     "name_en": "Radio Relay",
-    "name_de": "Radio-Relais",
+    "name_de": "Funkrelais",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 3000,
     "yield_en": "2x Speaker Component, 2x Sensors",
-    "yield_de": "2x Lautsprecher-Komponente, 2x Sensoren"
+    "yield_de": "2x Lautsprecherkomp., 2x Sensoren"
   },
   {
     "id": "key_raider_hatch",
     "name_en": "Raider Hatch Key",
-    "name_de": "Raider-Lukenschlüssel",
+    "name_de": "Raider Luke Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -1267,7 +1267,7 @@
   {
     "id": "red_coral_jewelry",
     "name_en": "Red Coral Jewelry",
-    "name_de": "Rote Korallenschmuck",
+    "name_de": "Roter Korallenschmuck",
     "rarity": "Rare",
     "category": "Trinket",
     "action": "sell",
@@ -1284,7 +1284,7 @@
     "action": "recycle",
     "value": 2000,
     "yield_en": "2x Synthesized Fuel, 6x Metal Parts",
-    "yield_de": "2x Synthetischer Treibstoff, 6x Metallteile"
+    "yield_de": "2x Synth. Treibstoff, 6x Metallteile"
   },
   {
     "id": "rope",
@@ -1306,7 +1306,7 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "2x Electrical Components, 2x Processor",
-    "yield_de": "2x Elektrische Komponenten, 2x Prozessor"
+    "yield_de": "2x Elektr. Komp., 2x Prozessor"
   },
   {
     "id": "rubber_pad",
@@ -1322,7 +1322,7 @@
   {
     "id": "ruined_accordion",
     "name_en": "Ruined Accordion",
-    "name_de": "Kaputtes Akkordeon",
+    "name_de": "Ruiniertes Akkordeon",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -1333,7 +1333,7 @@
   {
     "id": "ruined_riot_shield",
     "name_en": "Ruined Riot Shield",
-    "name_de": "Kaputtes Schutzschild",
+    "name_de": "Ruinierter Schutzschild",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
@@ -1355,7 +1355,7 @@
   {
     "id": "rusted_shut_medkit",
     "name_en": "Rusted Shut Medical Kit",
-    "name_de": "Verrosteter verschlossener Verbandkasten",
+    "name_de": "Verrostetes Medikit",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1383,7 +1383,7 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "2x Electrical Components, 14x Assorted Seeds",
-    "yield_de": "2x Elektrische Komponenten, 14x Verschiedenes Saatgut"
+    "yield_de": "2x Elektr. Komp., 14x Verschiedene Samen"
   },
   {
     "id": "sensors",
@@ -1399,7 +1399,7 @@
   {
     "id": "sentinel_firing_core",
     "name_en": "Sentinel Firing Core",
-    "name_de": "Wächter-Feuerkern",
+    "name_de": "Wächter Feuerkern",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1416,12 +1416,12 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "2x Electrical Components, 2x Voltage Converter",
-    "yield_de": "2x Elektrische Komponenten, 2x Spannungswandler"
+    "yield_de": "2x Elektr. Komp., 2x Spannungswandler"
   },
   {
     "id": "key_spaceport_container",
     "name_en": "Spaceport Container Storage Key",
-    "name_de": "Raumhafen-Containerlager-Schlüssel",
+    "name_de": "Raumhafen Containerlager Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -1432,7 +1432,7 @@
   {
     "id": "key_spaceport_control",
     "name_en": "Spaceport Control Tower Key",
-    "name_de": "Raumhafen-Kontrollturm-Schlüssel",
+    "name_de": "Raumhafen Kontrollturm Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -1443,7 +1443,7 @@
   {
     "id": "speaker_component",
     "name_en": "Speaker Component",
-    "name_de": "Lautsprecher-Komponente",
+    "name_de": "Lautsprecher Komponente",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -1460,23 +1460,23 @@
     "action": "recycle",
     "value": 3000,
     "yield_en": "1x Advanced Electrical Components, 1x Sensors",
-    "yield_de": "1x Fortschrittliche elektrische Komponenten, 1x Sensoren"
+    "yield_de": "1x Fortschr. elektr. Komp., 1x Sensoren"
   },
   {
     "id": "spring_cushion",
     "name_en": "Spring Cushion",
-    "name_de": "Sprungfederkissen",
+    "name_de": "Federkissen",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 2000,
     "yield_en": "2x Durable Cloth, 2x Steel Spring",
-    "yield_de": "2x Strapazierfähiges Stoffstück, 2x Stahlfeder"
+    "yield_de": "2x Robuster Stoff, 2x Stahlfeder"
   },
   {
     "id": "key_stella_montis_security",
     "name_en": "Stella Montis Security Checkpoint Key",
-    "name_de": "Schlüssel zur Sicherheitskontrolle in Stella Montis",
+    "name_de": "Stella Montis Sicherheitskontrolle Schlüssel",
     "rarity": "Rare",
     "category": "Key",
     "action": "keep",
@@ -1487,7 +1487,7 @@
   {
     "id": "surveyor_vault",
     "name_en": "Surveyor Vault",
-    "name_de": "Beobachtertresor",
+    "name_de": "Vermesser Tresor",
     "rarity": "Rare",
     "category": "Topside Material",
     "action": "keep",
@@ -1520,13 +1520,13 @@
   {
     "id": "telemetry_transceiver",
     "name_en": "Telemetry Transceiver",
-    "name_de": "Telemetrie-Empfänger",
+    "name_de": "Telemetrie Sendeempfänger",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 3000,
     "yield_en": "1x Advanced Electrical Components, 1x Processor",
-    "yield_de": "1x Fortschrittliche elektrische Komponenten, 1x Prozessor"
+    "yield_de": "1x Fortschr. elektr. Komp., 1x Prozessor"
   },
   {
     "id": "thermostat",
@@ -1570,7 +1570,7 @@
     "action": "recycle",
     "value": 2000,
     "yield_en": "1x Mechanical Components, 3x Oil",
-    "yield_de": "1x Mechanische Komponenten, 3x Öl"
+    "yield_de": "1x Mech. Komp., 3x Öl"
   },
   {
     "id": "unusable_weapon",
@@ -1608,7 +1608,7 @@
   {
     "id": "wasp_driver",
     "name_en": "Wasp Driver",
-    "name_de": "Wespentreiber",
+    "name_de": "Wasp Treiber",
     "rarity": "Rare",
     "category": "Recyclable",
     "action": "keep",
@@ -1674,7 +1674,7 @@
   {
     "id": "arc_alloy",
     "name_en": "ARC Alloy",
-    "name_de": "ARC-Legierung",
+    "name_de": "ARC Legierung",
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
@@ -1685,7 +1685,7 @@
   {
     "id": "battery",
     "name_en": "Battery",
-    "name_de": "Akku",
+    "name_de": "Batterie",
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
@@ -1696,7 +1696,7 @@
   {
     "id": "key_blue_gate_cellar",
     "name_en": "Blue Gate Cellar Key",
-    "name_de": "Blauer Tor Kellerschlüssel",
+    "name_de": "Blue Gate Keller Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1707,7 +1707,7 @@
   {
     "id": "key_blue_gate_village",
     "name_en": "Blue Gate Village Key",
-    "name_de": "Blauer Tor Dorfschlüssel",
+    "name_de": "Blue Gate Dorf Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1718,7 +1718,7 @@
   {
     "id": "key_buried_city_employee",
     "name_en": "Buried City JKV Employee Access Card",
-    "name_de": "JKV-Mitarbeiterzugangskarte (Begrabene Stadt)",
+    "name_de": "Versunkene Stadt JKV Mitarbeiterkarte",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1729,7 +1729,7 @@
   {
     "id": "key_buried_city_residential",
     "name_en": "Buried City Residential Mastery Key",
-    "name_de": "Vergrabene Stadt Wohngebiet-Hauptschlüssel",
+    "name_de": "Versunkene Stadt Wohngebiet Hauptschlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1740,13 +1740,13 @@
   {
     "id": "burned_arc_circuitry",
     "name_en": "Burned ARC Circuitry",
-    "name_de": "Durchgebrannte ARC-Schaltkreise",
+    "name_de": "Verbrannte ARC Schaltkreise",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
     "value": 640,
     "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC-Legierung"
+    "yield_de": "2x ARC Legierung"
   },
   {
     "id": "camera_lens",
@@ -1784,7 +1784,7 @@
   {
     "id": "crude_explosives",
     "name_en": "Crude Explosives",
-    "name_de": "Rohe Sprengstoffe",
+    "name_de": "Einfacher Sprengstoff",
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
@@ -1795,7 +1795,7 @@
   {
     "id": "crumpled_plastic_bottle",
     "name_en": "Crumpled Plastic Bottle",
-    "name_de": "Zerknitterte Plastikflasche",
+    "name_de": "Zerknüllte Plastikflasche",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -1806,7 +1806,7 @@
   {
     "id": "key_dam_staff",
     "name_en": "Dam Staff Room Key",
-    "name_de": "Damm-Personalraum-Schlüssel",
+    "name_de": "Staudamm Personalraum Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1817,7 +1817,7 @@
   {
     "id": "key_dam_surveillance",
     "name_en": "Dam Surveillance Key",
-    "name_de": "Überwachungsschlüssel (Damm)",
+    "name_de": "Staudamm Überwachung Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1828,7 +1828,7 @@
   {
     "id": "key_dam_utility",
     "name_en": "Dam Utility Key",
-    "name_de": "Damm-Versorgungsschlüssel",
+    "name_de": "Staudamm Wartungsschlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -1839,13 +1839,13 @@
   {
     "id": "damaged_arc_motion_core",
     "name_en": "Damaged ARC Motion Core",
-    "name_de": "Beschädigter ARC-Bewegungskern",
+    "name_de": "Beschäd. ARC Bewegungskern",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
     "value": 640,
     "yield_en": "2x ARC Alloy",
-    "yield_de": "2x ARC-Legierung"
+    "yield_de": "2x ARC Legierung"
   },
   {
     "id": "dart_board",
@@ -1861,7 +1861,7 @@
   {
     "id": "deflated_football",
     "name_en": "Deflated Football",
-    "name_de": "Schlapper Fußball",
+    "name_de": "Platter Fußball",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -1872,7 +1872,7 @@
   {
     "id": "degraded_arc_rubber",
     "name_en": "Degraded ARC Rubber",
-    "name_de": "Zersetztes ARC-Gummi",
+    "name_de": "Zersetztes ARC Gummi",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -1883,7 +1883,7 @@
   {
     "id": "dried_out_arc_resin",
     "name_en": "Dried-Out ARC Resin",
-    "name_de": "Ausgetrocknetes ARC-Harz",
+    "name_de": "Ausgetrocknetes ARC Harz",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -1894,7 +1894,7 @@
   {
     "id": "duct_tape",
     "name_en": "Duct Tape",
-    "name_de": "Isolierband",
+    "name_de": "Klebeband",
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
@@ -1905,7 +1905,7 @@
   {
     "id": "durable_cloth",
     "name_en": "Durable Cloth",
-    "name_de": "Strapazierfähiges Stoffstück",
+    "name_de": "Robuster Stoff",
     "rarity": "Uncommon",
     "category": "Refined Material",
     "action": "keep",
@@ -1938,7 +1938,7 @@
   {
     "id": "fireball_burner",
     "name_en": "Fireball Burner",
-    "name_de": "Feuerballbrenner",
+    "name_de": "Feuerball Brenner",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "keep",
@@ -1960,7 +1960,7 @@
   {
     "id": "great_mullein",
     "name_en": "Great Mullein",
-    "name_de": "Kleinblütige Königskerze",
+    "name_de": "Königskerze",
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",
@@ -1993,7 +1993,7 @@
   {
     "id": "impure_arc_coolant",
     "name_en": "Impure ARC Coolant",
-    "name_de": "Unreines ARC-Kühlmittel",
+    "name_de": "Verunreinigtes ARC Kühlmittel",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2037,7 +2037,7 @@
   {
     "id": "metal_brackets",
     "name_en": "Metal Brackets",
-    "name_de": "Metallhalterungen",
+    "name_de": "Metallklammern",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2081,7 +2081,7 @@
   {
     "id": "key_patrol_car",
     "name_en": "Patrol Car Key",
-    "name_de": "Streifenwagenschlüssel",
+    "name_de": "Streifenwagen Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -2092,7 +2092,7 @@
   {
     "id": "poster_natural_wonders",
     "name_en": "Poster of Natural Wonders",
-    "name_de": "Naturwunder-Poster",
+    "name_de": "Poster von Naturwundern",
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
@@ -2103,7 +2103,7 @@
   {
     "id": "pottery",
     "name_en": "Pottery",
-    "name_de": "Keramik",
+    "name_de": "Töpferware",
     "rarity": "Uncommon",
     "category": "Trinket",
     "action": "sell",
@@ -2125,13 +2125,13 @@
   {
     "id": "ripped_safety_vest",
     "name_en": "Ripped Safety Vest",
-    "name_de": "Zerfetzte Sicherheitsweste",
+    "name_de": "Zerrissene Warnweste",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
     "value": 1000,
     "yield_en": "1x Magnet, 1x Durable Cloth",
-    "yield_de": "1x Magnet, 1x Strapazierfähiges Stoffstück"
+    "yield_de": "1x Magnet, 1x Robuster Stoff"
   },
   {
     "id": "roots",
@@ -2147,7 +2147,7 @@
   {
     "id": "ruined_baton",
     "name_en": "Ruined Baton",
-    "name_de": "Kaputter Schlagstock",
+    "name_de": "Ruinierter Schlagstock",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2158,7 +2158,7 @@
   {
     "id": "ruined_handcuffs",
     "name_en": "Ruined Handcuffs",
-    "name_de": "Kaputte Handschellen",
+    "name_de": "Ruinierte Handschellen",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2169,7 +2169,7 @@
   {
     "id": "ruined_parachute",
     "name_en": "Ruined Parachute",
-    "name_de": "Kaputter Fallschirm",
+    "name_de": "Ruinierter Fallschirm",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2180,7 +2180,7 @@
   {
     "id": "ruined_tactical_vest",
     "name_en": "Ruined Tactical Vest",
-    "name_de": "Zerfetzte taktische Weste",
+    "name_de": "Ruinierte Taktische Weste",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2202,7 +2202,7 @@
   {
     "id": "rusty_arc_steel",
     "name_en": "Rusty ARC Steel",
-    "name_de": "Rostiger ARC-Stahl",
+    "name_de": "Rostiger ARC Stahl",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2213,13 +2213,13 @@
   {
     "id": "shredder_gyro",
     "name_en": "Shredder Gyro",
-    "name_de": "Shredder-Gyroskop",
+    "name_de": "Schredder Gyro",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
     "value": 3000,
     "yield_en": "3x Mechanical Components, 3x ARC Alloy",
-    "yield_de": "3x Mechanische Komponenten, 3x ARC-Legierung"
+    "yield_de": "3x Mech. Komp., 3x ARC Legierung"
   },
   {
     "id": "simple_gun_parts",
@@ -2235,7 +2235,7 @@
   {
     "id": "snitch_scanner",
     "name_en": "Snitch Scanner",
-    "name_de": "Spitzel-Scanner",
+    "name_de": "Snitch Scanner",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "keep",
@@ -2246,7 +2246,7 @@
   {
     "id": "key_spaceport_trench",
     "name_en": "Spaceport Trench Tower Key",
-    "name_de": "Raumhafen-Grabentürme Schlüssel",
+    "name_de": "Raumhafen Graben Turm Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -2257,7 +2257,7 @@
   {
     "id": "key_spaceport_warehouse",
     "name_en": "Spaceport Warehouse Key",
-    "name_de": "Raumhafen-Lagerhaus-Schlüssel",
+    "name_de": "Raumhafen Lagerhaus Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -2268,13 +2268,13 @@
   {
     "id": "spotter_relay",
     "name_en": "Spotter Relay",
-    "name_de": "Aufklärer-Relais",
+    "name_de": "Späher Relais",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
     "value": 2000,
     "yield_en": "2x Electrical Components, 1x ARC Alloy",
-    "yield_de": "2x Elektrische Komponenten, 1x ARC-Legierung"
+    "yield_de": "2x Elektr. Komp., 1x ARC Legierung"
   },
   {
     "id": "steel_spring",
@@ -2290,7 +2290,7 @@
   {
     "id": "key_stella_montis_admin",
     "name_en": "Stella Montis Assembly Admin Key",
-    "name_de": "Schlüssel zur Montageverwaltung in Stella Montis",
+    "name_de": "Stella Montis Montage Admin Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -2301,7 +2301,7 @@
   {
     "id": "key_stella_montis_medical",
     "name_en": "Stella Montis Medical Storage Key",
-    "name_de": "Stella Montis Medizinlager-Schlüssel",
+    "name_de": "Stella Montis Medizinlager Schlüssel",
     "rarity": "Uncommon",
     "category": "Key",
     "action": "keep",
@@ -2312,7 +2312,7 @@
   {
     "id": "tattered_arc_lining",
     "name_en": "Tattered ARC Lining",
-    "name_de": "Zerfetzte ARC-Fütterung",
+    "name_de": "Zerfetztes ARC Futter",
     "rarity": "Uncommon",
     "category": "Recyclable",
     "action": "recycle",
@@ -2345,7 +2345,7 @@
   {
     "id": "wires",
     "name_en": "Wires",
-    "name_de": "Kabel",
+    "name_de": "Drähte",
     "rarity": "Uncommon",
     "category": "Topside Material",
     "action": "keep",

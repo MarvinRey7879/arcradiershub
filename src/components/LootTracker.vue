@@ -5,12 +5,11 @@ import lootData from '../../loot_data.json';
 
 // --- State ---
 const searchQuery = ref('');
-const currentLang = ref('de');
+const currentLang = ref('en');
 const selectedRarities = ref([]);
 const selectedActions = ref([]);
 
-// Standardwert wird gleich in updateDimensions überschrieben, 
-// aber wir setzen hier 7 als Fallback für Desktop.
+// Standardwert (wird durch updateDimensions beim Start überschrieben)
 const itemsPerRow = ref(7);
 
 // Für Responsive Logic
@@ -30,41 +29,50 @@ const actions = [
 // --- Window Resize & Default Column Logic ---
 const updateDimensions = () => {
     if (typeof window !== 'undefined') {
+        // Bei Resize NUR die Breite aktualisieren, NICHT die Spaltenanzahl überschreiben!
         windowWidth.value = window.innerWidth;
-
-        // "Standardmäßig": Wir setzen den Wert hart, wenn die Größe sich ändert.
-        // Handy (< 768px) -> 3
-        // Tablet (< 1200px) -> 4
-        // Desktop (>= 1200px) -> 7
-        if (windowWidth.value < 768) {
-            itemsPerRow.value = 3;
-        } else if (windowWidth.value < 1200) {
-            itemsPerRow.value = 4;
-        } else {
-            itemsPerRow.value = 7;
-        }
     }
 };
 
 onMounted(() => {
     nextTick(() => {
-        updateDimensions();
+        updateDimensions();   // 1. Breite messen
+        setInitialColumns();  // 2. Einmalig Standard setzen (respektiert danach User-Wahl)
         window.addEventListener('resize', updateDimensions);
     });
 });
-
+const setInitialColumns = () => {
+    if (windowWidth.value < 768) {
+        itemsPerRow.value = 3;
+    } else if (windowWidth.value < 1200) {
+        itemsPerRow.value = 4;
+    } else {
+        itemsPerRow.value = 7;
+    }
+};
 onUnmounted(() => {
     window.removeEventListener('resize', updateDimensions);
 });
 
-// --- Computed: Einfache Zahlen-Optionen ---
+// --- Computed: Zahlen-Optionen mit Limitierung ---
 const columnOptions = computed(() => {
     const opts = [];
-    // Einfache Liste an Auswahlmöglichkeiten
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15];
 
+    // Hier definieren wir das Limit basierend auf der Breite
+    let maxColumns = 15; // Desktop Standard
+
+    if (windowWidth.value < 768) {
+        maxColumns = 5; // Handy Limit
+    } else if (windowWidth.value < 1200) {
+        maxColumns = 8; // Tablet Limit
+    }
+
+    // Wir filtern die Liste, sodass nur erlaubte Spaltenzahlen angezeigt werden
     numbers.forEach(n => {
-        opts.push({ value: n, label: String(n) });
+        if (n <= maxColumns) {
+            opts.push({ value: n, label: String(n) });
+        }
     });
 
     return opts;
@@ -128,7 +136,6 @@ const t = (key) => {
     return dict[key][currentLang.value];
 };
 </script>
-
 <template>
     <div class="tracker-container">
         <div class="controls">
@@ -184,7 +191,8 @@ const t = (key) => {
                 </div>
 
                 <div class="image-wrapper">
-                    <img :src="getImageUrl(item.id)" @error="handleImageError" alt="Item Image" />
+                    <img :src="getImageUrl(item.id)" loading="lazy" decoding="async" @error="handleImageError"
+                        alt="Item Image" />
                 </div>
 
                 <div class="card-content">
