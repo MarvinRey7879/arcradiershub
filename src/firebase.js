@@ -2,12 +2,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-// Importiere getAnalytics, aber rufe es noch nicht auf
 import { getAnalytics } from "firebase/analytics";
+// NEU: Database importieren
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDSfWL948J-1MEBN8FSh3Z0er4Q99zQzNk",
     authDomain: "arc-raiders-loot-list.firebaseapp.com",
+
+    // !!! WICHTIG: Diese Zeile musst du in der Firebase Console suchen !!!
+    // Geh zu: Projekteinstellungen -> Allgemein -> Deine Apps -> SDK-Einrichtung
+    databaseURL: "https://arc-raiders-loot-list-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "arc-raiders-loot-list",
     storageBucket: "arc-raiders-loot-list.firebasestorage.app",
     messagingSenderId: "192174084342",
@@ -19,13 +24,11 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+// NEU: Die Datenbank exportieren, damit main.js sie nutzen kann
+export const rtdb = getDatabase(app);
 
-// WICHTIGE ÄNDERUNG: Analytics nicht sofort starten!
-// Wir speichern die Instanz hier, aber initialisieren sie erst auf Abruf.
 let analytics;
-
 export const initAnalytics = () => {
-    // Nur starten, wenn wir im Browser sind und es noch nicht läuft
     if (typeof window !== "undefined" && !analytics) {
         analytics = getAnalytics(app);
         console.log("Firebase Analytics gestartet!");

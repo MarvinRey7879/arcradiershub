@@ -1,0 +1,61 @@
+<template>
+    <div class="legal-page">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: December 2025</p>
+
+        <h2>1. General Information</h2>
+        <p>We take the protection of your personal data very seriously. We treat your personal data confidentially and
+            in accordance with the statutory data protection regulations and this privacy policy.</p>
+
+        <h2>2. Hosting (Firebase)</h2>
+        <p>Our website is hosted by Google Firebase (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
+            Ireland). When you visit our website, Firebase collects standard log data (IP address, browser type, etc.)
+            to ensure the security and stability of the service.</p>
+
+        <h2>3. Google Analytics</h2>
+        <p>We use Google Analytics to analyze website usage. The provider is Google Ireland Limited. We use the
+            "Anonymize IP" function, which shortens your IP address within the EU.</p>
+        <p><strong>Consent:</strong> Google Analytics is only activated if you give your explicit consent via our Cookie
+            Banner.</p>
+
+        <h2>4. Google AdSense</h2>
+        <p>We use Google AdSense to display advertisements. Google AdSense uses cookies to serve ads based on a user's
+            prior visits to this or other websites.</p>
+        <p>You can opt-out of personalized advertising by visiting <a href="https://www.google.com/settings/ads"
+                target="_blank">Google Ad Settings</a>.</p>
+
+        <h2>5. Contact</h2>
+        <p>If you have questions about privacy, please contact us via the email provided in the Imprint.</p>
+
+        <div class="back-link">
+            <router-link to="/">← Back to Tool</router-link>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+/* Gleiche Styles wie oben */
+.legal-page {
+    max-width: 800px;
+    margin: 100px auto 40px auto;
+    padding: 20px;
+    color: #e0e0e0;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    color: #e74c3c;
+    margin-top: 30px;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.back-link {
+    margin-top: 40px;
+}
+</style>

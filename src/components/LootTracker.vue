@@ -1,15 +1,14 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
-// WICHTIG: Stelle sicher, dass die loot_data.json korrekt importiert wird
-import lootData from '../../loot_data.json';
+import lootData from '../../loot_data_de_en_fr.json';
 
 // --- State ---
 const searchQuery = ref('');
-const currentLang = ref('en');
+const currentLang = ref('en'); // Standardfall, wird in onMounted überschrieben
 const selectedRarities = ref([]);
 const selectedActions = ref([]);
 
-// Standardwert (wird durch updateDimensions beim Start überschrieben)
+// Standardwert Layout
 const itemsPerRow = ref(7);
 
 // Für Responsive Logic
@@ -20,27 +19,28 @@ const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legen
 const sortOrder = ref('name_asc');
 
 const rarities = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
+
+// WICHTIG: 'fr' ist hier der interne Key für SPANISCH (laut deinen Daten)
 const actions = [
-    { value: 'keep', label: 'Behalten (Keep)', color: '#2ecc71' },
-    { value: 'recycle', label: 'Verwerten (Recycle)', color: '#e67e22' },
-    { value: 'sell', label: 'Verkaufen (Sell)', color: '#f1c40f' }
+    { value: 'keep', label: { de: 'Behalten (Keep)', en: 'Keep', fr: 'Guardar (Keep)' }, color: '#2ecc71' },
+    { value: 'recycle', label: { de: 'Verwerten (Recycle)', en: 'Recycle', fr: 'Reciclar' }, color: '#e67e22' },
+    { value: 'sell', label: { de: 'Verkaufen (Sell)', en: 'Sell', fr: 'Vender (Sell)' }, color: '#f1c40f' }
+];
+
+// --- Sprach-Optionen für das Dropdown ---
+const langOptions = [
+    { value: 'en', label: '🇺🇸 EN' },
+    { value: 'de', label: '🇩🇪 DE' },
+    { value: 'fr', label: '🇪🇸 ES' } // Intern 'fr', aber Label ES
 ];
 
 // --- Window Resize & Default Column Logic ---
 const updateDimensions = () => {
     if (typeof window !== 'undefined') {
-        // Bei Resize NUR die Breite aktualisieren, NICHT die Spaltenanzahl überschreiben!
         windowWidth.value = window.innerWidth;
     }
 };
 
-onMounted(() => {
-    nextTick(() => {
-        updateDimensions();   // 1. Breite messen
-        setInitialColumns();  // 2. Einmalig Standard setzen (respektiert danach User-Wahl)
-        window.addEventListener('resize', updateDimensions);
-    });
-});
 const setInitialColumns = () => {
     if (windowWidth.value < 768) {
         itemsPerRow.value = 3;
@@ -50,43 +50,66 @@ const setInitialColumns = () => {
         itemsPerRow.value = 7;
     }
 };
+
+// --- ON MOUNTED (Sprache & Layout) ---
+onMounted(() => {
+    // 1. Automatische Spracherkennung
+    const navLang = navigator.language || navigator.userLanguage;
+    if (navLang) {
+        const lowerLang = navLang.toLowerCase();
+        console.log('Detected browser language:', lowerLang);
+        if (lowerLang.startsWith('de')) {
+            currentLang.value = 'de';
+        }
+        else if (lowerLang.startsWith('es')) {
+            // WICHTIG: Wenn Browser Spanisch ist, nutzen wir deinen internen Key 'fr'
+            currentLang.value = 'fr';
+        }
+        else {
+            currentLang.value = 'en';
+        }
+    }
+
+    // 2. Layout Initialisierung
+    nextTick(() => {
+        updateDimensions();
+        setInitialColumns();
+        window.addEventListener('resize', updateDimensions);
+    });
+});
+
 onUnmounted(() => {
     window.removeEventListener('resize', updateDimensions);
 });
 
-// --- Computed: Zahlen-Optionen mit Limitierung ---
+// --- Computed: Zahlen-Optionen ---
 const columnOptions = computed(() => {
     const opts = [];
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 15];
-
-    // Hier definieren wir das Limit basierend auf der Breite
-    let maxColumns = 15; // Desktop Standard
+    let maxColumns = 15;
 
     if (windowWidth.value < 768) {
-        maxColumns = 5; // Handy Limit
+        maxColumns = 5;
     } else if (windowWidth.value < 1200) {
-        maxColumns = 8; // Tablet Limit
+        maxColumns = 8;
     }
 
-    // Wir filtern die Liste, sodass nur erlaubte Spaltenzahlen angezeigt werden
     numbers.forEach(n => {
         if (n <= maxColumns) {
             opts.push({ value: n, label: String(n) });
         }
     });
-
     return opts;
 });
 
-// --- Helper: Yield Sprache wählen ---
-const getYield = (item) => {
-    return currentLang.value === 'de' ? item.yield_de : item.yield_en;
-};
+// --- Helper: Dynamischer Sprachzugriff ---
+const getName = (item) => item[`name_${currentLang.value}`] || item.name_en;
+const getYield = (item) => item[`yield_${currentLang.value}`];
 
 // --- Computed: Filter & Sortierung ---
 const filteredItems = computed(() => {
     let result = lootData.filter(item => {
-        const nameToSearch = currentLang.value === 'de' ? item.name_de : item.name_en;
+        const nameToSearch = getName(item);
         if (!nameToSearch) return false;
 
         const matchesSearch = nameToSearch.toLowerCase().includes(searchQuery.value.toLowerCase());
@@ -97,7 +120,6 @@ const filteredItems = computed(() => {
     });
 
     return result.sort((a, b) => {
-        const getName = (obj) => currentLang.value === 'de' ? obj.name_de : obj.name_en;
         switch (sortOrder.value) {
             case 'name_asc': return getName(a).localeCompare(getName(b));
             case 'name_desc': return getName(b).localeCompare(getName(a));
@@ -109,33 +131,33 @@ const filteredItems = computed(() => {
     });
 });
 
-// Grid Style nutzt jetzt direkt den ausgewählten Wert
 const gridStyle = computed(() => {
     return { 'grid-template-columns': `repeat(${itemsPerRow.value}, 1fr)` };
 });
 
 // --- Helper Methoden ---
-const toggleLang = () => { currentLang.value = currentLang.value === 'de' ? 'en' : 'de'; };
 const getImageUrl = (id) => { return `/items/${id}.webp`; };
 const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1a1a1a/FFF?text=No+Image'; };
 const getRarityClass = (rarity) => { return `rarity-${rarity.toLowerCase()}`; };
 
+// --- Übersetzungen ---
 const t = (key) => {
     const dict = {
-        searchPlaceholder: { de: 'Suche Item Name...', en: 'Search item name...' },
-        yieldLabel: { de: 'Verwertung:', en: 'Yield:' },
-        noResults: { de: 'Keine Items gefunden.', en: 'No items found.' },
-        sortNameAZ: { de: 'Name (A-Z)', en: 'Name (A-Z)' },
-        sortNameZA: { de: 'Name (Z-A)', en: 'Name (Z-A)' },
-        sortRarityLowHigh: { de: 'Seltenheit (Niedrig → Hoch)', en: 'Rarity (Low → High)' },
-        sortRarityHighLow: { de: 'Seltenheit (Hoch → Niedrig)', en: 'Rarity (High → Low)' },
-        rarity: { de: 'Seltenheit', en: 'Rarity' },
-        action: { de: 'Aktion', en: 'Action' }
+        searchPlaceholder: { de: 'Suche Item Name...', en: 'Search item name...', fr: 'Buscar objeto...' },
+        yieldLabel: { de: 'Verwertung:', en: 'Yield:', fr: 'Rendimiento:' },
+        noResults: { de: 'Keine Items gefunden.', en: 'No items found.', fr: 'No se encontraron objetos.' },
+        sortNameAZ: { de: 'Name (A-Z)', en: 'Name (A-Z)', fr: 'Nombre (A-Z)' },
+        sortNameZA: { de: 'Name (Z-A)', en: 'Name (Z-A)', fr: 'Nombre (Z-A)' },
+        sortRarityLowHigh: { de: 'Seltenheit (Niedrig → Hoch)', en: 'Rarity (Low → High)', fr: 'Rareza (Baja → Alta)' },
+        sortRarityHighLow: { de: 'Seltenheit (Hoch → Niedrig)', en: 'Rarity (High → Low)', fr: 'Rareza (Alta → Baja)' },
+        rarity: { de: 'Seltenheit', en: 'Rarity', fr: 'Rareza' },
+        action: { de: 'Aktion', en: 'Action', fr: 'Acción' },
+        colLabel: { de: 'Spalten', en: 'Cols', fr: 'Cols' }
     };
-    if (!dict[key]) return key;
-    return dict[key][currentLang.value];
+    return dict[key][currentLang.value] || dict[key]['en'];
 };
 </script>
+
 <template>
     <div class="tracker-container">
         <div class="controls">
@@ -151,14 +173,15 @@ const t = (key) => {
 
                 <select v-model="itemsPerRow" class="control-select columns-select">
                     <option v-for="opt in columnOptions" :key="opt.value" :value="opt.value">
-                        {{ opt.label }}
-                        {{ currentLang === 'de' ? 'Spalten' : 'Cols' }}
+                        {{ opt.label }} {{ t('colLabel') }}
                     </option>
                 </select>
 
-                <button @click="toggleLang" class="lang-btn">
-                    {{ currentLang === 'de' ? '🇺🇸 EN' : '🇩🇪 DE' }}
-                </button>
+                <select v-model="currentLang" class="control-select lang-select">
+                    <option v-for="opt in langOptions" :key="opt.value" :value="opt.value">
+                        {{ opt.label }}
+                    </option>
+                </select>
             </div>
 
             <div class="filter-row">
@@ -176,8 +199,7 @@ const t = (key) => {
                     <div class="checkbox-wrapper">
                         <label v-for="act in actions" :key="act.value" :style="{ color: act.color }">
                             <input type="checkbox" :value="act.value" v-model="selectedActions" />
-                            {{ currentLang === 'de' ? act.label.split('(')[0] : act.label.split('(')[1].replace(')', '')
-                            }}
+                            {{ act.label[currentLang] }}
                         </label>
                     </div>
                 </div>
@@ -197,7 +219,7 @@ const t = (key) => {
 
                 <div class="card-content">
                     <h3 class="item-name">
-                        {{ currentLang === 'de' ? item.name_de : item.name_en }}
+                        {{ getName(item) }}
                     </h3>
 
                     <div class="info-row">
@@ -285,15 +307,9 @@ const t = (key) => {
     height: 45px;
 }
 
-.lang-btn {
-    background: #333;
-    color: white;
-    border: 1px solid #444;
-    padding: 0 20px;
-    border-radius: 8px;
-    cursor: pointer;
+.lang-select {
     font-weight: bold;
-    height: 45px;
+    min-width: 110px;
 }
 
 @media (max-width: 768px) {
@@ -302,8 +318,7 @@ const t = (key) => {
     }
 
     .search-bar,
-    .control-select,
-    .lang-btn {
+    .control-select {
         width: 100%;
     }
 }
