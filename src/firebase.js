@@ -31,7 +31,6 @@ let analytics;
 export const initAnalytics = () => {
     if (typeof window !== "undefined" && !analytics) {
         analytics = getAnalytics(app);
-        console.log("Firebase Analytics gestartet!");
     }
     return analytics;
 };

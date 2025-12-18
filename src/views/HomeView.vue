@@ -5,8 +5,20 @@ import AdBanner from '../components/AdBanner.vue';
 
 const browserLang = ref('en');
 
-// --- SEO DATEN ---
+// --- SEO DATEN (Kombiniert: Patch 1.7.0 + Evergreen Items) ---
 const seoLootList = [
+  // NEU: Patch 1.7.0 Items
+  {
+    id: 'candle_berries',
+    de: 'Kerzenbeeren (Neu)', en: 'Candleberries (New)', es: 'Bayas de vela (Nuevo)',
+    action: 'Keep', reason: 'Flickering Flames Event / Winter Project'
+  },
+  {
+    id: 'empty_wine_bottle',
+    de: 'Leere Weinflasche', en: 'Empty Wine Bottle', es: 'Botella de vino vacía',
+    action: 'Keep', reason: 'Event Item: Candleberry Banquet'
+  },
+  // ALT: Wichtige Standard-Items (beibehalten für SEO)
   {
     id: 'arc_powercell',
     de: 'ARC-Energiezelle', en: 'ARC Powercell', es: 'Celda de energía ARC',
@@ -70,82 +82,180 @@ onMounted(() => {
     <LootTracker />
 
     <AdBanner />
-
     <div class="seo-footer">
 
-      <h1 v-if="browserLang === 'de'">ARC Raiders Loot Tabelle & Recycling Guide</h1>
-      <h1 v-else-if="browserLang === 'es'">Guía de Reciclaje y Tabla de Botín de ARC Raiders</h1>
-      <h1 v-else>ARC Raiders Loot Table & Recycling Guide</h1>
+      <div v-if="browserLang === 'de'">
+        <h1>ARC Raiders Loot Liste & Recycling Guide (Patch 1.7.0)</h1>
+        <p>
+          Willkommen in der größten und aktuellsten <strong>ARC Raiders Item Datenbank</strong>.
+          Unser Tracker ist live aktualisiert für den <strong>Patch 1.7.0 "Cold Snap"</strong>.
+          Wir decken alles ab: Vom neuen <strong>"Flackernde Flammen" (Flickering Flames)</strong> Event bis zum
+          großen <strong>Expeditionsprojekt (Prestige)</strong>.
+          Gleichzeitig findest du hier alle Infos zu klassischen Items: Solltest du Loot <strong>behalten
+            (Keep)</strong>,
+          für Cash <strong>verkaufen (Sell)</strong> oder für Crafting-Materialien <strong>recyceln</strong>?
+        </p>
+      </div>
 
-      <p v-if="browserLang === 'de'">
-        Nutze diesen interaktiven Tracker, um dein Inventar in ARC Raiders zu managen.
-        Finde sofort heraus, welche Items du <strong>behalten (Keep)</strong>, <strong>verkaufen (Sell)</strong> oder
-        <strong>recyceln</strong> solltest.
-      </p>
-      <p v-else-if="browserLang === 'es'">
-        Usa este rastreador interactivo para gestionar tu inventario en ARC Raiders.
-        Decide al instante si debes <strong>guardar (Keep)</strong>, <strong>vender (Sell)</strong> o
-        <strong>reciclar</strong> objetos basándote en las necesidades de fabricación y misiones.
-      </p>
-      <p v-else>
-        Use this interactive tracker to manage your inventory in ARC Raiders.
-        Instantly decide whether to <strong>Keep</strong>, <strong>Sell</strong>, or <strong>Recycle</strong> items
-        based on crafting needs and quest requirements.
-      </p>
+      <div v-else-if="browserLang === 'es'">
+        <h1>Guía de Reciclaje y Tabla de Botín ARC Raiders (Parche 1.7.0)</h1>
+        <p>
+          Bienvenido a la mayor base de datos de <strong>ARC Raiders</strong>, actualizada para el
+          <strong>Parche 1.7.0 "Cold Snap"</strong>.
+          Cubrimos todo: desde el nuevo evento <strong>"Llamas Parpadeantes" (Flickering Flames)</strong> hasta el
+          gran <strong>Proyecto de Expedición (Prestigio)</strong>.
+          Nuestro rastreador te ayuda a decidir al instante: ¿<strong>Guardar (Keep)</strong>, vender por dinero o
+          <strong>reciclar</strong> para materiales?
+        </p>
+      </div>
+
+      <div v-else>
+        <h1>ARC Raiders Loot Table & Recycling Guide (Patch 1.7.0)</h1>
+        <p>
+          Welcome to the biggest and most up-to-date <strong>ARC Raiders Item Database</strong>.
+          Our list is live-updated for the <strong>Patch 1.7.0 "Cold Snap"</strong> release.
+          We cover everything: From the new <strong>"Flickering Flames"</strong> winter event to the
+          major <strong>Expedition Project (Prestige)</strong> mechanics.
+          Our tracker tells you instantly: Should you <strong>Keep loot</strong>, <strong>Sell</strong> for cash, or
+          <strong>Recycle</strong> for crafting materials?
+        </p>
+      </div>
+
+      <div class="seo-faq">
+
+        <div class="faq-item highlight-item">
+          <h3 v-if="browserLang === 'de'">❄️ Welche Items muss ich für das "Flackernde Flammen" Event in ARC Raiders
+            behalten?</h3>
+          <h3 v-else-if="browserLang === 'es'">❄️ ¿Qué objetos guardar para el evento "Llamas Parpadeantes" en ARC
+            Raiders?</h3>
+          <h3 v-else>❄️ Which items to keep for the "Flickering Flames" event in ARC Raiders?</h3>
+
+          <p v-if="browserLang === 'de'">
+            Für das neue <strong>Winter-Projekt (Candleberry Banquet)</strong> musst du spezielle Items sammeln.
+            Behalte unbedingt: <strong>Kerzenbeeren (Candleberries)</strong>, <em>Leere Weinflaschen</em>,
+            <em>Kaffeekannen</em> und <em>Plastikteile</em>. Unser Tracker markiert diese neuen 1.7.0 Items
+            automatisch als "Keep".
+          </p>
+          <p v-else-if="browserLang === 'es'">
+            Para el nuevo <strong>Proyecto de Invierno (Candleberry Banquet)</strong> necesitas recolectar objetos
+            específicos.
+            Asegúrate de guardar: <strong>Bayas de vela (Candleberries)</strong>, <em>Botellas de vino vacías</em>,
+            <em>Cafeteras</em> y <em>Piezas de plástico</em>. Nuestro rastreador marca estos nuevos objetos
+            automáticamente.
+          </p>
+          <p v-else>
+            For the new <strong>Winter Project (Candleberry Banquet)</strong>, you need to scavenge specific items.
+            Definitely keep: <strong>Candleberries</strong>, <em>Empty Wine Bottles</em>, <em>Coffee Pots</em>, and
+            <em>Plastic Parts</em>.
+            Our tracker automatically marks these new 1.7.0 items as "Keep".
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 v-if="browserLang === 'de'">Sollte ich ARC-Energiezellen (Powercells) verkaufen?</h3>
+          <h3 v-else-if="browserLang === 'es'">¿Debo vender Celdas de energía ARC en el juego?</h3>
+          <h3 v-else>Should I sell ARC Powercells in ARC Raiders?</h3>
+
+          <p v-if="browserLang === 'de'">
+            Nein! Auch in Patch 1.7.0 sind <strong>ARC-Energiezellen</strong> essenziell für Waffen-Upgrades an der
+            Werkbank.
+            Verkaufe sie niemals an den Automaten.
+          </p>
+          <p v-else-if="browserLang === 'es'">
+            ¡No! Incluso en el parche 1.7.0, las <strong>Celdas de energía ARC</strong> son esenciales para mejorar
+            armas.
+            Nunca las vendas.
+          </p>
+          <p v-else>
+            No! Even in Patch 1.7.0, <strong>ARC Powercells</strong> are essential for weapon upgrades at the workbench.
+            Never sell them to the vending machines.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 v-if="browserLang === 'de'">Recycling Guide: Welche Items sollte ich in ARC Raiders verwerten?</h3>
+          <h3 v-else-if="browserLang === 'es'">Guía de reciclaje: ¿Qué objetos debo reciclar en ARC Raiders?</h3>
+          <h3 v-else>Recycling Guide: Which items should I recycle in ARC Raiders?</h3>
+
+          <p v-if="browserLang === 'de'">
+            Du solltest fast immer <strong>Unbrauchbare Waffen</strong> und Elektronik wie <em>Geigerzähler</em>
+            recyceln. Das ist der beste Weg, um an <strong>ARC-Legierung</strong> für das
+            <strong>Expeditionsprojekt</strong> zu kommen.
+          </p>
+          <p v-else-if="browserLang === 'es'">
+            Casi siempre debes reciclar <strong>Armas inutilizables</strong> y electrónica como <em>Contadores
+              Geiger</em>.
+            Es la mejor forma de obtener <strong>Aleación ARC</strong> para el <strong>Proyecto de Expedición</strong>.
+          </p>
+          <p v-else>
+            You should almost always recycle <strong>Unusable Weapons</strong> and electronics like <em>Geiger
+              Counters</em>.
+            This is the best way to get <strong>ARC Alloy</strong> needed for the new <strong>Expedition
+              Project</strong>.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 v-if="browserLang === 'de'">Liste wichtiger Quest-Gegenstände in ARC Raiders</h3>
+          <h3 v-else-if="browserLang === 'es'">Lista de objetos de misión importantes en ARC Raiders</h3>
+          <h3 v-else>List of important Quest Items in ARC Raiders</h3>
+
+          <p v-if="browserLang === 'de'">
+            Achte auf <strong>Verschiedenes Saatgut</strong>, <em>Filmrollen</em> und <em>Magnetrons</em>.
+            Diese werden oft für Verträge beim Händler Celeste benötigt.
+          </p>
+          <p v-else-if="browserLang === 'es'">
+            Presta atención a las <strong>Semillas variadas</strong>, <em>Rollos de película</em> y
+            <em>Magnetrones</em>.
+            A menudo se necesitan para contratos con la vendedora Celeste.
+          </p>
+          <p v-else>
+            Pay special attention to <strong>Assorted Seeds</strong>, <em>Film Reels</em>, and <em>Magnetrons</em>.
+            These are often required for contracts with the vendor Celeste.
+          </p>
+        </div>
+
+      </div>
 
       <details class="seo-details">
         <summary>
-          <span v-if="browserLang === 'de'">📜 Vollständige Item Liste & Tipps anzeigen</span>
-          <span v-else-if="browserLang === 'es'">📜 Mostrar lista completa de objetos y consejos</span>
-          <span v-else>📜 Show Full Item List & Tips</span>
+          <span v-if="browserLang === 'de'">📜 Beispielhafte 1.7.0 Items & Loot-Werte anzeigen</span>
+          <span v-else-if="browserLang === 'es'">📜 Mostrar ejemplos de objetos y valores (1.7.0)</span>
+          <span v-else>📜 Show Example Items & Loot Values (1.7.0)</span>
         </summary>
 
         <div class="seo-content-block">
-          <h3>Loot Database (Deutsch / English / Español)</h3>
-          <p>Complete list of materials, recyclables, and trinkets.</p>
+
+          <p v-if="browserLang === 'de'" style="margin-bottom: 15px; font-size: 0.85rem;">
+            Aktualisierte Datenbank für Patch 1.7.0 "Cold Snap". Enthält Kerzenbeeren, neue Quest-Items und
+            Recycling-Material.
+          </p>
+          <p v-else-if="browserLang === 'es'" style="margin-bottom: 15px; font-size: 0.85rem;">
+            Base de datos actualizada para el parche 1.7.0 "Cold Snap". Incluye bayas de vela, nuevos objetos de misión
+            y reciclables.
+          </p>
+          <p v-else style="margin-bottom: 15px; font-size: 0.85rem;">
+            Updated Database for Patch 1.7.0 "Cold Snap". Includes Candleberries, new Quest Items, and Recyclables.
+          </p>
 
           <div class="seo-grid">
             <div v-for="item in seoLootList" :key="item.id" class="seo-item-row">
               <div class="seo-name">
-                <strong>{{ item.en }}</strong> <br>
-                <span class="sub-text de">{{ item.de }}</span><br>
-                <span class="sub-text es">{{ item.es }}</span>
+                <template v-if="browserLang === 'de'">
+                  <strong>{{ item.de }}</strong> <br>
+                  <span class="sub-text">{{ item.en }}</span>
+                </template>
+                <template v-else-if="browserLang === 'es'">
+                  <strong>{{ item.es }}</strong> <br>
+                  <span class="sub-text">{{ item.en }}</span>
+                </template>
+                <template v-else>
+                  <strong>{{ item.en }}</strong>
+                </template>
               </div>
               <div class="seo-action" :class="item.action.toLowerCase()">
                 {{ item.action }}
               </div>
-              <div class="seo-reason">
-                {{ item.reason }}
-              </div>
-            </div>
-            <div class="seo-item-row">
-              <div class="seo-name">... and 400+ more items.</div>
-            </div>
-          </div>
-
-          <div class="seo-text-columns">
-            <div class="col">
-              <h4 v-if="browserLang === 'de'">Warum Recyceln?</h4>
-              <h4 v-else-if="browserLang === 'es'">¿Por qué reciclar?</h4>
-              <h4 v-else>Why Recycle?</h4>
-              <p v-if="browserLang === 'de'">Das Recyceln von Items wie <em>Unbrauchbare Waffen</em> liefert wichtige
-                Materialien wie <strong>ARC-Legierung</strong>.</p>
-              <p v-else-if="browserLang === 'es'">Reciclar objetos como <em>Armas inutilizables</em> proporciona
-                materiales esenciales como <strong>Aleación ARC</strong>.</p>
-              <p v-else>Recycling items like <em>Unusable Weapons</em> yields essential crafting materials like
-                <strong>ARC Alloy</strong>.
-              </p>
-            </div>
-            <div class="col">
-              <h4 v-if="browserLang === 'de'">Quest Items</h4>
-              <h4 v-else-if="browserLang === 'es'">Objetos de Misión</h4>
-              <h4 v-else>Quest Items</h4>
-              <p v-if="browserLang === 'de'">Manche Items wie <em>Verschiedenes Saatgut</em> sind wichtig für
-                Händler-Quests (Celeste). Nicht verkaufen!</p>
-              <p v-else-if="browserLang === 'es'">Algunos objetos como <em>Semillas variadas</em> son críticos para las
-                misiones de vendedores (Celeste). ¡No los vendas!</p>
-              <p v-else>Some items like <em>Assorted Seeds</em> are critical for vendor quests (Celeste). Do not sell
-                these!</p>
             </div>
           </div>
         </div>
@@ -155,12 +265,13 @@ onMounted(() => {
         <router-link to="/datenschutz">Privacy Policy (Datenschutz)</router-link> |
         <router-link to="/impressum">Imprint (Impressum)</router-link>
       </div>
+
     </div>
   </main>
 </template>
 
 <style scoped>
-/* --- SEO FOOTER STYLES (spezifisch für diese Seite) --- */
+/* --- SEO FOOTER STYLES --- */
 .seo-footer {
   max-width: 900px;
   margin: 80px auto 40px auto;
@@ -171,17 +282,50 @@ onMounted(() => {
 }
 
 .seo-footer h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #e74c3c;
   margin-bottom: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
+.seo-faq {
+  margin: 30px 0;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 3px solid #e74c3c;
+}
+
+/* Spezielles Highlighting für den neuen Patch-Content */
+.faq-item.highlight-item {
+  background: rgba(46, 204, 113, 0.05);
+  /* Leichter Grünton für "Neu" */
+  border-left: 3px solid #2ecc71;
+}
+
+.faq-item h3 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #bbb;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .seo-footer p {
   font-size: 0.95rem;
   line-height: 1.6;
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto 25px auto;
   color: #aaa;
 }
@@ -214,11 +358,6 @@ onMounted(() => {
   padding: 15px;
   margin-top: 10px;
   border-top: 1px solid #333;
-}
-
-.seo-content-block h3 {
-  color: #fff;
-  margin-top: 0;
 }
 
 /* --- SEO LISTE GRID --- */
@@ -275,30 +414,6 @@ onMounted(() => {
   border: 1px solid #f1c40f;
 }
 
-.seo-reason {
-  color: #999;
-  font-size: 0.75rem;
-  text-align: right;
-  max-width: 100px;
-}
-
-.seo-text-columns {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.seo-text-columns .col {
-  flex: 1;
-  min-width: 250px;
-}
-
-.seo-text-columns h4 {
-  color: #e74c3c;
-  margin-bottom: 5px;
-}
-
 /* --- LINKS --- */
 .legal-links {
   margin-top: 40px;
@@ -316,11 +431,5 @@ onMounted(() => {
 .legal-links a:hover {
   color: #e74c3c;
   text-decoration: underline;
-}
-
-/* Damit router-link-active (die aktive Seite) nicht komisch aussieht: */
-.legal-links a.router-link-active {
-  color: #fff;
-  font-weight: bold;
 }
 </style>

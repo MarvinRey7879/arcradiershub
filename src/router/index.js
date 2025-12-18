@@ -9,7 +9,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: 'ARC Raiders Loot Tracker & Recycling Guide (2025)',
+        description: 'Interaktive Loot Tabelle für ARC Raiders. Erfahre sofort, welche Items du behalten, verkaufen oder recyceln solltest.'
+      }
     },
     {
       path: '/impressum',
@@ -27,5 +31,15 @@ const router = createRouter({
     return { top: 0 }
   }
 })
+router.afterEach((to) => {
+  const defaultTitle = 'ARC Raiders Items Tool';
+  document.title = to.meta.title || defaultTitle;
+
+  // Optional: Meta Description ändern (für Profis)
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && to.meta.description) {
+    metaDesc.setAttribute('content', to.meta.description);
+  }
+});
 
 export default router

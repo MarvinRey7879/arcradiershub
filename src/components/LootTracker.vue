@@ -57,7 +57,6 @@ onMounted(() => {
     const navLang = navigator.language || navigator.userLanguage;
     if (navLang) {
         const lowerLang = navLang.toLowerCase();
-        console.log('Detected browser language:', lowerLang);
         if (lowerLang.startsWith('de')) {
             currentLang.value = 'de';
         }
