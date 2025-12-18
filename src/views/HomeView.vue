@@ -260,12 +260,10 @@ onMounted(() => {
           </div>
         </div>
       </details>
-
       <div class="legal-links">
         <router-link to="/datenschutz">Privacy Policy (Datenschutz)</router-link> |
         <router-link to="/impressum">Imprint (Impressum)</router-link>
       </div>
-
     </div>
   </main>
 </template>
