@@ -260,15 +260,186 @@ onMounted(() => {
           </div>
         </div>
       </details>
+      <details class="changelog-details">
+        <summary>
+          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.0)</span>
+          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.0)</span>
+          <span v-else>🛠️ Changelog & Updates (v1.2.0)</span>
+        </summary>
+
+        <div class="changelog-content">
+
+          <div class="log-entry">
+            <span class="log-date">23. Dec 2025</span>
+            <span class="log-version">v1.2.0</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Neu:</strong> 🏗️ Projekt-Filter hinzugefügt! Tracke jetzt Expeditionen und Events.</li>
+              <li><strong>Neu:</strong> 🐛 "Fehler melden"-Link ganz unten im Footer hinzugefügt.</li>
+              <li><strong>Fix:</strong> Fehlende Items ergänzt & falsch markierte Items korrigiert (z.B. Rosary, Flow
+                Controller).</li>
+              <li><strong>Logik:</strong> Bessere Erkennung für "Recyclable" vs. "Crafting" Items.</li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Nuevo:</strong> 🏗️ ¡Filtro de Proyectos! Rastrea expediciones y eventos.</li>
+              <li><strong>Nuevo:</strong> 🐛 Enlace para "Reportar error" añadido al pie de página.</li>
+              <li><strong>Corrección:</strong> Se añadieron objetos faltantes y se corrigieron marcadores erróneos.</li>
+              <li><strong>Lógica:</strong> Mejor detección de objetos para reciclar vs. artesanía.</li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>New:</strong> 🏗️ Project Filter added! Track Expeditions and Events.</li>
+              <li><strong>New:</strong> 🐛 Added "Report Bug" link at the very bottom (footer).</li>
+              <li><strong>Fix:</strong> Added missing items & fixed incorrectly marked items (e.g., Rosary, Flow
+                Controller).
+              </li>
+              <li><strong>Logic:</strong> Improved detection for "Recyclable" vs. "Crafting" items.</li>
+            </ul>
+          </div>
+
+          <div class="log-entry">
+            <span class="log-date">20. Dec 2025</span>
+            <span class="log-version">v1.1.0</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Neu:</strong> 📜 Quest-Tracker! Markiere Quests als erledigt.</li>
+              <li><strong>Feature:</strong> Tutorial für neue Nutzer hinzugefügt.</li>
+              <li><strong>Update:</strong> Datenbank auf Patch 1.7.0 synchronisiert.</li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Nuevo:</strong> 📜 ¡Rastreador de Misiones! Marca misiones como completadas.</li>
+              <li><strong>Feature:</strong> Tutorial para nuevos usuarios.</li>
+              <li><strong>Actualización:</strong> Base de datos sincronizada con el parche 1.7.0.</li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>New:</strong> 📜 Quest Tracker! Mark quests as completed.</li>
+              <li><strong>Feature:</strong> Added tutorial for new users.</li>
+              <li><strong>Update:</strong> Database synced to Patch 1.7.0.</li>
+            </ul>
+          </div>
+
+        </div>
+      </details>
       <div class="legal-links">
         <router-link to="/datenschutz">Privacy Policy (Datenschutz)</router-link> |
-        <router-link to="/impressum">Imprint (Impressum)</router-link>
+        <router-link to="/impressum">Imprint (Impressum)</router-link> |
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScB29rIVFfq4Ph26HguDd7_ObpGSQmK09sf5VcMtsxzLr6lMQ/viewform"
+          target="_blank" rel="noopener">
+          <span v-if="browserLang === 'de'">🐛 Fehler melden</span>
+          <span v-else-if="browserLang === 'es'">🐛 Reportar error</span>
+          <span v-else>🐛 Report Bug / Mistake</span>
+        </a>
       </div>
     </div>
   </main>
 </template>
 
 <style scoped>
+.legal-links a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.legal-links a:hover {
+  color: #e74c3c;
+  text-decoration: underline;
+}
+
+/* Optional: Bug Report leicht hervorheben */
+.legal-links a[href*="forms"] {
+  color: #e67e22;
+  /* Ein leichtes Orange */
+  font-weight: bold;
+}
+
+.changelog-details {
+  margin: 40px auto;
+  max-width: 700px;
+  /* Etwas breiter für bessere Lesbarkeit */
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.changelog-details summary {
+  padding: 12px 20px;
+  cursor: pointer;
+  color: #888;
+  font-family: monospace;
+  font-size: 0.95rem;
+  user-select: none;
+  transition: color 0.2s;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+.changelog-details summary:hover {
+  color: #e74c3c;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.changelog-content {
+  padding: 20px;
+  border-top: 1px solid #333;
+  background: rgba(0, 0, 0, 0.4);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #333;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.log-date {
+  font-size: 0.8rem;
+  color: #666;
+  margin-right: 12px;
+  font-family: monospace;
+}
+
+.log-version {
+  background: #2c3e50;
+  color: #3498db;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.log-entry ul {
+  margin: 12px 0 0 0;
+  padding-left: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.log-entry li {
+  margin-bottom: 6px;
+}
+
+.log-entry strong {
+  color: #ddd;
+  font-weight: 600;
+}
+
 /* --- SEO FOOTER STYLES --- */
 .seo-footer {
   max-width: 900px;
