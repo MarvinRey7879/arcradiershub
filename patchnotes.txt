@@ -73,3 +73,5 @@ Ein intelligentes System, um Items basierend auf Quests zu verwalten.
 
 
     habe acuh das bild gefixed im internet brwoser das es bei der suche angezgeitt wird
+
+    added projects und das filtering

@@ -1,8 +1,9 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
-// Pfade ggf. anpassen, je nachdem wo deine JSONs liegen
+// Pfade anpassen!
 import lootDataRaw from '../../loot_data_v6.json';
 import questListRaw from '../../quest_list.json';
+import projectListRaw from '../../project_list.json';
 
 // --- State ---
 const searchQuery = ref('');
@@ -14,15 +15,19 @@ const windowWidth = ref(1200);
 const gridRef = ref(null);
 const sortOrder = ref('name_asc');
 
-// --- Quest State ---
+// --- Quest & Project State ---
 const showQuestModal = ref(false);
+const showProjectModal = ref(false);
 const questSearchQuery = ref('');
+const projectSearchQuery = ref('');
 const showOnlyLootQuests = ref(true);
 const completedQuests = ref([]);
+const completedProjects = ref([]);
 
-// --- TUTORIAL STATE ---
-const showTutorial = ref(false);
-const TEST_MODE_ALWAYS_SHOW_TUTORIAL = false; // Habe ich mal auf false gesetzt, damit es nicht nervt
+// --- TUTORIAL STATE (Mehrstufig) ---
+// 0 = Aus, 1 = Quest Tutorial, 2 = Project Tutorial
+const tutorialStep = ref(0);
+const TEST_MODE_ALWAYS_SHOW_TUTORIAL = true; // Setze auf true zum Testen
 
 // --- Konstanten ---
 const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legendary': 5 };
@@ -56,21 +61,19 @@ onMounted(() => {
         window.addEventListener('resize', updateDimensions);
     });
 
+    // Load Data
     const savedQuests = localStorage.getItem('arc_tracker_completed_quests');
-    if (savedQuests) {
-        try {
-            completedQuests.value = JSON.parse(savedQuests);
-        } catch (e) {
-            console.error("Error loading quests", e);
-        }
-    }
+    if (savedQuests) { try { completedQuests.value = JSON.parse(savedQuests); } catch (e) { } }
 
-    // Tutorial Logic
+    const savedProjects = localStorage.getItem('arc_tracker_completed_projects');
+    if (savedProjects) { try { completedProjects.value = JSON.parse(savedProjects); } catch (e) { } }
+
+    // Tutorial Logic Start
     const tutorialSeen = localStorage.getItem('arc_tracker_tutorial_seen');
     if (TEST_MODE_ALWAYS_SHOW_TUTORIAL || !tutorialSeen) {
         setTimeout(() => {
-            showTutorial.value = true;
-        }, 500);
+            tutorialStep.value = 1; // Starte mit Schritt 1 (Quests)
+        }, 800);
     }
 });
 
@@ -82,8 +85,22 @@ watch(completedQuests, (newVal) => {
     localStorage.setItem('arc_tracker_completed_quests', JSON.stringify(newVal));
 }, { deep: true });
 
-const closeTutorial = () => {
-    showTutorial.value = false;
+watch(completedProjects, (newVal) => {
+    localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal));
+}, { deep: true });
+
+// --- Tutorial Actions ---
+const nextTutorialStep = () => {
+    tutorialStep.value = 2; // Gehe zu Projekten
+};
+
+const finishTutorial = () => {
+    tutorialStep.value = 0; // Beenden
+    localStorage.setItem('arc_tracker_tutorial_seen', 'true');
+};
+
+const skipTutorial = () => {
+    tutorialStep.value = 0;
     localStorage.setItem('arc_tracker_tutorial_seen', 'true');
 };
 
@@ -113,27 +130,24 @@ const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1
 const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
 
 // --- CORE LOGIC: Processed Items ---
-// Hier passiert die Magie für deine Quest-Logik
 const processedItems = computed(() => {
+    const allCompletedIds = [...completedQuests.value, ...completedProjects.value];
+
     return lootDataRaw.map(item => {
-        // Prüfen, ob Quests offen sind (nicht in completedQuests enthalten)
-        const activeQuests = item.quests ? item.quests.filter(q => !completedQuests.value.includes(q.questId)) : [];
-        const hasActiveQuest = activeQuests.length > 0;
+        const activeRequirements = item.quests ? item.quests.filter(q => !allCompletedIds.includes(q.questId)) : [];
+        const hasActiveReq = activeRequirements.length > 0;
 
-        // Standard: Nimm die Action aus der JSON (z.B. "recycle")
         let dynamicAction = item.action;
-
-        // Wenn Quest aktiv -> Erzwinge "keep"
-        if (hasActiveQuest) {
+        if (hasActiveReq) {
             dynamicAction = 'keep';
         }
 
         return {
             ...item,
-            action: dynamicAction,       // Das wird angezeigt (Keep oder Original)
-            originalAction: item.action, // Das Backup
-            activeQuests: activeQuests,  // Liste der offenen Quests
-            isQuestItem: hasActiveQuest  // Flag für die Anzeige der "For Quest"-Box
+            action: dynamicAction,
+            originalAction: item.action,
+            activeQuests: activeRequirements,
+            isQuestItem: hasActiveReq
         };
     });
 });
@@ -146,8 +160,6 @@ const filteredItems = computed(() => {
 
         const matchesSearch = nameToSearch.toLowerCase().includes(searchQuery.value.toLowerCase());
         const matchesRarity = selectedRarities.value.length === 0 || selectedRarities.value.includes(item.rarity);
-
-        // Filtert nach der DYNAMISCHEN Action (also Keep wenn Quest aktiv)
         const matchesAction = selectedActions.value.length === 0 || selectedActions.value.includes(item.action);
 
         return matchesSearch && matchesRarity && matchesAction;
@@ -165,7 +177,7 @@ const filteredItems = computed(() => {
     });
 });
 
-// --- Quest Filter Logic ---
+// --- Modals Logic ---
 const filteredQuestList = computed(() => {
     return questListRaw.filter(quest => {
         const matchesSearch = quest.name.toLowerCase().includes(questSearchQuery.value.toLowerCase());
@@ -173,20 +185,27 @@ const filteredQuestList = computed(() => {
         return matchesSearch && matchesType;
     });
 });
-
-const areAllVisibleSelected = computed(() => {
+const areAllQuestsVisibleSelected = computed(() => {
     if (filteredQuestList.value.length === 0) return false;
     return filteredQuestList.value.every(q => completedQuests.value.includes(q.id));
 });
-
-const toggleAllVisible = () => {
+const toggleAllQuestsVisible = () => {
     const visibleIds = filteredQuestList.value.map(q => q.id);
-    if (areAllVisibleSelected.value) {
-        completedQuests.value = completedQuests.value.filter(id => !visibleIds.includes(id));
-    } else {
-        const newIds = visibleIds.filter(id => !completedQuests.value.includes(id));
-        completedQuests.value = [...completedQuests.value, ...newIds];
-    }
+    if (areAllQuestsVisibleSelected.value) completedQuests.value = completedQuests.value.filter(id => !visibleIds.includes(id));
+    else completedQuests.value = [...completedQuests.value, ...newIds];
+};
+
+const filteredProjectList = computed(() => {
+    return projectListRaw.filter(proj => proj.name.toLowerCase().includes(projectSearchQuery.value.toLowerCase()));
+});
+const areAllProjectsVisibleSelected = computed(() => {
+    if (filteredProjectList.value.length === 0) return false;
+    return filteredProjectList.value.every(p => completedProjects.value.includes(p.id));
+});
+const toggleAllProjectsVisible = () => {
+    const visibleIds = filteredProjectList.value.map(p => p.id);
+    if (areAllProjectsVisibleSelected.value) completedProjects.value = completedProjects.value.filter(id => !visibleIds.includes(id));
+    else completedProjects.value = [...completedProjects.value, ...newIds];
 };
 
 // --- Translation ---
@@ -202,21 +221,39 @@ const t = (key) => {
         rarity: { de: 'Seltenheit', en: 'Rarity', fr: 'Rareza' },
         action: { de: 'Aktion', en: 'Action', fr: 'Acción' },
         colLabel: { de: 'Spalten', en: 'Cols', fr: 'Cols' },
+        // BUTTONS
         questLogBtn: { de: '📜 Quest Filter', en: '📜 Quest Filter', fr: '📜 Filtro de Misiones' },
+        projectLogBtn: { de: '🏗️ Projekt Filter', en: '🏗️ Project Filter', fr: '🏗️ Filtro de Proyectos' },        // MODALS
         questModalTitle: { de: 'Quest Übersicht', en: 'Quest Overview', fr: 'Resumen de Misiones' },
+        projectModalTitle: { de: 'Projekte & Events', en: 'Projects & Events', fr: 'Proyectos y Eventos' },
         searchQuest: { de: 'Suche Quest...', en: 'Search quest...', fr: 'Buscar misión...' },
+        searchProject: { de: 'Suche Projekt...', en: 'Search project...', fr: 'Buscar proyecto...' },
         onlyLootQuests: { de: 'Nur Loot-Relevante Quests', en: 'Only Loot Relevant Quests', fr: 'Solo misiones de botín' },
         close: { de: 'Schließen', en: 'Close', fr: 'Cerrar' },
-        neededFor: { de: 'Für Quest:', en: 'For Quest:', fr: 'Para misión:' },
+        neededFor: { de: 'Benötigt für:', en: 'Needed for:', fr: 'Necesario para:' },
         selectAll: { de: 'Alle auswählen', en: 'Select All', fr: 'Seleccionar todo' },
         deselectAll: { de: 'Alle abwählen', en: 'Deselect All', fr: 'Deseleccionar todo' },
-        tutTitle: { de: 'Neu: Quest Filter!', en: 'New: Quest Filter!', fr: 'Nuevo: Filtro de Misiones!' },
-        tutDesc: {
-            de: 'Markiere deine erledigten Quests. Items, die du nicht mehr brauchst, werden automatisch nicht mehr als "Keep" angezeigt.',
-            en: 'Check off your completed quests. Items you no longer need will automatically stop showing as "Keep".',
-            fr: 'Marca tus misiones completadas. Los objetos que ya no necesites dejarán de mostrarse automáticamente como "Keep".'
+        // TUTORIAL STEP 1 (Quests)
+        tutQuestTitle: { de: 'NEU: Quest Filter!', en: 'NEW: Quest Filter!', fr: 'NUEVO: Filtro de Misiones!' },
+        tutQuestDesc: {
+            de: 'Markiere erledigte Quests, damit Items nicht mehr unnötig als "Keep" angezeigt werden.',
+            en: 'Check off completed quests so items are no longer marked as "Keep" unnecessarily.',
+            fr: 'Marca las misiones completadas.'
         },
-        tutBtn: { de: 'Verstanden', en: 'Got it', fr: 'Entendido' }
+        tutQuestTip: {
+            de: 'Deine fertigen Quests findest du im Spiel unter: Raider -> Kodex -> Quests.',
+            en: 'You can find your finished quests in-game at: Raider -> Codex -> Quests.',
+            fr: 'Puedes encontrar tus misiones terminadas en: Raider -> Códice -> Misiones.'
+        },
+        tutNext: { de: 'Weiter', en: 'Next', fr: 'Siguiente' },
+
+        // TUTORIAL STEP 2 (Projects) - HIER IST DIE ÄNDERUNG
+        tutProjTitle: { de: 'NEU: Projekt Filter!', en: 'NEW: Project Filter!', fr: 'NUEVO: Filtro de Proyectos!' }, tutProjDesc: {
+            de: 'Verfolge Events & Expeditionen. Hake erledigte Phasen ab, damit nicht mehr benötigte Items automatisch wieder als "Verkaufen" oder "Verwerten" angezeigt werden.',
+            en: 'Track events & expeditions. Check off completed stages so unneeded items automatically revert to "Sell" or "Recycle".',
+            fr: 'Sigue eventos y expediciones. Marca las fases completadas para actualizar el estado de los objetos.'
+        },
+        tutFinish: { de: 'Verstanden!', en: 'Got it!', fr: '¡Entendido!' }
     };
     return dict[key][currentLang.value] || dict[key]['en'];
 };
@@ -225,9 +262,9 @@ const t = (key) => {
 <template>
     <div class="tracker-container">
 
-        <div v-if="showTutorial" class="tutorial-backdrop" @click="closeTutorial"></div>
+        <div v-if="tutorialStep > 0" class="tutorial-backdrop" @click="skipTutorial"></div>
 
-        <div class="controls" :class="{ 'tutorial-active': showTutorial }">
+        <div class="controls" :class="{ 'tutorial-active': tutorialStep > 0 }">
             <div class="top-row">
                 <input type="text" v-model="searchQuery" :placeholder="t('searchPlaceholder')" class="search-bar" />
 
@@ -255,12 +292,17 @@ const t = (key) => {
                         {{ t('questLogBtn') }}
                     </button>
 
-                    <div v-if="showTutorial" class="tutorial-bubble">
-                        <div class="arrow-up"></div>
-                        <h4>{{ t('tutTitle') }}</h4>
-                        <p>{{ t('tutDesc') }}</p>
-                        <button class="tut-close-btn" @click.stop="closeTutorial">{{ t('tutBtn') }}</button>
-                    </div>
+                    <transition name="pop">
+                        <div v-if="tutorialStep === 1" class="tutorial-bubble quest-bubble">
+                            <div class="arrow-up"></div>
+                            <h4>{{ t('tutQuestTitle') }} <span class="badge-new">✨</span></h4>
+                            <p>{{ t('tutQuestDesc') }}</p>
+                            <div class="tut-tip">
+                                💡 {{ t('tutQuestTip') }}
+                            </div>
+                            <button class="tut-btn" @click.stop="nextTutorialStep">{{ t('tutNext') }} →</button>
+                        </div>
+                    </transition>
                 </div>
             </div>
 
@@ -283,6 +325,21 @@ const t = (key) => {
                         </label>
                     </div>
                 </div>
+
+                <div class="project-btn-wrapper tutorial-wrapper">
+                    <button @click="showProjectModal = true" class="project-log-btn">
+                        {{ t('projectLogBtn') }}
+                    </button>
+
+                    <transition name="pop">
+                        <div v-if="tutorialStep === 2" class="tutorial-bubble project-bubble">
+                            <div class="arrow-dynamic"></div>
+                            <h4>{{ t('tutProjTitle') }} <span class="badge-new">✨</span></h4>
+                            <p>{{ t('tutProjDesc') }}</p>
+                            <button class="tut-btn finish" @click.stop="finishTutorial">✅ {{ t('tutFinish') }}</button>
+                        </div>
+                    </transition>
+                </div>
             </div>
         </div>
 
@@ -295,9 +352,9 @@ const t = (key) => {
                 <div class="modal-controls">
                     <input type="text" v-model="questSearchQuery" :placeholder="t('searchQuest')"
                         class="modal-search" />
-                    <button class="select-all-btn" @click="toggleAllVisible"
-                        :class="{ 'active': areAllVisibleSelected }">
-                        {{ areAllVisibleSelected ? t('deselectAll') : t('selectAll') }}
+                    <button class="select-all-btn" @click="toggleAllQuestsVisible"
+                        :class="{ 'active': areAllQuestsVisibleSelected }">
+                        {{ areAllQuestsVisibleSelected ? t('deselectAll') : t('selectAll') }}
                     </button>
                     <label class="toggle-switch">
                         <input type="checkbox" v-model="showOnlyLootQuests" />
@@ -321,6 +378,40 @@ const t = (key) => {
                         </div>
                     </div>
                     <div v-if="filteredQuestList.length === 0" class="no-quests">No quests found.</div>
+                </div>
+            </div>
+        </div>
+
+        <div v-if="showProjectModal" class="modal-backdrop" @click.self="showProjectModal = false">
+            <div class="modal-content project-modal">
+                <div class="modal-header project-header">
+                    <h2>{{ t('projectModalTitle') }}</h2>
+                    <button class="close-btn" @click="showProjectModal = false">✕</button>
+                </div>
+                <div class="modal-controls">
+                    <input type="text" v-model="projectSearchQuery" :placeholder="t('searchProject')"
+                        class="modal-search" />
+                    <button class="select-all-btn" @click="toggleAllProjectsVisible"
+                        :class="{ 'active': areAllProjectsVisibleSelected }">
+                        {{ areAllProjectsVisibleSelected ? t('deselectAll') : t('selectAll') }}
+                    </button>
+                </div>
+                <div class="quest-list">
+                    <div v-for="proj in filteredProjectList" :key="proj.id" class="quest-item">
+                        <label class="quest-checkbox-label">
+                            <input type="checkbox" :value="proj.id" v-model="completedProjects" />
+                            <span class="quest-info">
+                                <span class="quest-name">{{ proj.name }}</span>
+                                <span class="quest-trader">{{ proj.trader }}</span>
+                            </span>
+                        </label>
+                        <div class="quest-requirements">
+                            <span v-for="req in proj.requiredItems" :key="req.id" class="req-badge proj-badge">
+                                {{ req.amount }}x {{ req.name }}
+                            </span>
+                        </div>
+                    </div>
+                    <div v-if="filteredProjectList.length === 0" class="no-quests">No projects found.</div>
                 </div>
             </div>
         </div>
@@ -383,9 +474,6 @@ const t = (key) => {
     --action-recycle: #e67e22;
     --action-sell: #f1c40f;
     --modal-bg: #252525;
-}
-
-.tracker-container {
     max-width: 100%;
     margin: 0;
     padding: 20px;
@@ -402,12 +490,11 @@ const t = (key) => {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     position: relative;
     z-index: 5;
-    /* Basis Z-Index */
 }
 
-/* WENN TUTORIAL AKTIV IST: Control Box über das Backdrop heben */
 .controls.tutorial-active {
     z-index: 2001;
+    /* Über dem Backdrop */
 }
 
 .top-row {
@@ -415,7 +502,6 @@ const t = (key) => {
     gap: 15px;
     margin-bottom: 20px;
     flex-wrap: wrap;
-    /* Wichtig für Responsiveness */
     align-items: center;
 }
 
@@ -446,9 +532,9 @@ const t = (key) => {
     min-width: 110px;
 }
 
-/* Quest Button Styles */
-.quest-log-btn {
-    background: #3498db;
+/* BUTTONS */
+.quest-log-btn,
+.project-log-btn {
     color: white;
     border: none;
     padding: 0 20px;
@@ -461,33 +547,28 @@ const t = (key) => {
     white-space: nowrap;
 }
 
+.quest-log-btn {
+    background: #3498db;
+}
+
 .quest-log-btn:hover {
     background: #2980b9;
 }
 
-/* MEDIA QUERY FÜR MOBILE (wie in deinem Code) */
-@media (max-width: 768px) {
-    .top-row {
-        flex-direction: column;
-        align-items: stretch;
-        /* Damit alles volle Breite hat */
-    }
-
-    .search-bar,
-    .control-select,
-    .tutorial-wrapper,
-    /* Wrapper nimmt volle Breite */
-    .quest-log-btn {
-        /* Button nimmt volle Breite */
-        width: 100%;
-    }
+.project-log-btn {
+    background: #e67e22;
 }
 
-/* --- FILTER STYLES (wie in deinem Code) --- */
+.project-log-btn:hover {
+    background: #d35400;
+}
+
+/* --- FILTER ROW --- */
 .filter-row {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    align-items: center;
 }
 
 .filter-group {
@@ -518,7 +599,6 @@ const t = (key) => {
     font-weight: 500;
 }
 
-/* FARBEN (Wichtig: Klassennamen im HTML müssen matchen) */
 .checkbox-wrapper label.rarity-common {
     color: var(--common);
 }
@@ -539,46 +619,56 @@ const t = (key) => {
     color: var(--legendary);
 }
 
-/* --- TUTORIAL STYLES (Overlay) --- */
+/* --- TUTORIAL STYLES (NEW) --- */
 .tutorial-backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(4px);
-    /* Blur ist da! */
     z-index: 2000;
-    cursor: pointer;
     animation: fadeIn 0.3s ease-in-out;
 }
 
 .tutorial-wrapper {
     position: relative;
-    /* Wrapper braucht keinen z-index mehr, da .controls angehoben wird */
+    /* Damit Bubble absolut zum Button ist */
 }
 
 .tutorial-bubble {
     position: absolute;
-    top: 60px;
-    /* Unter dem Button */
-    right: 0;
-    /* Rechtsbündig, damit es nicht rausragt */
-
     background: white;
     color: #121212;
-    padding: 15px;
+    padding: 18px;
     border-radius: 8px;
-    width: 260px;
+    width: 280px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-    animation: popIn 0.3s ease-out;
     text-align: left;
-    z-index: 2002;
+    z-index: 2005;
 }
 
-/* Pfeil zeigt auf Button */
-.arrow-up {
+/* Transition Animation */
+.pop-enter-active,
+.pop-leave-active {
+    transition: all 0.3s ease;
+}
+
+.pop-enter-from,
+.pop-leave-to {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+}
+
+/* QUEST BUBBLE POSITION */
+.quest-bubble {
+    top: 60px;
+    right: 0;
+    /* Pfeil zeigt nach oben */
+}
+
+.quest-bubble .arrow-up {
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -587,13 +677,44 @@ const t = (key) => {
     position: absolute;
     top: -10px;
     right: 20px;
-    /* Passend zum Button */
 }
 
+/* PROJECT BUBBLE POSITION (Desktop: Oben drüber, da Button unten) */
+.project-bubble {
+    bottom: 60px;
+    /* Über dem Button */
+    right: 0;
+    /* Pfeil zeigt nach unten */
+}
+
+.arrow-dynamic {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    /* Zeigt nach unten */
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+}
+
+/* Styles für den Inhalt */
 .tutorial-bubble h4 {
     margin: 0 0 8px 0;
     color: #3498db;
     font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge-new {
+    background: #e74c3c;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    vertical-align: middle;
 }
 
 .tutorial-bubble p {
@@ -603,37 +724,95 @@ const t = (key) => {
     color: #333;
 }
 
-.tut-close-btn {
+.tut-tip {
+    background: #f0f8ff;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #2980b9;
+    margin-bottom: 15px;
+    border-left: 3px solid #3498db;
+}
+
+.tut-btn {
     background: #3498db;
     color: white;
     border: none;
-    padding: 6px 15px;
+    padding: 8px 16px;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     float: right;
+    transition: background 0.2s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+.tut-btn:hover {
+    background: #2980b9;
 }
 
-@keyframes popIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+.tut-btn.finish {
+    background: #2ecc71;
+}
+
+.tut-btn.finish:hover {
+    background: #27ae60;
+}
+
+/* --- MOBILE SPECIFIC LOGIC --- */
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column;
+        align-items: stretch;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .search-bar,
+    .control-select,
+    .tutorial-wrapper,
+    .quest-log-btn {
+        width: 100%;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    /* Schiebt Projekt Button nach oben */
+    .project-btn-wrapper {
+        order: -1;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .project-log-btn {
+        width: 100%;
+    }
+
+    /* MOBILE BUBBLE FIXES */
+    .quest-bubble {
+        right: 0;
+        /* Links/Rechts ausrichten */
+        width: auto;
+        /* Volle Breite */
+        min-width: 250px;
+    }
+
+    /* Auf Mobile ist der Projekt Button OBEN (wegen order: -1).
+       Also muss die Bubble DARUNTER sein (wie bei Quest) */
+    .project-bubble {
+        bottom: auto;
+        top: 60px;
+        /* Unter dem Button */
+    }
+
+    /* Pfeil muss nach OBEN zeigen */
+    .project-bubble .arrow-dynamic {
+        border-top: none;
+        border-bottom: 10px solid white;
+        top: -10px;
+        bottom: auto;
     }
 }
 
@@ -665,6 +844,19 @@ const t = (key) => {
     border: 1px solid #444;
 }
 
+.modal-header.project-header {
+    background: #e67e22;
+    color: #fff;
+}
+
+.modal-header.project-header h2 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header.project-header .close-btn {
+    color: white;
+}
+
 .modal-header {
     padding: 20px;
     border-bottom: 1px solid #444;
@@ -685,10 +877,6 @@ const t = (key) => {
     color: #888;
     font-size: 1.5rem;
     cursor: pointer;
-}
-
-.close-btn:hover {
-    color: white;
 }
 
 .modal-controls {
@@ -718,13 +906,6 @@ const t = (key) => {
     border-radius: 6px;
     cursor: pointer;
     font-size: 0.8rem;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.select-all-btn:hover {
-    background: #555;
-    color: white;
 }
 
 .select-all-btn.active {
@@ -738,7 +919,6 @@ const t = (key) => {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    font-size: 0.9rem;
     user-select: none;
 }
 
@@ -836,6 +1016,12 @@ const t = (key) => {
     border-radius: 4px;
 }
 
+.req-badge.proj-badge {
+    background: rgba(230, 126, 34, 0.2);
+    border-color: rgba(230, 126, 34, 0.4);
+    color: #f5cba7;
+}
+
 .quest-checkbox-label input:checked~.quest-info .quest-name {
     text-decoration: line-through;
     color: #666;
@@ -847,15 +1033,23 @@ const t = (key) => {
     color: #777;
 }
 
-/* --- GRID SYSTEM --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* --- GRID & CARDS --- */
 .grid {
     display: grid;
-    /* CSS Grid Fallback - wird durch :style überschrieben */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
 }
 
-/* --- CARD DESIGN & RESPONSIVE --- */
 .card {
     container-type: inline-size;
     background: var(--bg-card);
