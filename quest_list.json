@@ -10,15 +10,32 @@
     "id": "trash_into_treasure",
     "name": "Trash Into Treasure",
     "trader": "Shani",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 1
+      },
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 6
+      }
+    ]
   },
   {
     "id": "clearer_skies",
     "name": "Clearer Skies",
     "trader": "Shani",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "arc_alloy",
+        "name": "ARC Alloy",
+        "amount": 3
+      }
+    ]
   },
   {
     "id": "off_the_radar",
@@ -31,52 +48,15 @@
     "id": "a_bad_feeling",
     "name": "A Bad Feeling",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "metal_parts",
-        "name": "Metal Parts",
-        "amount": 10
-      },
-      {
-        "id": "duct_tape",
-        "name": "Duct Tape",
-        "amount": 5
-      },
-      {
-        "id": "steel_spring",
-        "name": "Steel Spring",
-        "amount": 5
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "a_balanced_harvest",
     "name": "A Balanced Harvest",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "adv_mech_comp",
-        "name": "Advanced Mechanical Components",
-        "amount": 3
-      },
-      {
-        "id": "medium_gun_parts",
-        "name": "Medium Gun Parts",
-        "amount": 3
-      },
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
-        "amount": 1
-      },
-      {
-        "id": "steel_spring",
-        "name": "Steel Spring",
-        "amount": 10
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "a_better_use",
@@ -89,14 +69,8 @@
     "id": "a_lay_of_the_land",
     "name": "A Lay Of The Land",
     "trader": "Shani",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "key_dam_testing_annex",
-        "name": "Dam Testing Annex Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "a_reveal_in_ruins",
@@ -109,37 +83,15 @@
     "id": "a_symbol_of_unification",
     "name": "A Symbol Of Unification",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "mod_components",
-        "name": "Mod Components",
-        "amount": 3
-      },
-      {
-        "id": "duct_tape",
-        "name": "Duct Tape",
-        "amount": 5
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "a_warm_place_to_rest",
     "name": "A Warm Place To Rest",
     "trader": "Apollo",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "rosary",
-        "name": "Rosary",
-        "amount": 1
-      },
-      {
-        "id": "radio",
-        "name": "Radio",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "after_rain_comes",
@@ -148,13 +100,8 @@
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "antiseptic",
-        "name": "Antiseptic",
-        "amount": 3
-      },
-      {
-        "id": "durable_cloth",
-        "name": "Durable Cloth",
+        "id": "wires",
+        "name": "Wires",
         "amount": 5
       }
     ]
@@ -177,74 +124,63 @@
     "id": "building_a_library",
     "name": "Building A Library",
     "trader": "Apollo",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "key_buried_city_town_hall",
-        "name": "Buried City Town Hall Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "celeste_s_journals",
     "name": "Celeste's Journals",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "exodus_modules",
-        "name": "Exodus Modules",
-        "amount": 1
-      },
-      {
-        "id": "magnetic_accelerator",
-        "name": "Magnetic Accelerator",
-        "amount": 1
-      },
-      {
-        "id": "heavy_gun_parts",
-        "name": "Heavy Gun Parts",
-        "amount": 3
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "communication_hideout",
     "name": "Communication Hideout",
     "trader": "Shani",
-    "hasObtains": false,
-    "requiredItems": []
-  },
-  {
-    "id": "digging_up_dirt",
-    "name": "Digging Up Dirt",
-    "trader": "Celeste",
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "adv_elec_comp",
-        "name": "Advanced Electrical Components",
-        "amount": 2
-      },
-      {
-        "id": "speaker_component",
-        "name": "Speaker Component",
-        "amount": 4
-      },
-      {
-        "id": "electrical_components",
-        "name": "Electrical Components",
+        "id": "battery",
+        "name": "Battery",
         "amount": 1
       }
     ]
   },
   {
+    "id": "digging_up_dirt",
+    "name": "Digging Up Dirt",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": []
+  },
+  {
     "id": "doctor_s_orders",
     "name": "Doctor's Orders",
     "trader": "Lance",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "antiseptic",
+        "name": "Antiseptic",
+        "amount": 2
+      },
+      {
+        "id": "syringe",
+        "name": "Syringe",
+        "amount": 1
+      },
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 1
+      },
+      {
+        "id": "great_mullein",
+        "name": "Great Mullein",
+        "amount": 1
+      }
+    ]
   },
   {
     "id": "down_to_earth",
@@ -257,59 +193,28 @@
     "id": "echoes_of_victory_ridge",
     "name": "Echoes Of Victory Ridge",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "music_box",
-        "name": "Music Box",
-        "amount": 1
-      },
-      {
-        "id": "processor",
-        "name": "Processor",
-        "amount": 2
-      },
-      {
-        "id": "crude_explosives",
-        "name": "Crude Explosives",
-        "amount": 6
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "eyes_on_the_prize",
     "name": "Eyes On The Prize",
     "trader": "Tian Wen",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 3
+      }
+    ]
   },
   {
     "id": "flickering_threat",
     "name": "Flickering Threat",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "adv_mech_comp",
-        "name": "Advanced Mechanical Components",
-        "amount": 3
-      },
-      {
-        "id": "medium_gun_parts",
-        "name": "Medium Gun Parts",
-        "amount": 5
-      },
-      {
-        "id": "radio",
-        "name": "Radio",
-        "amount": 1
-      },
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "greasing_her_palms",
@@ -318,13 +223,8 @@
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "speaker_component",
-        "name": "Speaker Component",
-        "amount": 1
-      },
-      {
-        "id": "electrical_components",
-        "name": "Electrical Components",
+        "id": "rocket_thruster",
+        "name": "Rocket Thruster",
         "amount": 1
       }
     ]
@@ -333,55 +233,22 @@
     "id": "hatch_repairs",
     "name": "Hatch Repairs",
     "trader": "Shani",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "industrial_espionage",
     "name": "Industrial Espionage",
     "trader": "Tian Wen",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
-        "amount": 3
-      },
-      {
-        "id": "simple_gun_parts",
-        "name": "Simple Gun Parts",
-        "amount": 3
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "keeping_the_memory",
     "name": "Keeping The Memory",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "duct_tape",
-        "name": "Duct Tape",
-        "amount": 5
-      },
-      {
-        "id": "magnet",
-        "name": "Magnet",
-        "amount": 5
-      },
-      {
-        "id": "simple_gun_parts",
-        "name": "Simple Gun Parts",
-        "amount": 5
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "lost_in_transmission",
@@ -411,8 +278,8 @@
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
+        "id": "surveyor_vault",
+        "name": "Surveyor Vault",
         "amount": 1
       }
     ]
@@ -421,26 +288,21 @@
     "id": "our_presence_up_there",
     "name": "Our Presence Up There",
     "trader": "Shani",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "key_buried_city_town_hall",
-        "name": "Buried City Town Hall Key",
-        "amount": 1
-      },
-      {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "out_of_the_shadows",
     "name": "Out Of The Shadows",
     "trader": "Shani",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "rocketeer_driver",
+        "name": "Rocketeer Driver",
+        "amount": 1
+      }
+    ]
   },
   {
     "id": "prescriptions_of_the_past",
@@ -460,88 +322,29 @@
     "id": "source_of_the_contamination",
     "name": "Source Of The Contamination",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "mod_components",
-        "name": "Mod Components",
-        "amount": 1
-      },
-      {
-        "id": "duct_tape",
-        "name": "Duct Tape",
-        "amount": 5
-      },
-      {
-        "id": "steel_spring",
-        "name": "Steel Spring",
-        "amount": 5
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "sparks_fly",
     "name": "Sparks Fly",
     "trader": "Apollo",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "processor",
-        "name": "Processor",
-        "amount": 2
-      },
-      {
-        "id": "crude_explosives",
-        "name": "Crude Explosives",
-        "amount": 4
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "straight_record",
     "name": "Straight Record",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "adv_mech_comp",
-        "name": "Advanced Mechanical Components",
-        "amount": 3
-      },
-      {
-        "id": "medium_gun_parts",
-        "name": "Medium Gun Parts",
-        "amount": 5
-      },
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "switching_the_supply",
     "name": "Switching The Supply",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "radio",
-        "name": "Radio",
-        "amount": 1
-      },
-      {
-        "id": "synthesized_fuel",
-        "name": "Synthesized Fuel",
-        "amount": 3
-      },
-      {
-        "id": "key_spaceport_trench",
-        "name": "Spaceport Trench Tower Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "the_right_tool",
@@ -571,13 +374,18 @@
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "key_dam_control_tower",
-        "name": "Dam Control Tower Key",
+        "id": "hornet_driver",
+        "name": "Hornet Driver",
         "amount": 1
       },
       {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
+        "id": "wasp_driver",
+        "name": "Wasp Driver",
+        "amount": 1
+      },
+      {
+        "id": "snitch_scanner",
+        "name": "Snitch Scanner",
         "amount": 1
       }
     ]
@@ -589,8 +397,8 @@
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "key_dam_staff",
-        "name": "Dam Staff Room Key",
+        "id": "power_rod",
+        "name": "Power Rod",
         "amount": 1
       }
     ]
@@ -599,66 +407,46 @@
     "id": "unexpected_initiative",
     "name": "Unexpected Initiative",
     "trader": "Tian Wen",
-    "hasObtains": false,
-    "requiredItems": []
-  },
-  {
-    "id": "untended_garden",
-    "name": "Untended Garden",
-    "trader": "Celeste",
     "hasObtains": true,
     "requiredItems": [
       {
-        "id": "adv_mech_comp",
-        "name": "Advanced Mechanical Components",
-        "amount": 3
+        "id": "water_pump",
+        "name": "Water Pump",
+        "amount": 1
       },
       {
-        "id": "heavy_gun_parts",
-        "name": "Heavy Gun Parts",
-        "amount": 3
-      },
-      {
-        "id": "canister",
-        "name": "Canister",
-        "amount": 5
-      },
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
+        "id": "fertilizer",
+        "name": "Fertilizer",
         "amount": 1
       }
     ]
   },
   {
+    "id": "untended_garden",
+    "name": "Untended Garden",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": []
+  },
+  {
     "id": "water_troubles",
     "name": "Water Troubles",
     "trader": "Celeste",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "mechanical_components",
-        "name": "Mechanical Components",
-        "amount": 3
-      },
-      {
-        "id": "simple_gun_parts",
-        "name": "Simple Gun Parts",
-        "amount": 3
-      },
-      {
-        "id": "steel_spring",
-        "name": "Steel Spring",
-        "amount": 3
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "what_goes_around",
     "name": "What Goes Around",
     "trader": "Apollo",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "fireball_burner",
+        "name": "Fireball Burner",
+        "amount": 1
+      }
+    ]
   },
   {
     "id": "what_we_left_behind",
@@ -671,24 +459,8 @@
     "id": "paving_the_way",
     "name": "Paving The Way",
     "trader": "Apollo",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "adv_elec_comp",
-        "name": "Advanced Electrical Components",
-        "amount": 1
-      },
-      {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
-        "amount": 1
-      },
-      {
-        "id": "electrical_components",
-        "name": "Electrical Components",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "deciphering_the_data",
@@ -701,14 +473,8 @@
     "id": "groundbreaking",
     "name": "Groundbreaking",
     "trader": "Apollo",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "power_rod",
-        "name": "Power Rod",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "a_toxic_trail",
@@ -721,19 +487,8 @@
     "id": "the_stench_of_corruption",
     "name": "The Stench Of Corruption",
     "trader": "Shani",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "air_freshener",
-        "name": "Air Freshener",
-        "amount": 1
-      },
-      {
-        "id": "key_dam_staff",
-        "name": "Dam Staff Room Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "the_clean_dream",
@@ -774,20 +529,25 @@
     "id": "cold_storage",
     "name": "Cold Storage",
     "trader": "Shani",
-    "hasObtains": true,
-    "requiredItems": [
-      {
-        "id": "key_raider_hatch",
-        "name": "Raider Hatch Key",
-        "amount": 1
-      }
-    ]
+    "hasObtains": false,
+    "requiredItems": []
   },
   {
     "id": "snap_and_salvage",
     "name": "Snap And Salvage",
     "trader": "Tian Wen",
-    "hasObtains": false,
-    "requiredItems": []
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "magnetron",
+        "name": "Magnetron",
+        "amount": 1
+      },
+      {
+        "id": "flow_controller",
+        "name": "Flow Controller",
+        "amount": 1
+      }
+    ]
   }
 ]

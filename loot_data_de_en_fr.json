@@ -621,7 +621,15 @@
     "value": 6000,
     "yield_en": "1x Quest",
     "yield_de": "1x Quest",
-    "yield_fr": "1x Misión"
+    "yield_fr": "1x Misión",
+    "quests": [
+      {
+        "questId": "snap_and_salvage",
+        "questName": "Snap And Salvage",
+        "trader": "Tian Wen",
+        "amount": 1
+      }
+    ]
   },
   {
     "id": "mod_components",
