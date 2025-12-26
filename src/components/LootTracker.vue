@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
 // Pfade anpassen!
-import lootDataRaw from '../../loot_data_v6.json';
+import lootDataRaw from '../../loot_data_final.json';
 import questListRaw from '../../quest_list.json';
 import projectListRaw from '../../project_list.json';
+const emit = defineEmits(['lang-change']);
 
 // --- State ---
 const searchQuery = ref('');
@@ -27,7 +28,7 @@ const completedProjects = ref([]);
 // --- TUTORIAL STATE (Mehrstufig) ---
 // 0 = Aus, 1 = Quest Tutorial, 2 = Project Tutorial
 const tutorialStep = ref(0);
-const TEST_MODE_ALWAYS_SHOW_TUTORIAL = true; // Setze auf true zum Testen
+const TEST_MODE_ALWAYS_SHOW_TUTORIAL = false; // Setze auf true zum Testen
 
 // --- Konstanten ---
 const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legendary': 5 };
@@ -47,13 +48,23 @@ const langOptions = [
 
 // --- Lifecycle ---
 onMounted(() => {
-    const navLang = navigator.language || navigator.userLanguage;
-    if (navLang) {
-        const lowerLang = navLang.toLowerCase();
-        if (lowerLang.startsWith('de')) currentLang.value = 'de';
-        else if (lowerLang.startsWith('es')) currentLang.value = 'fr';
-        else currentLang.value = 'en';
+    const savedLang = localStorage.getItem('arc_tracker_lang');
+
+    if (savedLang) {
+        currentLang.value = savedLang;
+    } else {
+        // 2. Falls nicht, Browser-Sprache nehmen
+        const navLang = navigator.language || navigator.userLanguage;
+        if (navLang) {
+            const lowerLang = navLang.toLowerCase();
+            if (lowerLang.startsWith('de')) currentLang.value = 'de';
+            else if (lowerLang.startsWith('es')) currentLang.value = 'fr'; // Anmerkung: Dein Code mapped ES auf FR? Falls gewollt, ok.
+            else currentLang.value = 'en';
+        }
     }
+
+    // 3. WICHTIG: Die initiale Sprache sofort an die HomeView senden
+    emit('lang-change', currentLang.value);
 
     nextTick(() => {
         updateDimensions();
@@ -88,6 +99,13 @@ watch(completedQuests, (newVal) => {
 watch(completedProjects, (newVal) => {
     localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal));
 }, { deep: true });
+
+watch(currentLang, (newVal) => {
+    // 1. Speichern im LocalStorage
+    localStorage.setItem('arc_tracker_lang', newVal);
+    // 2. An HomeView senden, damit sich Patch Notes ändern
+    emit('lang-change', newVal);
+});
 
 // --- Tutorial Actions ---
 const nextTutorialStep = () => {

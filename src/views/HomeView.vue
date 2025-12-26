@@ -4,7 +4,9 @@ import LootTracker from '../components/LootTracker.vue';
 import AdBanner from '../components/AdBanner.vue';
 
 const browserLang = ref('en');
-
+const updateLanguage = (lang) => {
+  browserLang.value = lang;
+};
 // --- SEO DATEN (Kombiniert: Patch 1.7.0 + Evergreen Items) ---
 const seoLootList = [
   // NEU: Patch 1.7.0 Items
@@ -68,18 +70,25 @@ const seoLootList = [
 
 // --- LOGIK ---
 onMounted(() => {
-  const navLang = navigator.language || navigator.userLanguage;
-  if (navLang) {
-    if (navLang.startsWith('de')) browserLang.value = 'de';
-    else if (navLang.startsWith('es')) browserLang.value = 'es';
-    else browserLang.value = 'en';
+  // Optional: Auch hier initial aus dem Storage lesen, um "Flackern" zu vermeiden,
+  // bevor der LootTracker geladen ist.
+  const savedLang = localStorage.getItem('arc_tracker_lang');
+  if (savedLang) {
+    browserLang.value = savedLang;
+  } else {
+    const navLang = navigator.language || navigator.userLanguage;
+    if (navLang) {
+      if (navLang.startsWith('de')) browserLang.value = 'de';
+      else if (navLang.startsWith('es')) browserLang.value = 'es';
+      else browserLang.value = 'en';
+    }
   }
 });
 </script>
 
 <template>
   <main>
-    <LootTracker />
+    <LootTracker @lang-change="updateLanguage" />
 
     <AdBanner />
     <div class="seo-footer">
@@ -262,13 +271,78 @@ onMounted(() => {
       </details>
       <details class="changelog-details">
         <summary>
-          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.0)</span>
-          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.0)</span>
-          <span v-else>🛠️ Changelog & Updates (v1.2.0)</span>
+          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.1)</span>
+          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.1)</span>
+          <span v-else>🛠️ Changelog & Updates (v1.2.1)</span>
         </summary>
 
         <div class="changelog-content">
+          <div class="log-entry" style="border-left: 3px solid #f39c12; padding-left: 15px;">
+            <span class="log-date" style="color: #f39c12;">🚧 Work in Progress</span>
+            <span class="log-version" style="background: #f39c12; color: #000;">Upcoming</span>
 
+            <ul v-if="browserLang === 'de'">
+              <li><strong>In Bearbeitung:</strong> Vollständige Übersetzung aller <strong>Quest- und
+                  Projektnamen</strong> ins
+                Deutsche und Spanische, um den Abgleich mit dem Spiel zu erleichtern.</li>
+              <li><strong>Optimierung:</strong> Verbesserung der Suche, um Teiltreffer in verschiedenen Sprachen
+                zuverlässiger
+                zu finden.</li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>En proceso:</strong> Traducción completa de todos los nombres de <strong>Misiones y
+                  Proyectos</strong> al español y alemán para facilitar la comparación con el juego.</li>
+              <li><strong>Mejora:</strong> Optimización de la búsqueda para encontrar mejor las coincidencias parciales
+                en
+                diferentes idiomas.</li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>In progress:</strong> Full translation of all <strong>Quest and Project names</strong> into
+                German
+                and Spanish to facilitate easier cross-referencing with the game.</li>
+              <li><strong>Improvement:</strong> Optimization of the search function to better find partial matches
+                across
+                different languages.</li>
+            </ul>
+          </div>
+          <div class="log-entry">
+            <span class="log-date">26. Dec 2025</span>
+            <span class="log-version">v1.2.1</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Feature:</strong> 💾 Deine Spracheinstellung wird jetzt gespeichert und bleibt beim Neuladen
+                erhalten!</li>
+              <li><strong>Fix:</strong> Fehler behoben, bei dem Items (z.B. <em>Glühbirnen</em>) nicht korrekt mit
+                Projekten
+                verknüpft waren.</li>
+              <li><strong>Übersetzung:</strong> Bezeichnungen korrigiert: "Direktabzug" →
+                <strong>"Pop-Auslöser"</strong> und
+                "Haushaltsreiniger" → <strong>"Allzweckreiniger"</strong>.
+              </li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Mejora:</strong> 💾 ¡La configuración de idioma ahora se guarda y persiste al recargar la
+                página!
+              </li>
+              <li><strong>Corrección:</strong> Se corrigieron enlaces de objetos a proyectos (ej. <em>Bombillas</em>).
+              </li>
+              <li><strong>Traducción:</strong> Correcciones de traducción en alemán ("Pop-Auslöser",
+                "Allzweckreiniger").</li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>Feature:</strong> 💾 Language setting is now saved and persists on page reload!</li>
+              <li><strong>Fix:</strong> Fixed issue where items (e.g., <em>Light Bulbs</em>) were not correctly linked
+                to
+                projects.</li>
+              <li><strong>Translation:</strong> Corrected German translations: "Direktabzug" is now
+                <strong>"Pop-Auslöser"</strong>.
+              </li>
+            </ul>
+          </div>
           <div class="log-entry">
             <span class="log-date">23. Dec 2025</span>
             <span class="log-version">v1.2.0</span>

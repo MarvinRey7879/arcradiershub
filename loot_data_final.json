@@ -359,7 +359,7 @@
   {
     "id": "pop_trigger",
     "name_en": "Pop Trigger",
-    "name_de": "Direktabzug",
+    "name_de": "Pop-Auslöser",
     "name_fr": "Gatillo de tronador",
     "rarity": "Common",
     "category": "Recyclable",
@@ -716,7 +716,7 @@
   {
     "id": "leaper_pulse_unit",
     "name_en": "Leaper Pulse Unit",
-    "name_de": "Springer-Pulseinheit",
+    "name_de": "Springer-Impulseinheit",
     "name_fr": "Unidad de pulso de saltador",
     "rarity": "Epic",
     "category": "Recyclable",
@@ -731,7 +731,12 @@
         "questName": "Expedition: Outfitting (4/6)",
         "trader": "Project",
         "amount": 3
-      }
+      },
+      {
+    "id": "into_the_fray",  
+    "amount": 1,
+    "type": "quest"         
+  }
     ]
   },
   {
@@ -2824,7 +2829,7 @@
   {
     "id": "household_cleaner",
     "name_en": "Household Cleaner",
-    "name_de": "Haushaltsreiniger",
+    "name_de": "Allzweckreiniger",
     "name_fr": "Limpiador Doméstico",
     "rarity": "Uncommon",
     "category": "Recyclable",

@@ -4,7 +4,10 @@
     "name": "Picking Up The Pieces",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Picking Up The Pieces",
+    "name_de": "Die Scherben aufsammeln",
+    "name_es": "Reconstrucción"
   },
   {
     "id": "trash_into_treasure",
@@ -22,7 +25,26 @@
         "name": "Wires",
         "amount": 6
       }
-    ]
+    ],
+    "name_en": "Trash Into Treasure",
+    "name_de": "Des einen Müll ist des anderen Schatz",
+    "name_es": "Basura valiosa"
+  },
+  {
+    "id": "into_the_fray",
+    "name": "Into the Fray",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "leaper_pulse_unit",
+        "name": "Leaper Pulse Unit",
+        "amount": 1
+      }
+    ],
+    "name_en": "Into the Fray",
+    "name_de": "Mitten ins Gefecht",
+    "name_es": "Al fragor de la batalla"
   },
   {
     "id": "clearer_skies",
@@ -35,63 +57,90 @@
         "name": "ARC Alloy",
         "amount": 3
       }
-    ]
+    ],
+    "name_en": "Clearer Skies",
+    "name_de": "Klarer Himmel",
+    "name_es": "Cielos despejados"
   },
   {
     "id": "off_the_radar",
     "name": "Off The Radar",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Off The Radar",
+    "name_de": "Unter dem Radar",
+    "name_es": "Fuera del radar"
   },
   {
     "id": "a_bad_feeling",
     "name": "A Bad Feeling",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Bad Feeling",
+    "name_de": "Ein ungutes Gefühl",
+    "name_es": "Un mal presentimiento"
   },
   {
     "id": "a_balanced_harvest",
     "name": "A Balanced Harvest",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Balanced Harvest",
+    "name_de": "Eine ausgewogene Ernte",
+    "name_es": "Una cosecha equilibrada"
   },
   {
     "id": "a_better_use",
     "name": "A Better Use",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Better Use",
+    "name_de": "Eine bessere Verwendung",
+    "name_es": "Un mejor uso"
   },
   {
     "id": "a_lay_of_the_land",
     "name": "A Lay Of The Land",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Lay of the Land",
+    "name_de": "Eine Lagebeschreibung",
+    "name_es": "Reconociendo el terreno"
   },
   {
     "id": "a_reveal_in_ruins",
     "name": "A Reveal in Ruins",
     "trader": "Lance",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Reveal in Ruins",
+    "name_de": "Eine Enthüllung in Trümmern",
+    "name_es": "Descubrimiento en ruinas"
   },
   {
     "id": "a_symbol_of_unification",
     "name": "A Symbol Of Unification",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Symbol of Unification",
+    "name_de": "Ein Symbol der Einheit",
+    "name_es": "Un símbolo de unificación"
   },
   {
     "id": "a_warm_place_to_rest",
     "name": "A Warm Place To Rest",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Warm Place to Rest",
+    "name_de": "Ein warmer Ort zum Ausruhen",
+    "name_es": "Un lugar cálido para descansar"
   },
   {
     "id": "after_rain_comes",
@@ -104,35 +153,50 @@
         "name": "Wires",
         "amount": 5
       }
-    ]
+    ],
+    "name_en": "After Rain Comes",
+    "name_de": "Nach dem Regen kommt",
+    "name_es": "Después de la lluvia viene"
   },
   {
     "id": "back_on_top",
     "name": "Back On Top",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Back on Top",
+    "name_de": "Wieder an der Spitze",
+    "name_es": "Recuperando la ventaja"
   },
   {
     "id": "broken_monument",
     "name": "Broken Monument",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Broken Monument",
+    "name_de": "Zerstörtes Monument",
+    "name_es": "Monumento destrozado"
   },
   {
     "id": "building_a_library",
     "name": "Building A Library",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Building a Library",
+    "name_de": "Eine Bibliothek aufbauen",
+    "name_es": "Construyendo una biblioteca"
   },
   {
     "id": "celeste_s_journals",
     "name": "Celeste's Journals",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Celeste's Journals",
+    "name_de": "Celestes Tagebücher",
+    "name_es": "Los diarios de Celeste"
   },
   {
     "id": "communication_hideout",
@@ -145,14 +209,20 @@
         "name": "Battery",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Communication Hideout",
+    "name_de": "Kommunikationsversteck",
+    "name_es": "Escondite de comunicaciones"
   },
   {
     "id": "digging_up_dirt",
     "name": "Digging Up Dirt",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Digging Up Dirt",
+    "name_de": "Schmutz ausgraben",
+    "name_es": "Desenterrando trapos sucios"
   },
   {
     "id": "doctor_s_orders",
@@ -180,21 +250,30 @@
         "name": "Great Mullein",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Doctor's Orders",
+    "name_de": "Ärztliche Anweisung",
+    "name_es": "Receta del doctor"
   },
   {
     "id": "down_to_earth",
     "name": "Down To Earth",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Down To Earth",
+    "name_de": "Bodenständig",
+    "name_es": "Pies en la tierra"
   },
   {
     "id": "echoes_of_victory_ridge",
     "name": "Echoes Of Victory Ridge",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Echoes of Victory Ridge",
+    "name_de": "Echos vom Siegeskamm",
+    "name_es": "Ecos de la Cordillera Victoriosa"
   },
   {
     "id": "eyes_on_the_prize",
@@ -207,14 +286,20 @@
         "name": "Wires",
         "amount": 3
       }
-    ]
+    ],
+    "name_en": "Eyes on the Prize",
+    "name_de": "Die Augen auf den Preis",
+    "name_es": "Ojos en el premio"
   },
   {
     "id": "flickering_threat",
     "name": "Flickering Threat",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Flickering Threat",
+    "name_de": "Flackernde Bedrohung",
+    "name_es": "Amenaza parpadeante"
   },
   {
     "id": "greasing_her_palms",
@@ -227,49 +312,70 @@
         "name": "Rocket Thruster",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Greasing Her Palms",
+    "name_de": "Hände gerieben",
+    "name_es": "Untando la mano"
   },
   {
     "id": "hatch_repairs",
     "name": "Hatch Repairs",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Hatch Repairs",
+    "name_de": "Lukenreparatur",
+    "name_es": "Reparaciones de trampilla"
   },
   {
     "id": "industrial_espionage",
     "name": "Industrial Espionage",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Industrial Espionage",
+    "name_de": "Industriespionage",
+    "name_es": "Espionaje industrial"
   },
   {
     "id": "keeping_the_memory",
     "name": "Keeping The Memory",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Keeping the Memory",
+    "name_de": "In Erinnerung behalten",
+    "name_es": "Preservar la memoria"
   },
   {
     "id": "lost_in_transmission",
     "name": "Lost In Transmission",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Lost in Transmission",
+    "name_de": "Übertragung unterbrochen",
+    "name_es": "Perdido en la transmisión"
   },
   {
     "id": "marked_for_death",
     "name": "Marked For Death",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Marked for Death",
+    "name_de": "Zum Tode verurteilt",
+    "name_es": "Marcado para morir"
   },
   {
     "id": "medical_merchandise",
     "name": "Medical Merchandise",
     "trader": "Lance",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Medical Merchandise",
+    "name_de": "Medizinisches Merchandise",
+    "name_es": "Mercancía médica"
   },
   {
     "id": "mixed_signals",
@@ -282,14 +388,20 @@
         "name": "Surveyor Vault",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Mixed Signals",
+    "name_de": "Gemischte Signale",
+    "name_es": "Señales mixtas"
   },
   {
     "id": "our_presence_up_there",
     "name": "Our Presence Up There",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Our Presence Up There",
+    "name_de": "Unsere Präsenz dort oben",
+    "name_es": "Nuestra presencia ahí arriba"
   },
   {
     "id": "out_of_the_shadows",
@@ -302,70 +414,100 @@
         "name": "Rocketeer Driver",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Out of the Shadows",
+    "name_de": "Aus den Schatten",
+    "name_es": "Saliendo de las sombras"
   },
   {
     "id": "prescriptions_of_the_past",
     "name": "Prescriptions Of The Past",
     "trader": "Lance",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Prescriptions of the Past",
+    "name_de": "Rezepte der Vergangenheit",
+    "name_es": "Recetas del pasado"
   },
   {
     "id": "safe_passage",
     "name": "Safe Passage",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Safe Passage",
+    "name_de": "Sicherer Durchgang",
+    "name_es": "Salvoconducto"
   },
   {
     "id": "source_of_the_contamination",
     "name": "Source Of The Contamination",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Source of the Contamination",
+    "name_de": "Quelle der Kontamination",
+    "name_es": "Fuente de la contaminación"
   },
   {
     "id": "sparks_fly",
     "name": "Sparks Fly",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Sparks Fly",
+    "name_de": "Fliegende Funken",
+    "name_es": "Las chispas vuelan"
   },
   {
     "id": "straight_record",
     "name": "Straight Record",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Straight Record",
+    "name_de": "Gute Aufnahme",
+    "name_es": "Registro limpio"
   },
   {
     "id": "switching_the_supply",
     "name": "Switching The Supply",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Switching the Supply",
+    "name_de": "Umstellung der Versorgung",
+    "name_es": "Cambiar el suministro"
   },
   {
     "id": "the_right_tool",
     "name": "The Right Tool",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "The Right Tool",
+    "name_de": "Das richtige Werkzeug",
+    "name_es": "La herramienta adecuada"
   },
   {
     "id": "the_root_of_the_matter",
     "name": "The Root Of The Matter",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "The Root of the Matter",
+    "name_de": "Der Kern der Sache",
+    "name_es": "La raíz del asunto"
   },
   {
     "id": "the_major_s_footlocker",
     "name": "The Major's Footlocker",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "The Major's Footlocker",
+    "name_de": "Die Truhe des Majors",
+    "name_es": "El baúl de la comandante"
   },
   {
     "id": "the_trifecta",
@@ -388,7 +530,10 @@
         "name": "Snitch Scanner",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "The Trifecta",
+    "name_de": "Die Triade",
+    "name_es": "Triplete"
   },
   {
     "id": "tribute_to_toledo",
@@ -401,7 +546,10 @@
         "name": "Power Rod",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Tribute to Toledo",
+    "name_de": "Tribut an Toledo",
+    "name_es": "Tributo a Toledo"
   },
   {
     "id": "unexpected_initiative",
@@ -419,21 +567,30 @@
         "name": "Fertilizer",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Unexpected Initiative",
+    "name_de": "Unerwartete Initiative",
+    "name_es": "Iniciativa inesperada"
   },
   {
     "id": "untended_garden",
     "name": "Untended Garden",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Untended Garden",
+    "name_de": "Ungepflegter Garten",
+    "name_es": "Jardín descuidado"
   },
   {
     "id": "water_troubles",
     "name": "Water Troubles",
     "trader": "Celeste",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Water Troubles",
+    "name_de": "Wasserprobleme",
+    "name_es": "Problemas de agua"
   },
   {
     "id": "what_goes_around",
@@ -446,91 +603,130 @@
         "name": "Fireball Burner",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "What Goes Around",
+    "name_de": "Alles rächt sich",
+    "name_es": "Todo lo que va"
   },
   {
     "id": "what_we_left_behind",
     "name": "What We Left Behind",
     "trader": "Tian Wen",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "What We Left Behind",
+    "name_de": "Was wir zurückließen",
+    "name_es": "Lo que dejamos atrás"
   },
   {
     "id": "paving_the_way",
     "name": "Paving The Way",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Paving the Way",
+    "name_de": "Den Weg ebnen",
+    "name_es": "Abriendo camino"
   },
   {
     "id": "deciphering_the_data",
     "name": "Deciphering The Data",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Deciphering the Data",
+    "name_de": "Entschlüsselung der Daten",
+    "name_es": "Descifrando los datos"
   },
   {
     "id": "groundbreaking",
     "name": "Groundbreaking",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Groundbreaking",
+    "name_de": "Bahnbrechend",
+    "name_es": "Comenzando la obra"
   },
   {
     "id": "a_toxic_trail",
     "name": "A Toxic Trail",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A Toxic Trail",
+    "name_de": "Eine giftige Spur",
+    "name_es": "Un rastro tóxico"
   },
   {
     "id": "the_stench_of_corruption",
     "name": "The Stench Of Corruption",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "The Stench of Corruption",
+    "name_de": "Der Gestank der Korruption",
+    "name_es": "El hedor de la corrupción"
   },
   {
     "id": "the_clean_dream",
     "name": "The Clean Dream",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "The Clean Dream",
+    "name_de": "Der reine Traum",
+    "name_es": "El sueño limpio"
   },
   {
     "id": "a_first_foothold",
     "name": "A First Foothold",
     "trader": "Apollo",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "A First Foothold",
+    "name_de": "Der erste Schritt",
+    "name_es": "Afianzando la presencia"
   },
   {
     "id": "reduced_to_rubble",
     "name": "Reduced To Rubble",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Reduced to Rubble",
+    "name_de": "Schutt und Asche",
+    "name_es": "Reducido a escombros"
   },
   {
     "id": "with_a_trace",
     "name": "With A Trace",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "With a Trace",
+    "name_de": "Mit einer Spur",
+    "name_es": "Buscando un rastro"
   },
   {
     "id": "in_my_image",
     "name": "In My Image",
     "trader": "Lance",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "In My Image",
+    "name_de": "Mein Ebenbild",
+    "name_es": "A mi semejanza"
   },
   {
     "id": "cold_storage",
     "name": "Cold Storage",
     "trader": "Shani",
     "hasObtains": false,
-    "requiredItems": []
+    "requiredItems": [],
+    "name_en": "Cold Storage",
+    "name_de": "Tiefkühllagerung",
+    "name_es": "Almacén frigorífico"
   },
   {
     "id": "snap_and_salvage",
@@ -548,6 +744,109 @@
         "name": "Flow Controller",
         "amount": 1
       }
-    ]
+    ],
+    "name_en": "Snap and Salvage",
+    "name_de": "Schnappen und Ausschlachten",
+    "name_es": "Disparo y rescate"
+  },
+  {
+    "id": "dormantbarons",
+    "name": "Dormant Barons",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Dormant Barons",
+    "name_de": "Schlafende Barone",
+    "name_es": "Barones durmientes"
+  },
+  {
+    "id": "eyesinthesky",
+    "name": "Eyes in the Sky",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Eyes in the Sky",
+    "name_de": "Augen am Himmel",
+    "name_es": "Ojos en el cielo"
+  },
+  {
+    "id": "powerout",
+    "name": "Power Out",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Power Out",
+    "name_de": "Stromausfall",
+    "name_es": "Apagón"
+  },
+  {
+    "id": "bees",
+    "name": "Bees!",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Bees!",
+    "name_de": "Bienen!",
+    "name_es": "¡Abejas!"
+  },
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Espresso",
+    "name_de": "Espresso",
+    "name_es": "Espresso"
+  },
+  {
+    "id": "lifeofapharmacist",
+    "name": "Life of a Pharmacist",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Life of a Pharmacist",
+    "name_de": "Leben eines Apothekers",
+    "name_es": "Vida de un farmacéutico"
+  },
+  {
+    "id": "anewtypeofplant",
+    "name": "A New Type of Plant",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A New Type of Plant",
+    "name_de": "Eine neue Pflanzenart",
+    "name_es": "Un nuevo tipo de planta"
+  },
+  {
+    "id": "turnabout",
+    "name": "Turnabout",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Turnabout",
+    "name_de": "Umschwung",
+    "name_es": "Cambio de tornas"
+  },
+  {
+    "id": "marketcorrection",
+    "name": "Market Correction",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Market Correction",
+    "name_de": "Marktkorrektur",
+    "name_es": "Corrección del mercado"
+  },
+  {
+    "id": "armoredtransports",
+    "name": "Armored Transports",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Armored Transports",
+    "name_de": "Gepanzerte Transporter",
+    "name_es": "Transportes blindados"
   }
 ]
