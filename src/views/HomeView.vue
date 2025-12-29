@@ -424,8 +424,8 @@ onMounted(() => {
 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScB29rIVFfq4Ph26HguDd7_ObpGSQmK09sf5VcMtsxzLr6lMQ/viewform"
           target="_blank" rel="noopener">
-          <span v-if="browserLang === 'de'">🐛 Fehler melden</span>
-          <span v-else-if="browserLang === 'es'">🐛 Reportar error</span>
+          <span v-if="browserLang === 'de'">🐛 Fehler / Bug melden</span>
+          <span v-else-if="browserLang === 'es'">🐛 Reportar / Bug error</span>
           <span v-else>🐛 Report Bug / Mistake</span>
         </a>
       </div>
