@@ -1,9 +1,10 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
-// Pfade anpassen!
+// Pfade anpassen falls nötig!
 import lootDataRaw from '../../loot_data_final.json';
 import questListRaw from '../../quest_list.json';
 import projectListRaw from '../../project_list.json';
+
 const emit = defineEmits(['lang-change']);
 
 // --- State ---
@@ -25,45 +26,90 @@ const showOnlyLootQuests = ref(true);
 const completedQuests = ref([]);
 const completedProjects = ref([]);
 
-// --- TUTORIAL STATE (Mehrstufig) ---
-// 0 = Aus, 1 = Quest Tutorial, 2 = Project Tutorial
+// --- TUTORIAL STATE ---
 const tutorialStep = ref(0);
-const TEST_MODE_ALWAYS_SHOW_TUTORIAL = false; // Setze auf true zum Testen
 
-// --- Konstanten ---
+// --- Mapping & Konstanten ---
 const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legendary': 5 };
 const rarities = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
 
-const actions = [
-    { value: 'keep', label: { de: 'Behalten (Keep)', en: 'Keep', fr: 'Guardar (Keep)' }, color: '#2ecc71' },
-    { value: 'recycle', label: { de: 'Verwerten (Recycle)', en: 'Recycle', fr: 'Reciclar' }, color: '#e67e22' },
-    { value: 'sell', label: { de: 'Verkaufen (Sell)', en: 'Sell', fr: 'Vender (Sell)' }, color: '#f1c40f' }
-];
-
+// Definition der Sprachen (nutzt 'es' für Spanisch)
 const langOptions = [
     { value: 'en', label: '🇺🇸 EN' },
     { value: 'de', label: '🇩🇪 DE' },
-    { value: 'fr', label: '🇪🇸 ES' }
+    { value: 'es', label: '🇪🇸 ES' }
 ];
+
+const actions = [
+    { value: 'keep', label: { de: 'Behalten (Keep)', en: 'Keep', es: 'Guardar (Keep)' }, color: '#2ecc71' },
+    { value: 'recycle', label: { de: 'Verwerten (Recycle)', en: 'Recycle', es: 'Reciclar' }, color: '#e67e22' },
+    { value: 'sell', label: { de: 'Verkaufen (Sell)', en: 'Sell', es: 'Vender (Sell)' }, color: '#f1c40f' }
+];
+
+// --- DATA HELPERS (WICHTIG!) ---
+
+// 1. Eine Map aller Items für schnelle Namenssuche (id -> Item Object)
+const itemMap = computed(() => {
+    const map = {};
+    lootDataRaw.forEach(item => { map[item.id] = item; });
+    return map;
+});
+
+// 2. Eine Map aller Quests & Projekte für schnelle Namenssuche (id -> Quest Object)
+const objectivesMap = computed(() => {
+    const map = {};
+    questListRaw.forEach(q => { map[q.id] = { ...q, type: 'quest' }; });
+    projectListRaw.forEach(p => { map[p.id] = { ...p, type: 'project' }; });
+    return map;
+});
+
+// 3. Intelligente Namens-Abfrage (löst das fr/es Problem)
+const getLocName = (obj) => {
+    if (!obj) return 'Unknown';
+    const lang = currentLang.value;
+
+    // Sonderfall: Spanisch
+    if (lang === 'es') {
+        // Quest-Listen nutzen 'name_es'
+        if (obj.name_es) return obj.name_es;
+        // Loot-Daten nutzen fälschlicherweise 'name_fr' für Spanisch
+        if (obj.name_fr) return obj.name_fr;
+        // Fallback
+        return obj.name_en || obj.name;
+    }
+
+    // Normalfall (de/en)
+    return obj[`name_${lang}`] || obj.name_en || obj.name;
+};
+
+const getLocYield = (item) => {
+    const lang = currentLang.value;
+    // Auch hier: Loot Data nutzt 'yield_fr' für Spanisch
+    if (lang === 'es') return item.yield_fr || item.yield_en;
+    return item[`yield_${lang}`] || item.yield_en;
+};
+
+// Hilfsfunktion: Holt den übersetzten Namen eines Items anhand der ID (für die Requirements Liste)
+const resolveItemName = (itemId, fallbackName) => {
+    const item = itemMap.value[itemId];
+    if (item) return getLocName(item);
+    return fallbackName; // Fallback falls ID nicht gefunden (z.B. neue Items)
+};
 
 // --- Lifecycle ---
 onMounted(() => {
     const savedLang = localStorage.getItem('arc_tracker_lang');
-
     if (savedLang) {
         currentLang.value = savedLang;
     } else {
-        // 2. Falls nicht, Browser-Sprache nehmen
         const navLang = navigator.language || navigator.userLanguage;
         if (navLang) {
             const lowerLang = navLang.toLowerCase();
             if (lowerLang.startsWith('de')) currentLang.value = 'de';
-            else if (lowerLang.startsWith('es')) currentLang.value = 'fr'; // Anmerkung: Dein Code mapped ES auf FR? Falls gewollt, ok.
+            else if (lowerLang.startsWith('es')) currentLang.value = 'es';
             else currentLang.value = 'en';
         }
     }
-
-    // 3. WICHTIG: Die initiale Sprache sofort an die HomeView senden
     emit('lang-change', currentLang.value);
 
     nextTick(() => {
@@ -72,55 +118,39 @@ onMounted(() => {
         window.addEventListener('resize', updateDimensions);
     });
 
-    // Load Data
+    // Load Completed Data
     const savedQuests = localStorage.getItem('arc_tracker_completed_quests');
     if (savedQuests) { try { completedQuests.value = JSON.parse(savedQuests); } catch (e) { } }
 
     const savedProjects = localStorage.getItem('arc_tracker_completed_projects');
     if (savedProjects) { try { completedProjects.value = JSON.parse(savedProjects); } catch (e) { } }
 
-    // Tutorial Logic Start
+    // Tutorial Check
     const tutorialSeen = localStorage.getItem('arc_tracker_tutorial_seen');
-    if (TEST_MODE_ALWAYS_SHOW_TUTORIAL || !tutorialSeen) {
-        setTimeout(() => {
-            tutorialStep.value = 1; // Starte mit Schritt 1 (Quests)
-        }, 800);
+    if (!tutorialSeen) {
+        setTimeout(() => { tutorialStep.value = 1; }, 800);
     }
 });
 
 onUnmounted(() => {
-    window.removeEventListener('resize', updateDimensions);
+    if (typeof window !== 'undefined') window.removeEventListener('resize', updateDimensions);
 });
 
-watch(completedQuests, (newVal) => {
-    localStorage.setItem('arc_tracker_completed_quests', JSON.stringify(newVal));
-}, { deep: true });
-
-watch(completedProjects, (newVal) => {
-    localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal));
-}, { deep: true });
-
+// Watchers für Persistenz
+watch(completedQuests, (newVal) => localStorage.setItem('arc_tracker_completed_quests', JSON.stringify(newVal)), { deep: true });
+watch(completedProjects, (newVal) => localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal)), { deep: true });
 watch(currentLang, (newVal) => {
-    // 1. Speichern im LocalStorage
     localStorage.setItem('arc_tracker_lang', newVal);
-    // 2. An HomeView senden, damit sich Patch Notes ändern
     emit('lang-change', newVal);
 });
 
 // --- Tutorial Actions ---
-const nextTutorialStep = () => {
-    tutorialStep.value = 2; // Gehe zu Projekten
-};
-
+const nextTutorialStep = () => { tutorialStep.value = 2; };
 const finishTutorial = () => {
-    tutorialStep.value = 0; // Beenden
-    localStorage.setItem('arc_tracker_tutorial_seen', 'true');
-};
-
-const skipTutorial = () => {
     tutorialStep.value = 0;
     localStorage.setItem('arc_tracker_tutorial_seen', 'true');
 };
+const skipTutorial = () => { finishTutorial(); };
 
 // --- Layout Logic ---
 const updateDimensions = () => { if (typeof window !== 'undefined') windowWidth.value = window.innerWidth; };
@@ -136,23 +166,47 @@ const columnOptions = computed(() => {
     numbers.forEach(n => { if (n <= maxColumns) opts.push({ value: n, label: String(n) }); });
     return opts;
 });
-const gridStyle = computed(() => {
-    return { 'grid-template-columns': `repeat(${itemsPerRow.value}, 1fr)` };
-});
-
-// --- Helper ---
-const getName = (item) => item[`name_${currentLang.value}`] || item.name_en;
-const getYield = (item) => item[`yield_${currentLang.value}`];
-const getImageUrl = (id) => `/items/${id}.webp`;
-const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1a1a1a/FFF?text=No+Image'; };
-const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
+const gridStyle = computed(() => ({ 'grid-template-columns': `repeat(${itemsPerRow.value}, 1fr)` }));
 
 // --- CORE LOGIC: Processed Items ---
 const processedItems = computed(() => {
-    const allCompletedIds = [...completedQuests.value, ...completedProjects.value];
+    const allCompletedIds = new Set([...completedQuests.value, ...completedProjects.value]);
 
     return lootDataRaw.map(item => {
-        const activeRequirements = item.quests ? item.quests.filter(q => !allCompletedIds.includes(q.questId)) : [];
+        // Hier passiert die Magie: Wir lösen die IDs auf und prüfen, ob sie erledigt sind
+        const rawQuests = item.quests || [];
+
+        // Filtere Quests, die noch NICHT erledigt sind
+        const activeRequirements = [];
+
+        rawQuests.forEach(qRef => {
+            // qRef ist z.B. { id: "trash_into_treasure", amount: 1 }
+            // Prüfen ob erledigt
+            if (allCompletedIds.has(qRef.questId || qRef.id)) return; // Support für alte (questId) und neue (id) Struktur
+
+            // Daten aus der großen Map holen
+            const questId = qRef.questId || qRef.id;
+            const questData = objectivesMap.value[questId];
+
+            if (questData) {
+                activeRequirements.push({
+                    questId: questId,
+                    amount: qRef.amount,
+                    // Hier holen wir den NAMEN dynamisch in der richtigen Sprache
+                    questName: getLocName(questData),
+                    trader: questData.trader
+                });
+            } else {
+                // Fallback falls ID nicht gefunden (sollte nicht passieren durch Scraper)
+                activeRequirements.push({
+                    questId: questId,
+                    amount: qRef.amount,
+                    questName: qRef.questName || 'Unknown Quest',
+                    trader: '?'
+                });
+            }
+        });
+
         const hasActiveReq = activeRequirements.length > 0;
 
         let dynamicAction = item.action;
@@ -165,7 +219,9 @@ const processedItems = computed(() => {
             action: dynamicAction,
             originalAction: item.action,
             activeQuests: activeRequirements,
-            isQuestItem: hasActiveReq
+            isQuestItem: hasActiveReq,
+            // Cache localized name for sorting/filtering
+            _locName: getLocName(item)
         };
     });
 });
@@ -173,7 +229,7 @@ const processedItems = computed(() => {
 // --- Filtered Items ---
 const filteredItems = computed(() => {
     let result = processedItems.value.filter(item => {
-        const nameToSearch = getName(item);
+        const nameToSearch = item._locName; // Nutzung des gecachten Namens
         if (!nameToSearch) return false;
 
         const matchesSearch = nameToSearch.toLowerCase().includes(searchQuery.value.toLowerCase());
@@ -185,8 +241,8 @@ const filteredItems = computed(() => {
 
     return result.sort((a, b) => {
         switch (sortOrder.value) {
-            case 'name_asc': return getName(a).localeCompare(getName(b));
-            case 'name_desc': return getName(b).localeCompare(getName(a));
+            case 'name_asc': return a._locName.localeCompare(b._locName);
+            case 'name_desc': return b._locName.localeCompare(a._locName);
             case 'rarity_asc': return rarityWeights[a.rarity] - rarityWeights[b.rarity];
             case 'rarity_desc': return rarityWeights[b.rarity] - rarityWeights[a.rarity];
             case 'value_desc': return b.value - a.value;
@@ -196,82 +252,97 @@ const filteredItems = computed(() => {
 });
 
 // --- Modals Logic ---
-const filteredQuestList = computed(() => {
-    return questListRaw.filter(quest => {
-        const matchesSearch = quest.name.toLowerCase().includes(questSearchQuery.value.toLowerCase());
-        const matchesType = showOnlyLootQuests.value ? quest.hasObtains : true;
+// Helper for Quest Filtering
+const getFilteredList = (sourceList, query, onlyObtains = false, completedSet) => {
+    return sourceList.filter(entry => {
+        const name = getLocName(entry);
+        const matchesSearch = name.toLowerCase().includes(query.toLowerCase());
+        const matchesType = onlyObtains ? entry.hasObtains : true;
         return matchesSearch && matchesType;
     });
-});
+};
+
+const filteredQuestList = computed(() => getFilteredList(questListRaw, questSearchQuery.value, showOnlyLootQuests.value));
+const filteredProjectList = computed(() => getFilteredList(projectListRaw, projectSearchQuery.value, false));
+
 const areAllQuestsVisibleSelected = computed(() => {
     if (filteredQuestList.value.length === 0) return false;
     return filteredQuestList.value.every(q => completedQuests.value.includes(q.id));
 });
+
 const toggleAllQuestsVisible = () => {
     const visibleIds = filteredQuestList.value.map(q => q.id);
-    if (areAllQuestsVisibleSelected.value) completedQuests.value = completedQuests.value.filter(id => !visibleIds.includes(id));
-    else completedQuests.value = [...completedQuests.value, ...newIds];
+    if (areAllQuestsVisibleSelected.value) {
+        completedQuests.value = completedQuests.value.filter(id => !visibleIds.includes(id));
+    } else {
+        // Nur IDs hinzufügen, die noch nicht drin sind
+        const newIds = visibleIds.filter(id => !completedQuests.value.includes(id));
+        completedQuests.value = [...completedQuests.value, ...newIds];
+    }
 };
 
-const filteredProjectList = computed(() => {
-    return projectListRaw.filter(proj => proj.name.toLowerCase().includes(projectSearchQuery.value.toLowerCase()));
-});
 const areAllProjectsVisibleSelected = computed(() => {
     if (filteredProjectList.value.length === 0) return false;
     return filteredProjectList.value.every(p => completedProjects.value.includes(p.id));
 });
+
 const toggleAllProjectsVisible = () => {
     const visibleIds = filteredProjectList.value.map(p => p.id);
-    if (areAllProjectsVisibleSelected.value) completedProjects.value = completedProjects.value.filter(id => !visibleIds.includes(id));
-    else completedProjects.value = [...completedProjects.value, ...newIds];
+    if (areAllProjectsVisibleSelected.value) {
+        completedProjects.value = completedProjects.value.filter(id => !visibleIds.includes(id));
+    } else {
+        const newIds = visibleIds.filter(id => !completedProjects.value.includes(id));
+        completedProjects.value = [...completedProjects.value, ...newIds];
+    }
 };
 
-// --- Translation ---
+// --- Images ---
+const getImageUrl = (id) => `/items/${id}.webp`;
+const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1a1a1a/FFF?text=No+Image'; };
+const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
+
+// --- Translation UI Strings ---
 const t = (key) => {
     const dict = {
-        searchPlaceholder: { de: 'Suche Item Name...', en: 'Search item name...', fr: 'Buscar objeto...' },
-        yieldLabel: { de: 'Verwertung:', en: 'Yield:', fr: 'Rendimiento:' },
-        noResults: { de: 'Keine Items gefunden.', en: 'No items found.', fr: 'No se encontraron objetos.' },
-        sortNameAZ: { de: 'Name (A-Z)', en: 'Name (A-Z)', fr: 'Nombre (A-Z)' },
-        sortNameZA: { de: 'Name (Z-A)', en: 'Name (Z-A)', fr: 'Nombre (Z-A)' },
-        sortRarityLowHigh: { de: 'Seltenheit (Niedrig → Hoch)', en: 'Rarity (Low → High)', fr: 'Rareza (Baja → Alta)' },
-        sortRarityHighLow: { de: 'Seltenheit (Hoch → Niedrig)', en: 'Rarity (High → Low)', fr: 'Rareza (Alta → Baja)' },
-        rarity: { de: 'Seltenheit', en: 'Rarity', fr: 'Rareza' },
-        action: { de: 'Aktion', en: 'Action', fr: 'Acción' },
-        colLabel: { de: 'Spalten', en: 'Cols', fr: 'Cols' },
-        // BUTTONS
-        questLogBtn: { de: '📜 Quest Filter', en: '📜 Quest Filter', fr: '📜 Filtro de Misiones' },
-        projectLogBtn: { de: '🏗️ Projekt Filter', en: '🏗️ Project Filter', fr: '🏗️ Filtro de Proyectos' },        // MODALS
-        questModalTitle: { de: 'Quest Übersicht', en: 'Quest Overview', fr: 'Resumen de Misiones' },
-        projectModalTitle: { de: 'Projekte & Events', en: 'Projects & Events', fr: 'Proyectos y Eventos' },
-        searchQuest: { de: 'Suche Quest...', en: 'Search quest...', fr: 'Buscar misión...' },
-        searchProject: { de: 'Suche Projekt...', en: 'Search project...', fr: 'Buscar proyecto...' },
-        onlyLootQuests: { de: 'Nur Loot-Relevante Quests', en: 'Only Loot Relevant Quests', fr: 'Solo misiones de botín' },
-        close: { de: 'Schließen', en: 'Close', fr: 'Cerrar' },
-        neededFor: { de: 'Benötigt für:', en: 'Needed for:', fr: 'Necesario para:' },
-        selectAll: { de: 'Alle auswählen', en: 'Select All', fr: 'Seleccionar todo' },
-        deselectAll: { de: 'Alle abwählen', en: 'Deselect All', fr: 'Deseleccionar todo' },
-        // TUTORIAL STEP 1 (Quests)
-        tutQuestTitle: { de: 'NEU: Quest Filter!', en: 'NEW: Quest Filter!', fr: 'NUEVO: Filtro de Misiones!' },
+        searchPlaceholder: { de: 'Suche Item Name...', en: 'Search item name...', es: 'Buscar objeto...' },
+        yieldLabel: { de: 'Verwertung:', en: 'Yield:', es: 'Rendimiento:' },
+        noResults: { de: 'Keine Items gefunden.', en: 'No items found.', es: 'No se encontraron objetos.' },
+        sortNameAZ: { de: 'Name (A-Z)', en: 'Name (A-Z)', es: 'Nombre (A-Z)' },
+        sortNameZA: { de: 'Name (Z-A)', en: 'Name (Z-A)', es: 'Nombre (Z-A)' },
+        sortRarityLowHigh: { de: 'Seltenheit (Niedrig → Hoch)', en: 'Rarity (Low → High)', es: 'Rareza (Baja → Alta)' },
+        sortRarityHighLow: { de: 'Seltenheit (Hoch → Niedrig)', en: 'Rarity (High → Low)', es: 'Rareza (Alta → Baja)' },
+        rarity: { de: 'Seltenheit', en: 'Rarity', es: 'Rareza' },
+        action: { de: 'Aktion', en: 'Action', es: 'Acción' },
+        colLabel: { de: 'Spalten', en: 'Cols', es: 'Cols' },
+        questLogBtn: { de: '📜 Quest Filter', en: '📜 Quest Filter', es: '📜 Filtro de Misiones' },
+        projectLogBtn: { de: '🏗️ Projekt Filter', en: '🏗️ Project Filter', es: '🏗️ Filtro de Proyectos' },
+        questModalTitle: { de: 'Quest Übersicht', en: 'Quest Overview', es: 'Resumen de Misiones' },
+        projectModalTitle: { de: 'Projekte & Events', en: 'Projects & Events', es: 'Proyectos y Eventos' },
+        searchQuest: { de: 'Suche Quest...', en: 'Search quest...', es: 'Buscar misión...' },
+        searchProject: { de: 'Suche Projekt...', en: 'Search project...', es: 'Buscar proyecto...' },
+        onlyLootQuests: { de: 'Nur Loot-Relevante Quests', en: 'Only Loot Relevant Quests', es: 'Solo misiones de botín' },
+        neededFor: { de: 'Benötigt für:', en: 'Needed for:', es: 'Necesario para:' },
+        selectAll: { de: 'Alle auswählen', en: 'Select All', es: 'Seleccionar todo' },
+        deselectAll: { de: 'Alle abwählen', en: 'Deselect All', es: 'Deseleccionar todo' },
+        tutQuestTitle: { de: 'NEU: Quest Filter!', en: 'NEW: Quest Filter!', es: 'NUEVO: Filtro de Misiones!' },
         tutQuestDesc: {
             de: 'Markiere erledigte Quests, damit Items nicht mehr unnötig als "Keep" angezeigt werden.',
             en: 'Check off completed quests so items are no longer marked as "Keep" unnecessarily.',
-            fr: 'Marca las misiones completadas.'
+            es: 'Marca las misiones completadas para actualizar el estado.'
         },
         tutQuestTip: {
             de: 'Deine fertigen Quests findest du im Spiel unter: Raider -> Kodex -> Quests.',
             en: 'You can find your finished quests in-game at: Raider -> Codex -> Quests.',
-            fr: 'Puedes encontrar tus misiones terminadas en: Raider -> Códice -> Misiones.'
+            es: 'Encuentra tus misiones terminadas en: Raider -> Códice -> Misiones.'
         },
-        tutNext: { de: 'Weiter', en: 'Next', fr: 'Siguiente' },
-
-        // TUTORIAL STEP 2 (Projects) - HIER IST DIE ÄNDERUNG
-        tutProjTitle: { de: 'NEU: Projekt Filter!', en: 'NEW: Project Filter!', fr: 'NUEVO: Filtro de Proyectos!' }, tutProjDesc: {
-            de: 'Verfolge Events & Expeditionen. Hake erledigte Phasen ab, damit nicht mehr benötigte Items automatisch wieder als "Verkaufen" oder "Verwerten" angezeigt werden.',
-            en: 'Track events & expeditions. Check off completed stages so unneeded items automatically revert to "Sell" or "Recycle".',
-            fr: 'Sigue eventos y expediciones. Marca las fases completadas para actualizar el estado de los objetos.'
+        tutNext: { de: 'Weiter', en: 'Next', es: 'Siguiente' },
+        tutProjTitle: { de: 'NEU: Projekt Filter!', en: 'NEW: Project Filter!', es: 'NUEVO: Filtro de Proyectos!' },
+        tutProjDesc: {
+            de: 'Verfolge Events & Expeditionen. Hake erledigte Phasen ab, damit Items aktualisiert werden.',
+            en: 'Track events & expeditions. Check off completed stages to update item status.',
+            es: 'Sigue eventos y expediciones. Marca fases completadas.'
         },
-        tutFinish: { de: 'Verstanden!', en: 'Got it!', fr: '¡Entendido!' }
+        tutFinish: { de: 'Verstanden!', en: 'Got it!', es: '¡Entendido!' }
     };
     return dict[key][currentLang.value] || dict[key]['en'];
 };
@@ -385,17 +456,17 @@ const t = (key) => {
                         <label class="quest-checkbox-label">
                             <input type="checkbox" :value="quest.id" v-model="completedQuests" />
                             <span class="quest-info">
-                                <span class="quest-name">{{ quest.name }}</span>
+                                <span class="quest-name">{{ getLocName(quest) }}</span>
                                 <span class="quest-trader">{{ quest.trader }}</span>
                             </span>
                         </label>
                         <div v-if="quest.hasObtains" class="quest-requirements">
                             <span v-for="req in quest.requiredItems" :key="req.id" class="req-badge">
-                                {{ req.amount }}x {{ req.name }}
+                                {{ req.amount }}x {{ resolveItemName(req.id, req.name) }}
                             </span>
                         </div>
                     </div>
-                    <div v-if="filteredQuestList.length === 0" class="no-quests">No quests found.</div>
+                    <div v-if="filteredQuestList.length === 0" class="no-quests">{{ t('noResults') }}</div>
                 </div>
             </div>
         </div>
@@ -419,17 +490,17 @@ const t = (key) => {
                         <label class="quest-checkbox-label">
                             <input type="checkbox" :value="proj.id" v-model="completedProjects" />
                             <span class="quest-info">
-                                <span class="quest-name">{{ proj.name }}</span>
+                                <span class="quest-name">{{ getLocName(proj) }}</span>
                                 <span class="quest-trader">{{ proj.trader }}</span>
                             </span>
                         </label>
                         <div class="quest-requirements">
                             <span v-for="req in proj.requiredItems" :key="req.id" class="req-badge proj-badge">
-                                {{ req.amount }}x {{ req.name }}
+                                {{ req.amount }}x {{ resolveItemName(req.id, req.name) }}
                             </span>
                         </div>
                     </div>
-                    <div v-if="filteredProjectList.length === 0" class="no-quests">No projects found.</div>
+                    <div v-if="filteredProjectList.length === 0" class="no-quests">{{ t('noResults') }}</div>
                 </div>
             </div>
         </div>
@@ -444,7 +515,7 @@ const t = (key) => {
                         alt="Item Image" />
                 </div>
                 <div class="card-content">
-                    <h3 class="item-name">{{ getName(item) }}</h3>
+                    <h3 class="item-name">{{ item._locName }}</h3>
                     <div class="info-row">
                         <span class="rarity-tag">{{ item.rarity }}</span>
                         <span class="value-tag">💰 {{ item.value }}</span>
@@ -459,9 +530,9 @@ const t = (key) => {
                         </ul>
                     </div>
 
-                    <div v-if="item.action === 'recycle' && getYield(item)" class="yield-box">
+                    <div v-if="item.action === 'recycle' && getLocYield(item)" class="yield-box">
                         <span class="label">{{ t('yieldLabel') }}</span>
-                        <p class="yield-text">{{ getYield(item) }}</p>
+                        <p class="yield-text">{{ getLocYield(item) }}</p>
                     </div>
                     <div v-else-if="!item.isQuestItem" class="yield-box simple">
                         <span v-if="item.action === 'keep'" class="action-text">✅ Keep</span>
@@ -512,7 +583,6 @@ const t = (key) => {
 
 .controls.tutorial-active {
     z-index: 2001;
-    /* Über dem Backdrop */
 }
 
 .top-row {
@@ -637,7 +707,7 @@ const t = (key) => {
     color: var(--legendary);
 }
 
-/* --- TUTORIAL STYLES (NEW) --- */
+/* --- TUTORIAL STYLES --- */
 .tutorial-backdrop {
     position: fixed;
     top: 0;
@@ -652,7 +722,6 @@ const t = (key) => {
 
 .tutorial-wrapper {
     position: relative;
-    /* Damit Bubble absolut zum Button ist */
 }
 
 .tutorial-bubble {
@@ -667,7 +736,6 @@ const t = (key) => {
     z-index: 2005;
 }
 
-/* Transition Animation */
 .pop-enter-active,
 .pop-leave-active {
     transition: all 0.3s ease;
@@ -679,11 +747,9 @@ const t = (key) => {
     transform: translateY(-10px) scale(0.9);
 }
 
-/* QUEST BUBBLE POSITION */
 .quest-bubble {
     top: 60px;
     right: 0;
-    /* Pfeil zeigt nach oben */
 }
 
 .quest-bubble .arrow-up {
@@ -697,12 +763,9 @@ const t = (key) => {
     right: 20px;
 }
 
-/* PROJECT BUBBLE POSITION (Desktop: Oben drüber, da Button unten) */
 .project-bubble {
     bottom: 60px;
-    /* Über dem Button */
     right: 0;
-    /* Pfeil zeigt nach unten */
 }
 
 .arrow-dynamic {
@@ -711,13 +774,11 @@ const t = (key) => {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid white;
-    /* Zeigt nach unten */
     position: absolute;
     bottom: -10px;
     right: 20px;
 }
 
-/* Styles für den Inhalt */
 .tutorial-bubble h4 {
     margin: 0 0 8px 0;
     color: #3498db;
@@ -797,7 +858,6 @@ const t = (key) => {
         gap: 20px;
     }
 
-    /* Schiebt Projekt Button nach oben */
     .project-btn-wrapper {
         order: -1;
         margin-bottom: 10px;
@@ -808,24 +868,17 @@ const t = (key) => {
         width: 100%;
     }
 
-    /* MOBILE BUBBLE FIXES */
     .quest-bubble {
         right: 0;
-        /* Links/Rechts ausrichten */
         width: auto;
-        /* Volle Breite */
         min-width: 250px;
     }
 
-    /* Auf Mobile ist der Projekt Button OBEN (wegen order: -1).
-       Also muss die Bubble DARUNTER sein (wie bei Quest) */
     .project-bubble {
         bottom: auto;
         top: 60px;
-        /* Unter dem Button */
     }
 
-    /* Pfeil muss nach OBEN zeigen */
     .project-bubble .arrow-dynamic {
         border-top: none;
         border-bottom: 10px solid white;

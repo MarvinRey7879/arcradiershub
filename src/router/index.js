@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ImprintView from '../views/ImprintView.vue'
 import PrivacyView from '../views/PrivacyView.vue'
+import Disclaimer from '../views/DisclaimerView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
         title: 'ARC Raiders Loot Tracker & Recycling Guide (2025)',
         description: 'Interaktive Loot Tabelle für ARC Raiders. Erfahre sofort, welche Items du behalten, verkaufen oder recyceln solltest.'
       }
+    },
+    {
+      path: '/disclaimer',
+      name: 'Disclaimer',
+      component: Disclaimer
     },
     {
       path: '/impressum',

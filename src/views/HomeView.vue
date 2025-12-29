@@ -94,133 +94,137 @@ onMounted(() => {
     <div class="seo-footer">
 
       <div v-if="browserLang === 'de'">
-        <h1>ARC Raiders Loot Liste & Recycling Guide (Patch 1.7.0)</h1>
+        <h1>Interaktiver ARC Raiders Loot Tracker: Quest Items & Projekte (Patch 1.7.0)</h1>
         <p>
-          Willkommen in der größten und aktuellsten <strong>ARC Raiders Item Datenbank</strong>.
-          Unser Tracker ist live aktualisiert für den <strong>Patch 1.7.0 "Cold Snap"</strong>.
-          Wir decken alles ab: Vom neuen <strong>"Flackernde Flammen" (Flickering Flames)</strong> Event bis zum
-          großen <strong>Expeditionsprojekt (Prestige)</strong>.
-          Gleichzeitig findest du hier alle Infos zu klassischen Items: Solltest du Loot <strong>behalten
-            (Keep)</strong>,
-          für Cash <strong>verkaufen (Sell)</strong> oder für Crafting-Materialien <strong>recyceln</strong>?
+          Der ultimative, <strong>interaktive Loot-Tracker</strong> für ARC Raiders (Patch 1.7.0 "Cold Snap").
+          Schluss mit Excel-Tabellen: Unser Tool zeigt dir live, welche <strong>Quest Items</strong> und
+          <strong>Projekt-Gegenstände</strong>
+          (z.B. für <em>Flackernde Flammen</em> oder die <em>Expedition</em>) du aktuell wirklich brauchst.
+          Entscheide in Sekunden: <strong>Loot behalten</strong>, für Cash verkaufen oder für Crafting-Materialien
+          <strong>recyceln</strong>.
+          Verwalte dein Inventar intelligent und verkaufe nie wieder versehentlich seltene Quest-Objekte.
         </p>
       </div>
 
       <div v-else-if="browserLang === 'es'">
-        <h1>Guía de Reciclaje y Tabla de Botín ARC Raiders (Parche 1.7.0)</h1>
+        <h1>Rastreador Interactivo de ARC Raiders: Objetos de Misión y Proyectos (Parche 1.7.0)</h1>
         <p>
-          Bienvenido a la mayor base de datos de <strong>ARC Raiders</strong>, actualizada para el
-          <strong>Parche 1.7.0 "Cold Snap"</strong>.
-          Cubrimos todo: desde el nuevo evento <strong>"Llamas Parpadeantes" (Flickering Flames)</strong> hasta el
-          gran <strong>Proyecto de Expedición (Prestigio)</strong>.
-          Nuestro rastreador te ayuda a decidir al instante: ¿<strong>Guardar (Keep)</strong>, vender por dinero o
-          <strong>reciclar</strong> para materiales?
+          La herramienta definitiva de <strong>rastreo de botín interactivo</strong> para ARC Raiders (Parche 1.7.0
+          "Cold Snap").
+          Olvídate de las listas estáticas: nuestra web te muestra en tiempo real qué <strong>objetos de misión</strong>
+          y
+          <strong>ítems de proyecto</strong> (como <em>Llamas Parpadeantes</em> o <em>Expedición</em>) necesitas guardar
+          ahora mismo.
+          Decide al instante: ¿<strong>Guardar loot</strong>, vender por dinero o <strong>reciclar</strong> para
+          materiales?
+          Gestiona tu inventario de forma inteligente y nunca más vendas objetos importantes por error.
         </p>
       </div>
 
       <div v-else>
-        <h1>ARC Raiders Loot Table & Recycling Guide (Patch 1.7.0)</h1>
+        <h1>Interactive ARC Raiders Loot Tracker: Quest Items, Projects & Recycling (Patch 1.7.0)</h1>
         <p>
-          Welcome to the biggest and most up-to-date <strong>ARC Raiders Item Database</strong>.
-          Our list is live-updated for the <strong>Patch 1.7.0 "Cold Snap"</strong> release.
-          We cover everything: From the new <strong>"Flickering Flames"</strong> winter event to the
-          major <strong>Expedition Project (Prestige)</strong> mechanics.
-          Our tracker tells you instantly: Should you <strong>Keep loot</strong>, <strong>Sell</strong> for cash, or
-          <strong>Recycle</strong> for crafting materials?
+          The ultimate <strong>Interactive Loot Tracker</strong> and Database for ARC Raiders (Patch 1.7.0 "Cold Snap").
+          Stop using static lists: Our tool shows you live exactly which <strong>Quest Items</strong> and
+          <strong>Project Loot</strong>
+          (e.g., for <em>Flickering Flames</em> or the <em>Expedition</em>) you currently need to keep.
+          Decide instantly: <strong>Keep loot</strong>, Sell for cash, or <strong>Recycle</strong> for crafting
+          materials.
+          Master your inventory management and never accidentally sell critical quest items again.
         </p>
       </div>
 
       <div class="seo-faq">
 
         <div class="faq-item highlight-item">
-          <h3 v-if="browserLang === 'de'">❄️ Welche Items muss ich für das "Flackernde Flammen" Event in ARC Raiders
-            behalten?</h3>
-          <h3 v-else-if="browserLang === 'es'">❄️ ¿Qué objetos guardar para el evento "Llamas Parpadeantes" en ARC
-            Raiders?</h3>
-          <h3 v-else>❄️ Which items to keep for the "Flickering Flames" event in ARC Raiders?</h3>
+          <h3 v-if="browserLang === 'de'">⚡ Wie funktioniert der interaktive Quest- & Projekt-Tracker?</h3>
+          <h3 v-else-if="browserLang === 'es'">⚡ ¿Cómo funciona el rastreador interactivo de misiones y proyectos?</h3>
+          <h3 v-else>⚡ How does the interactive Quest & Project Tracker work?</h3>
 
           <p v-if="browserLang === 'de'">
-            Für das neue <strong>Winter-Projekt (Candleberry Banquet)</strong> musst du spezielle Items sammeln.
-            Behalte unbedingt: <strong>Kerzenbeeren (Candleberries)</strong>, <em>Leere Weinflaschen</em>,
-            <em>Kaffeekannen</em> und <em>Plastikteile</em>. Unser Tracker markiert diese neuen 1.7.0 Items
-            automatisch als "Keep".
+            Anders als statische Wikis passt sich unser Tracker deinem Fortschritt an. Wähle im Menü deine aktiven
+            <strong>Quests (z.B. von Celeste oder Shani)</strong> aus. Das Tool markiert sofort alle benötigten
+            <strong>Quest-Items</strong> als "Keep". Sobald du eine Quest erledigt hast, hake sie ab, und der Status
+            ändert sich automatisch.
           </p>
           <p v-else-if="browserLang === 'es'">
-            Para el nuevo <strong>Proyecto de Invierno (Candleberry Banquet)</strong> necesitas recolectar objetos
-            específicos.
-            Asegúrate de guardar: <strong>Bayas de vela (Candleberries)</strong>, <em>Botellas de vino vacías</em>,
-            <em>Cafeteras</em> y <em>Piezas de plástico</em>. Nuestro rastreador marca estos nuevos objetos
-            automáticamente.
+            A diferencia de las wikis estáticas, nuestro rastreador se adapta a tu progreso. Selecciona tus
+            <strong>misiones activas</strong> en el menú. La herramienta marcará automáticamente todos los
+            <strong>objetos de misión</strong> necesarios como "Guardar". Cuando termines, márcala como hecha y el
+            estado se actualizará.
           </p>
           <p v-else>
-            For the new <strong>Winter Project (Candleberry Banquet)</strong>, you need to scavenge specific items.
+            Unlike static wikis, our tracker adapts to your progress. Select your active
+            <strong>Quests (e.g., from Celeste or Shani)</strong> in the menu. The tool instantly flags all required
+            <strong>Quest Items</strong> as "Keep". Once you finish a quest, check it off, and the status updates
+            automatically.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 v-if="browserLang === 'de'">❄️ Welche Items muss ich für das "Flackernde Flammen" Event behalten?</h3>
+          <h3 v-else-if="browserLang === 'es'">❄️ ¿Qué objetos guardar para el evento "Llamas Parpadeantes"?</h3>
+          <h3 v-else>❄️ Which items to keep for the "Flickering Flames" event?</h3>
+
+          <p v-if="browserLang === 'de'">
+            Für das neue <strong>Winter-Projekt</strong> in Patch 1.7.0 brauchst du spezielle Items.
+            Behalte unbedingt: <strong>Kerzenbeeren (Candleberries)</strong>, <em>Leere Weinflaschen</em>,
+            <em>Kaffeekannen</em> und <em>Plastikteile</em>. Unser Tracker markiert diese neuen Items automatisch als
+            "Keep",
+            wenn das Event aktiv ist.
+          </p>
+          <p v-else-if="browserLang === 'es'">
+            Para el nuevo <strong>Proyecto de Invierno</strong> necesitas objetos específicos.
+            Asegúrate de guardar: <strong>Bayas de vela</strong>, <em>Botellas de vino vacías</em>,
+            <em>Cafeteras</em> y <em>Piezas de plástico</em>. Nuestro rastreador marca estos objetos automáticamente.
+          </p>
+          <p v-else>
+            For the new <strong>Winter Project</strong> in Patch 1.7.0, you need specific items.
             Definitely keep: <strong>Candleberries</strong>, <em>Empty Wine Bottles</em>, <em>Coffee Pots</em>, and
-            <em>Plastic Parts</em>.
-            Our tracker automatically marks these new 1.7.0 items as "Keep".
+            <em>Plastic Parts</em>. Our tracker automatically marks these as "Keep" while the event is active.
           </p>
         </div>
 
         <div class="faq-item">
           <h3 v-if="browserLang === 'de'">Sollte ich ARC-Energiezellen (Powercells) verkaufen?</h3>
-          <h3 v-else-if="browserLang === 'es'">¿Debo vender Celdas de energía ARC en el juego?</h3>
-          <h3 v-else>Should I sell ARC Powercells in ARC Raiders?</h3>
+          <h3 v-else-if="browserLang === 'es'">¿Debo vender Celdas de energía ARC?</h3>
+          <h3 v-else>Should I sell ARC Powercells?</h3>
 
           <p v-if="browserLang === 'de'">
             Nein! Auch in Patch 1.7.0 sind <strong>ARC-Energiezellen</strong> essenziell für Waffen-Upgrades an der
-            Werkbank.
-            Verkaufe sie niemals an den Automaten.
+            Werkbank. Verkaufe sie niemals an den Automaten, nutze sie lieber für das Crafting.
           </p>
           <p v-else-if="browserLang === 'es'">
             ¡No! Incluso en el parche 1.7.0, las <strong>Celdas de energía ARC</strong> son esenciales para mejorar
-            armas.
-            Nunca las vendas.
+            armas. Nunca las vendas; úsalas para la artesanía (crafting).
           </p>
           <p v-else>
             No! Even in Patch 1.7.0, <strong>ARC Powercells</strong> are essential for weapon upgrades at the workbench.
-            Never sell them to the vending machines.
+            Never sell them to vending machines; keep them for crafting.
           </p>
         </div>
 
         <div class="faq-item">
-          <h3 v-if="browserLang === 'de'">Recycling Guide: Welche Items sollte ich in ARC Raiders verwerten?</h3>
-          <h3 v-else-if="browserLang === 'es'">Guía de reciclaje: ¿Qué objetos debo reciclar en ARC Raiders?</h3>
-          <h3 v-else>Recycling Guide: Which items should I recycle in ARC Raiders?</h3>
+          <h3 v-if="browserLang === 'de'">Recycling Guide: Was tun mit "Unbrauchbaren Waffen"?</h3>
+          <h3 v-else-if="browserLang === 'es'">Guía de reciclaje: ¿Qué hacer con "Armas inutilizables"?</h3>
+          <h3 v-else>Recycling Guide: What to do with "Unusable Weapons"?</h3>
 
           <p v-if="browserLang === 'de'">
             Du solltest fast immer <strong>Unbrauchbare Waffen</strong> und Elektronik wie <em>Geigerzähler</em>
-            recyceln. Das ist der beste Weg, um an <strong>ARC-Legierung</strong> für das
+            recyceln. Das ist der effizienteste Weg, um an <strong>ARC-Legierung</strong> für das
             <strong>Expeditionsprojekt</strong> zu kommen.
           </p>
           <p v-else-if="browserLang === 'es'">
             Casi siempre debes reciclar <strong>Armas inutilizables</strong> y electrónica como <em>Contadores
               Geiger</em>.
-            Es la mejor forma de obtener <strong>Aleación ARC</strong> para el <strong>Proyecto de Expedición</strong>.
+            Es la forma más eficiente de obtener <strong>Aleación ARC</strong> para el <strong>Proyecto de
+              Expedición</strong>.
           </p>
           <p v-else>
             You should almost always recycle <strong>Unusable Weapons</strong> and electronics like <em>Geiger
               Counters</em>.
-            This is the best way to get <strong>ARC Alloy</strong> needed for the new <strong>Expedition
+            This is the most efficient way to get <strong>ARC Alloy</strong> needed for the new <strong>Expedition
               Project</strong>.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3 v-if="browserLang === 'de'">Liste wichtiger Quest-Gegenstände in ARC Raiders</h3>
-          <h3 v-else-if="browserLang === 'es'">Lista de objetos de misión importantes en ARC Raiders</h3>
-          <h3 v-else>List of important Quest Items in ARC Raiders</h3>
-
-          <p v-if="browserLang === 'de'">
-            Achte auf <strong>Verschiedenes Saatgut</strong>, <em>Filmrollen</em> und <em>Magnetrons</em>.
-            Diese werden oft für Verträge beim Händler Celeste benötigt.
-          </p>
-          <p v-else-if="browserLang === 'es'">
-            Presta atención a las <strong>Semillas variadas</strong>, <em>Rollos de película</em> y
-            <em>Magnetrones</em>.
-            A menudo se necesitan para contratos con la vendedora Celeste.
-          </p>
-          <p v-else>
-            Pay special attention to <strong>Assorted Seeds</strong>, <em>Film Reels</em>, and <em>Magnetrons</em>.
-            These are often required for contracts with the vendor Celeste.
           </p>
         </div>
 
@@ -228,23 +232,20 @@ onMounted(() => {
 
       <details class="seo-details">
         <summary>
-          <span v-if="browserLang === 'de'">📜 Beispielhafte 1.7.0 Items & Loot-Werte anzeigen</span>
-          <span v-else-if="browserLang === 'es'">📜 Mostrar ejemplos de objetos y valores (1.7.0)</span>
-          <span v-else>📜 Show Example Items & Loot Values (1.7.0)</span>
+          <span v-if="browserLang === 'de'">📜 Loot-Tabelle: Beispiele & Werte (1.7.0)</span>
+          <span v-else-if="browserLang === 'es'">📜 Tabla de Botín: Ejemplos y Valores (1.7.0)</span>
+          <span v-else>📜 Loot Table: Examples & Values (1.7.0)</span>
         </summary>
 
         <div class="seo-content-block">
-
           <p v-if="browserLang === 'de'" style="margin-bottom: 15px; font-size: 0.85rem;">
-            Aktualisierte Datenbank für Patch 1.7.0 "Cold Snap". Enthält Kerzenbeeren, neue Quest-Items und
-            Recycling-Material.
+            Auszug aus unserer Datenbank für Patch 1.7.0. Enthält Preise, Recycling-Erträge und Verwendungszwecke.
           </p>
           <p v-else-if="browserLang === 'es'" style="margin-bottom: 15px; font-size: 0.85rem;">
-            Base de datos actualizada para el parche 1.7.0 "Cold Snap". Incluye bayas de vela, nuevos objetos de misión
-            y reciclables.
+            Extracto de nuestra base de datos para el parche 1.7.0. Incluye precios, rendimientos de reciclaje y usos.
           </p>
           <p v-else style="margin-bottom: 15px; font-size: 0.85rem;">
-            Updated Database for Patch 1.7.0 "Cold Snap". Includes Candleberries, new Quest Items, and Recyclables.
+            Excerpt from our database for Patch 1.7.0. Includes prices, recycling yields, and usage.
           </p>
 
           <div class="seo-grid">
@@ -271,37 +272,56 @@ onMounted(() => {
       </details>
       <details class="changelog-details">
         <summary>
-          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.1)</span>
-          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.1)</span>
-          <span v-else>🛠️ Changelog & Updates (v1.2.1)</span>
+          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.3)</span>
+          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.3)</span>
+          <span v-else>🛠️ Changelog & Updates (v1.2.3)</span>
         </summary>
 
         <div class="changelog-content">
-          <div class="log-entry" style="border-left: 3px solid #f39c12; padding-left: 15px;">
-            <span class="log-date" style="color: #f39c12;">🚧 Work in Progress</span>
-            <span class="log-version" style="background: #f39c12; color: #000;">Upcoming</span>
+          <div class="log-entry">
+            <span class="log-date">27. Dec 2025</span>
+            <span class="log-version">v1.2.3</span>
 
             <ul v-if="browserLang === 'de'">
-              <li><strong>In Bearbeitung:</strong> Vollständige Übersetzung aller <strong>Quest- und
-                  Projektnamen</strong> ins
-                Deutsche und Spanische, um den Abgleich mit dem Spiel zu erleichtern.</li>
+              <li><strong>Status Update:</strong> Kurzer Ausfall am 27.12. (DNS/Server). Wir sind wieder online und
+                alles sollte jetzt reibungslos funktionieren!</li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Estado:</strong> Breve interrupción el 27/12 (DNS/Servidor). ¡Estamos de vuelta y todo debería
+                funcionar correctamente ahora!</li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>Status Update:</strong> Short outage on Dec 27th (DNS/Server). We are back online and
+                everything should be working perfectly now!</li>
+            </ul>
+          </div>
+          <div class="log-entry">
+            <span class="log-date">26. Dec 2025</span>
+            <span class="log-version">v1.2.2</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Neu:</strong> Vollständige Übersetzung aller <strong>Quest- und Projektnamen</strong> ins
+                Deutsche
+                und Spanische.</li>
               <li><strong>Optimierung:</strong> Verbesserung der Suche, um Teiltreffer in verschiedenen Sprachen
                 zuverlässiger
                 zu finden.</li>
             </ul>
 
             <ul v-else-if="browserLang === 'es'">
-              <li><strong>En proceso:</strong> Traducción completa de todos los nombres de <strong>Misiones y
-                  Proyectos</strong> al español y alemán para facilitar la comparación con el juego.</li>
+              <li><strong>Nuevo:</strong> Traducción completa de todos los nombres de <strong>Misiones y
+                  Proyectos</strong> al
+                español y alemán.</li>
               <li><strong>Mejora:</strong> Optimización de la búsqueda para encontrar mejor las coincidencias parciales
                 en
                 diferentes idiomas.</li>
             </ul>
 
             <ul v-else>
-              <li><strong>In progress:</strong> Full translation of all <strong>Quest and Project names</strong> into
-                German
-                and Spanish to facilitate easier cross-referencing with the game.</li>
+              <li><strong>New:</strong> Full translation of all <strong>Quest and Project names</strong> into German and
+                Spanish.</li>
               <li><strong>Improvement:</strong> Optimization of the search function to better find partial matches
                 across
                 different languages.</li>
@@ -399,6 +419,7 @@ onMounted(() => {
       </details>
       <div class="legal-links">
         <router-link to="/datenschutz">Privacy Policy (Datenschutz)</router-link> |
+        <router-link to="/disclaimer">Disclaimer (Haftung)</router-link> |
         <router-link to="/impressum">Imprint (Impressum)</router-link> |
 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScB29rIVFfq4Ph26HguDd7_ObpGSQmK09sf5VcMtsxzLr6lMQ/viewform"
