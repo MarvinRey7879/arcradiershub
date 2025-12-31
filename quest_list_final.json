@@ -1,0 +1,924 @@
+[
+  {
+    "id": "picking_up_the_pieces",
+    "name": "Picking Up The Pieces",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Picking Up The Pieces",
+    "name_de": "Die Scherben aufsammeln",
+    "name_es": "Reconstrucción",
+    "name_ru": "Сбор по крупицам"
+  },
+  {
+    "id": "trash_into_treasure",
+    "name": "Trash Into Treasure",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 1
+      },
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 6
+      }
+    ],
+    "name_en": "Trash Into Treasure",
+    "name_de": "Des einen Müll ist des anderen Schatz",
+    "name_es": "Basura valiosa",
+    "name_ru": "Из мусора в сокровище"
+  },
+  {
+    "id": "into_the_fray",
+    "name": "Into the Fray",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "leaper_pulse_unit",
+        "name": "Leaper Pulse Unit",
+        "amount": 1
+      }
+    ],
+    "name_en": "Into the Fray",
+    "name_de": "Mitten ins Gefecht",
+    "name_es": "Al fragor de la batalla",
+    "name_ru": "В самое пекло"
+  },
+  {
+    "id": "clearer_skies",
+    "name": "Clearer Skies",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "arc_alloy",
+        "name": "ARC Alloy",
+        "amount": 3
+      }
+    ],
+    "name_en": "Clearer Skies",
+    "name_de": "Klarer Himmel",
+    "name_es": "Cielos despejados",
+    "name_ru": "Чистое небо"
+  },
+  {
+    "id": "off_the_radar",
+    "name": "Off The Radar",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Off The Radar",
+    "name_de": "Unter dem Radar",
+    "name_es": "Fuera del radar",
+    "name_ru": "Уход в тень"
+  },
+  {
+    "id": "a_bad_feeling",
+    "name": "A Bad Feeling",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Bad Feeling",
+    "name_de": "Ein ungutes Gefühl",
+    "name_es": "Un mal presentimiento",
+    "name_ru": "Дурное предчувствие"
+  },
+  {
+    "id": "a_balanced_harvest",
+    "name": "A Balanced Harvest",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Balanced Harvest",
+    "name_de": "Eine ausgewogene Ernte",
+    "name_es": "Una cosecha equilibrada",
+    "name_ru": "Сбалансированный урожай"
+  },
+  {
+    "id": "a_better_use",
+    "name": "A Better Use",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Better Use",
+    "name_de": "Eine bessere Verwendung",
+    "name_es": "Un mejor uso",
+    "name_ru": "Применение получше"
+  },
+  {
+    "id": "a_lay_of_the_land",
+    "name": "A Lay Of The Land",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Lay of the Land",
+    "name_de": "Eine Lagebeschreibung",
+    "name_es": "Reconociendo el terreno",
+    "name_ru": "Рельеф местности"
+  },
+  {
+    "id": "a_reveal_in_ruins",
+    "name": "A Reveal in Ruins",
+    "trader": "Lance",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Reveal in Ruins",
+    "name_de": "Eine Enthüllung in Trümmern",
+    "name_es": "Descubrimiento en ruinas",
+    "name_ru": "Что скрывают развалины"
+  },
+  {
+    "id": "a_symbol_of_unification",
+    "name": "A Symbol Of Unification",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Symbol of Unification",
+    "name_de": "Ein Symbol der Einheit",
+    "name_es": "Un símbolo de unificación",
+    "name_ru": "Символ Объединения"
+  },
+  {
+    "id": "a_warm_place_to_rest",
+    "name": "A Warm Place To Rest",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Warm Place to Rest",
+    "name_de": "Ein warmer Ort zum Ausruhen",
+    "name_es": "Un lugar cálido para descansar",
+    "name_ru": "Тёплое место для отдыха"
+  },
+  {
+    "id": "after_rain_comes",
+    "name": "After Rain Comes",
+    "trader": "Celeste",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 5
+      }
+    ],
+    "name_en": "After Rain Comes",
+    "name_de": "Nach dem Regen kommt",
+    "name_es": "Después de la lluvia viene",
+    "name_ru": "После дождя"
+  },
+  {
+    "id": "back_on_top",
+    "name": "Back On Top",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Back on Top",
+    "name_de": "Wieder an der Spitze",
+    "name_es": "Recuperando la ventaja",
+    "name_ru": "Снова на вершине"
+  },
+  {
+    "id": "broken_monument",
+    "name": "Broken Monument",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Broken Monument",
+    "name_de": "Zerstörtes Monument",
+    "name_es": "Monumento destrozado",
+    "name_ru": "Поврежденный памятник"
+  },
+  {
+    "id": "building_a_library",
+    "name": "Building A Library",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Building a Library",
+    "name_de": "Eine Bibliothek aufbauen",
+    "name_es": "Construyendo una biblioteca",
+    "name_ru": "Строим Библиотеку"
+  },
+  {
+    "id": "celeste_s_journals",
+    "name": "Celeste's Journals",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Celeste's Journals",
+    "name_de": "Celestes Tagebücher",
+    "name_es": "Los diarios de Celeste",
+    "name_ru": "Дневники Селесты"
+  },
+  {
+    "id": "communication_hideout",
+    "name": "Communication Hideout",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 1
+      }
+    ],
+    "name_en": "Communication Hideout",
+    "name_de": "Kommunikationsversteck",
+    "name_es": "Escondite de comunicaciones",
+    "name_ru": "Коммуникационное убежище"
+  },
+  {
+    "id": "digging_up_dirt",
+    "name": "Digging Up Dirt",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Digging Up Dirt",
+    "name_de": "Schmutz ausgraben",
+    "name_es": "Desenterrando trapos sucios",
+    "name_ru": "Копаем грязь"
+  },
+  {
+    "id": "doctor_s_orders",
+    "name": "Doctor's Orders",
+    "trader": "Lance",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "antiseptic",
+        "name": "Antiseptic",
+        "amount": 2
+      },
+      {
+        "id": "syringe",
+        "name": "Syringe",
+        "amount": 1
+      },
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 1
+      },
+      {
+        "id": "great_mullein",
+        "name": "Great Mullein",
+        "amount": 1
+      }
+    ],
+    "name_en": "Doctor's Orders",
+    "name_de": "Ärztliche Anweisung",
+    "name_es": "Receta del doctor",
+    "name_ru": "Указания врача"
+  },
+  {
+    "id": "down_to_earth",
+    "name": "Down To Earth",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Down To Earth",
+    "name_de": "Bodenständig",
+    "name_es": "Pies en la tierra",
+    "name_ru": "Приземленные загадки"
+  },
+  {
+    "id": "echoes_of_victory_ridge",
+    "name": "Echoes Of Victory Ridge",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Echoes of Victory Ridge",
+    "name_de": "Echos vom Siegeskamm",
+    "name_es": "Ecos de la Cordillera Victoriosa",
+    "name_ru": "Отголоски Победного Хребта"
+  },
+  {
+    "id": "eyes_on_the_prize",
+    "name": "Eyes On The Prize",
+    "trader": "Tian Wen",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 3
+      }
+    ],
+    "name_en": "Eyes on the Prize",
+    "name_de": "Die Augen auf den Preis",
+    "name_es": "Ojos en el premio",
+    "name_ru": "Взгляд на приз"
+  },
+  {
+    "id": "flickering_threat",
+    "name": "Flickering Threat",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Flickering Threat",
+    "name_de": "Flackernde Bedrohung",
+    "name_es": "Amenaza parpadeante",
+    "name_ru": "Мерцающая угроза"
+  },
+  {
+    "id": "greasing_her_palms",
+    "name": "Greasing Her Palms",
+    "trader": "Celeste",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "rocket_thruster",
+        "name": "Rocket Thruster",
+        "amount": 1
+      }
+    ],
+    "name_en": "Greasing Her Palms",
+    "name_de": "Hände gerieben",
+    "name_es": "Untando la mano",
+    "name_ru": "Взяточные запчасти"
+  },
+  {
+    "id": "hatch_repairs",
+    "name": "Hatch Repairs",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Hatch Repairs",
+    "name_de": "Lukenreparatur",
+    "name_es": "Reparaciones de trampilla",
+    "name_ru": "Ремонт люков"
+  },
+  {
+    "id": "industrial_espionage",
+    "name": "Industrial Espionage",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Industrial Espionage",
+    "name_de": "Industriespionage",
+    "name_es": "Espionaje industrial",
+    "name_ru": "Промышленный шпионаж"
+  },
+  {
+    "id": "keeping_the_memory",
+    "name": "Keeping The Memory",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Keeping the Memory",
+    "name_de": "In Erinnerung behalten",
+    "name_es": "Preservar la memoria",
+    "name_ru": "В память о былом"
+  },
+  {
+    "id": "lost_in_transmission",
+    "name": "Lost In Transmission",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Lost in Transmission",
+    "name_de": "Übertragung unterbrochen",
+    "name_es": "Perdido en la transmisión",
+    "name_ru": "Потеряно при передаче"
+  },
+  {
+    "id": "marked_for_death",
+    "name": "Marked For Death",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Marked for Death",
+    "name_de": "Zum Tode verurteilt",
+    "name_es": "Marcado para morir",
+    "name_ru": "Метка смерти"
+  },
+  {
+    "id": "medical_merchandise",
+    "name": "Medical Merchandise",
+    "trader": "Lance",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Medical Merchandise",
+    "name_de": "Medizinisches Merchandise",
+    "name_es": "Mercancía médica",
+    "name_ru": "Медицинские товары"
+  },
+  {
+    "id": "mixed_signals",
+    "name": "Mixed Signals",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "surveyor_vault",
+        "name": "Surveyor Vault",
+        "amount": 1
+      }
+    ],
+    "name_en": "Mixed Signals",
+    "name_de": "Gemischte Signale",
+    "name_es": "Señales mixtas",
+    "name_ru": "Смешанный сигнал"
+  },
+  {
+    "id": "our_presence_up_there",
+    "name": "Our Presence Up There",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Our Presence Up There",
+    "name_de": "Unsere Präsenz dort oben",
+    "name_es": "Nuestra presencia ahí arriba",
+    "name_ru": "Наше присутствие там"
+  },
+  {
+    "id": "out_of_the_shadows",
+    "name": "Out Of The Shadows",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "rocketeer_driver",
+        "name": "Rocketeer Driver",
+        "amount": 1
+      }
+    ],
+    "name_en": "Out of the Shadows",
+    "name_de": "Aus den Schatten",
+    "name_es": "Saliendo de las sombras",
+    "name_ru": "Из тени"
+  },
+  {
+    "id": "prescriptions_of_the_past",
+    "name": "Prescriptions Of The Past",
+    "trader": "Lance",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Prescriptions of the Past",
+    "name_de": "Rezepte der Vergangenheit",
+    "name_es": "Recetas del pasado",
+    "name_ru": "Рецепты прошлого"
+  },
+  {
+    "id": "safe_passage",
+    "name": "Safe Passage",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Safe Passage",
+    "name_de": "Sicherer Durchgang",
+    "name_es": "Salvoconducto",
+    "name_ru": "Безопасный проход"
+  },
+  {
+    "id": "source_of_the_contamination",
+    "name": "Source Of The Contamination",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Source of the Contamination",
+    "name_de": "Quelle der Kontamination",
+    "name_es": "Fuente de la contaminación",
+    "name_ru": "Источник заражения"
+  },
+  {
+    "id": "sparks_fly",
+    "name": "Sparks Fly",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Sparks Fly",
+    "name_de": "Fliegende Funken",
+    "name_es": "Las chispas vuelan",
+    "name_ru": "Искры летят"
+  },
+  {
+    "id": "straight_record",
+    "name": "Straight Record",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Straight Record",
+    "name_de": "Gute Aufnahme",
+    "name_es": "Registro limpio",
+    "name_ru": "Поправки"
+  },
+  {
+    "id": "switching_the_supply",
+    "name": "Switching The Supply",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Switching the Supply",
+    "name_de": "Umstellung der Versorgung",
+    "name_es": "Cambiar el suministro",
+    "name_ru": "Переключение снабжения"
+  },
+  {
+    "id": "the_right_tool",
+    "name": "The Right Tool",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "The Right Tool",
+    "name_de": "Das richtige Werkzeug",
+    "name_es": "La herramienta adecuada",
+    "name_ru": "Подходящий инструмент"
+  },
+  {
+    "id": "the_root_of_the_matter",
+    "name": "The Root Of The Matter",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "The Root of the Matter",
+    "name_de": "Der Kern der Sache",
+    "name_es": "La raíz del asunto",
+    "name_ru": "Корень проблемы"
+  },
+  {
+    "id": "the_major_s_footlocker",
+    "name": "The Major's Footlocker",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "The Major's Footlocker",
+    "name_de": "Die Truhe des Majors",
+    "name_es": "El baúl de la comandante",
+    "name_ru": "Сундук майора"
+  },
+  {
+    "id": "the_trifecta",
+    "name": "The Trifecta",
+    "trader": "Shani",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "hornet_driver",
+        "name": "Hornet Driver",
+        "amount": 1
+      },
+      {
+        "id": "wasp_driver",
+        "name": "Wasp Driver",
+        "amount": 1
+      },
+      {
+        "id": "snitch_scanner",
+        "name": "Snitch Scanner",
+        "amount": 1
+      }
+    ],
+    "name_en": "The Trifecta",
+    "name_de": "Die Triade",
+    "name_es": "Triplete",
+    "name_ru": "Триада"
+  },
+  {
+    "id": "tribute_to_toledo",
+    "name": "Tribute to Toledo",
+    "trader": "Celeste",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "power_rod",
+        "name": "Power Rod",
+        "amount": 1
+      }
+    ],
+    "name_en": "Tribute to Toledo",
+    "name_de": "Tribut an Toledo",
+    "name_es": "Tributo a Toledo",
+    "name_ru": "Дань Толедо"
+  },
+  {
+    "id": "unexpected_initiative",
+    "name": "Unexpected Initiative",
+    "trader": "Tian Wen",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "water_pump",
+        "name": "Water Pump",
+        "amount": 1
+      },
+      {
+        "id": "fertilizer",
+        "name": "Fertilizer",
+        "amount": 1
+      }
+    ],
+    "name_en": "Unexpected Initiative",
+    "name_de": "Unerwartete Initiative",
+    "name_es": "Iniciativa inesperada",
+    "name_ru": "Неожиданная Инициатива"
+  },
+  {
+    "id": "untended_garden",
+    "name": "Untended Garden",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Untended Garden",
+    "name_de": "Ungepflegter Garten",
+    "name_es": "Jardín descuidado",
+    "name_ru": "Заброшенный сад"
+  },
+  {
+    "id": "water_troubles",
+    "name": "Water Troubles",
+    "trader": "Celeste",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Water Troubles",
+    "name_de": "Wasserprobleme",
+    "name_es": "Problemas de agua",
+    "name_ru": "Проблемы с водой"
+  },
+  {
+    "id": "what_goes_around",
+    "name": "What Goes Around",
+    "trader": "Apollo",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "fireball_burner",
+        "name": "Fireball Burner",
+        "amount": 1
+      }
+    ],
+    "name_en": "What Goes Around",
+    "name_de": "Alles rächt sich",
+    "name_es": "Todo lo que va",
+    "name_ru": "Что посеешь..."
+  },
+  {
+    "id": "what_we_left_behind",
+    "name": "What We Left Behind",
+    "trader": "Tian Wen",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "What We Left Behind",
+    "name_de": "Was wir zurückließen",
+    "name_es": "Lo que dejamos atrás",
+    "name_ru": "Следы прошлого"
+  },
+  {
+    "id": "paving_the_way",
+    "name": "Paving The Way",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Paving the Way",
+    "name_de": "Den Weg ebnen",
+    "name_es": "Abriendo camino",
+    "name_ru": "Прокладывая путь"
+  },
+  {
+    "id": "deciphering_the_data",
+    "name": "Deciphering The Data",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Deciphering the Data",
+    "name_de": "Entschlüsselung der Daten",
+    "name_es": "Descifrando los datos",
+    "name_ru": "Расшифровка данных"
+  },
+  {
+    "id": "groundbreaking",
+    "name": "Groundbreaking",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Groundbreaking",
+    "name_de": "Bahnbrechend",
+    "name_es": "Comenzando la obra",
+    "name_ru": "Начало работ"
+  },
+  {
+    "id": "a_toxic_trail",
+    "name": "A Toxic Trail",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A Toxic Trail",
+    "name_de": "Eine giftige Spur",
+    "name_es": "Un rastro tóxico",
+    "name_ru": "Токсичный след"
+  },
+  {
+    "id": "the_stench_of_corruption",
+    "name": "The Stench Of Corruption",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "The Stench of Corruption",
+    "name_de": "Der Gestank der Korruption",
+    "name_es": "El hedor de la corrupción",
+    "name_ru": "Смрад коррупции"
+  },
+  {
+    "id": "the_clean_dream",
+    "name": "The Clean Dream",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "The Clean Dream",
+    "name_de": "Der reine Traum",
+    "name_es": "El sueño limpio",
+    "name_ru": "Чистая мечта"
+  },
+  {
+    "id": "a_first_foothold",
+    "name": "A First Foothold",
+    "trader": "Apollo",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A First Foothold",
+    "name_de": "Der erste Schritt",
+    "name_es": "Afianzando la presencia",
+    "name_ru": "Первый плацдарм"
+  },
+  {
+    "id": "reduced_to_rubble",
+    "name": "Reduced To Rubble",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Reduced to Rubble",
+    "name_de": "Schutt und Asche",
+    "name_es": "Reducido a escombros",
+    "name_ru": "Одни только щепки"
+  },
+  {
+    "id": "with_a_trace",
+    "name": "With A Trace",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "With a Trace",
+    "name_de": "Mit einer Spur",
+    "name_es": "Buscando un rastro",
+    "name_ru": "По горячим следам"
+  },
+  {
+    "id": "in_my_image",
+    "name": "In My Image",
+    "trader": "Lance",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "In My Image",
+    "name_de": "Mein Ebenbild",
+    "name_es": "A mi semejanza",
+    "name_ru": "По образу и подобию"
+  },
+  {
+    "id": "cold_storage",
+    "name": "Cold Storage",
+    "trader": "Shani",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Cold Storage",
+    "name_de": "Tiefkühllagerung",
+    "name_es": "Almacén frigorífico",
+    "name_ru": "Холодильное хранилище"
+  },
+  {
+    "id": "snap_and_salvage",
+    "name": "Snap And Salvage",
+    "trader": "Tian Wen",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "magnetron",
+        "name": "Magnetron",
+        "amount": 1
+      },
+      {
+        "id": "flow_controller",
+        "name": "Flow Controller",
+        "amount": 1
+      }
+    ],
+    "name_en": "Snap and Salvage",
+    "name_de": "Schnappen und Ausschlachten",
+    "name_es": "Disparo y rescate",
+    "name_ru": "Фотогеничные детали"
+  },
+  {
+    "id": "dormantbarons",
+    "name": "Dormant Barons",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Dormant Barons",
+    "name_de": "Schlafende Barone",
+    "name_es": "Barones durmientes",
+    "name_ru": "Спящие «бароны»"
+  },
+  {
+    "id": "eyesinthesky",
+    "name": "Eyes in the Sky",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Eyes in the Sky",
+    "name_de": "Augen am Himmel",
+    "name_es": "Ojos en el cielo",
+    "name_ru": "Глаза в небе"
+  },
+  {
+    "id": "powerout",
+    "name": "Power Out",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Power Out",
+    "name_de": "Stromausfall",
+    "name_es": "Apagón",
+    "name_ru": "Отключение электричества"
+  },
+  {
+    "id": "bees",
+    "name": "Bees!",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Bees!",
+    "name_de": "Bienen!",
+    "name_es": "¡Abejas!",
+    "name_ru": "Пчёлы!"
+  },
+  {
+    "id": "espresso",
+    "name": "Espresso",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Espresso",
+    "name_de": "Espresso",
+    "name_es": "Espresso",
+    "name_ru": "Эспрессо"
+  },
+  {
+    "id": "lifeofapharmacist",
+    "name": "Life of a Pharmacist",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Life of a Pharmacist",
+    "name_de": "Leben eines Apothekers",
+    "name_es": "Vida de un farmacéutico",
+    "name_ru": "Жизнь фармацевта"
+  },
+  {
+    "id": "anewtypeofplant",
+    "name": "A New Type of Plant",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "A New Type of Plant",
+    "name_de": "Eine neue Pflanzenart",
+    "name_es": "Un nuevo tipo de planta",
+    "name_ru": "Новый Тип Растения"
+  },
+  {
+    "id": "turnabout",
+    "name": "Turnabout",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Turnabout",
+    "name_de": "Umschwung",
+    "name_es": "Cambio de tornas",
+    "name_ru": "Переворот"
+  },
+  {
+    "id": "marketcorrection",
+    "name": "Market Correction",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Market Correction",
+    "name_de": "Marktkorrektur",
+    "name_es": "Corrección del mercado",
+    "name_ru": "Коррекция рынка"
+  },
+  {
+    "id": "armoredtransports",
+    "name": "Armored Transports",
+    "trader": "Unknown",
+    "hasObtains": false,
+    "requiredItems": [],
+    "name_en": "Armored Transports",
+    "name_de": "Gepanzerte Transporter",
+    "name_es": "Transportes blindados",
+    "name_ru": "Бронированные транспорты"
+  }
+]

@@ -716,7 +716,7 @@
   {
     "id": "leaper_pulse_unit",
     "name_en": "Leaper Pulse Unit",
-    "name_de": "Springer-Pulseinheit",
+    "name_de": "Springer-Impulseinheit",
     "name_fr": "Unidad de pulso de saltador",
     "rarity": "Epic",
     "category": "Recyclable",
@@ -731,7 +731,12 @@
         "questName": "Expedition: Outfitting (4/6)",
         "trader": "Project",
         "amount": 3
-      }
+      },
+      {
+    "id": "into_the_fray",  
+    "amount": 1,
+    "type": "quest"         
+  }
     ]
   },
   {
@@ -2448,7 +2453,7 @@
   },
   {
     "id": "key_buried_city_residential",
-    "name_en": "Buried City Residential Mastery Key",
+    "name_en": "Buried City Residential Master Key",
     "name_de": "Vergrabene Stadt Wohngebiet-Hauptschlüssel",
     "name_fr": "Llave maestra residencial de la ciudad enterrada",
     "rarity": "Uncommon",
@@ -3028,13 +3033,13 @@
     "name_en": "Remote Control",
     "name_de": "Fernbedienung",
     "name_fr": "Control Remoto",
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 1000,
-    "yield_en": "2x Plastic Parts, 1x Sensors",
-    "yield_de": "2x Plastikteile, 1x Sensoren",
-    "yield_fr": "2x Piezas de plástico, 1x Sensores",
+    "yield_en": "7x Plastic Parts, 1x Sensors",
+    "yield_de": "7x Plastikteile, 1x Sensoren",
+    "yield_fr": "7x Piezas de plástico, 1x Sensores",
     "quests": []
   },
   {

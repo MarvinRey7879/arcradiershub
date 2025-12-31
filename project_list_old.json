@@ -5,11 +5,30 @@
     "trader": "Project",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "metal_parts", "name": "Metal Parts", "amount": 150 },
-      { "id": "rubber_parts", "name": "Rubber Parts", "amount": 200 },
-      { "id": "arc_alloy", "name": "ARC Alloy", "amount": 80 },
-      { "id": "steel_spring", "name": "Steel Spring", "amount": 15 }
-    ]
+      {
+        "id": "metal_parts",
+        "name": "Metal Parts",
+        "amount": 150
+      },
+      {
+        "id": "rubber_parts",
+        "name": "Rubber Parts",
+        "amount": 200
+      },
+      {
+        "id": "arc_alloy",
+        "name": "ARC Alloy",
+        "amount": 80
+      },
+      {
+        "id": "steel_spring",
+        "name": "Steel Spring",
+        "amount": 15
+      }
+    ],
+    "name_en": "Expedition: Foundation (1/6)",
+    "name_de": "Expeditionsprojekt: Fundament (1/6)",
+    "name_es": "Proyecto de expedición: Fundación (1/6)"
   },
   {
     "id": "expedition_stage_2",
@@ -17,11 +36,30 @@
     "trader": "Project",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "durable_cloth", "name": "Durable Cloth", "amount": 35 },
-      { "id": "wires", "name": "Wires", "amount": 25 },
-      { "id": "electrical_components", "name": "Electrical Components", "amount": 20 },
-      { "id": "cooling_coil", "name": "Cooling Coil", "amount": 4 }
-    ]
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 35
+      },
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 25
+      },
+      {
+        "id": "electrical_components",
+        "name": "Electrical Components",
+        "amount": 20
+      },
+      {
+        "id": "cooling_coil",
+        "name": "Cooling Coil",
+        "amount": 4
+      }
+    ],
+    "name_en": "Expedition: Core Systems (2/6)",
+    "name_de": "Expeditionsprojekt: Kernsysteme (2/6)",
+    "name_es": "Proyecto de expedición: Sistemas centrales (2/6)"
   },
   {
     "id": "expedition_stage_3",
@@ -29,11 +67,30 @@
     "trader": "Project",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "light_bulb", "name": "Light Bulb", "amount": 4 },
-      { "id": "battery", "name": "Battery", "amount": 30 },
-      { "id": "shredder_gyro", "name": "Shredder Gyro", "amount": 10 },
-      { "id": "exodus_modules", "name": "Exodus Modules", "amount": 1 }
-    ]
+      {
+        "id": "light_bulb",
+        "name": "Light Bulb",
+        "amount": 4
+      },
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 30
+      },
+      {
+        "id": "shredder_gyro",
+        "name": "Shredder Gyro",
+        "amount": 10
+      },
+      {
+        "id": "exodus_modules",
+        "name": "Exodus Modules",
+        "amount": 1
+      }
+    ],
+    "name_en": "Expedition: Framework (3/6)",
+    "name_de": "Expeditionsprojekt: Rahmen (3/6)",
+    "name_es": "Proyecto de expedición: Marco (3/6)"
   },
   {
     "id": "expedition_stage_4",
@@ -41,11 +98,30 @@
     "trader": "Project",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "frequency_modulation_box", "name": "Frequency Modulation Box", "amount": 5 },
-      { "id": "adv_elec_comp", "name": "Advanced Electrical Components", "amount": 5 },
-      { "id": "ion_sputter", "name": "Ion Sputter", "amount": 3 },
-      { "id": "leaper_pulse_unit", "name": "Leaper Pulse Unit", "amount": 3 }
-    ]
+      {
+        "id": "frequency_modulation_box",
+        "name": "Frequency Modulation Box",
+        "amount": 5
+      },
+      {
+        "id": "adv_elec_comp",
+        "name": "Advanced Electrical Components",
+        "amount": 5
+      },
+      {
+        "id": "ion_sputter",
+        "name": "Ion Sputter",
+        "amount": 3
+      },
+      {
+        "id": "leaper_pulse_unit",
+        "name": "Leaper Pulse Unit",
+        "amount": 3
+      }
+    ],
+    "name_en": "Expedition: Outfitting (4/6)",
+    "name_de": "Expeditionsprojekt: Ausrüstung (4/6)",
+    "name_es": "Proyecto de expedición: Equipamiento (4/6)"
   },
   {
     "id": "flickering_flames_1",
@@ -53,11 +129,30 @@
     "trader": "Event",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "empty_wine_bottle", "name": "Empty Wine Bottle", "amount": 1 },
-      { "id": "plastic_parts", "name": "Plastic Parts", "amount": 25 },
-      { "id": "durable_cloth", "name": "Durable Cloth", "amount": 5 },
-      { "id": "candle_berries", "name": "Candleberries", "amount": 20 }
-    ]
+      {
+        "id": "empty_wine_bottle",
+        "name": "Empty Wine Bottle",
+        "amount": 1
+      },
+      {
+        "id": "plastic_parts",
+        "name": "Plastic Parts",
+        "amount": 25
+      },
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 5
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 20
+      }
+    ],
+    "name_en": "Flickering Flames: Candlelight (1/5)",
+    "name_de": "Flackernde Flammen: Kerzenlicht (1/5)",
+    "name_es": "Llamas parpadeantes: Luz de vela (1/5)"
   },
   {
     "id": "flickering_flames_2",
@@ -65,11 +160,30 @@
     "trader": "Event",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "candle_holder", "name": "Candle Holder", "amount": 3 },
-      { "id": "light_bulb", "name": "Light Bulb", "amount": 3 },
-      { "id": "industrial_battery", "name": "Industrial Battery", "amount": 1 },
-      { "id": "candle_berries", "name": "Candleberries", "amount": 50 }
-    ]
+      {
+        "id": "candle_holder",
+        "name": "Candle Holder",
+        "amount": 3
+      },
+      {
+        "id": "light_bulb",
+        "name": "Light Bulb",
+        "amount": 3
+      },
+      {
+        "id": "industrial_battery",
+        "name": "Industrial Battery",
+        "amount": 1
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 50
+      }
+    ],
+    "name_en": "Flickering Flames: Decorations (2/5)",
+    "name_de": "Flackernde Flammen: Dekorationen (2/5)",
+    "name_es": "Llamas parpadeantes: Decoraciones (2/5)"
   },
   {
     "id": "flickering_flames_3",
@@ -77,10 +191,25 @@
     "trader": "Event",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "duct_tape", "name": "Duct Tape", "amount": 10 },
-      { "id": "film_reel", "name": "Film Reel", "amount": 1 },
-      { "id": "candle_berries", "name": "Candleberries", "amount": 60 }
-    ]
+      {
+        "id": "duct_tape",
+        "name": "Duct Tape",
+        "amount": 10
+      },
+      {
+        "id": "film_reel",
+        "name": "Film Reel",
+        "amount": 1
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 60
+      }
+    ],
+    "name_en": "Flickering Flames: Presents (3/5)",
+    "name_de": "Flackernde Flammen: Geschenke (3/5)",
+    "name_es": "Llamas parpadeantes: Regalos (3/5)"
   },
   {
     "id": "flickering_flames_4",
@@ -88,11 +217,30 @@
     "trader": "Event",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "coffee_pot", "name": "Coffee Pot", "amount": 2 },
-      { "id": "fireball_burner", "name": "Fireball Burner", "amount": 10 },
-      { "id": "water_filter", "name": "Water Filter", "amount": 2 },
-      { "id": "candle_berries", "name": "Candleberries", "amount": 60 }
-    ]
+      {
+        "id": "coffee_pot",
+        "name": "Coffee Pot",
+        "amount": 2
+      },
+      {
+        "id": "fireball_burner",
+        "name": "Fireball Burner",
+        "amount": 10
+      },
+      {
+        "id": "water_filter",
+        "name": "Water Filter",
+        "amount": 2
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 60
+      }
+    ],
+    "name_en": "Flickering Flames: Beverages (4/5)",
+    "name_de": "Flackernde Flammen: Getränke (4/5)",
+    "name_es": "Llamas parpadeantes: Bebidas (4/5)"
   },
   {
     "id": "flickering_flames_5",
@@ -100,10 +248,29 @@
     "trader": "Event",
     "hasObtains": true,
     "requiredItems": [
-      { "id": "mushroom", "name": "Mushroom", "amount": 7 },
-      { "id": "frying_pan", "name": "Frying Pan", "amount": 2 },
-      { "id": "music_album", "name": "Music Album", "amount": 2 },
-      { "id": "candle_berries", "name": "Candleberries", "amount": 70 }
-    ]
+      {
+        "id": "mushroom",
+        "name": "Mushroom",
+        "amount": 7
+      },
+      {
+        "id": "frying_pan",
+        "name": "Frying Pan",
+        "amount": 2
+      },
+      {
+        "id": "music_album",
+        "name": "Music Album",
+        "amount": 2
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 70
+      }
+    ],
+    "name_en": "Flickering Flames: Meals (5/5)",
+    "name_de": "Flackernde Flammen: Mahlzeiten (5/5)",
+    "name_es": "Llamas parpadeantes: Comidas (5/5)"
   }
 ]

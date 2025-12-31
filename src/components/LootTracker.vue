@@ -2,8 +2,8 @@
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
 // Pfade anpassen falls nötig!
 import lootDataRaw from '../../loot_data_final.json';
-import questListRaw from '../../quest_list.json';
-import projectListRaw from '../../project_list.json';
+import questListRaw from '../../quest_list_final.json';
+import projectListRaw from '../../project_list_final.json';
 
 const emit = defineEmits(['lang-change']);
 

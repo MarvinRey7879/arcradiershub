@@ -1,0 +1,418 @@
+[
+  {
+    "id": "expedition_s1_stage_1",
+    "name": "Expedition S1: Phase 1: Foundation",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "metal_parts",
+        "name": "Metal Parts",
+        "amount": 150
+      },
+      {
+        "id": "rubber_parts",
+        "name": "Rubber Parts",
+        "amount": 200
+      },
+      {
+        "id": "arc_alloy",
+        "name": "ARC Alloy",
+        "amount": 80
+      },
+      {
+        "id": "steel_spring",
+        "name": "Steel Spring",
+        "amount": 15
+      }
+    ],
+    "name_en": "Expedition S1: Phase 1: Foundation",
+    "name_de": "Expedition S1: Phase 1: Fundament",
+    "name_es": "Expedición T1: Fase 1: Fundación",
+    "name_ru": "Экспедиция С1: Фаза 1: Фундамент"
+  },
+  {
+    "id": "expedition_s1_stage_2",
+    "name": "Expedition S1: Phase 2: Core Systems",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 35
+      },
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 30
+      },
+      {
+        "id": "electrical_components",
+        "name": "Electrical Components",
+        "amount": 30
+      },
+      {
+        "id": "cooling_fan",
+        "name": "Cooling Fan",
+        "amount": 5
+      }
+    ],
+    "name_en": "Expedition S1: Phase 2: Core Systems",
+    "name_de": "Expedition S1: Phase 2: Kernsysteme",
+    "name_es": "Expedición T1: Fase 2: Sistemas centrales",
+    "name_ru": "Экспедиция С1: Фаза 2: Основные системы"
+  },
+  {
+    "id": "expedition_s1_stage_3",
+    "name": "Expedition S1: Phase 3: Framework",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "light_bulb",
+        "name": "Light Bulb",
+        "amount": 5
+      },
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 30
+      },
+      {
+        "id": "sensors",
+        "name": "Sensors",
+        "amount": 20
+      },
+      {
+        "id": "exodus_modules",
+        "name": "Exodus Modules",
+        "amount": 1
+      }
+    ],
+    "name_en": "Expedition S1: Phase 3: Framework",
+    "name_de": "Expedition S1: Phase 3: Rahmen",
+    "name_es": "Expedición T1: Fase 3: Marco",
+    "name_ru": "Экспедиция С1: Фаза 3: Каркас"
+  },
+  {
+    "id": "expedition_s1_stage_4",
+    "name": "Expedition S2: Phase 4: Outfitting",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "humidifier",
+        "name": "Humidifier",
+        "amount": 5
+      },
+      {
+        "id": "adv_elec_comp",
+        "name": "Advanced Electrical Components",
+        "amount": 5
+      },
+      {
+        "id": "magnetic_accelerator",
+        "name": "Magnetic Accelerator",
+        "amount": 3
+      },
+      {
+        "id": "leaper_pulse_unit",
+        "name": "Leaper Pulse Unit",
+        "amount": 3
+      }
+    ],
+    "name_en": "Expedition S1: Phase 4: Outfitting",
+    "name_de": "Expedition S1: Phase 4: Ausrüstung",
+    "name_es": "Expedición T1: Fase 4: Equipamiento",
+    "name_ru": "Экспедиция С1: Фаза 4: Оснащение"
+  },
+  {
+    "id": "expedition_s2_stage_1",
+    "name": "Expedition S2: Phase 1: Foundation",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "metal_parts",
+        "name": "Metal Parts",
+        "amount": 150
+      },
+      {
+        "id": "plastic_parts",
+        "name": "Plastic Parts",
+        "amount": 200
+      },
+      {
+        "id": "arc_alloy",
+        "name": "ARC Alloy",
+        "amount": 80
+      },
+      {
+        "id": "steel_spring",
+        "name": "Steel Spring",
+        "amount": 15
+      }
+    ],
+    "name_en": "Expedition S2: Phase 1: Foundation",
+    "name_de": "Expedition S2: Phase 1: Fundament",
+    "name_es": "Expedición T2: Fase 1: Fundación",
+    "name_ru": "Экспедиция С2: Фаза 1: Фундамент"
+  },
+  {
+    "id": "expedition_s2_stage_2",
+    "name": "Expedition S2: Phase 2: Core Systems",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 35
+      },
+      {
+        "id": "wires",
+        "name": "Wires",
+        "amount": 25
+      },
+      {
+        "id": "electrical_components",
+        "name": "Electrical Components",
+        "amount": 20
+      },
+      {
+        "id": "cooling_coil",
+        "name": "Cooling Coil",
+        "amount": 4
+      }
+    ],
+    "name_en": "Expedition S2: Phase 2: Core Systems",
+    "name_de": "Expedition S2: Phase 2: Kernsysteme",
+    "name_es": "Expedición T2: Fase 2: Sistemas centrales",
+    "name_ru": "Экспедиция С2: Фаза 2: Основные системы"
+  },
+  {
+    "id": "expedition_s2_stage_3",
+    "name": "Expedition S2: Phase 3: Framework",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "light_bulb",
+        "name": "Light Bulb",
+        "amount": 4
+      },
+      {
+        "id": "battery",
+        "name": "Battery",
+        "amount": 30
+      },
+      {
+        "id": "shredder_gyro",
+        "name": "Shredder Gyro",
+        "amount": 10
+      },
+      {
+        "id": "exodus_modules",
+        "name": "Exodus Modules",
+        "amount": 1
+      }
+    ],
+    "name_en": "Expedition S2: Phase 3: Framework",
+    "name_de": "Expedition S2: Phase 3: Rahmen",
+    "name_es": "Expedición T2: Fase 3: Marco",
+    "name_ru": "Экспедиция С2: Фаза 3: Каркас"
+  },
+  {
+    "id": "expedition_s2_stage_4",
+    "name": "Expedition S2: Phase 4: Outfitting",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "frequency_modulation_box",
+        "name": "Frequency Modulation Box",
+        "amount": 5
+      },
+      {
+        "id": "adv_elec_comp",
+        "name": "Advanced Electrical Components",
+        "amount": 5
+      },
+      {
+        "id": "ion_sputter",
+        "name": "Ion Sputter",
+        "amount": 3
+      },
+      {
+        "id": "leaper_pulse_unit",
+        "name": "Leaper Pulse Unit",
+        "amount": 3
+      }
+    ],
+    "name_en": "Expedition S2: Phase 4: Outfitting",
+    "name_de": "Expedition S2: Phase 4: Ausrüstung",
+    "name_es": "Expedición T2: Fase 4: Equipamiento",
+    "name_ru": "Экспедиция С2: Фаза 4: Оснащение"
+  },
+  {
+    "id": "flickering_stage_1",
+    "name": "Flickering Flames: Phase 1: Candlelight",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "empty_wine_bottle",
+        "name": "Empty Wine Bottle",
+        "amount": 1
+      },
+      {
+        "id": "plastic_parts",
+        "name": "Plastic Parts",
+        "amount": 25
+      },
+      {
+        "id": "durable_cloth",
+        "name": "Durable Cloth",
+        "amount": 5
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 20
+      }
+    ],
+    "name_en": "Flickering Flames: Phase 1: Candlelight",
+    "name_de": "Flackernde Flammen: Phase 1: Kerzenlicht",
+    "name_es": "Llamas parpadeantes: Fase 1: Luz de vela",
+    "name_ru": "Мерцающее пламя: Фаза 1: Свет свечи"
+  },
+  {
+    "id": "flickering_stage_2",
+    "name": "Flickering Flames: Phase 2: Decorations",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "candle_holder",
+        "name": "Candle Holder",
+        "amount": 3
+      },
+      {
+        "id": "light_bulb",
+        "name": "Light Bulb",
+        "amount": 3
+      },
+      {
+        "id": "industrial_battery",
+        "name": "Industrial Battery",
+        "amount": 1
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 50
+      }
+    ],
+    "name_en": "Flickering Flames: Phase 2: Decorations",
+    "name_de": "Flackernde Flammen: Phase 2: Dekorationen",
+    "name_es": "Llamas parpadeantes: Fase 2: Decoraciones",
+    "name_ru": "Мерцающее пламя: Фаза 2: Украшения"
+  },
+  {
+    "id": "flickering_stage_3",
+    "name": "Flickering Flames: Phase 3: Presents",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "snap_blast_grenade",
+        "name": "Snap Blast Grenade",
+        "amount": 5
+      },
+      {
+        "id": "duct_tape",
+        "name": "Duct Tape",
+        "amount": 10
+      },
+      {
+        "id": "film_reel",
+        "name": "Film Reel",
+        "amount": 1
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 60
+      }
+    ],
+    "name_en": "Flickering Flames: Phase 3: Presents",
+    "name_de": "Flackernde Flammen: Phase 3: Geschenke",
+    "name_es": "Llamas parpadeantes: Fase 3: Regalos",
+    "name_ru": "Мерцающее пламя: Фаза 3: Подарки"
+  },
+  {
+    "id": "flickering_stage_4",
+    "name": "Flickering Flames: Phase 4: Beverages",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "coffee_pot",
+        "name": "Coffee Pot",
+        "amount": 2
+      },
+      {
+        "id": "fireball_burner",
+        "name": "Fireball Burner",
+        "amount": 10
+      },
+      {
+        "id": "water_filter",
+        "name": "Water Filter",
+        "amount": 2
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 60
+      }
+    ],
+    "name_en": "Flickering Flames: Phase 4: Beverages",
+    "name_de": "Flackernde Flammen: Phase 4: Getränke",
+    "name_es": "Llamas parpadeantes: Fase 4: Bebidas",
+    "name_ru": "Мерцающее пламя: Фаза 4: Напитки"
+  },
+  {
+    "id": "flickering_stage_5",
+    "name": "Flickering Flames: Phase 5: Meals",
+    "trader": "Project",
+    "hasObtains": true,
+    "requiredItems": [
+      {
+        "id": "mushroom",
+        "name": "Mushroom",
+        "amount": 7
+      },
+      {
+        "id": "frying_pan",
+        "name": "Frying Pan",
+        "amount": 2
+      },
+      {
+        "id": "music_album",
+        "name": "Music Album",
+        "amount": 2
+      },
+      {
+        "id": "candle_berries",
+        "name": "Candleberries",
+        "amount": 70
+      }
+    ],
+    "name_en": "Flickering Flames: Phase 5: Meals",
+    "name_de": "Flackernde Flammen: Phase 5: Mahlzeiten",
+    "name_es": "Llamas parpadeantes: Fase 5: Comidas",
+    "name_ru": "Мерцающее пламя: Фаза 5: Блюда"
+  }
+]

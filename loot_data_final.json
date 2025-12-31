@@ -11,7 +11,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Энергоячейка ARC",
+    "yield_ru": "2x Продвинутая энергоячейка ARC"
   },
   {
     "id": "assorted_seeds",
@@ -25,7 +27,9 @@
     "yield_en": "Currency for Celeste",
     "yield_de": "Währung für Celeste",
     "yield_fr": "Moneda para Celeste",
-    "quests": []
+    "quests": [],
+    "name_ru": "Различные семена",
+    "yield_ru": "3x Абрикос, 2x Свечные ягоды, 2x Удобрение, 2x Коровяк, 2x Травяной бинт, 3x Лимон, 3x Мох, 2x Оливки, 3x Опунция, 1x Корни, 14x Очиститель образцов"
   },
   {
     "id": "bloated_tuna",
@@ -39,7 +43,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Вздутая банка тунца",
+    "yield_ru": null
   },
   {
     "id": "cat_bed",
@@ -53,7 +59,9 @@
     "yield_en": "1x Scrappy",
     "yield_de": "1x Scrappy",
     "yield_fr": "1x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Кошачья лежанка",
+    "yield_ru": null
   },
   {
     "id": "chemicals",
@@ -67,7 +75,9 @@
     "yield_en": "50x Workshop",
     "yield_de": "50x Werkstatt",
     "yield_fr": "50x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Химикаты",
+    "yield_ru": "1x Инъекция адреналина, 10x Антисептик, 16x Охлаждающее вещество ARC, 1x Синий химический фонарь, 5x Охлаждающая жидкость, 6x Охлаждающий змеевик, 3x Самодельная взрывчатка, 1x Взрывная мина, 1x Горелка Огнешара, 1x Газовая граната, 1x Газовая мина, 11x Чистящее средство, 12x Загрязненное охлаждающее вещество ARC, 7x Промышленная батарея, 2x Лабораторные реагенты, 1x Легкая граната, 1x Маленькая дымовая граната, 3x Масло, 6x Импульсная мина, 1x Красный химический фонарь, 1x Устройство дистанционного пуска рейдерской ракеты, 1x Самонаводящаяся граната, 2x Дымовая граната, 1x Разрывная граната, 2x Шприц, 2x Оболочка Блохи, 1x Управляемая граната, 4x Витаминная сыворотка, 1x Желтый химический фонарь"
   },
   {
     "id": "coffee_pot",
@@ -83,12 +93,14 @@
     "yield_fr": null,
     "quests": [
       {
-        "questId": "flickering_flames_4",
-        "questName": "Flickering Flames: Beverages (4/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_4",
+        "questName": "Flickering Flames: Phase 4: Beverages",
+        "trader": "Project",
         "amount": 2
       }
-    ]
+    ],
+    "name_ru": "Кофейник",
+    "yield_ru": null
   },
   {
     "id": "damaged_arc_powercell",
@@ -102,7 +114,9 @@
     "yield_en": "1x ARC Alloy",
     "yield_de": "1x ARC-Legierung",
     "yield_fr": "1x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Повреждённая энергоячейка ARC",
+    "yield_ru": "1x Сплав ARC"
   },
   {
     "id": "damaged_fireball_burner",
@@ -116,7 +130,9 @@
     "yield_en": "1x ARC Alloy",
     "yield_de": "1x ARC-Legierung",
     "yield_fr": "1x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденная горелка огненного шара",
+    "yield_ru": "1x Сплав ARC"
   },
   {
     "id": "damaged_hornet_driver",
@@ -130,7 +146,9 @@
     "yield_en": "2x ARC Alloy",
     "yield_de": "2x ARC-Legierung",
     "yield_fr": "2x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденный драйвер Шершня",
+    "yield_ru": "2x Сплав ARC"
   },
   {
     "id": "damaged_rocketeer_driver",
@@ -144,7 +162,9 @@
     "yield_en": "3x ARC Alloy",
     "yield_de": "3x ARC-Legierung",
     "yield_fr": "3x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденный драйвер Ракетчика",
+    "yield_ru": "3x Сплав ARC"
   },
   {
     "id": "damaged_snitch_scanner",
@@ -158,7 +178,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденный сканер Snitch",
+    "yield_ru": null
   },
   {
     "id": "damaged_tick_pod",
@@ -172,7 +194,9 @@
     "yield_en": "1x ARC Alloy",
     "yield_de": "1x ARC-Legierung",
     "yield_fr": "1x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденная оболочка Блохи",
+    "yield_ru": "1x Сплав ARC"
   },
   {
     "id": "damaged_wasp_driver",
@@ -186,7 +210,9 @@
     "yield_en": "1x ARC Alloy",
     "yield_de": "1x ARC-Legierung",
     "yield_fr": "1x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденная оболочка Осы",
+    "yield_ru": "1x Сплав ARC"
   },
   {
     "id": "empty_wine_bottle",
@@ -202,12 +228,14 @@
     "yield_fr": null,
     "quests": [
       {
-        "questId": "flickering_flames_1",
-        "questName": "Flickering Flames: Candlelight (1/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_1",
+        "questName": "Flickering Flames: Phase 1: Candlelight",
+        "trader": "Project",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Пустая бутылка из-под вина",
+    "yield_ru": null
   },
   {
     "id": "expired_pasta",
@@ -221,7 +249,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Просроченные макароны",
+    "yield_ru": null
   },
   {
     "id": "fabric",
@@ -235,7 +265,9 @@
     "yield_en": "80x Workshop",
     "yield_de": "80x Werkstatt",
     "yield_fr": "80x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ткань",
+    "yield_ru": "16x Термоподкладка ARC, 2x Бинт, 8x Собачий ошейник, 3x Скотч, 6x Прочная ткань, 4x Просроченный респиратор, 5x Травяной бинт, 6x Загрязненный воздушный фильтр, 5x Веревка, 10x Испорченный парашют, 5x Испорченный тактический жилет, 12x Потрепанная ARC-Подкладка, 11x Рваная одежда, 12x Рваное одеяло"
   },
   {
     "id": "flow_controller",
@@ -256,7 +288,9 @@
         "trader": "Tian Wen",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Регулятор Потока",
+    "yield_ru": "1x Продвинутые механические компоненты, 1x Датчики"
   },
   {
     "id": "faded_photograph",
@@ -270,7 +304,9 @@
     "yield_en": "2x Quest",
     "yield_de": "2x Quest",
     "yield_fr": "2x Misión",
-    "quests": []
+    "quests": [],
+    "name_ru": "Выцветшая фотография",
+    "yield_ru": null
   },
   {
     "id": "lemon",
@@ -284,7 +320,9 @@
     "yield_en": "3x Scrappy",
     "yield_de": "3x Scrappy",
     "yield_fr": "3x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Лимон",
+    "yield_ru": "3x Различные семена"
   },
   {
     "id": "metal_parts",
@@ -300,12 +338,20 @@
     "yield_fr": "80x Taller, 150x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_1",
-        "questName": "Expedition: Foundation (1/6)",
+        "questId": "expedition_s1_stage_1",
+        "questName": "Expedition S1: Phase 1: Foundation",
+        "trader": "Project",
+        "amount": 150
+      },
+      {
+        "questId": "expedition_s2_stage_1",
+        "questName": "Expedition S2: Phase 1: Foundation",
         "trader": "Project",
         "amount": 150
       }
-    ]
+    ],
+    "name_ru": "Металлические детали",
+    "yield_ru": "2x Сплав ARC, 12x Высокопрочная сталь ARC, 4x Набор баррикад, 2x Батарея, 10x Велосипедный насос, 4x Пламенная граната, 6x Сломанный фонарик, 8x Подсвечник, 5x Компенсатор I, 6x Поврежденный теплопоглотитель, 1x Собачий ошейник, 2x Блокиратор дверей, 2x Ферро I, 4x Ферро II, 6x Ферро III, 8x Сковорода, 12x Пресс для чеснока, 2x Заколка I, 4x Заколка II, 6x Заколка III, 7x Ложка для мороженого, 5x Промышленное зарядное устройство, 4x Промышленный магнит, 3x Магнит, 3x Механические компоненты, 8x Металлические скобы, 5x Дульный тормоз I, 3x Номерной знак, 8x Трещетка I, 12x Трещетка II, 6x Ракетный двигатель, 6x Сломанная дубинка, 8x Сломанные наручники, 8x Ржавые болты, 4x Ржавая шестиренка, 8x Ржавые инструменты, 8x Ржавая сталь ARC, 1x Датчики, 1x Осколочная граната, 2x Простые детали для оружия, 2x Стальная пружина, 3x Сшиватель I, 6x Сшиватель II, 12x Сшиватель III, 4x Непригодное оружие, 4x Водяной насос, 1x Зиплайн"
   },
   {
     "id": "olives",
@@ -319,7 +365,9 @@
     "yield_en": "6x Scrappy",
     "yield_de": "6x Scrappy",
     "yield_fr": "6x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Оливки",
+    "yield_ru": "2x Различные семена"
   },
   {
     "id": "painted_box",
@@ -333,7 +381,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Расписная коробка",
+    "yield_ru": null
   },
   {
     "id": "plastic_parts",
@@ -349,12 +399,20 @@
     "yield_fr": "75x Taller",
     "quests": [
       {
-        "questId": "flickering_flames_1",
-        "questName": "Flickering Flames: Candlelight (1/5)",
-        "trader": "Event",
+        "questId": "expedition_s2_stage_1",
+        "questName": "Expedition S2: Phase 1: Foundation",
+        "trader": "Project",
+        "amount": 200
+      },
+      {
+        "questId": "flickering_stage_1",
+        "questName": "Flickering Flames: Phase 1: Candlelight",
+        "trader": "Project",
         "amount": 25
       }
-    ]
+    ],
+    "name_ru": "Пластиковые детали",
+    "yield_ru": "1x Инъекция адреналина, 6x Будильник, 14x Синтетическая смола ARC, 4x Бинокль, 8x Объектив камеры, 3x Канистра, 3x Бой 1, 14x Охлаждающий вентилятор, 4x Смятая пластиковая бутылка, 1x Дефибриллятор, 9x Высохшая смола ARC, 3x Электрические компоненты, 6x Увеличенный магазин для легкого оружия I, 6x Увеличенный магазин дробовика II, 3x Петарда, 5x Сгоревшая материнская плата, 4x Заколка II, 2x Электрическая мина, 3x Чайник I, 6x Чайник II, 1x Легкая граната, 4x Легкий щит, 1x Маленькая дымовая граната, 3x Добыча 1, 1x Процессор, 10x Флейта, 7x Пульт дистанционного управления, 2x Испорченный аугмент, 10x Разрушенный щит, 2x Компонент динамика, 1x Синтезированное топливо, 3x Шприц, 3x Стратегия 1, 1x Маркирующая граната, 5x Тостер"
   },
   {
     "id": "pop_trigger",
@@ -368,7 +426,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поп-триггер",
+    "yield_ru": "1x Самодельная взрывчатка, 1x Сплав ARC"
   },
   {
     "id": "prickly_pear",
@@ -382,7 +442,9 @@
     "yield_en": "6x Scrappy",
     "yield_de": "6x Scrappy",
     "yield_fr": "6x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Опунция",
+    "yield_ru": "3x Различные семена"
   },
   {
     "id": "resin",
@@ -396,7 +458,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Смола",
+    "yield_ru": null
   },
   {
     "id": "rosary",
@@ -410,7 +474,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Чётки",
+    "yield_ru": null
   },
   {
     "id": "rubber_duck",
@@ -424,7 +490,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Резиновая уточка",
+    "yield_ru": null
   },
   {
     "id": "rubber_parts",
@@ -440,12 +508,14 @@
     "yield_fr": "30x Taller, 200x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_1",
-        "questName": "Expedition: Foundation (1/6)",
+        "questId": "expedition_s1_stage_1",
+        "questName": "Expedition S1: Phase 1: Foundation",
         "trader": "Project",
         "amount": 200
       }
-    ]
+    ],
+    "name_ru": "Резиновые детали",
+    "yield_ru": "16x Гибкая резина ARC, 2x Бинокль, 3x Бой 1, 3x Треснувший биосканер, 15x Сдутый футбольный мяч, 11x Изношенная резина ARC, 12x Очки для плавания, 3x Электрические компоненты, 8x Просроченный респиратор, 1x Ферро I, 3x Ферро II, 1x Газовая граната, 1x Газовая мина, 1x Заколка I, 7x Наушники, 2x Тяжелая граната с детонатором, 2x Чайник I, 6x Чайник II, 3x Добыча 1, 2x Механические компоненты, 1x Устройство дистанционного пуска рейдерской ракеты, 18x Резиновый коврик, 18x Сломанный аккордеон, 2x Испорченный аугмент, 3x Сломанная дубинка, 6x Разрушенный щит, 4x Устройство для перезарядки щита, 3x Компонент динамика, 6x Надежный приклад I, 2x Сшиватель I, 6x Сшиватель II, 3x Стратегия 1, 7x Термостат, 1x Преобразователь напряжения, 2x Водяной фильтр, 2x Провода"
   },
   {
     "id": "ruined_augment",
@@ -459,7 +529,9 @@
     "yield_en": "2x Plastic Parts, 2x Rubber Parts",
     "yield_de": "2x Plastikteile, 2x Gummiteile",
     "yield_fr": "2x Piezas de plástico, 2x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Испорченный аугмент",
+    "yield_ru": "2x Пластиковые детали, 2x Резиновые детали"
   },
   {
     "id": "silver_teaspoon_set",
@@ -473,7 +545,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Набор серебряных чайных ложек",
+    "yield_ru": null
   },
   {
     "id": "statuette",
@@ -487,7 +561,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Статуэтка",
+    "yield_ru": null
   },
   {
     "id": "torn_book",
@@ -501,7 +577,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Порванная книга",
+    "yield_ru": null
   },
   {
     "id": "very_comfortable_pillow",
@@ -515,7 +593,9 @@
     "yield_en": "3x Scrappy",
     "yield_de": "3x Scrappy",
     "yield_fr": "3x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Очень удобная подушка",
+    "yield_ru": null
   },
   {
     "id": "burnt_out_candles",
@@ -529,7 +609,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Сгоревшие свечи",
+    "yield_ru": null
   },
   {
     "id": "volcanic_rock",
@@ -543,7 +625,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Вулканическая порода",
+    "yield_ru": null
   },
   {
     "id": "bastion_cell",
@@ -557,7 +641,9 @@
     "yield_en": "6x Workshop",
     "yield_de": "6x Werkstatt",
     "yield_fr": "6x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ячейка Бастиона",
+    "yield_ru": "2x Сплав ARC, 2x Продвинутые механические компоненты"
   },
   {
     "id": "key_blue_gate_confiscation",
@@ -571,7 +657,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от комнаты конфиската Синих ворот",
+    "yield_ru": null
   },
   {
     "id": "bombardier_cell",
@@ -585,7 +673,9 @@
     "yield_en": "6x Workshop",
     "yield_de": "6x Werkstatt",
     "yield_fr": "6x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ячейка Бомбардира",
+    "yield_ru": "2x Продвинутые механические компоненты, 2x Сплав ARC"
   },
   {
     "id": "snow_globe",
@@ -599,7 +689,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Захватывающий снежный шар",
+    "yield_ru": null
   },
   {
     "id": "key_buried_city_town_hall",
@@ -613,7 +705,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от мэрии в Погребенном городе",
+    "yield_ru": null
   },
   {
     "id": "complex_gun_parts",
@@ -627,7 +721,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Сложные детали оружия",
+    "yield_ru": "1x Афелий, 1x Уравнитель, 1x Юпитер"
   },
   {
     "id": "key_dam_control_tower",
@@ -641,7 +737,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от диспетчерской вышки у дамбы",
+    "yield_ru": null
   },
   {
     "id": "exodus_modules",
@@ -657,12 +755,20 @@
     "yield_fr": "1x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_3",
-        "questName": "Expedition: Framework (3/6)",
+        "questId": "expedition_s1_stage_3",
+        "questName": "Expedition S1: Phase 3: Framework",
+        "trader": "Project",
+        "amount": 1
+      },
+      {
+        "questId": "expedition_s2_stage_3",
+        "questName": "Expedition S2: Phase 3: Framework",
         "trader": "Project",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Модули Исхода",
+    "yield_ru": "1x Счётчик Гейгера, 1x Ионный распылитель, 1x Анализатор спектра"
   },
   {
     "id": "geiger_counter",
@@ -676,7 +782,9 @@
     "yield_en": "3x Battery, 1x Exodus Modules",
     "yield_de": "3x Akku, 1x Exodus-Module",
     "yield_fr": "3x Batería, 1x Módulos del Éxodo",
-    "quests": []
+    "quests": [],
+    "name_ru": "Счётчик Гейгера",
+    "yield_ru": "3x Батарея, 1x Модули Исхода"
   },
   {
     "id": "ion_sputter",
@@ -692,12 +800,14 @@
     "yield_fr": "4x Convertidor de voltaje, 1x Módulos del Éxodo",
     "quests": [
       {
-        "questId": "expedition_stage_4",
-        "questName": "Expedition: Outfitting (4/6)",
+        "questId": "expedition_s2_stage_4",
+        "questName": "Expedition S2: Phase 4: Outfitting",
         "trader": "Project",
         "amount": 3
       }
-    ]
+    ],
+    "name_ru": "Ионный распылитель",
+    "yield_ru": "4x Преобразователь напряжения, 1x Модули Исхода"
   },
   {
     "id": "lances_mixtape",
@@ -711,7 +821,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Микстейп Лэнса (5-е издание)",
+    "yield_ru": null
   },
   {
     "id": "leaper_pulse_unit",
@@ -727,17 +839,25 @@
     "yield_fr": "3x Expedición, 4x Taller",
     "quests": [
       {
-        "questId": "expedition_stage_4",
-        "questName": "Expedition: Outfitting (4/6)",
+        "id": "into_the_fray",
+        "amount": 1,
+        "type": "quest"
+      },
+      {
+        "questId": "expedition_s1_stage_4",
+        "questName": "Expedition S1: Phase 4: Outfitting",
         "trader": "Project",
         "amount": 3
       },
       {
-    "id": "into_the_fray",  
-    "amount": 1,
-    "type": "quest"         
-  }
-    ]
+        "questId": "expedition_s2_stage_4",
+        "questName": "Expedition S2: Phase 4: Outfitting",
+        "trader": "Project",
+        "amount": 3
+      }
+    ],
+    "name_ru": "Импульсный блок Прыгуна",
+    "yield_ru": "2x Продвинутые механические компоненты, 3x Сплав ARC"
   },
   {
     "id": "magnetic_accelerator",
@@ -751,7 +871,16 @@
     "yield_en": "3x Expedition",
     "yield_de": "3x Expedition",
     "yield_fr": "3x Expedición",
-    "quests": []
+    "quests": [
+      {
+        "questId": "expedition_s1_stage_4",
+        "questName": "Expedition S1: Phase 4: Outfitting",
+        "trader": "Project",
+        "amount": 3
+      }
+    ],
+    "name_ru": "Магнитный ускоритель",
+    "yield_ru": "2x Афелий, 2x Уравнитель, 2x Юпитер, 1x Магнетрон, 1x Реактор Матриарха, 1x Реактор королевы"
   },
   {
     "id": "magnetron",
@@ -772,7 +901,9 @@
         "trader": "Tian Wen",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Магнетрон",
+    "yield_ru": "1x Магнитный ускоритель, 1x Стальная пружина"
   },
   {
     "id": "mod_components",
@@ -786,7 +917,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Компоненты для модификаций",
+    "yield_ru": "1x Угловая рукоятка III, 1x Разделитель Наковальни, 1x Удлиненный ствол, 1x Увеличенный магазин для легкого оружия III, 1x Увеличенный магазин для оружия среднего калибра III, 1x Горизонтальная Рукоятка, 1x Кинетический преобразователь, 1x Глушитель III"
   },
   {
     "id": "power_rod",
@@ -807,7 +940,9 @@
         "trader": "Celeste",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Энергетический стержень",
+    "yield_ru": "1x Реактор Матриарха, 1x Реактор королевы, 1x Крюк с защелкой"
   },
   {
     "id": "rocketeer_driver",
@@ -828,7 +963,9 @@
         "trader": "Shani",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Драйвер Ракетчика",
+    "yield_ru": "2x Продвинутые электрические компоненты, 3x Сплав ARC"
   },
   {
     "id": "spectrum_analyzer",
@@ -842,7 +979,9 @@
     "yield_en": "1x Sensors, 1x Exodus Modules",
     "yield_de": "1x Sensoren, 1x Exodus-Module",
     "yield_fr": "1x Sensores, 1x Módulos del Éxodo",
-    "quests": []
+    "quests": [],
+    "name_ru": "Анализатор спектра",
+    "yield_ru": "1x Датчики, 1x Модули Исхода"
   },
   {
     "id": "key_stella_montis_archives",
@@ -856,7 +995,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от архива Стелла Монтис",
+    "yield_ru": null
   },
   {
     "id": "matriarch_reactor",
@@ -870,7 +1011,9 @@
     "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
     "yield_de": "1x Energiestab, 1x Magnetischer Beschleuniger",
     "yield_fr": "1x Varilla de energía, 1x Acelerador Magnético",
-    "quests": []
+    "quests": [],
+    "name_ru": "Реактор Матриарха",
+    "yield_ru": "1x Энергетический стержень, 1x Магнитный ускоритель"
   },
   {
     "id": "queen_reactor",
@@ -884,7 +1027,9 @@
     "yield_en": "1x Power Rod, 1x Magnetic Accelerator",
     "yield_de": "1x Energiestab, 1x Magnetischer Beschleuniger",
     "yield_fr": "1x Varilla de energía, 1x Acelerador Magnético",
-    "quests": []
+    "quests": [],
+    "name_ru": "Реактор королевы",
+    "yield_ru": "1x Энергетический стержень, 1x Магнитный ускоритель"
   },
   {
     "id": "adv_arc_powercell",
@@ -898,7 +1043,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Продвинутая энергоячейка ARC",
+    "yield_ru": "2x Энергоячейка ARC"
   },
   {
     "id": "adv_elec_comp",
@@ -914,12 +1061,20 @@
     "yield_fr": "5x Taller, 5x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_4",
-        "questName": "Expedition: Outfitting (4/6)",
+        "questId": "expedition_s1_stage_4",
+        "questName": "Expedition S1: Phase 4: Outfitting",
+        "trader": "Project",
+        "amount": 5
+      },
+      {
+        "questId": "expedition_s2_stage_4",
+        "questName": "Expedition S2: Phase 4: Outfitting",
         "trader": "Project",
         "amount": 5
       }
-    ]
+    ],
+    "name_ru": "Продвинутые электрические компоненты",
+    "yield_ru": "1x Боевой Mk. 3 (Агрессивный), 1x Боевой Mk. 3 (Фланговый), 1x Коробка частотной модуляции, 1x Добыча 3 (Выживший), 1x Фотоэлектрический плащ, 1x Энергетический стержень, 2x Драйвер Ракетчика, 1x Спектрометр, 1x Стратегия 2, 1x Тактический Mk. 3 (Оборонительный), 1x Стратегия 3 (Лечение), 1x Телеметрический приемопередатчик"
   },
   {
     "id": "adv_mech_comp",
@@ -933,7 +1088,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Продвинутые механические компоненты",
+    "yield_ru": "2x Ячейка Бастиона, 2x Бобкэт I, 3x Бобкэт II, 4x Бобкэт III, 5x Бобкэт IV, 2x Ячейка Бомбардира, 1x Регулятор Потока, 2x Взломщик корпусов I, 2x Взломщик корпусов II, 3x Взломщик корпусов III, 4x Взломщик корпусов IV, 2x Импульсный блок Прыгуна, 1x Магнитный ускоритель, 1x Микроскоп, 1x Мини-центрифуга, 2x Ястреб II, 2x Ястреб III, 3x Ястреб IV, 1x Ренегат I, 2x Буря I, 3x Буря II, 4x Буря III, 5x Буря IV, 1x Торренте I, 2x Торренте II, 2x Торренте III, 3x Торренте IV, 1x Охотник I, 2x Охотник II, 2x Venator III, 3x Охотник IV, 2x Вулкан I, 2x Вулкан II, 3x Вулкан III, 4x Vulcano IV"
   },
   {
     "id": "alarm_clock",
@@ -947,7 +1104,9 @@
     "yield_en": "1x Processor, 6x Plastic Parts",
     "yield_de": "1x Prozessor, 6x Plastikteile",
     "yield_fr": "1x Procesador, 6x Piezas de plástico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Будильник",
+    "yield_ru": "6x Пластиковые детали, 1x Процессор"
   },
   {
     "id": "antiseptic",
@@ -968,7 +1127,9 @@
         "trader": "Lance",
         "amount": 2
       }
-    ]
+    ],
+    "name_ru": "Антисептик",
+    "yield_ru": "1x Аптечка со ржавым замком, 1x Вита-спрей"
   },
   {
     "id": "arc_circuitry",
@@ -982,7 +1143,9 @@
     "yield_en": "10x Workshop",
     "yield_de": "10x Werkstatt",
     "yield_fr": "10x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Электронная схема ARC",
+    "yield_ru": "1x Средний щит, 1x Энергетический стержень"
   },
   {
     "id": "arc_coolant",
@@ -996,7 +1159,9 @@
     "yield_en": "16x Chemicals",
     "yield_de": "16x Chemikalien",
     "yield_fr": "16x Producto Químico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Охлаждающее вещество ARC",
+    "yield_ru": "16x Химикаты"
   },
   {
     "id": "arc_flex_rubber",
@@ -1010,7 +1175,9 @@
     "yield_en": "16x Rubber Parts",
     "yield_de": "16x Gummiteile",
     "yield_fr": "16x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Гибкая резина ARC",
+    "yield_ru": "16x Резиновые детали"
   },
   {
     "id": "arc_motion_core",
@@ -1024,7 +1191,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Движущее ядро ARC",
+    "yield_ru": "1x Магнитный ускоритель, 1x Волчья стая"
   },
   {
     "id": "arc_perf_steel",
@@ -1038,7 +1207,9 @@
     "yield_en": "12x Metal Parts",
     "yield_de": "12x Metallteile",
     "yield_fr": "12x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Высокопрочная сталь ARC",
+    "yield_ru": "12x Металлические детали"
   },
   {
     "id": "arc_synth_resin",
@@ -1052,7 +1223,9 @@
     "yield_en": "14x Plastic Parts",
     "yield_de": "14x Plastikteile",
     "yield_fr": "14x Piezas de plástico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Синтетическая смола ARC",
+    "yield_ru": "14x Пластиковые детали"
   },
   {
     "id": "arc_thermo_lining",
@@ -1066,7 +1239,9 @@
     "yield_en": "16x Fabric",
     "yield_de": "16x Stoff",
     "yield_fr": "16x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Термоподкладка ARC",
+    "yield_ru": "16x Ткань"
   },
   {
     "id": "bicycle_pump",
@@ -1080,7 +1255,9 @@
     "yield_en": "4x Canister, 10x Metal Parts",
     "yield_de": "4x Kanister, 10x Metallteile",
     "yield_fr": "4x Bidón, 10x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Велосипедный насос",
+    "yield_ru": "4x Канистра, 10x Металлические детали"
   },
   {
     "id": "key_blue_gate_comm",
@@ -1094,7 +1271,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от Коммуникационной Башни у Синих Ворот",
+    "yield_ru": null
   },
   {
     "id": "broken_flashlight",
@@ -1108,7 +1287,9 @@
     "yield_en": "2x Battery, 6x Metal Parts",
     "yield_de": "2x Akku, 6x Metallteile",
     "yield_fr": "2x Batería, 6x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанный фонарик",
+    "yield_ru": "2x Батарея, 6x Металлические детали"
   },
   {
     "id": "broken_guidance",
@@ -1122,7 +1303,9 @@
     "yield_en": "4x Processor",
     "yield_de": "4x Prozessor",
     "yield_fr": "4x Procesador",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанная система наведения",
+    "yield_ru": "4x Процессор"
   },
   {
     "id": "broken_radio",
@@ -1136,7 +1319,9 @@
     "yield_en": "3x Sensors, 3x Wires",
     "yield_de": "3x Sensoren, 3x Kabel",
     "yield_fr": "3x Sensores, 3x Cables",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанное портативное радио",
+    "yield_ru": "3x Датчики, 2x Провода"
   },
   {
     "id": "broken_taser",
@@ -1150,7 +1335,9 @@
     "yield_en": "2x Battery, 2x Wires",
     "yield_de": "2x Akku, 2x Kabel",
     "yield_fr": "2x Batería, 2x Cables",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанный электрошокер",
+    "yield_ru": "2x Батарея, 2x Провода"
   },
   {
     "id": "key_buried_city_hospital",
@@ -1164,7 +1351,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от больницы Погребённого города",
+    "yield_ru": null
   },
   {
     "id": "coolant",
@@ -1178,7 +1367,9 @@
     "yield_en": "5x Chemicals, 2x Oil",
     "yield_de": "5x Chemikalien, 2x Öl",
     "yield_fr": "5x Producto Químico, 2x Aceite",
-    "quests": []
+    "quests": [],
+    "name_ru": "Охлаждающая жидкость",
+    "yield_ru": "5x Химикаты, 2x Масло"
   },
   {
     "id": "cooling_coil",
@@ -1194,12 +1385,14 @@
     "yield_fr": "6x Producto Químico, 2x Resorte de acero",
     "quests": [
       {
-        "questId": "expedition_stage_2",
-        "questName": "Expedition: Core Systems (2/6)",
+        "questId": "expedition_s2_stage_2",
+        "questName": "Expedition S2: Phase 2: Core Systems",
         "trader": "Project",
         "amount": 4
       }
-    ]
+    ],
+    "name_ru": "Охлаждающий змеевик",
+    "yield_ru": "6x Химикаты, 2x Стальная пружина"
   },
   {
     "id": "cooling_fan",
@@ -1213,7 +1406,16 @@
     "yield_en": "5x Expedition",
     "yield_de": "5x Expedition",
     "yield_fr": "5x Expedición",
-    "quests": []
+    "quests": [
+      {
+        "questId": "expedition_s1_stage_2",
+        "questName": "Expedition S1: Phase 2: Core Systems",
+        "trader": "Project",
+        "amount": 5
+      }
+    ],
+    "name_ru": "Охлаждающий вентилятор",
+    "yield_ru": "14x Пластиковые детали, 4x Провода"
   },
   {
     "id": "cracked_bioscanner",
@@ -1227,7 +1429,9 @@
     "yield_en": "2x Workshop",
     "yield_de": "2x Werkstatt",
     "yield_fr": "2x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Треснувший биосканер",
+    "yield_ru": "3x Резиновые детали, 3x Батарея"
   },
   {
     "id": "key_dam_testing_annex",
@@ -1241,7 +1445,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от испытательной пристройки плотины",
+    "yield_ru": null
   },
   {
     "id": "damaged_heat_sink",
@@ -1255,7 +1461,9 @@
     "yield_en": "2x Workshop",
     "yield_de": "2x Werkstatt",
     "yield_fr": "2x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденный теплопоглотитель",
+    "yield_ru": "6x Металлические детали, 2x Провода"
   },
   {
     "id": "diving_goggles",
@@ -1269,7 +1477,9 @@
     "yield_en": "12x Rubber Parts",
     "yield_de": "12x Gummiteile",
     "yield_fr": "12x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Очки для плавания",
+    "yield_ru": "12x Резиновые детали"
   },
   {
     "id": "dog_collar",
@@ -1283,7 +1493,9 @@
     "yield_en": "1x Scrappy",
     "yield_de": "1x Scrappy",
     "yield_fr": "1x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Собачий ошейник",
+    "yield_ru": "8x Ткань, 1x Металлические детали"
   },
   {
     "id": "expired_respirator",
@@ -1297,7 +1509,9 @@
     "yield_en": "8x Rubber Parts, 4x Fabric",
     "yield_de": "8x Gummiteile, 4x Stoff",
     "yield_fr": "8x Piezas de goma, 4x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Просроченный респиратор",
+    "yield_ru": "8x Резиновые детали, 4x Ткань"
   },
   {
     "id": "explosive_compound",
@@ -1311,7 +1525,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Взрывчатое вещество",
+    "yield_ru": "1x Крайний срок, 1x Коробка фейерверков, 3x Окаменевшая молния"
   },
   {
     "id": "film_reel",
@@ -1327,12 +1543,14 @@
     "yield_fr": "1x Misión",
     "quests": [
       {
-        "questId": "flickering_flames_3",
-        "questName": "Flickering Flames: Presents (3/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_3",
+        "questName": "Flickering Flames: Phase 3: Presents",
+        "trader": "Project",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Кинопленка",
+    "yield_ru": null
   },
   {
     "id": "fine_wristwatch",
@@ -1346,7 +1564,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Изысканные наручные часы",
+    "yield_ru": null
   },
   {
     "id": "frequency_modulation_box",
@@ -1362,12 +1582,14 @@
     "yield_fr": "1x Componentes eléctricos avanzados, 1x Componente de altavoz",
     "quests": [
       {
-        "questId": "expedition_stage_4",
-        "questName": "Expedition: Outfitting (4/6)",
+        "questId": "expedition_s2_stage_4",
+        "questName": "Expedition S2: Phase 4: Outfitting",
         "trader": "Project",
         "amount": 5
       }
-    ]
+    ],
+    "name_ru": "Коробка частотной модуляции",
+    "yield_ru": "1x Продвинутые электрические компоненты, 1x Компонент динамика"
   },
   {
     "id": "fried_motherboard",
@@ -1381,7 +1603,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сгоревшая материнская плата",
+    "yield_ru": "5x Пластиковые детали, 2x Электрические компоненты"
   },
   {
     "id": "frying_pan",
@@ -1397,12 +1621,14 @@
     "yield_fr": "8x Piezas de metal",
     "quests": [
       {
-        "questId": "flickering_flames_5",
-        "questName": "Flickering Flames: Meals (5/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_5",
+        "questName": "Flickering Flames: Phase 5: Meals",
+        "trader": "Project",
         "amount": 2
       }
-    ]
+    ],
+    "name_ru": "Сковорода",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "headphones",
@@ -1416,7 +1642,9 @@
     "yield_en": "6x Rubber Parts, 2x Speaker Component",
     "yield_de": "6x Gummiteile, 2x Lautsprecher-Komponente",
     "yield_fr": "6x Piezas de goma, 2x Componente de altavoz",
-    "quests": []
+    "quests": [],
+    "name_ru": "Наушники",
+    "yield_ru": "7x Резиновые детали, 1x Компонент динамика"
   },
   {
     "id": "heavy_gun_parts",
@@ -1430,7 +1658,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Детали для тяжелого оружия",
+    "yield_ru": "2x Взломщик корпусов I, 3x Взломщик корпусов II, 4x Взломщик корпусов III, 5x Взломщик корпусов IV, 2x Вулкан I, 3x Вулкан II, 4x Вулкан III, 5x Vulcano IV"
   },
   {
     "id": "hornet_driver",
@@ -1451,7 +1681,9 @@
         "trader": "Shani",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Драйвер Шершня",
+    "yield_ru": "2x Сплав ARC, 2x Электрические компоненты"
   },
   {
     "id": "humidifier",
@@ -1465,7 +1697,16 @@
     "yield_en": "5x Expedition",
     "yield_de": "5x Expedition",
     "yield_fr": "5x Expedición",
-    "quests": []
+    "quests": [
+      {
+        "questId": "expedition_s1_stage_4",
+        "questName": "Expedition S1: Phase 4: Outfitting",
+        "trader": "Project",
+        "amount": 5
+      }
+    ],
+    "name_ru": "Увлажнитель",
+    "yield_ru": "2x Канистра, 2x Провода"
   },
   {
     "id": "industrial_battery",
@@ -1481,12 +1722,14 @@
     "yield_fr": "3x Taller",
     "quests": [
       {
-        "questId": "flickering_flames_2",
-        "questName": "Flickering Flames: Decorations (2/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_2",
+        "questName": "Flickering Flames: Phase 2: Decorations",
+        "trader": "Project",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Промышленная батарея",
+    "yield_ru": "7x Химикаты, 2x Батарея"
   },
   {
     "id": "industrial_charger",
@@ -1500,7 +1743,9 @@
     "yield_en": "5x Metal Parts, 1x Voltage Converter",
     "yield_de": "5x Metallteile, 1x Spannungswandler",
     "yield_fr": "5x Piezas de metal, 1x Convertidor de voltaje",
-    "quests": []
+    "quests": [],
+    "name_ru": "Промышленное зарядное устройство",
+    "yield_ru": "5x Металлические детали, 1x Преобразователь напряжения"
   },
   {
     "id": "industrial_magnet",
@@ -1514,7 +1759,9 @@
     "yield_en": "2x Magnet, 4x Metal Parts",
     "yield_de": "2x Magnet, 4x Metallteile",
     "yield_fr": "2x Imán, 4x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Промышленный магнит",
+    "yield_ru": "2x Магнит, 4x Металлические детали"
   },
   {
     "id": "lab_reagents",
@@ -1528,7 +1775,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Лабораторные реагенты",
+    "yield_ru": "2x Химикаты, 2x Самодельная взрывчатка"
   },
   {
     "id": "light_gun_parts",
@@ -1542,7 +1791,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Детали для легкого оружия",
+    "yield_ru": "2x Бобкэт I, 3x Бобкэт II, 4x Бобкэт III, 4x Бобкэт IV"
   },
   {
     "id": "medium_gun_parts",
@@ -1556,7 +1807,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Детали для оружия среднего калибра",
+    "yield_ru": "2x Ястреб II, 3x Ястреб III, 3x Ястреб IV, 2x Ренегат I, 2x Буря I, 3x Буря II, 4x Буря III, 4x Буря IV, 2x Торренте I, 2x Торренте II, 3x Торренте III, 3x Торренте IV, 2x Охотник I, 2x Охотник II, 3x Venator III, 3x Охотник IV"
   },
   {
     "id": "microscope",
@@ -1570,7 +1823,9 @@
     "yield_en": "1x Advanced Mechanical Components, 3x Magnet",
     "yield_de": "1x Fortschrittliche mechanische Komponenten, 3x Magnet",
     "yield_fr": "1x Componentes mecánicos avanzados, 3x Imán",
-    "quests": []
+    "quests": [],
+    "name_ru": "Микроскоп",
+    "yield_ru": "1x Продвинутые механические компоненты, 3x Магнит"
   },
   {
     "id": "mini_centrifuge",
@@ -1584,7 +1839,9 @@
     "yield_en": "1x Advanced Mechanical Components, 2x Canister",
     "yield_de": "1x Fortschrittliche mechanische Komponenten, 2x Kanister",
     "yield_fr": "1x Componentes mecánicos avanzados, 2x Bidón",
-    "quests": []
+    "quests": [],
+    "name_ru": "Мини-центрифуга",
+    "yield_ru": "1x Продвинутые механические компоненты, 2x Канистра"
   },
   {
     "id": "moss",
@@ -1598,7 +1855,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Мох",
+    "yield_ru": "1x Дефибриллятор"
   },
   {
     "id": "motor",
@@ -1612,7 +1871,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Мотор",
+    "yield_ru": "2x Масло, 2x Механические компоненты"
   },
   {
     "id": "music_album",
@@ -1628,12 +1889,14 @@
     "yield_fr": null,
     "quests": [
       {
-        "questId": "flickering_flames_5",
-        "questName": "Flickering Flames: Meals (5/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_5",
+        "questName": "Flickering Flames: Phase 5: Meals",
+        "trader": "Project",
         "amount": 2
       }
-    ]
+    ],
+    "name_ru": "Музыкальный альбом",
+    "yield_ru": null
   },
   {
     "id": "music_box",
@@ -1647,7 +1910,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Музыкальная шкатулка",
+    "yield_ru": null
   },
   {
     "id": "playing_cards",
@@ -1661,7 +1926,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Игральные карты",
+    "yield_ru": null
   },
   {
     "id": "polluted_air_filter",
@@ -1675,7 +1942,9 @@
     "yield_en": "6x Fabric, 2x Oil",
     "yield_de": "6x Stoff, 2x Öl",
     "yield_fr": "6x Tela, 2x Aceite",
-    "quests": []
+    "quests": [],
+    "name_ru": "Загрязненный воздушный фильтр",
+    "yield_ru": "6x Ткань, 2x Масло"
   },
   {
     "id": "portable_tv",
@@ -1689,7 +1958,9 @@
     "yield_en": "2x Battery, 6x Wires",
     "yield_de": "2x Akku, 6x Kabel",
     "yield_fr": "2x Batería, 6x Cables",
-    "quests": []
+    "quests": [],
+    "name_ru": "Портативный телевизор",
+    "yield_ru": "2x Батарея, 6x Провода"
   },
   {
     "id": "power_bank",
@@ -1703,7 +1974,9 @@
     "yield_en": "2x Battery, 2x Wires",
     "yield_de": "2x Akku, 2x Kabel",
     "yield_fr": "2x Batería, 2x Cables",
-    "quests": []
+    "quests": [],
+    "name_ru": "Портативный аккумулятор",
+    "yield_ru": "2x Батарея, 2x Провода"
   },
   {
     "id": "power_cable",
@@ -1717,7 +1990,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Кабель питания",
+    "yield_ru": "4x Провода"
   },
   {
     "id": "processor",
@@ -1731,7 +2006,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Процессор",
+    "yield_ru": "1x Будильник, 1x Разделитель Наковальни, 4x Сломанная система наведения, 1x Боевой Mk. 3 (Агрессивный), 1x Боевой Mk. 3 (Фланговый), 2x Модули Исхода, 1x Добыча 3 (Выживший), 1x Проектор, 2x Поворотный энкодер, 1x Тактический Mk. 3 (Оборонительный), 1x Стратегия 3 (Лечение), 1x Телеметрический приемопередатчик, 1x Управляемая граната"
   },
   {
     "id": "projector",
@@ -1745,7 +2022,9 @@
     "yield_en": "1x Processor, 2x Wires",
     "yield_de": "1x Prozessor, 2x Kabel",
     "yield_fr": "1x Procesador, 2x Cables",
-    "quests": []
+    "quests": [],
+    "name_ru": "Проектор",
+    "yield_ru": "2x Провода, 1x Процессор"
   },
   {
     "id": "radio",
@@ -1759,7 +2038,9 @@
     "yield_en": "1x Speaker Component, 1x Sensors",
     "yield_de": "1x Lautsprecher-Komponente, 1x Sensoren",
     "yield_fr": "1x Componente de altavoz, 1x Sensores",
-    "quests": []
+    "quests": [],
+    "name_ru": "Радио",
+    "yield_ru": "1x Компонент динамика, 1x Датчики"
   },
   {
     "id": "radio_relay",
@@ -1773,7 +2054,9 @@
     "yield_en": "2x Speaker Component, 2x Sensors",
     "yield_de": "2x Lautsprecher-Komponente, 2x Sensoren",
     "yield_fr": "2x Componente de altavoz, 2x Sensores",
-    "quests": []
+    "quests": [],
+    "name_ru": "Радиорелейная станция",
+    "yield_ru": "2x Компонент динамика, 2x Датчики"
   },
   {
     "id": "key_raider_hatch",
@@ -1787,7 +2070,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от рейдерского люка",
+    "yield_ru": null
   },
   {
     "id": "red_coral_jewelry",
@@ -1801,7 +2086,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Украшение из красного коралла",
+    "yield_ru": null
   },
   {
     "id": "rocket_thruster",
@@ -1822,7 +2109,9 @@
         "trader": "Celeste",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Ракетный двигатель",
+    "yield_ru": "2x Синтезированное топливо, 6x Металлические детали"
   },
   {
     "id": "rope",
@@ -1836,7 +2125,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Веревка",
+    "yield_ru": "3x Крюк с защелкой, 1x Зиплайн"
   },
   {
     "id": "rotary_encoder",
@@ -1850,7 +2141,9 @@
     "yield_en": "2x Electrical Components, 2x Processor",
     "yield_de": "2x Elektrische Komponenten, 2x Prozessor",
     "yield_fr": "2x Componentes eléctricos, 2x Procesador",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поворотный энкодер",
+    "yield_ru": "2x Электрические компоненты, 2x Процессор"
   },
   {
     "id": "rubber_pad",
@@ -1864,7 +2157,9 @@
     "yield_en": "18x Rubber Parts",
     "yield_de": "18x Gummiteile",
     "yield_fr": "18x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Резиновый коврик",
+    "yield_ru": "18x Резиновые детали"
   },
   {
     "id": "ruined_accordion",
@@ -1878,7 +2173,9 @@
     "yield_en": "18x Rubber Parts, 3x Steel Spring",
     "yield_de": "18x Gummiteile, 3x Stahlfeder",
     "yield_fr": "18x Piezas de goma, 3x Resorte de acero",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанный аккордеон",
+    "yield_ru": "18x Резиновые детали, 3x Стальная пружина"
   },
   {
     "id": "ruined_riot_shield",
@@ -1892,7 +2189,9 @@
     "yield_en": "10x Plastic Parts, 6x Rubber Parts",
     "yield_de": "10x Plastikteile, 6x Gummiteile",
     "yield_fr": "10x Piezas de plástico, 6x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Разрушенный щит",
+    "yield_ru": "10x Пластиковые детали, 6x Резиновые детали"
   },
   {
     "id": "rusted_gear",
@@ -1906,7 +2205,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ржавая шестиренка",
+    "yield_ru": "4x Металлические детали, 2x Механические компоненты"
   },
   {
     "id": "rusted_shut_medkit",
@@ -1920,7 +2221,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Аптечка со ржавым замком",
+    "yield_ru": "2x Шприц, 1x Антисептик"
   },
   {
     "id": "rusted_tools",
@@ -1934,7 +2237,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ржавые инструменты",
+    "yield_ru": "8x Металлические детали, 1x Стальная пружина"
   },
   {
     "id": "sample_cleaner",
@@ -1948,7 +2253,9 @@
     "yield_en": "2x Electrical Components, 14x Assorted Seeds",
     "yield_de": "2x Elektrische Komponenten, 14x Verschiedenes Saatgut",
     "yield_fr": "2x Componentes eléctricos, 14x Semillas variadas",
-    "quests": []
+    "quests": [],
+    "name_ru": "Очиститель образцов",
+    "yield_ru": "2x Электрические компоненты, 14x Различные семена"
   },
   {
     "id": "sensors",
@@ -1962,7 +2269,16 @@
     "yield_en": "20x Expedition",
     "yield_de": "20x Expedition",
     "yield_fr": "20x Expedición",
-    "quests": []
+    "quests": [
+      {
+        "questId": "expedition_s1_stage_3",
+        "questName": "Expedition S1: Phase 3: Framework",
+        "trader": "Project",
+        "amount": 20
+      }
+    ],
+    "name_ru": "Датчики",
+    "yield_ru": "3x Сломанное портативное радио, 1x Взрывная мина, 1x Регулятор Потока, 1x Радио, 2x Радиорелейная станция, 1x Пульт дистанционного управления, 1x Спектрометр, 1x Анализатор спектра, 1x Маркирующая граната, 1x Термостат"
   },
   {
     "id": "sentinel_firing_core",
@@ -1976,7 +2292,9 @@
     "yield_en": "4x Workshop",
     "yield_de": "4x Werkstatt",
     "yield_fr": "4x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Огневое ядро стража",
+    "yield_ru": "2x Сплав ARC, 3x Механические компоненты"
   },
   {
     "id": "signal_amplifier",
@@ -1990,7 +2308,9 @@
     "yield_en": "2x Electrical Components, 2x Voltage Converter",
     "yield_de": "2x Elektrische Komponenten, 2x Spannungswandler",
     "yield_fr": "2x Componentes eléctricos, 2x Convertidor de voltaje",
-    "quests": []
+    "quests": [],
+    "name_ru": "Усилитель сигнала",
+    "yield_ru": "2x Электрические компоненты, 2x Преобразователь напряжения"
   },
   {
     "id": "key_spaceport_container",
@@ -2004,7 +2324,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от хранилища контейнеров космопорта",
+    "yield_ru": null
   },
   {
     "id": "key_spaceport_control",
@@ -2018,7 +2340,9 @@
     "yield_en": "1x Quest",
     "yield_de": "1x Quest",
     "yield_fr": "1x Misión",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от диспетчерской башни космопорта",
+    "yield_ru": null
   },
   {
     "id": "speaker_component",
@@ -2032,7 +2356,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Компонент динамика",
+    "yield_ru": "1x Коробка частотной модуляции, 1x Наушники, 1x Граната-приманка, 1x Фотоэлектрический плащ, 1x Радио, 2x Радиорелейная станция"
   },
   {
     "id": "spectrometer",
@@ -2046,7 +2372,9 @@
     "yield_en": "1x Advanced Electrical Components, 1x Sensors",
     "yield_de": "1x Fortschrittliche elektrische Komponenten, 1x Sensoren",
     "yield_fr": "1x Componentes eléctricos avanzados, 1x Sensores",
-    "quests": []
+    "quests": [],
+    "name_ru": "Спектрометр",
+    "yield_ru": "1x Продвинутые электрические компоненты, 1x Датчики"
   },
   {
     "id": "spring_cushion",
@@ -2060,7 +2388,9 @@
     "yield_en": "2x Durable Cloth, 2x Steel Spring",
     "yield_de": "2x Strapazierfähiges Stoffstück, 2x Stahlfeder",
     "yield_fr": "2x Tela resistente, 2x Resorte de acero",
-    "quests": []
+    "quests": [],
+    "name_ru": "Пружинная подушка",
+    "yield_ru": "2x Прочная ткань, 2x Стальная пружина"
   },
   {
     "id": "key_stella_montis_security",
@@ -2074,7 +2404,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от контрольно-пропускного пункта Стелла Монтис",
+    "yield_ru": null
   },
   {
     "id": "surveyor_vault",
@@ -2095,7 +2427,9 @@
         "trader": "Shani",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Сейф Наблюдателя",
+    "yield_ru": "2x Механические компоненты, 2x Сплав ARC"
   },
   {
     "id": "synthesized_fuel",
@@ -2109,7 +2443,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Синтезированное топливо",
+    "yield_ru": "2x Ракетный двигатель"
   },
   {
     "id": "syringe",
@@ -2130,7 +2466,9 @@
         "trader": "Lance",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Шприц",
+    "yield_ru": "2x Аптечка со ржавым замком, 1x Витаминная сыворотка"
   },
   {
     "id": "telemetry_transceiver",
@@ -2144,7 +2482,9 @@
     "yield_en": "1x Advanced Electrical Components, 1x Processor",
     "yield_de": "1x Fortschrittliche elektrische Komponenten, 1x Prozessor",
     "yield_fr": "1x Componentes eléctricos avanzados, 1x Procesador",
-    "quests": []
+    "quests": [],
+    "name_ru": "Телеметрический приемопередатчик",
+    "yield_ru": "1x Продвинутые электрические компоненты, 1x Процессор"
   },
   {
     "id": "thermostat",
@@ -2158,7 +2498,9 @@
     "yield_en": "6x Rubber Parts, 2x Sensors",
     "yield_de": "6x Gummiteile, 2x Sensoren",
     "yield_fr": "6x Piezas de goma, 2x Sensores",
-    "quests": []
+    "quests": [],
+    "name_ru": "Термостат",
+    "yield_ru": "7x Резиновые детали, 1x Датчики"
   },
   {
     "id": "toaster",
@@ -2172,7 +2514,9 @@
     "yield_en": "3x Workshop",
     "yield_de": "3x Werkstatt",
     "yield_fr": "3x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Тостер",
+    "yield_ru": "5x Пластиковые детали, 3x Провода"
   },
   {
     "id": "torn_blanket",
@@ -2186,7 +2530,9 @@
     "yield_en": "12x Fabric",
     "yield_de": "12x Stoff",
     "yield_fr": "12x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Рваное одеяло",
+    "yield_ru": "12x Ткань"
   },
   {
     "id": "turbo_pump",
@@ -2200,7 +2546,9 @@
     "yield_en": "1x Mechanical Components, 3x Oil",
     "yield_de": "1x Mechanische Komponenten, 3x Öl",
     "yield_fr": "1x Componentes mecánicos, 3x Aceite",
-    "quests": []
+    "quests": [],
+    "name_ru": "Турбонасос",
+    "yield_ru": "1x Механические компоненты, 3x Масло"
   },
   {
     "id": "unusable_weapon",
@@ -2214,7 +2562,9 @@
     "yield_en": "4x Metal Parts, 5x Simple Gun Parts",
     "yield_de": "4x Metallteile, 5x Einfache Waffenteile",
     "yield_fr": "4x Piezas de metal, 5x Piezas de arma básica",
-    "quests": []
+    "quests": [],
+    "name_ru": "Непригодное оружие",
+    "yield_ru": "4x Металлические детали, 5x Простые детали для оружия"
   },
   {
     "id": "vase",
@@ -2228,7 +2578,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ваза",
+    "yield_ru": null
   },
   {
     "id": "voltage_converter",
@@ -2242,7 +2594,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Преобразователь напряжения",
+    "yield_ru": "1x Промышленное зарядное устройство, 4x Ионный распылитель, 2x Усилитель сигнала"
   },
   {
     "id": "wasp_driver",
@@ -2263,7 +2617,9 @@
         "trader": "Shani",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Драйвер Осы",
+    "yield_ru": "1x Сплав ARC, 1x Электрические компоненты"
   },
   {
     "id": "water_filter",
@@ -2279,12 +2635,14 @@
     "yield_fr": "2x Piezas de goma, 3x Bidón",
     "quests": [
       {
-        "questId": "flickering_flames_4",
-        "questName": "Flickering Flames: Beverages (4/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_4",
+        "questName": "Flickering Flames: Phase 4: Beverages",
+        "trader": "Project",
         "amount": 2
       }
-    ]
+    ],
+    "name_ru": "Водяной фильтр",
+    "yield_ru": "2x Резиновые детали, 3x Канистра"
   },
   {
     "id": "water_pump",
@@ -2305,7 +2663,9 @@
         "trader": "Tian Wen",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Водяной насос",
+    "yield_ru": "4x Металлические детали, 2x Масло"
   },
   {
     "id": "agave",
@@ -2319,7 +2679,9 @@
     "yield_en": "1x Quest",
     "yield_de": "1x Quest",
     "yield_fr": "1x Misión",
-    "quests": []
+    "quests": [],
+    "name_ru": "Агава",
+    "yield_ru": null
   },
   {
     "id": "air_freshener",
@@ -2333,7 +2695,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Освежитель воздуха",
+    "yield_ru": null
   },
   {
     "id": "apricot",
@@ -2347,7 +2711,9 @@
     "yield_en": "15x Scrappy",
     "yield_de": "15x Scrappy",
     "yield_fr": "15x Scrappy",
-    "quests": []
+    "quests": [],
+    "name_ru": "Абрикос",
+    "yield_ru": "3x Различные семена"
   },
   {
     "id": "arc_alloy",
@@ -2369,12 +2735,20 @@
         "amount": 3
       },
       {
-        "questId": "expedition_stage_1",
-        "questName": "Expedition: Foundation (1/6)",
+        "questId": "expedition_s1_stage_1",
+        "questName": "Expedition S1: Phase 1: Foundation",
+        "trader": "Project",
+        "amount": 80
+      },
+      {
+        "questId": "expedition_s2_stage_1",
+        "questName": "Expedition S2: Phase 1: Foundation",
         "trader": "Project",
         "amount": 80
       }
-    ]
+    ],
+    "name_ru": "Сплав ARC",
+    "yield_ru": "2x Электронная схема ARC, 2x Движущее ядро ARC, 2x Ячейка Бастиона, 2x Ячейка Бомбардира, 2x Сгоревшая схема Arc, 2x Поврежденное движущее ядро ARC, 1x Повреждённая энергоячейка ARC, 1x Поврежденная горелка огненного шара, 2x Поврежденный драйвер Шершня, 3x Поврежденный драйвер Ракетчика, 1x Поврежденная оболочка Блохи, 1x Поврежденная оболочка Осы, 1x Горелка Огнешара, 2x Драйвер Шершня, 3x Импульсный блок Прыгуна, 1x Поп-триггер, 3x Драйвер Ракетчика, 2x Огневое ядро стража, 3x Гироскоп Измельчителя, 1x Сканер Стукача, 1x Передатчик Наводчика, 2x Сейф Наблюдателя, 2x Оболочка Блохи, 1x Драйвер Осы"
   },
   {
     "id": "battery",
@@ -2402,12 +2776,20 @@
         "amount": 1
       },
       {
-        "questId": "expedition_stage_3",
-        "questName": "Expedition: Framework (3/6)",
+        "questId": "expedition_s1_stage_3",
+        "questName": "Expedition S1: Phase 3: Framework",
+        "trader": "Project",
+        "amount": 30
+      },
+      {
+        "questId": "expedition_s2_stage_3",
+        "questName": "Expedition S2: Phase 3: Framework",
         "trader": "Project",
         "amount": 30
       }
-    ]
+    ],
+    "name_ru": "Батарея",
+    "yield_ru": "2x Сломанный фонарик, 2x Сломанный электрошокер, 3x Треснувший биосканер, 3x Счётчик Гейгера, 2x Промышленная батарея, 1x Электрическая мина, 2x Портативный телевизор, 2x Портативный аккумулятор, 2x Коронный номер"
   },
   {
     "id": "key_blue_gate_cellar",
@@ -2421,7 +2803,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от подвала Синих Врат",
+    "yield_ru": null
   },
   {
     "id": "key_blue_gate_village",
@@ -2435,7 +2819,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от деревни Синих Врат",
+    "yield_ru": null
   },
   {
     "id": "key_buried_city_employee",
@@ -2449,11 +2835,13 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Карта доступа сотрудника JKV Погребённого города",
+    "yield_ru": null
   },
   {
     "id": "key_buried_city_residential",
-    "name_en": "Buried City Residential Mastery Key",
+    "name_en": "Buried City Residential Master Key",
     "name_de": "Vergrabene Stadt Wohngebiet-Hauptschlüssel",
     "name_fr": "Llave maestra residencial de la ciudad enterrada",
     "rarity": "Uncommon",
@@ -2463,7 +2851,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Главный ключ от жилых районов Погребённого города",
+    "yield_ru": null
   },
   {
     "id": "burned_arc_circuitry",
@@ -2477,7 +2867,9 @@
     "yield_en": "2x ARC Alloy",
     "yield_de": "2x ARC-Legierung",
     "yield_fr": "2x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сгоревшая схема Arc",
+    "yield_ru": "2x Сплав ARC"
   },
   {
     "id": "camera_lens",
@@ -2491,7 +2883,9 @@
     "yield_en": "8x Plastic Parts",
     "yield_de": "8x Plastikteile",
     "yield_fr": "8x Piezas de plástico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Объектив камеры",
+    "yield_ru": "8x Пластиковые детали"
   },
   {
     "id": "candle_holder",
@@ -2507,12 +2901,14 @@
     "yield_fr": "8x Piezas de metal",
     "quests": [
       {
-        "questId": "flickering_flames_2",
-        "questName": "Flickering Flames: Decorations (2/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_2",
+        "questName": "Flickering Flames: Phase 2: Decorations",
+        "trader": "Project",
         "amount": 3
       }
-    ]
+    ],
+    "name_ru": "Подсвечник",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "canister",
@@ -2526,7 +2922,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Канистра",
+    "yield_ru": "4x Велосипедный насос, 2x Увлажнитель, 2x Мини-центрифуга, 1x Дымовая граната, 2x Вита-спрей, 3x Водяной фильтр"
   },
   {
     "id": "crude_explosives",
@@ -2540,7 +2938,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Самодельная взрывчатка",
+    "yield_ru": "2x Взрывчатое вещество, 2x Лабораторные реагенты, 1x Поп-триггер, 1x Осколочная граната, 2x Первопроходец, 1x Волчья стая"
   },
   {
     "id": "crumpled_plastic_bottle",
@@ -2554,7 +2954,9 @@
     "yield_en": "3x Plastic Parts",
     "yield_de": "3x Plastikteile",
     "yield_fr": "3x Piezas de plástico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Смятая пластиковая бутылка",
+    "yield_ru": "4x Пластиковые детали"
   },
   {
     "id": "key_dam_staff",
@@ -2568,7 +2970,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от комнаты персонала дамбы",
+    "yield_ru": null
   },
   {
     "id": "key_dam_surveillance",
@@ -2582,7 +2986,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от комнаты наблюдения дамбы",
+    "yield_ru": null
   },
   {
     "id": "key_dam_utility",
@@ -2596,7 +3002,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от подсобных помещений дамбы",
+    "yield_ru": null
   },
   {
     "id": "damaged_arc_motion_core",
@@ -2610,7 +3018,9 @@
     "yield_en": "2x ARC Alloy",
     "yield_de": "2x ARC-Legierung",
     "yield_fr": "2x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Поврежденное движущее ядро ARC",
+    "yield_ru": "2x Сплав ARC"
   },
   {
     "id": "dart_board",
@@ -2624,7 +3034,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Мишень для дартса",
+    "yield_ru": null
   },
   {
     "id": "deflated_football",
@@ -2638,7 +3050,9 @@
     "yield_en": "15x Rubber Parts",
     "yield_de": "15x Gummiteile",
     "yield_fr": "15x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сдутый футбольный мяч",
+    "yield_ru": "15x Резиновые детали"
   },
   {
     "id": "degraded_arc_rubber",
@@ -2652,7 +3066,9 @@
     "yield_en": "11x Rubber Parts",
     "yield_de": "11x Gummiteile",
     "yield_fr": "11x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Изношенная резина ARC",
+    "yield_ru": "11x Резиновые детали"
   },
   {
     "id": "dried_out_arc_resin",
@@ -2666,7 +3082,9 @@
     "yield_en": "9x Plastic Parts",
     "yield_de": "9x Plastikteile",
     "yield_fr": "9x Piezas de plástico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Высохшая смола ARC",
+    "yield_ru": "9x Пластиковые детали"
   },
   {
     "id": "duct_tape",
@@ -2682,12 +3100,14 @@
     "yield_fr": null,
     "quests": [
       {
-        "questId": "flickering_flames_3",
-        "questName": "Flickering Flames: Presents (3/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_3",
+        "questName": "Flickering Flames: Phase 3: Presents",
+        "trader": "Project",
         "amount": 10
       }
-    ]
+    ],
+    "name_ru": "Скотч",
+    "yield_ru": "1x Угловая рукоятка II, 2x Угловая рукоятка III, 2x Горизонтальная Рукоятка, 2x Кинетический преобразователь, 1x Надежный приклад II, 1x Вертикальная рукоятка II"
   },
   {
     "id": "durable_cloth",
@@ -2709,18 +3129,26 @@
         "amount": 1
       },
       {
-        "questId": "expedition_stage_2",
-        "questName": "Expedition: Core Systems (2/6)",
+        "questId": "expedition_s1_stage_2",
+        "questName": "Expedition S1: Phase 2: Core Systems",
         "trader": "Project",
         "amount": 35
       },
       {
-        "questId": "flickering_flames_1",
-        "questName": "Flickering Flames: Candlelight (1/5)",
-        "trader": "Event",
+        "questId": "expedition_s2_stage_2",
+        "questName": "Expedition S2: Phase 2: Core Systems",
+        "trader": "Project",
+        "amount": 35
+      },
+      {
+        "questId": "flickering_stage_1",
+        "questName": "Flickering Flames: Phase 1: Candlelight",
+        "trader": "Project",
         "amount": 5
       }
-    ]
+    ],
+    "name_ru": "Прочная ткань",
+    "yield_ru": "1x Рваный сигнальный жилет, 2x Пружинная подушка"
   },
   {
     "id": "electrical_components",
@@ -2736,12 +3164,20 @@
     "yield_fr": "10x Taller, 30x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_2",
-        "questName": "Expedition: Core Systems (2/6)",
+        "questId": "expedition_s1_stage_2",
+        "questName": "Expedition S1: Phase 2: Core Systems",
+        "trader": "Project",
+        "amount": 30
+      },
+      {
+        "questId": "expedition_s2_stage_2",
+        "questName": "Expedition S2: Phase 2: Core Systems",
         "trader": "Project",
         "amount": 20
       }
-    ]
+    ],
+    "name_ru": "Электрические компоненты",
+    "yield_ru": "1x Продвинутые электрические компоненты, 1x Бой 2, 2x Сгоревшая материнская плата, 2x Драйвер Шершня, 1x Добыча 2, 2x Поворотный энкодер, 2x Очиститель образцов, 1x Коронный номер, 2x Усилитель сигнала, 2x Сканер Стукача, 2x Передатчик Наводчика, 1x Устройство для мгновенной перезарядки щита, 1x Драйвер Осы"
   },
   {
     "id": "fertilizer",
@@ -2762,7 +3198,9 @@
         "trader": "Tian Wen",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Удобрение",
+    "yield_ru": "2x Различные семена"
   },
   {
     "id": "fireball_burner",
@@ -2784,12 +3222,14 @@
         "amount": 1
       },
       {
-        "questId": "flickering_flames_4",
-        "questName": "Flickering Flames: Beverages (4/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_4",
+        "questName": "Flickering Flames: Phase 4: Beverages",
+        "trader": "Project",
         "amount": 10
       }
-    ]
+    ],
+    "name_ru": "Горелка Огнешара",
+    "yield_ru": "1x Сплав ARC, 1x Химикаты"
   },
   {
     "id": "garlic_press",
@@ -2803,7 +3243,9 @@
     "yield_en": "12x Metal Parts",
     "yield_de": "12x Metallteile",
     "yield_fr": "12x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Пресс для чеснока",
+    "yield_ru": "12x Металлические детали"
   },
   {
     "id": "great_mullein",
@@ -2824,7 +3266,9 @@
         "trader": "Lance",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Коровяк",
+    "yield_ru": "2x Различные семена"
   },
   {
     "id": "household_cleaner",
@@ -2838,7 +3282,9 @@
     "yield_en": "13x Chemicals",
     "yield_de": "13x Chemikalien",
     "yield_fr": "13x Producto Químico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Чистящее средство",
+    "yield_ru": "11x Химикаты"
   },
   {
     "id": "ice_cream_scooper",
@@ -2852,7 +3298,9 @@
     "yield_en": "7x Metal Parts",
     "yield_de": "7x Metallteile",
     "yield_fr": "7x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ложка для мороженого",
+    "yield_ru": "7x Металлические детали"
   },
   {
     "id": "impure_arc_coolant",
@@ -2866,7 +3314,9 @@
     "yield_en": "13x Chemicals",
     "yield_de": "13x Chemikalien",
     "yield_fr": "13x Producto Químico",
-    "quests": []
+    "quests": [],
+    "name_ru": "Загрязненное охлаждающее вещество ARC",
+    "yield_ru": "12x Химикаты"
   },
   {
     "id": "light_bulb",
@@ -2882,18 +3332,26 @@
     "yield_fr": "5x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_3",
-        "questName": "Expedition: Framework (3/6)",
+        "questId": "expedition_s1_stage_3",
+        "questName": "Expedition S1: Phase 3: Framework",
+        "trader": "Project",
+        "amount": 5
+      },
+      {
+        "questId": "expedition_s2_stage_3",
+        "questName": "Expedition S2: Phase 3: Framework",
         "trader": "Project",
         "amount": 4
       },
       {
-        "questId": "flickering_flames_2",
-        "questName": "Flickering Flames: Decorations (2/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_2",
+        "questName": "Flickering Flames: Phase 2: Decorations",
+        "trader": "Project",
         "amount": 3
       }
-    ]
+    ],
+    "name_ru": "Лампочка",
+    "yield_ru": null
   },
   {
     "id": "magnet",
@@ -2907,7 +3365,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Магнит",
+    "yield_ru": "1x Бой 2, 2x Модули Исхода, 2x Промышленный магнит, 1x Добыча 2, 3x Микроскоп, 1x Рваный сигнальный жилет, 1x Испорченный тактический жилет, 1x Разрывная граната, 1x Стратегия 2"
   },
   {
     "id": "mechanical_components",
@@ -2921,7 +3381,9 @@
     "yield_en": "5x Workshop",
     "yield_de": "5x Werkstatt",
     "yield_fr": "5x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Механические компоненты",
+    "yield_ru": "1x Продвинутые механические компоненты, 1x Угловая рукоятка II, 2x Наковальня I, 3x Наковальня II, 4x Наковальня III, 5x Наковальня IV, 5x Арпеджио IV, 1x Бурлетта I, 2x Бурлетта II, 3x Бурлетта III, 4x Бурлетта IV, 1x Компенсатор II, 1x Компенсатор III, 1x Увеличенный магазин для легкого оружия II, 1x Ферро IV, 1x Заколка IV, 2x Эль-Торо I, 4x Il Toro III, 5x Il Toro IV, 1x Компоненты для модификаций, 2x Мотор, 1x Дульный тормоз II, 4x Rattler IV, 2x Ржавая шестиренка, 3x Огневое ядро стража, 1x Чок для дробовика II, 3x Гироскоп Измельчителя, 1x Надежный приклад II, 2x Сшиватель IV, 2x Сейф Наблюдателя, 1x Турбонасос, 1x Вертикальная рукоятка II"
   },
   {
     "id": "metal_brackets",
@@ -2935,7 +3397,9 @@
     "yield_en": "8x Metal Parts",
     "yield_de": "8x Metallteile",
     "yield_fr": "8x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Металлические скобы",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "mushroom",
@@ -2951,12 +3415,14 @@
     "yield_fr": "12x Scrappy",
     "quests": [
       {
-        "questId": "flickering_flames_5",
-        "questName": "Flickering Flames: Meals (5/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_5",
+        "questName": "Flickering Flames: Phase 5: Meals",
+        "trader": "Project",
         "amount": 7
       }
-    ]
+    ],
+    "name_ru": "Гриб",
+    "yield_ru": null
   },
   {
     "id": "number_plate",
@@ -2970,7 +3436,9 @@
     "yield_en": "3x Metal Parts",
     "yield_de": "3x Metallteile",
     "yield_fr": "3x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Номерной знак",
+    "yield_ru": "3x Металлические детали"
   },
   {
     "id": "oil",
@@ -2984,7 +3452,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Масло",
+    "yield_ru": "2x Пламенная граната, 2x Охлаждающая жидкость, 1x Тяжелая граната с детонатором, 2x Мотор, 2x Загрязненный воздушный фильтр, 1x Синтезированное топливо, 3x Турбонасос, 2x Водяной насос"
   },
   {
     "id": "key_patrol_car",
@@ -2998,7 +3468,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от патрульной машины",
+    "yield_ru": null
   },
   {
     "id": "poster_natural_wonders",
@@ -3012,7 +3484,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Плакат Чудеса природы",
+    "yield_ru": null
   },
   {
     "id": "pottery",
@@ -3026,7 +3500,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Глиняная посуда",
+    "yield_ru": null
   },
   {
     "id": "remote_control",
@@ -3040,7 +3516,9 @@
     "yield_en": "7x Plastic Parts, 1x Sensors",
     "yield_de": "7x Plastikteile, 1x Sensoren",
     "yield_fr": "7x Piezas de plástico, 1x Sensores",
-    "quests": []
+    "quests": [],
+    "name_ru": "Пульт дистанционного управления",
+    "yield_ru": "7x Пластиковые детали, 1x Датчики"
   },
   {
     "id": "ripped_safety_vest",
@@ -3054,7 +3532,9 @@
     "yield_en": "1x Magnet, 1x Durable Cloth",
     "yield_de": "1x Magnet, 1x Strapazierfähiges Stoffstück",
     "yield_fr": "1x Imán, 1x Tela resistente",
-    "quests": []
+    "quests": [],
+    "name_ru": "Рваный сигнальный жилет",
+    "yield_ru": "1x Прочная ткань, 1x Магнит"
   },
   {
     "id": "roots",
@@ -3068,7 +3548,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Корни",
+    "yield_ru": "1x Различные семена"
   },
   {
     "id": "ruined_baton",
@@ -3082,7 +3564,9 @@
     "yield_en": "6x Metal Parts, 3x Rubber Parts",
     "yield_de": "6x Metallteile, 3x Gummiteile",
     "yield_fr": "6x Piezas de metal, 3x Piezas de goma",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанная дубинка",
+    "yield_ru": "6x Металлические детали, 3x Резиновые детали"
   },
   {
     "id": "ruined_handcuffs",
@@ -3096,7 +3580,9 @@
     "yield_en": "8x Metal Parts",
     "yield_de": "8x Metallteile",
     "yield_fr": "8x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Сломанные наручники",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "candle_berries",
@@ -3112,36 +3598,38 @@
     "yield_fr": "2x Semillas variadas",
     "quests": [
       {
-        "questId": "flickering_flames_1",
-        "questName": "Flickering Flames: Candlelight (1/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_1",
+        "questName": "Flickering Flames: Phase 1: Candlelight",
+        "trader": "Project",
         "amount": 20
       },
       {
-        "questId": "flickering_flames_2",
-        "questName": "Flickering Flames: Decorations (2/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_2",
+        "questName": "Flickering Flames: Phase 2: Decorations",
+        "trader": "Project",
         "amount": 50
       },
       {
-        "questId": "flickering_flames_3",
-        "questName": "Flickering Flames: Presents (3/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_3",
+        "questName": "Flickering Flames: Phase 3: Presents",
+        "trader": "Project",
         "amount": 60
       },
       {
-        "questId": "flickering_flames_4",
-        "questName": "Flickering Flames: Beverages (4/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_4",
+        "questName": "Flickering Flames: Phase 4: Beverages",
+        "trader": "Project",
         "amount": 60
       },
       {
-        "questId": "flickering_flames_5",
-        "questName": "Flickering Flames: Meals (5/5)",
-        "trader": "Event",
+        "questId": "flickering_stage_5",
+        "questName": "Flickering Flames: Phase 5: Meals",
+        "trader": "Project",
         "amount": 70
       }
-    ]
+    ],
+    "name_ru": "Свечные ягоды",
+    "yield_ru": "2x Различные семена"
   },
   {
     "id": "ruined_parachute",
@@ -3155,7 +3643,9 @@
     "yield_en": "10x Fabric",
     "yield_de": "10x Stoff",
     "yield_fr": "10x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Испорченный парашют",
+    "yield_ru": "10x Ткань"
   },
   {
     "id": "ruined_tactical_vest",
@@ -3169,7 +3659,9 @@
     "yield_en": "5x Fabric, 1x Magnet",
     "yield_de": "5x Stoff, 1x Magnet",
     "yield_fr": "5x Tela, 1x Imán",
-    "quests": []
+    "quests": [],
+    "name_ru": "Испорченный тактический жилет",
+    "yield_ru": "5x Ткань, 1x Магнит"
   },
   {
     "id": "rusted_bolts",
@@ -3183,7 +3675,9 @@
     "yield_en": "8x Metal Parts",
     "yield_de": "8x Metallteile",
     "yield_fr": "8x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ржавые болты",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "rusty_arc_steel",
@@ -3197,7 +3691,9 @@
     "yield_en": "8x Metal Parts",
     "yield_de": "8x Metallteile",
     "yield_fr": "8x Piezas de metal",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ржавая сталь ARC",
+    "yield_ru": "8x Металлические детали"
   },
   {
     "id": "shredder_gyro",
@@ -3213,12 +3709,14 @@
     "yield_fr": "3x Componentes mecánicos, 3x Aleación ARC",
     "quests": [
       {
-        "questId": "expedition_stage_3",
-        "questName": "Expedition: Framework (3/6)",
+        "questId": "expedition_s2_stage_3",
+        "questName": "Expedition S2: Phase 3: Framework",
         "trader": "Project",
         "amount": 10
       }
-    ]
+    ],
+    "name_ru": "Гироскоп Измельчителя",
+    "yield_ru": "3x Механические компоненты, 3x Сплав ARC"
   },
   {
     "id": "simple_gun_parts",
@@ -3232,7 +3730,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Простые детали для оружия",
+    "yield_ru": "2x Наковальня I, 3x Наковальня II, 4x Наковальня III, 5x Наковальня IV, 5x Арпеджио IV, 2x Бурлетта I, 2x Бурлетта II, 3x Бурлетта III, 4x Бурлетта IV, 3x Сложные детали оружия, 1x Ферро III, 2x Ферро IV, 1x Заколка III, 2x Заколка IV, 2x Детали для тяжелого оружия, 2x Эль-Торо I, 4x Il Toro III, 5x Il Toro IV, 2x Детали для легкого оружия, 2x Детали для оружия среднего калибра, 2x Rattler IV, 1x Сшиватель III, 2x Сшиватель IV, 5x Непригодное оружие"
   },
   {
     "id": "snitch_scanner",
@@ -3253,7 +3753,9 @@
         "trader": "Shani",
         "amount": 1
       }
-    ]
+    ],
+    "name_ru": "Сканер Стукача",
+    "yield_ru": "1x Сплав ARC, 2x Электрические компоненты"
   },
   {
     "id": "key_spaceport_trench",
@@ -3267,7 +3769,9 @@
     "yield_en": "1x Quest",
     "yield_de": "1x Quest",
     "yield_fr": "1x Misión",
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от башни траншей космопорта",
+    "yield_ru": null
   },
   {
     "id": "key_spaceport_warehouse",
@@ -3281,7 +3785,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от склада космопорта",
+    "yield_ru": null
   },
   {
     "id": "spotter_relay",
@@ -3295,7 +3801,9 @@
     "yield_en": "2x Electrical Components, 1x ARC Alloy",
     "yield_de": "2x Elektrische Komponenten, 1x ARC-Legierung",
     "yield_fr": "2x Componentes eléctricos, 1x Aleación ARC",
-    "quests": []
+    "quests": [],
+    "name_ru": "Передатчик Наводчика",
+    "yield_ru": "2x Электрические компоненты, 1x Сплав ARC"
   },
   {
     "id": "steel_spring",
@@ -3311,12 +3819,20 @@
     "yield_fr": "15x Expedición",
     "quests": [
       {
-        "questId": "expedition_stage_1",
-        "questName": "Expedition: Foundation (1/6)",
+        "questId": "expedition_s1_stage_1",
+        "questName": "Expedition S1: Phase 1: Foundation",
+        "trader": "Project",
+        "amount": 15
+      },
+      {
+        "questId": "expedition_s2_stage_1",
+        "questName": "Expedition S2: Phase 1: Foundation",
         "trader": "Project",
         "amount": 15
       }
-    ]
+    ],
+    "name_ru": "Стальная пружина",
+    "yield_ru": "2x Охлаждающий змеевик, 1x Увеличенный магазин для легкого оружия II, 2x Увеличенный магазин для легкого оружия III, 2x Увеличенный магазин для оружия среднего калибра III, 1x Магнетрон, 1x Компоненты для модификаций, 3x Сломанный аккордеон, 1x Ржавые инструменты, 2x Пружинная подушка"
   },
   {
     "id": "key_stella_montis_admin",
@@ -3330,7 +3846,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Административный Ключ Сборочного Цеха Стелла Монтис",
+    "yield_ru": null
   },
   {
     "id": "key_stella_montis_medical",
@@ -3344,7 +3862,9 @@
     "yield_en": null,
     "yield_de": null,
     "yield_fr": null,
-    "quests": []
+    "quests": [],
+    "name_ru": "Ключ от медицинского склада Стелла Монтис",
+    "yield_ru": null
   },
   {
     "id": "tattered_arc_lining",
@@ -3358,7 +3878,9 @@
     "yield_en": "12x Fabric",
     "yield_de": "12x Stoff",
     "yield_fr": "12x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Потрепанная ARC-Подкладка",
+    "yield_ru": "12x Ткань"
   },
   {
     "id": "tattered_clothes",
@@ -3372,7 +3894,9 @@
     "yield_en": "11x Fabric",
     "yield_de": "11x Stoff",
     "yield_fr": "11x Tela",
-    "quests": []
+    "quests": [],
+    "name_ru": "Рваная одежда",
+    "yield_ru": "11x Ткань"
   },
   {
     "id": "tick_pod",
@@ -3386,7 +3910,9 @@
     "yield_en": "8x Workshop",
     "yield_de": "8x Werkstatt",
     "yield_fr": "8x Taller",
-    "quests": []
+    "quests": [],
+    "name_ru": "Оболочка Блохи",
+    "yield_ru": "2x Химикаты, 2x Сплав ARC"
   },
   {
     "id": "wires",
@@ -3420,11 +3946,19 @@
         "amount": 3
       },
       {
-        "questId": "expedition_stage_2",
-        "questName": "Expedition: Core Systems (2/6)",
+        "questId": "expedition_s1_stage_2",
+        "questName": "Expedition S1: Phase 2: Core Systems",
+        "trader": "Project",
+        "amount": 30
+      },
+      {
+        "questId": "expedition_s2_stage_2",
+        "questName": "Expedition S2: Phase 2: Core Systems",
         "trader": "Project",
         "amount": 25
       }
-    ]
+    ],
+    "name_ru": "Провода",
+    "yield_ru": "1x Продвинутые электрические компоненты, 1x Продвинутые механические компоненты, 2x Сломанное портативное радио, 2x Сломанный электрошокер, 1x Компенсатор II, 2x Компенсатор III, 4x Охлаждающий вентилятор, 2x Поврежденный теплопоглотитель, 1x Удлиненный ствол, 2x Увлажнитель, 1x Дульный тормоз II, 6x Портативный телевизор, 2x Портативный аккумулятор, 4x Кабель питания, 1x Процессор, 2x Проектор, 1x Датчики, 1x Чок для дробовика II, 3x Глушитель III, 3x Тостер, 1x Преобразователь напряжения"
   }
 ]
