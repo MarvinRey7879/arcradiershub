@@ -272,12 +272,37 @@ onMounted(() => {
       </details>
       <details class="changelog-details">
         <summary>
-          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.3)</span>
-          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.3)</span>
-          <span v-else>🛠️ Changelog & Updates (v1.2.3)</span>
+          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.4)</span>
+          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.4)</span>
+          <span v-else>🛠️ Changelog & Updates (v1.2.4)</span>
         </summary>
 
         <div class="changelog-content">
+          <div class="log-entry">
+            <span class="log-date">31. Dec 2025</span>
+            <span class="log-version">v1.2.4</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Data Fix:</strong> 🔧 Item <em>Fernbedienung</em> korrigiert: Seltenheit auf
+                <strong>Rare</strong>
+                und Ertrag auf <strong>7x Plastikteile</strong> angepasst. Danke an den Nutzer für die Fehlermeldung!
+              </li>
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Corrección:</strong> 🔧 Objeto <em>Control Remoto</em> corregido: Rareza a
+                <strong>Raro</strong> y
+                rendimiento a <strong>7x Piezas de plástico</strong> actualizados. ¡Gracias por el reporte!
+              </li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>Data Fix:</strong> 🔧 Item <em>Remote Control</em> updated: Rarity changed to
+                <strong>Rare</strong>
+                and yield to <strong>7x Plastic Parts</strong>. Thanks for the user report!
+              </li>
+            </ul>
+          </div>
           <div class="log-entry">
             <span class="log-date">27. Dec 2025</span>
             <span class="log-version">v1.2.3</span>

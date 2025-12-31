@@ -3033,13 +3033,13 @@
     "name_en": "Remote Control",
     "name_de": "Fernbedienung",
     "name_fr": "Control Remoto",
-    "rarity": "Uncommon",
+    "rarity": "Rare",
     "category": "Recyclable",
     "action": "recycle",
     "value": 1000,
-    "yield_en": "2x Plastic Parts, 1x Sensors",
-    "yield_de": "2x Plastikteile, 1x Sensoren",
-    "yield_fr": "2x Piezas de plástico, 1x Sensores",
+    "yield_en": "7x Plastic Parts, 1x Sensors",
+    "yield_de": "7x Plastikteile, 1x Sensoren",
+    "yield_fr": "7x Piezas de plástico, 1x Sensores",
     "quests": []
   },
   {
