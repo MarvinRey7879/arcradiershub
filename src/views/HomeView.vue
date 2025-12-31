@@ -272,12 +272,45 @@ onMounted(() => {
       </details>
       <details class="changelog-details">
         <summary>
-          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.4)</span>
-          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.4)</span>
-          <span v-else>🛠️ Changelog & Updates (v1.2.4)</span>
+          <span v-if="browserLang === 'de'">🛠️ Changelog & Updates (v1.2.5)</span>
+          <span v-else-if="browserLang === 'es'">🛠️ Registro de cambios (v1.2.5)</span>
+          <span v-else>🛠️ Changelog & Updates (v1.2.5)</span>
         </summary>
 
         <div class="changelog-content">
+          <div class="log-entry">
+            <span class="log-date">31. Dec 2025</span>
+            <span class="log-version">v1.2.5</span>
+
+            <ul v-if="browserLang === 'de'">
+              <li><strong>Daten-Update:</strong> 🗂️ Projekte sind jetzt sauber nach <strong>Season 1</strong> und
+                <strong>Season 2</strong> getrennt!
+                <br><span style="font-size: 0.85em; opacity: 0.8;">(Beispiel: <em>"Expedition S1"</em> für alte Phasen,
+                  <em>"Expedition S2"</em> für aktuelle).</span>
+              </li>
+
+            </ul>
+
+            <ul v-else-if="browserLang === 'es'">
+              <li><strong>Actualización de datos:</strong> 🗂️ ¡Los proyectos ahora están separados por
+                <strong>Temporada
+                  1</strong> y
+                <strong>Temporada 2</strong>!
+                <br><span style="font-size: 0.85em; opacity: 0.8;">(Ejemplo: <em>"Expedición T1"</em> vs <em>"Expedición
+                    T2"</em>).</span>
+              </li>
+            </ul>
+
+            <ul v-else>
+              <li><strong>Data Update:</strong> 🗂️ Projects are now clearly separated into <strong>Season 1</strong>
+                and
+                <strong>Season 2</strong>!
+                <br><span style="font-size: 0.85em; opacity: 0.8;">(Example: <em>"Expedition S1"</em> vs <em>"Expedition
+                    S2"</em>).</span>
+              </li>
+
+            </ul>
+          </div>
           <div class="log-entry">
             <span class="log-date">31. Dec 2025</span>
             <span class="log-version">v1.2.4</span>
