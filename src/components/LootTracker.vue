@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
+import { useI18n } from 'vue-i18n'; // Importiere useI18n
+
 // Pfade anpassen falls nötig!
 import lootDataRaw from '../../loot_data_final.json';
 import questListRaw from '../../quest_list_final.json';
@@ -7,9 +9,21 @@ import projectListRaw from '../../project_list_final.json';
 
 const emit = defineEmits(['lang-change']);
 
+// i18n nutzen
+const { t, locale } = useI18n();
+
 // --- State ---
 const searchQuery = ref('');
-const currentLang = ref('en');
+// WICHTIG: currentLang wird jetzt über locale von vue-i18n gesteuert
+// Wir behalten currentLang als ref für lokale Logik, synchronisieren es aber
+const currentLang = computed({
+    get: () => locale.value,
+    set: (val) => {
+        locale.value = val;
+        emit('lang-change', val);
+    }
+});
+
 const selectedRarities = ref([]);
 const selectedActions = ref([]);
 const itemsPerRow = ref(7);
@@ -33,29 +47,28 @@ const tutorialStep = ref(0);
 const rarityWeights = { 'Common': 1, 'Uncommon': 2, 'Rare': 3, 'Epic': 4, 'Legendary': 5 };
 const rarities = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
 
-// Definition der Sprachen (nutzt 'es' für Spanisch)
 const langOptions = [
     { value: 'en', label: '🇺🇸 EN' },
     { value: 'de', label: '🇩🇪 DE' },
-    { value: 'es', label: '🇪🇸 ES' }
+    { value: 'es', label: '🇪🇸 ES' },
+    { value: 'ru', label: '🇷🇺 RU' }
 ];
 
+// Actions Definition (Labels kommen jetzt dynamisch aus i18n)
 const actions = [
-    { value: 'keep', label: { de: 'Behalten (Keep)', en: 'Keep', es: 'Guardar (Keep)' }, color: '#2ecc71' },
-    { value: 'recycle', label: { de: 'Verwerten (Recycle)', en: 'Recycle', es: 'Reciclar' }, color: '#e67e22' },
-    { value: 'sell', label: { de: 'Verkaufen (Sell)', en: 'Sell', es: 'Vender (Sell)' }, color: '#f1c40f' }
+    { value: 'keep', i18nKey: 'tracker.actions.keep', color: '#2ecc71' },
+    { value: 'recycle', i18nKey: 'tracker.actions.recycle', color: '#e67e22' },
+    { value: 'sell', i18nKey: 'tracker.actions.sell', color: '#f1c40f' }
 ];
 
-// --- DATA HELPERS (WICHTIG!) ---
+// --- DATA HELPERS ---
 
-// 1. Eine Map aller Items für schnelle Namenssuche (id -> Item Object)
 const itemMap = computed(() => {
     const map = {};
     lootDataRaw.forEach(item => { map[item.id] = item; });
     return map;
 });
 
-// 2. Eine Map aller Quests & Projekte für schnelle Namenssuche (id -> Quest Object)
 const objectivesMap = computed(() => {
     const map = {};
     questListRaw.forEach(q => { map[q.id] = { ...q, type: 'quest' }; });
@@ -63,54 +76,34 @@ const objectivesMap = computed(() => {
     return map;
 });
 
-// 3. Intelligente Namens-Abfrage (löst das fr/es Problem)
 const getLocName = (obj) => {
     if (!obj) return 'Unknown';
     const lang = currentLang.value;
 
-    // Sonderfall: Spanisch
     if (lang === 'es') {
-        // Quest-Listen nutzen 'name_es'
         if (obj.name_es) return obj.name_es;
-        // Loot-Daten nutzen fälschlicherweise 'name_fr' für Spanisch
-        if (obj.name_fr) return obj.name_fr;
-        // Fallback
+        if (obj.name_fr) return obj.name_fr; // Fallback Fix für alte Daten
         return obj.name_en || obj.name;
     }
-
-    // Normalfall (de/en)
     return obj[`name_${lang}`] || obj.name_en || obj.name;
 };
 
 const getLocYield = (item) => {
     const lang = currentLang.value;
-    // Auch hier: Loot Data nutzt 'yield_fr' für Spanisch
     if (lang === 'es') return item.yield_fr || item.yield_en;
     return item[`yield_${lang}`] || item.yield_en;
 };
 
-// Hilfsfunktion: Holt den übersetzten Namen eines Items anhand der ID (für die Requirements Liste)
 const resolveItemName = (itemId, fallbackName) => {
     const item = itemMap.value[itemId];
     if (item) return getLocName(item);
-    return fallbackName; // Fallback falls ID nicht gefunden (z.B. neue Items)
+    return fallbackName;
 };
 
 // --- Lifecycle ---
 onMounted(() => {
-    const savedLang = localStorage.getItem('arc_tracker_lang');
-    if (savedLang) {
-        currentLang.value = savedLang;
-    } else {
-        const navLang = navigator.language || navigator.userLanguage;
-        if (navLang) {
-            const lowerLang = navLang.toLowerCase();
-            if (lowerLang.startsWith('de')) currentLang.value = 'de';
-            else if (lowerLang.startsWith('es')) currentLang.value = 'es';
-            else currentLang.value = 'en';
-        }
-    }
-    emit('lang-change', currentLang.value);
+    // Initialsprache wird bereits in App.vue / i18n setup gesetzt, 
+    // aber wir lesen hier für Dimensions und Tutorial
 
     nextTick(() => {
         updateDimensions();
@@ -136,13 +129,10 @@ onUnmounted(() => {
     if (typeof window !== 'undefined') window.removeEventListener('resize', updateDimensions);
 });
 
-// Watchers für Persistenz
+// Watchers
 watch(completedQuests, (newVal) => localStorage.setItem('arc_tracker_completed_quests', JSON.stringify(newVal)), { deep: true });
 watch(completedProjects, (newVal) => localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal)), { deep: true });
-watch(currentLang, (newVal) => {
-    localStorage.setItem('arc_tracker_lang', newVal);
-    emit('lang-change', newVal);
-});
+// Kein Watcher mehr für Lang nötig, da computed setter das regelt
 
 // --- Tutorial Actions ---
 const nextTutorialStep = () => { tutorialStep.value = 2; };
@@ -173,18 +163,12 @@ const processedItems = computed(() => {
     const allCompletedIds = new Set([...completedQuests.value, ...completedProjects.value]);
 
     return lootDataRaw.map(item => {
-        // Hier passiert die Magie: Wir lösen die IDs auf und prüfen, ob sie erledigt sind
         const rawQuests = item.quests || [];
-
-        // Filtere Quests, die noch NICHT erledigt sind
         const activeRequirements = [];
 
         rawQuests.forEach(qRef => {
-            // qRef ist z.B. { id: "trash_into_treasure", amount: 1 }
-            // Prüfen ob erledigt
-            if (allCompletedIds.has(qRef.questId || qRef.id)) return; // Support für alte (questId) und neue (id) Struktur
+            if (allCompletedIds.has(qRef.questId || qRef.id)) return;
 
-            // Daten aus der großen Map holen
             const questId = qRef.questId || qRef.id;
             const questData = objectivesMap.value[questId];
 
@@ -192,12 +176,10 @@ const processedItems = computed(() => {
                 activeRequirements.push({
                     questId: questId,
                     amount: qRef.amount,
-                    // Hier holen wir den NAMEN dynamisch in der richtigen Sprache
                     questName: getLocName(questData),
                     trader: questData.trader
                 });
             } else {
-                // Fallback falls ID nicht gefunden (sollte nicht passieren durch Scraper)
                 activeRequirements.push({
                     questId: questId,
                     amount: qRef.amount,
@@ -208,7 +190,6 @@ const processedItems = computed(() => {
         });
 
         const hasActiveReq = activeRequirements.length > 0;
-
         let dynamicAction = item.action;
         if (hasActiveReq) {
             dynamicAction = 'keep';
@@ -220,7 +201,6 @@ const processedItems = computed(() => {
             originalAction: item.action,
             activeQuests: activeRequirements,
             isQuestItem: hasActiveReq,
-            // Cache localized name for sorting/filtering
             _locName: getLocName(item)
         };
     });
@@ -229,7 +209,7 @@ const processedItems = computed(() => {
 // --- Filtered Items ---
 const filteredItems = computed(() => {
     let result = processedItems.value.filter(item => {
-        const nameToSearch = item._locName; // Nutzung des gecachten Namens
+        const nameToSearch = item._locName;
         if (!nameToSearch) return false;
 
         const matchesSearch = nameToSearch.toLowerCase().includes(searchQuery.value.toLowerCase());
@@ -252,8 +232,7 @@ const filteredItems = computed(() => {
 });
 
 // --- Modals Logic ---
-// Helper for Quest Filtering
-const getFilteredList = (sourceList, query, onlyObtains = false, completedSet) => {
+const getFilteredList = (sourceList, query, onlyObtains = false) => {
     return sourceList.filter(entry => {
         const name = getLocName(entry);
         const matchesSearch = name.toLowerCase().includes(query.toLowerCase());
@@ -275,7 +254,6 @@ const toggleAllQuestsVisible = () => {
     if (areAllQuestsVisibleSelected.value) {
         completedQuests.value = completedQuests.value.filter(id => !visibleIds.includes(id));
     } else {
-        // Nur IDs hinzufügen, die noch nicht drin sind
         const newIds = visibleIds.filter(id => !completedQuests.value.includes(id));
         completedQuests.value = [...completedQuests.value, ...newIds];
     }
@@ -301,51 +279,6 @@ const getImageUrl = (id) => `/items/${id}.webp`;
 const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1a1a1a/FFF?text=No+Image'; };
 const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
 
-// --- Translation UI Strings ---
-const t = (key) => {
-    const dict = {
-        searchPlaceholder: { de: 'Suche Item Name...', en: 'Search item name...', es: 'Buscar objeto...' },
-        yieldLabel: { de: 'Verwertung:', en: 'Yield:', es: 'Rendimiento:' },
-        noResults: { de: 'Keine Items gefunden.', en: 'No items found.', es: 'No se encontraron objetos.' },
-        sortNameAZ: { de: 'Name (A-Z)', en: 'Name (A-Z)', es: 'Nombre (A-Z)' },
-        sortNameZA: { de: 'Name (Z-A)', en: 'Name (Z-A)', es: 'Nombre (Z-A)' },
-        sortRarityLowHigh: { de: 'Seltenheit (Niedrig → Hoch)', en: 'Rarity (Low → High)', es: 'Rareza (Baja → Alta)' },
-        sortRarityHighLow: { de: 'Seltenheit (Hoch → Niedrig)', en: 'Rarity (High → Low)', es: 'Rareza (Alta → Baja)' },
-        rarity: { de: 'Seltenheit', en: 'Rarity', es: 'Rareza' },
-        action: { de: 'Aktion', en: 'Action', es: 'Acción' },
-        colLabel: { de: 'Spalten', en: 'Cols', es: 'Cols' },
-        questLogBtn: { de: '📜 Quest Filter', en: '📜 Quest Filter', es: '📜 Filtro de Misiones' },
-        projectLogBtn: { de: '🏗️ Projekt Filter', en: '🏗️ Project Filter', es: '🏗️ Filtro de Proyectos' },
-        questModalTitle: { de: 'Quest Übersicht', en: 'Quest Overview', es: 'Resumen de Misiones' },
-        projectModalTitle: { de: 'Projekte & Events', en: 'Projects & Events', es: 'Proyectos y Eventos' },
-        searchQuest: { de: 'Suche Quest...', en: 'Search quest...', es: 'Buscar misión...' },
-        searchProject: { de: 'Suche Projekt...', en: 'Search project...', es: 'Buscar proyecto...' },
-        onlyLootQuests: { de: 'Nur Loot-Relevante Quests', en: 'Only Loot Relevant Quests', es: 'Solo misiones de botín' },
-        neededFor: { de: 'Benötigt für:', en: 'Needed for:', es: 'Necesario para:' },
-        selectAll: { de: 'Alle auswählen', en: 'Select All', es: 'Seleccionar todo' },
-        deselectAll: { de: 'Alle abwählen', en: 'Deselect All', es: 'Deseleccionar todo' },
-        tutQuestTitle: { de: 'NEU: Quest Filter!', en: 'NEW: Quest Filter!', es: 'NUEVO: Filtro de Misiones!' },
-        tutQuestDesc: {
-            de: 'Markiere erledigte Quests, damit Items nicht mehr unnötig als "Keep" angezeigt werden.',
-            en: 'Check off completed quests so items are no longer marked as "Keep" unnecessarily.',
-            es: 'Marca las misiones completadas para actualizar el estado.'
-        },
-        tutQuestTip: {
-            de: 'Deine fertigen Quests findest du im Spiel unter: Raider -> Kodex -> Quests.',
-            en: 'You can find your finished quests in-game at: Raider -> Codex -> Quests.',
-            es: 'Encuentra tus misiones terminadas en: Raider -> Códice -> Misiones.'
-        },
-        tutNext: { de: 'Weiter', en: 'Next', es: 'Siguiente' },
-        tutProjTitle: { de: 'NEU: Projekt Filter!', en: 'NEW: Project Filter!', es: 'NUEVO: Filtro de Proyectos!' },
-        tutProjDesc: {
-            de: 'Verfolge Events & Expeditionen. Hake erledigte Phasen ab, damit Items aktualisiert werden.',
-            en: 'Track events & expeditions. Check off completed stages to update item status.',
-            es: 'Sigue eventos y expediciones. Marca fases completadas.'
-        },
-        tutFinish: { de: 'Verstanden!', en: 'Got it!', es: '¡Entendido!' }
-    };
-    return dict[key][currentLang.value] || dict[key]['en'];
-};
 </script>
 
 <template>
@@ -355,18 +288,19 @@ const t = (key) => {
 
         <div class="controls" :class="{ 'tutorial-active': tutorialStep > 0 }">
             <div class="top-row">
-                <input type="text" v-model="searchQuery" :placeholder="t('searchPlaceholder')" class="search-bar" />
+                <input type="text" v-model="searchQuery" :placeholder="$t('tracker.searchPlaceholder')"
+                    class="search-bar" />
 
                 <select v-model="sortOrder" class="control-select">
-                    <option value="name_asc">{{ t('sortNameAZ') }}</option>
-                    <option value="name_desc">{{ t('sortNameZA') }}</option>
-                    <option value="rarity_asc">{{ t('sortRarityLowHigh') }}</option>
-                    <option value="rarity_desc">{{ t('sortRarityHighLow') }}</option>
+                    <option value="name_asc">{{ $t('tracker.sortNameAZ') }}</option>
+                    <option value="name_desc">{{ $t('tracker.sortNameZA') }}</option>
+                    <option value="rarity_asc">{{ $t('tracker.sortRarityLowHigh') }}</option>
+                    <option value="rarity_desc">{{ $t('tracker.sortRarityHighLow') }}</option>
                 </select>
 
                 <select v-model="itemsPerRow" class="control-select columns-select">
                     <option v-for="opt in columnOptions" :key="opt.value" :value="opt.value">
-                        {{ opt.label }} {{ t('colLabel') }}
+                        {{ opt.label }} {{ $t('tracker.cols') }}
                     </option>
                 </select>
 
@@ -378,18 +312,19 @@ const t = (key) => {
 
                 <div class="tutorial-wrapper">
                     <button @click="showQuestModal = true" class="quest-log-btn">
-                        {{ t('questLogBtn') }}
+                        {{ $t('tracker.questLogBtn') }}
                     </button>
 
                     <transition name="pop">
                         <div v-if="tutorialStep === 1" class="tutorial-bubble quest-bubble">
                             <div class="arrow-up"></div>
-                            <h4>{{ t('tutQuestTitle') }} <span class="badge-new">✨</span></h4>
-                            <p>{{ t('tutQuestDesc') }}</p>
+                            <h4>{{ $t('tracker.tutQuestTitle') }} <span class="badge-new">✨</span></h4>
+                            <p>{{ $t('tracker.tutQuestDesc') }}</p>
                             <div class="tut-tip">
-                                💡 {{ t('tutQuestTip') }}
+                                💡 {{ $t('tracker.tutQuestTip') }}
                             </div>
-                            <button class="tut-btn" @click.stop="nextTutorialStep">{{ t('tutNext') }} →</button>
+                            <button class="tut-btn" @click.stop="nextTutorialStep">{{ $t('tracker.tutNext') }}
+                                →</button>
                         </div>
                     </transition>
                 </div>
@@ -397,7 +332,7 @@ const t = (key) => {
 
             <div class="filter-row">
                 <div class="filter-group">
-                    <span class="filter-label">{{ t('rarity') }}:</span>
+                    <span class="filter-label">{{ $t('tracker.rarity') }}:</span>
                     <div class="checkbox-wrapper">
                         <label v-for="rarity in rarities" :key="rarity" :class="getRarityClass(rarity)">
                             <input type="checkbox" :value="rarity" v-model="selectedRarities" />
@@ -406,26 +341,27 @@ const t = (key) => {
                     </div>
                 </div>
                 <div class="filter-group">
-                    <span class="filter-label">{{ t('action') }}:</span>
+                    <span class="filter-label">{{ $t('tracker.action') }}:</span>
                     <div class="checkbox-wrapper">
                         <label v-for="act in actions" :key="act.value" :style="{ color: act.color }">
                             <input type="checkbox" :value="act.value" v-model="selectedActions" />
-                            {{ act.label[currentLang] }}
+                            {{ $t(act.i18nKey) }}
                         </label>
                     </div>
                 </div>
 
                 <div class="project-btn-wrapper tutorial-wrapper">
                     <button @click="showProjectModal = true" class="project-log-btn">
-                        {{ t('projectLogBtn') }}
+                        {{ $t('tracker.projectLogBtn') }}
                     </button>
 
                     <transition name="pop">
                         <div v-if="tutorialStep === 2" class="tutorial-bubble project-bubble">
                             <div class="arrow-dynamic"></div>
-                            <h4>{{ t('tutProjTitle') }} <span class="badge-new">✨</span></h4>
-                            <p>{{ t('tutProjDesc') }}</p>
-                            <button class="tut-btn finish" @click.stop="finishTutorial">✅ {{ t('tutFinish') }}</button>
+                            <h4>{{ $t('tracker.tutProjTitle') }} <span class="badge-new">✨</span></h4>
+                            <p>{{ $t('tracker.tutProjDesc') }}</p>
+                            <button class="tut-btn finish" @click.stop="finishTutorial">✅ {{ $t('tracker.tutFinish')
+                                }}</button>
                         </div>
                     </transition>
                 </div>
@@ -435,20 +371,20 @@ const t = (key) => {
         <div v-if="showQuestModal" class="modal-backdrop" @click.self="showQuestModal = false">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2>{{ t('questModalTitle') }}</h2>
+                    <h2>{{ $t('tracker.questModalTitle') }}</h2>
                     <button class="close-btn" @click="showQuestModal = false">✕</button>
                 </div>
                 <div class="modal-controls">
-                    <input type="text" v-model="questSearchQuery" :placeholder="t('searchQuest')"
+                    <input type="text" v-model="questSearchQuery" :placeholder="$t('tracker.searchQuest')"
                         class="modal-search" />
                     <button class="select-all-btn" @click="toggleAllQuestsVisible"
                         :class="{ 'active': areAllQuestsVisibleSelected }">
-                        {{ areAllQuestsVisibleSelected ? t('deselectAll') : t('selectAll') }}
+                        {{ areAllQuestsVisibleSelected ? $t('tracker.deselectAll') : $t('tracker.selectAll') }}
                     </button>
                     <label class="toggle-switch">
                         <input type="checkbox" v-model="showOnlyLootQuests" />
                         <span class="slider"></span>
-                        <span class="toggle-label">{{ t('onlyLootQuests') }}</span>
+                        <span class="toggle-label">{{ $t('tracker.onlyLootQuests') }}</span>
                     </label>
                 </div>
                 <div class="quest-list">
@@ -466,7 +402,7 @@ const t = (key) => {
                             </span>
                         </div>
                     </div>
-                    <div v-if="filteredQuestList.length === 0" class="no-quests">{{ t('noResults') }}</div>
+                    <div v-if="filteredQuestList.length === 0" class="no-quests">{{ $t('tracker.noResults') }}</div>
                 </div>
             </div>
         </div>
@@ -474,15 +410,15 @@ const t = (key) => {
         <div v-if="showProjectModal" class="modal-backdrop" @click.self="showProjectModal = false">
             <div class="modal-content project-modal">
                 <div class="modal-header project-header">
-                    <h2>{{ t('projectModalTitle') }}</h2>
+                    <h2>{{ $t('tracker.projectModalTitle') }}</h2>
                     <button class="close-btn" @click="showProjectModal = false">✕</button>
                 </div>
                 <div class="modal-controls">
-                    <input type="text" v-model="projectSearchQuery" :placeholder="t('searchProject')"
+                    <input type="text" v-model="projectSearchQuery" :placeholder="$t('tracker.searchProject')"
                         class="modal-search" />
                     <button class="select-all-btn" @click="toggleAllProjectsVisible"
                         :class="{ 'active': areAllProjectsVisibleSelected }">
-                        {{ areAllProjectsVisibleSelected ? t('deselectAll') : t('selectAll') }}
+                        {{ areAllProjectsVisibleSelected ? $t('tracker.deselectAll') : $t('tracker.selectAll') }}
                     </button>
                 </div>
                 <div class="quest-list">
@@ -500,7 +436,7 @@ const t = (key) => {
                             </span>
                         </div>
                     </div>
-                    <div v-if="filteredProjectList.length === 0" class="no-quests">{{ t('noResults') }}</div>
+                    <div v-if="filteredProjectList.length === 0" class="no-quests">{{ $t('tracker.noResults') }}</div>
                 </div>
             </div>
         </div>
@@ -522,7 +458,7 @@ const t = (key) => {
                     </div>
 
                     <div v-if="item.isQuestItem && item.activeQuests.length > 0" class="quest-active-box">
-                        <span class="quest-label">{{ t('neededFor') }}</span>
+                        <span class="quest-label">{{ $t('tracker.neededFor') }}</span>
                         <ul class="quest-names">
                             <li v-for="q in item.activeQuests" :key="q.questId">
                                 {{ q.amount }}x {{ q.questName }}
@@ -531,7 +467,7 @@ const t = (key) => {
                     </div>
 
                     <div v-if="item.action === 'recycle' && getLocYield(item)" class="yield-box">
-                        <span class="label">{{ t('yieldLabel') }}</span>
+                        <span class="label">{{ $t('tracker.yieldLabel') }}</span>
                         <p class="yield-text">{{ getLocYield(item) }}</p>
                     </div>
                     <div v-else-if="!item.isQuestItem" class="yield-box simple">
@@ -542,7 +478,7 @@ const t = (key) => {
             </div>
         </div>
         <div v-if="filteredItems.length === 0" class="empty-state">
-            {{ t('noResults') }}
+            {{ $t('tracker.noResults') }}
         </div>
     </div>
 </template>

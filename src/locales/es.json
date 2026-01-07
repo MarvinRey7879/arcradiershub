@@ -1,0 +1,108 @@
+{
+  "cookieBanner": {
+    "title": "Galletas? 🍪",
+    "msg": "Usamos cookies y análisis para asegurar que tengas la mejor experiencia.",
+    "yes": "Entendido!",
+    "no": "No, gracias"
+  },
+  "seo": {
+    "title": "Rastreador Interactivo de ARC Raiders: Objetos de Misión y Proyectos (Parche 1.7.0)",
+    "desc": "La herramienta definitiva de <strong>rastreo de botín interactivo</strong> para ARC Raiders (Parche 1.7.0 \"Cold Snap\"). Olvídate de las listas estáticas: nuestra web te muestra en tiempo real qué <strong>objetos de misión</strong> y <strong>ítems de proyecto</strong> (como <em>Llamas Parpadeantes</em> o <em>Expedición</em>) necesitas guardar ahora mismo. Decide al instante: ¿<strong>Guardar loot</strong>, vender por dinero o <strong>reciclar</strong> para materiales? Gestiona tu inventario de forma inteligente y nunca más vendas objetos importantes por error.",
+    "lootTableTitle": "📜 Tabla de Botín: Ejemplos y Valores (1.7.0)",
+    "lootTableSub": "Extracto de nuestra base de datos para el parche 1.7.0. Incluye precios, rendimientos de reciclaje y usos.",
+    "changelogTitle": "🛠️ Registro de cambios",
+    "bugReport": "🐛 Reportar / Bug error"
+  },
+  "faq": {
+    "q1": "⚡ ¿Cómo funciona el rastreador interactivo de misiones y proyectos?",
+    "a1": "A diferencia de las wikis estáticas, nuestro rastreador se adapta a tu progreso. Selecciona tus <strong>misiones activas</strong> en el menú. La herramienta marcará automáticamente todos los <strong>objetos de misión</strong> necesarios como \"Guardar\". Cuando termines, márcala como hecha y el estado se actualizará.",
+    "q2": "❄️ ¿Qué objetos guardar para el evento \"Llamas Parpadeantes\"?",
+    "a2": "Para el nuevo <strong>Proyecto de Invierno</strong> necesitas objetos específicos. Asegúrate de guardar: <strong>Bayas de vela</strong>, <em>Botellas de vino vacías</em>, <em>Cafeteras</em> y <em>Piezas de plástico</em>. Nuestro rastreador marca estos objetos automáticamente.",
+    "q3": "¿Debo vender Celdas de energía ARC?",
+    "a3": "¡No! Incluso en el parche 1.7.0, las <strong>Celdas de energía ARC</strong> son esenciales para mejorar armas. Nunca las vendas; úsalas para la artesanía (crafting).",
+    "q4": "Guía de reciclaje: ¿Qué hacer con \"Armas inutilizables\"?",
+    "a4": "Casi siempre debes reciclar <strong>Armas inutilizables</strong> y electrónica como <em>Contadores Geiger</em>. Es la forma más eficiente de obtener <strong>Aleación ARC</strong> para el <strong>Proyecto de Expedición</strong>."
+  },
+  "loot": {
+    "candle_berries": { "name": "Bayas de vela (Nuevo)", "reason": "Evento Llamas Parpadeantes / Proyecto de Invierno" },
+    "empty_wine_bottle": { "name": "Botella de vino vacía", "reason": "Objeto de evento: Banquete de Bayas de vela" },
+    "arc_powercell": { "name": "Celda de energía ARC", "reason": "Artesanía (Taller)" },
+    "leaper_pulse": { "name": "Unidad de pulso de saltador", "reason": "Alto valor / Objeto de misión" },
+    "magnetron": { "name": "Magnetrón", "reason": "Objeto de misión" },
+    "geiger": { "name": "Contador Geiger", "reason": "Produce baterías y módulos" },
+    "ion_sputter": { "name": "Pulverizador iónico", "reason": "Produce convertidores de voltaje" },
+    "bloated_tuna": { "name": "Lata de atún hinchada", "reason": "Baratija" },
+    "film_reel": { "name": "Rollo de película", "reason": "Objeto de misión" },
+    "u_weapon": { "name": "Arma inutilizable", "reason": "Produce piezas de armas" },
+    "arc_alloy": { "name": "Aleación ARC", "reason": "Material esencial" }
+  },
+  "changelog": {
+    "v1_3_0": {
+  "t1": "<strong>Nuevo idioma:</strong> 🇷🇺 ¡Añadido soporte completo para <strong>ruso</strong>! ¡Bienvenidos, Raiders!",
+  "t2": "<strong>Actualización de misión:</strong> 🔧 Requisitos corregidos para <em>'Iniciativa Inesperada'</em>: Ya no se necesitan <strong>Bomba de agua</strong> ni <strong>Fertilizante</strong> (cambio del parche 1.7.0). ¡Gracias por el reporte!"
+},
+    "v1_2_5": {
+      "text": "<strong>Actualización de datos:</strong> 🗂️ ¡Los proyectos ahora están separados por <strong>Temporada 1</strong> y <strong>Temporada 2</strong>! <br><span style='font-size: 0.85em; opacity: 0.8;'>(Ejemplo: <em>'Expedición T1'</em> vs <em>'Expedición T2'</em>).</span>"
+    },
+    "v1_2_4": {
+      "text": "<strong>Corrección:</strong> 🔧 Objeto <em>Control Remoto</em> corregido: Rareza a <strong>Raro</strong> y rendimiento a <strong>7x Piezas de plástico</strong> actualizados. ¡Gracias por el reporte!"
+    },
+    "v1_2_3": {
+      "text": "<strong>Estado:</strong> Breve interrupción el 27/12 (DNS/Servidor). ¡Estamos de vuelta y todo debería funcionar correctamente ahora!"
+    },
+    "v1_2_2": {
+      "t1": "<strong>Nuevo:</strong> Traducción completa de todos los nombres de <strong>Misiones y Proyectos</strong> al español y alemán.",
+      "t2": "<strong>Mejora:</strong> Optimización de la búsqueda para encontrar mejor las coincidencias parciales en diferentes idiomas."
+    },
+    "v1_2_1": {
+      "t1": "<strong>Mejora:</strong> 💾 ¡La configuración de idioma ahora se guarda y persiste al recargar la página!",
+      "t2": "<strong>Corrección:</strong> Se corrigieron enlaces de objetos a proyectos (ej. <em>Bombillas</em>).",
+      "t3": "<strong>Traducción:</strong> Correcciones de traducción en alemán."
+    },
+    "v1_2_0": {
+      "t1": "<strong>Nuevo:</strong> 🏗️ ¡Filtro de Proyectos! Rastrea expediciones y eventos.",
+      "t2": "<strong>Nuevo:</strong> 🐛 Enlace para \"Reportar error\" añadido al pie de página.",
+      "t3": "<strong>Corrección:</strong> Se añadieron objetos faltantes y se corrigieron marcadores erróneos.",
+      "t4": "<strong>Lógica:</strong> Mejor detección de objetos para reciclar vs. artesanía."
+    },
+    "v1_1_0": {
+      "t1": "<strong>Nuevo:</strong> 📜 ¡Rastreador de Misiones! Marca misiones como completadas.",
+      "t2": "<strong>Feature:</strong> Tutorial para nuevos usuarios.",
+      "t3": "<strong>Actualización:</strong> Base de datos sincronizada con el parche 1.7.0."
+    }
+  },
+  "tracker": {
+    "searchPlaceholder": "Buscar objeto...",
+    "searchQuest": "Buscar misión...",
+    "searchProject": "Buscar proyecto...",
+    "yieldLabel": "Rendimiento:",
+    "noResults": "No se encontraron objetos.",
+    "sortNameAZ": "Nombre (A-Z)",
+    "sortNameZA": "Nombre (Z-A)",
+    "sortRarityLowHigh": "Rareza (Baja → Alta)",
+    "sortRarityHighLow": "Rareza (Alta → Baja)",
+    "rarity": "Rareza",
+    "action": "Acción",
+    "cols": "Cols",
+    "questLogBtn": "📜 Filtro de Misiones",
+    "projectLogBtn": "🏗️ Filtro de Proyectos",
+    "questModalTitle": "Resumen de Misiones",
+    "projectModalTitle": "Proyectos y Eventos",
+    "onlyLootQuests": "Solo misiones de botín",
+    "neededFor": "Necesario para:",
+    "selectAll": "Seleccionar todo",
+    "deselectAll": "Deseleccionar todo",
+    "tutQuestTitle": "NUEVO: Filtro de Misiones!",
+    "tutQuestDesc": "Marca las misiones completadas para actualizar el estado.",
+    "tutQuestTip": "Encuentra tus misiones terminadas en: Raider -> Códice -> Misiones.",
+    "tutNext": "Siguiente",
+    "tutProjTitle": "NUEVO: Filtro de Proyectos!",
+    "tutProjDesc": "Sigue eventos y expediciones. Marca fases completadas.",
+    "tutFinish": "¡Entendido!",
+    "actions": {
+      "keep": "Guardar (Keep)",
+      "recycle": "Reciclar (Recycle)",
+      "sell": "Vender (Sell)"
+    }
+  }
+}

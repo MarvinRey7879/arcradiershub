@@ -1,0 +1,108 @@
+{
+  "cookieBanner": {
+    "title": "Kekse? 🍪",
+    "msg": "Wir nutzen Cookies und Analytics für ein besseres Erlebnis.",
+    "yes": "Alles klar!",
+    "no": "Nein, danke"
+  },
+  "seo": {
+    "title": "Interaktiver ARC Raiders Loot Tracker: Quest Items & Projekte (Patch 1.7.0)",
+    "desc": "Der ultimative, <strong>interaktive Loot-Tracker</strong> für ARC Raiders (Patch 1.7.0 \"Cold Snap\"). Schluss mit Excel-Tabellen: Unser Tool zeigt dir live, welche <strong>Quest Items</strong> und <strong>Projekt-Gegenstände</strong> (z.B. für <em>Flackernde Flammen</em> oder die <em>Expedition</em>) du aktuell wirklich brauchst. Entscheide in Sekunden: <strong>Loot behalten</strong>, für Cash verkaufen oder für Crafting-Materialien <strong>recyceln</strong>. Verwalte dein Inventar intelligent und verkaufe nie wieder versehentlich seltene Quest-Objekte.",
+    "lootTableTitle": "📜 Loot-Tabelle: Beispiele & Werte (1.7.0)",
+    "lootTableSub": "Auszug aus unserer Datenbank für Patch 1.7.0. Enthält Preise, Recycling-Erträge und Verwendungszwecke.",
+    "changelogTitle": "🛠️ Changelog & Updates",
+    "bugReport": "🐛 Fehler / Bug melden"
+  },
+  "faq": {
+    "q1": "⚡ Wie funktioniert der interaktive Quest- & Projekt-Tracker?",
+    "a1": "Anders als statische Wikis passt sich unser Tracker deinem Fortschritt an. Wähle im Menü deine aktiven <strong>Quests (z.B. von Celeste oder Shani)</strong> aus. Das Tool markiert sofort alle benötigten <strong>Quest-Items</strong> als \"Keep\". Sobald du eine Quest erledigt hast, hake sie ab, und der Status ändert sich automatisch.",
+    "q2": "❄️ Welche Items muss ich für das \"Flackernde Flammen\" Event behalten?",
+    "a2": "Für das neue <strong>Winter-Projekt</strong> in Patch 1.7.0 brauchst du spezielle Items. Behalte unbedingt: <strong>Kerzenbeeren (Candleberries)</strong>, <em>Leere Weinflaschen</em>, <em>Kaffeekannen</em> und <em>Plastikteile</em>. Unser Tracker markiert diese neuen Items automatisch als \"Keep\", wenn das Event aktiv ist.",
+    "q3": "Sollte ich ARC-Energiezellen (Powercells) verkaufen?",
+    "a3": "Nein! Auch in Patch 1.7.0 sind <strong>ARC-Energiezellen</strong> essenziell für Waffen-Upgrades an der Werkbank. Verkaufe sie niemals an den Automaten, nutze sie lieber für das Crafting.",
+    "q4": "Recycling Guide: Was tun mit \"Unbrauchbaren Waffen\"?",
+    "a4": "Du solltest fast immer <strong>Unbrauchbare Waffen</strong> und Elektronik wie <em>Geigerzähler</em> recyceln. Das ist der effizienteste Weg, um an <strong>ARC-Legierung</strong> für das <strong>Expeditionsprojekt</strong> zu kommen."
+  },
+  "loot": {
+    "candle_berries": { "name": "Kerzenbeeren (Neu)", "reason": "Flickering Flames Event / Winter-Projekt" },
+    "empty_wine_bottle": { "name": "Leere Weinflasche", "reason": "Event Item: Candleberry Banquet" },
+    "arc_powercell": { "name": "ARC-Energiezelle", "reason": "Handwerk (Werkbank)" },
+    "leaper_pulse": { "name": "Springer-Pulseinheit", "reason": "Hoher Wert / Quest Item" },
+    "magnetron": { "name": "Magnetron", "reason": "Quest Item" },
+    "geiger": { "name": "Geigerzähler", "reason": "Ergibt Batterien & Module" },
+    "ion_sputter": { "name": "Ionenzerstäuber", "reason": "Ergibt Spannungswandler" },
+    "bloated_tuna": { "name": "Aufgeblähte Thunfischdose", "reason": "Wertsache" },
+    "film_reel": { "name": "Filmrolle", "reason": "Quest Item" },
+    "u_weapon": { "name": "Unbrauchbare Waffe", "reason": "Ergibt Waffenteile" },
+    "arc_alloy": { "name": "ARC-Legierung", "reason": "Wichtiges Crafting-Material" }
+  },
+  "changelog": {
+    "v1_3_0": {
+  "t1": "<strong>Neue Sprache:</strong> 🇷🇺 Vollständige <strong>russische</strong> Übersetzung hinzugefügt! Willkommen, Raider!",
+  "t2": "<strong>Quest Update:</strong> 🔧 Anforderungen für <em>'Unerwartete Initiative'</em> korrigiert: <strong>Wasserpumpe</strong> und <strong>Dünger</strong> werden nicht mehr benötigt (Patch 1.7.0 Änderung). Danke für den Hinweis!"
+},
+    "v1_2_5": {
+      "text": "<strong>Daten-Update:</strong> 🗂️ Projekte sind jetzt sauber nach <strong>Season 1</strong> und <strong>Season 2</strong> getrennt! <br><span style='font-size: 0.85em; opacity: 0.8;'>(Beispiel: <em>'Expedition S1'</em> für alte Phasen, <em>'Expedition S2'</em> für aktuelle).</span>"
+    },
+    "v1_2_4": {
+      "text": "<strong>Data Fix:</strong> 🔧 Item <em>Fernbedienung</em> korrigiert: Seltenheit auf <strong>Rare</strong> und Ertrag auf <strong>7x Plastikteile</strong> angepasst. Danke an den Nutzer für die Fehlermeldung!"
+    },
+    "v1_2_3": {
+      "text": "<strong>Status Update:</strong> Kurzer Ausfall am 27.12. (DNS/Server). Wir sind wieder online und alles sollte jetzt reibungslos funktionieren!"
+    },
+    "v1_2_2": {
+      "t1": "<strong>Neu:</strong> Vollständige Übersetzung aller <strong>Quest- und Projektnamen</strong> ins Deutsche und Spanische.",
+      "t2": "<strong>Optimierung:</strong> Verbesserung der Suche, um Teiltreffer in verschiedenen Sprachen zuverlässiger zu finden."
+    },
+    "v1_2_1": {
+      "t1": "<strong>Feature:</strong> 💾 Deine Spracheinstellung wird jetzt gespeichert und bleibt beim Neuladen erhalten!",
+      "t2": "<strong>Fix:</strong> Fehler behoben, bei dem Items (z.B. <em>Glühbirnen</em>) nicht korrekt mit Projekten verknüpft waren.",
+      "t3": "<strong>Übersetzung:</strong> Bezeichnungen korrigiert: 'Direktabzug' → <strong>'Pop-Auslöser'</strong> und 'Haushaltsreiniger' → <strong>'Allzweckreiniger'</strong>."
+    },
+    "v1_2_0": {
+      "t1": "<strong>Neu:</strong> 🏗️ Projekt-Filter hinzugefügt! Tracke jetzt Expeditionen und Events.",
+      "t2": "<strong>Neu:</strong> 🐛 'Fehler melden'-Link ganz unten im Footer hinzugefügt.",
+      "t3": "<strong>Fix:</strong> Fehlende Items ergänzt & falsch markierte Items korrigiert (z.B. Rosary, Flow Controller).",
+      "t4": "<strong>Logik:</strong> Bessere Erkennung für 'Recyclable' vs. 'Crafting' Items."
+    },
+    "v1_1_0": {
+      "t1": "<strong>Neu:</strong> 📜 Quest-Tracker! Markiere Quests als erledigt.",
+      "t2": "<strong>Feature:</strong> Tutorial für neue Nutzer hinzugefügt.",
+      "t3": "<strong>Update:</strong> Datenbank auf Patch 1.7.0 synchronisiert."
+    }
+  },
+  "tracker": {
+    "searchPlaceholder": "Suche Item Name...",
+    "searchQuest": "Suche Quest...",
+    "searchProject": "Suche Projekt...",
+    "yieldLabel": "Verwertung:",
+    "noResults": "Keine Items gefunden.",
+    "sortNameAZ": "Name (A-Z)",
+    "sortNameZA": "Name (Z-A)",
+    "sortRarityLowHigh": "Seltenheit (Niedrig → Hoch)",
+    "sortRarityHighLow": "Seltenheit (Hoch → Niedrig)",
+    "rarity": "Seltenheit",
+    "action": "Aktion",
+    "cols": "Spalten",
+    "questLogBtn": "📜 Quest Filter",
+    "projectLogBtn": "🏗️ Projekt Filter",
+    "questModalTitle": "Quest Übersicht",
+    "projectModalTitle": "Projekte & Events",
+    "onlyLootQuests": "Nur Loot-Relevante Quests",
+    "neededFor": "Benötigt für:",
+    "selectAll": "Alle auswählen",
+    "deselectAll": "Alle abwählen",
+    "tutQuestTitle": "NEU: Quest Filter!",
+    "tutQuestDesc": "Markiere erledigte Quests, damit Items nicht mehr unnötig als \"Keep\" angezeigt werden.",
+    "tutQuestTip": "Deine fertigen Quests findest du im Spiel unter: Raider -> Kodex -> Quests.",
+    "tutNext": "Weiter",
+    "tutProjTitle": "NEU: Projekt Filter!",
+    "tutProjDesc": "Verfolge Events & Expeditionen. Hake erledigte Phasen ab, damit Items aktualisiert werden.",
+    "tutFinish": "Verstanden!",
+    "actions": {
+      "keep": "Behalten (Keep)",
+      "recycle": "Verwerten (Recycle)",
+      "sell": "Verkaufen (Sell)"
+    }
+  }
+}

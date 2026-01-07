@@ -1,18 +1,13 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue';
-import { initAnalytics } from './firebase.js'; // Pfad ggf. anpassen, wenn firebase.js woanders liegt
+import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n'; // NEU: Importieren
+import { initAnalytics } from './firebase.js';
+
+// --- I18N SETUP ---
+const { t, locale } = useI18n(); // Zugriff auf Übersetzungsfunktion und Sprache
 
 // --- STATE FÜR DEN GLOBALEN COOKIE BANNER ---
 const showCookieBanner = ref(false);
-const browserLang = ref('en');
-
-// --- TEXTE (DE / EN / ES) ---
-const texts = {
-  de: { title: 'Kekse? 🍪', msg: 'Wir nutzen Cookies und Analytics für ein besseres Erlebnis.', yes: 'Alles klar!', no: 'Nein, danke' },
-  en: { title: 'Cookies? 🍪', msg: 'We use cookies and analytics to ensure you get the best experience.', yes: 'Got it!', no: 'No, thanks' },
-  es: { title: 'Galletas? 🍪', msg: 'Usamos cookies y análisis para asegurar que tengas la mejor experiencia.', yes: 'Entendido!', no: 'No, gracias' }
-};
-const t = computed(() => texts[browserLang.value] || texts.en);
 
 // --- HELPER ---
 const isLikelyEU = () => {
@@ -21,11 +16,12 @@ const isLikelyEU = () => {
 
 // --- LOGIK ---
 onMounted(() => {
+  // Sprache erkennen und i18n locale setzen
   const navLang = navigator.language || navigator.userLanguage;
   if (navLang) {
-    if (navLang.startsWith('de')) browserLang.value = 'de';
-    else if (navLang.startsWith('es')) browserLang.value = 'es';
-    else browserLang.value = 'en';
+    if (navLang.startsWith('de')) locale.value = 'de';
+    else if (navLang.startsWith('es')) locale.value = 'es';
+    else locale.value = 'en';
   }
 
   const consent = localStorage.getItem('cookie_consent');
@@ -48,18 +44,18 @@ const declineCookies = () => { localStorage.setItem('cookie_consent', 'denied');
     <div v-if="showCookieBanner" class="cookie-card">
       <div class="cookie-content">
         <div class="icon-area">🍪</div>
-        <div class="text-area"><strong>{{ t.title }}</strong>
-          <p>{{ t.msg }}</p>
+        <div class="text-area">
+          <strong>{{ t('cookieBanner.title') }}</strong>
+          <p>{{ t('cookieBanner.msg') }}</p>
         </div>
       </div>
       <div class="button-area">
-        <button @click="declineCookies" class="btn-decline">{{ t.no }}</button>
-        <button @click="acceptCookies" class="btn-accept">{{ t.yes }}</button>
+        <button @click="declineCookies" class="btn-decline">{{ t('cookieBanner.no') }}</button>
+        <button @click="acceptCookies" class="btn-accept">{{ t('cookieBanner.yes') }}</button>
       </div>
     </div>
   </transition>
 </template>
-
 <style>
 /* --- GLOBALE STYLES (gelten für die ganze App) --- */
 body {
