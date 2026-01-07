@@ -4,13 +4,13 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
-
+import i18n from './i18n' // Importieren
 // Realtime DB Imports
 import { rtdb } from './firebase'
 import { ref, runTransaction } from "firebase/database";
 
 const app = createApp(App)
-
+app.use(i18n) // Benutzen
 app.use(createPinia())
 app.use(router)
 

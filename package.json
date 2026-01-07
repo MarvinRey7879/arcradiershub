@@ -19,6 +19,7 @@
     "pinia": "^3.0.4",
     "puppeteer": "^24.34.0",
     "vue": "^3.5.25",
+    "vue-i18n": "^9.14.5",
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
