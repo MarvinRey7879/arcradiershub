@@ -72,6 +72,10 @@
     }
   },
   "tracker": {
+    "hideoutLogBtn": "Guarida",
+    "hideoutModalTitle": "Módulos de Guarida",
+    "searchHideout": "Buscar en Guarida...",
+    "hideout": "Guarida",
     "searchPlaceholder": "Buscar objeto...",
     "searchQuest": "Buscar misión...",
     "searchProject": "Buscar proyecto...",

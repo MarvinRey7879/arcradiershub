@@ -71,6 +71,11 @@
     }
   },
   "tracker": {
+    "hideoutLogBtn": "Hideout",
+    "hideoutModalTitle": "Hideout Modules",
+    "searchHideout": "Search Hideout...",
+    "hideout": "Hideout",
+  
     "searchPlaceholder": "Search item name...",
     "searchQuest": "Search quest...",
     "searchProject": "Search project...",

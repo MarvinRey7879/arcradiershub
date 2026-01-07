@@ -72,6 +72,10 @@
     }
   },
   "tracker": {
+    "hideoutLogBtn": "Убежище",
+    "hideoutModalTitle": "Модули Убежища",
+    "searchHideout": "Поиск в Убежище...",
+    "hideout": "Убежище",
     "searchPlaceholder": "Поиск предмета...",
     "searchQuest": "Поиск квеста...",
     "searchProject": "Поиск проекта...",

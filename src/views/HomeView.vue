@@ -95,10 +95,10 @@ onMounted(() => {
         </div>
       </div>
 
-      <details class="seo-details">
-        <summary>
+      <div class="seo-details-visible">
+        <h2>
           <span>{{ $t('seo.lootTableTitle') }}</span>
-        </summary>
+        </h2>
 
         <div class="seo-content-block">
           <p style="margin-bottom: 15px; font-size: 0.85rem;">
@@ -122,12 +122,12 @@ onMounted(() => {
             </div>
           </div>
         </div>
-      </details>
+      </div>
 
-      <details class="changelog-details">
-        <summary>
+      <div class="changelog-details-visible">
+        <h2>
           <span>{{ $t('seo.changelogTitle') }} ({{ changelogData[0].version }})</span>
-        </summary>
+        </h2>
 
         <div class="changelog-content">
           <div v-for="(log, index) in changelogData" :key="index" class="log-entry">
@@ -141,7 +141,7 @@ onMounted(() => {
             </ul>
           </div>
         </div>
-      </details>
+      </div>
 
       <div class="legal-links">
         <router-link to="/datenschutz">Privacy Policy</router-link> |
@@ -419,5 +419,63 @@ onMounted(() => {
 .legal-links a:hover {
   color: #e74c3c;
   text-decoration: underline;
+}
+
+.buttons-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hideout-log-btn {
+  background: #8e44ad;
+  /* Violett für Hideout */
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 45px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.hideout-log-btn:hover {
+  background: #732d91;
+}
+
+.modal-header.hideout-header {
+  background: #8e44ad;
+  color: #fff;
+}
+
+.modal-header.hideout-header h2 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header.hideout-header .close-btn {
+  color: white;
+}
+
+.req-badge.hideout-badge {
+  background: rgba(142, 68, 173, 0.2);
+  border: 1px solid rgba(142, 68, 173, 0.4);
+  color: #d2b4de;
+}
+
+/* ... Deine existierenden Styles ... */
+
+/* Mobile Anpassung für die Buttons */
+@media (max-width: 768px) {
+  .buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hideout-log-btn {
+    width: 100%;
+  }
 }
 </style>

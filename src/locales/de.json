@@ -72,6 +72,10 @@
     }
   },
   "tracker": {
+    "hideoutLogBtn": "Unterschlupf",
+    "hideoutModalTitle": "Unterschlupf-Module",
+    "searchHideout": "Unterschlupf durchsuchen...",
+    "hideout": "Unterschlupf",
     "searchPlaceholder": "Suche Item Name...",
     "searchQuest": "Suche Quest...",
     "searchProject": "Suche Projekt...",

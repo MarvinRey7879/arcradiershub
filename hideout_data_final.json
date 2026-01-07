@@ -1,0 +1,329 @@
+[
+  {
+    "id": "sprengstoffstation",
+    "name_de": "Sprengstoffstation",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": [
+          {
+            "id": "rubber_parts",
+            "amount": 50
+          },
+          {
+            "id": "arc_alloy",
+            "amount": 6
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "synthesized_fuel",
+            "amount": 3
+          },
+          {
+            "id": "crude_explosives",
+            "amount": 5
+          },
+          {
+            "id": "pop_trigger",
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "lab_reagents",
+            "amount": 3
+          },
+          {
+            "id": "explosive_compound",
+            "amount": 5
+          },
+          {
+            "id": "rocketeer_driver",
+            "amount": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "medizinisches_labor",
+    "name_de": "Medizinisches Labor",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": [
+          {
+            "id": "fabric",
+            "amount": 50
+          },
+          {
+            "id": "arc_alloy",
+            "amount": 6
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "cracked_bioscanner",
+            "amount": 2
+          },
+          {
+            "id": "durable_cloth",
+            "amount": 5
+          },
+          {
+            "id": "tick_pod",
+            "amount": 8
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "rusted_shut_medkit",
+            "amount": 3
+          },
+          {
+            "id": "antiseptic",
+            "amount": 8
+          },
+          {
+            "id": "surveyor_vault",
+            "amount": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "veredler",
+    "name_de": "Veredler",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": [
+          {
+            "id": "metal_parts",
+            "amount": 60
+          },
+          {
+            "id": "arc_powercell",
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "toaster",
+            "amount": 3
+          },
+          {
+            "id": "arc_motion_core",
+            "amount": 5
+          },
+          {
+            "id": "fireball_burner",
+            "amount": 8
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "motor",
+            "amount": 3
+          },
+          {
+            "id": "arc_circuitry",
+            "amount": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "scrappy",
+    "name_de": "Scrappy",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": []
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "dog_collar",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "lemon",
+            "amount": 3
+          },
+          {
+            "id": "apricot",
+            "amount": 3
+          }
+        ]
+      },
+      {
+        "level": 4,
+        "requiredItems": [
+          {
+            "id": "prickly_pear",
+            "amount": 6
+          },
+          {
+            "id": "olives",
+            "amount": 6
+          },
+          {
+            "id": "cat_bed",
+            "amount": 1
+          }
+        ]
+      },
+      {
+        "level": 5,
+        "requiredItems": [
+          {
+            "id": "mushroom",
+            "amount": 12
+          },
+          {
+            "id": "apricot",
+            "amount": 12
+          },
+          {
+            "id": "very_comfortable_pillow",
+            "amount": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gebrauchsgegenstand_station",
+    "name_de": "Gebrauchsgegenstand-Station",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": [
+          {
+            "id": "plastic_parts",
+            "amount": 50
+          },
+          {
+            "id": "arc_alloy",
+            "amount": 6
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "damaged_heat_sink",
+            "amount": 2
+          },
+          {
+            "id": "electrical_components",
+            "amount": 5
+          },
+          {
+            "id": "snitch_scanner",
+            "amount": 6
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "fried_motherboard",
+            "amount": 3
+          },
+          {
+            "id": "adv_elec_comp",
+            "amount": 5
+          },
+          {
+            "id": "leaper_pulse_unit",
+            "amount": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "waffenstation",
+    "name_de": "Waffenstation",
+    "levels": [
+      {
+        "level": 1,
+        "requiredItems": [
+          {
+            "id": "metal_parts",
+            "amount": 20
+          },
+          {
+            "id": "rubber_parts",
+            "amount": 30
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "requiredItems": [
+          {
+            "id": "rusted_tools",
+            "amount": 3
+          },
+          {
+            "id": "mechanical_components",
+            "amount": 5
+          },
+          {
+            "id": "wasp_driver",
+            "amount": 8
+          }
+        ]
+      },
+      {
+        "level": 3,
+        "requiredItems": [
+          {
+            "id": "rusted_gear",
+            "amount": 3
+          },
+          {
+            "id": "adv_mech_comp",
+            "amount": 5
+          },
+          {
+            "id": "sentinel_firing_core",
+            "amount": 4
+          }
+        ]
+      }
+    ]
+  }
+]

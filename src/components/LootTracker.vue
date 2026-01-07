@@ -1,21 +1,22 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue';
-import { useI18n } from 'vue-i18n'; // Importiere useI18n
+import { useI18n } from 'vue-i18n';
 
 // Pfade anpassen falls nötig!
 import lootDataRaw from '../../loot_data_final.json';
 import questListRaw from '../../quest_list_final.json';
 import projectListRaw from '../../project_list_final.json';
+// Importiert die Datei aus dem Scraper
+import hideoutListRaw from '../../hideout_data_final.json';
 
 const emit = defineEmits(['lang-change']);
 
-// i18n nutzen
 const { t, locale } = useI18n();
+
+
 
 // --- State ---
 const searchQuery = ref('');
-// WICHTIG: currentLang wird jetzt über locale von vue-i18n gesteuert
-// Wir behalten currentLang als ref für lokale Logik, synchronisieren es aber
 const currentLang = computed({
     get: () => locale.value,
     set: (val) => {
@@ -31,14 +32,21 @@ const windowWidth = ref(1200);
 const gridRef = ref(null);
 const sortOrder = ref('name_asc');
 
-// --- Quest & Project State ---
+// --- Quest, Project & Hideout State ---
 const showQuestModal = ref(false);
 const showProjectModal = ref(false);
+const showHideoutModal = ref(false);
+
 const questSearchQuery = ref('');
 const projectSearchQuery = ref('');
+const hideoutSearchQuery = ref('');
+
 const showOnlyLootQuests = ref(true);
+
 const completedQuests = ref([]);
 const completedProjects = ref([]);
+// Hier speichern wir jetzt Strings wie "sprengstoffstation_1", "sprengstoffstation_2"
+const completedHideoutLevels = ref([]);
 
 // --- TUTORIAL STATE ---
 const tutorialStep = ref(0);
@@ -54,7 +62,6 @@ const langOptions = [
     { value: 'ru', label: '🇷🇺 RU' }
 ];
 
-// Actions Definition (Labels kommen jetzt dynamisch aus i18n)
 const actions = [
     { value: 'keep', i18nKey: 'tracker.actions.keep', color: '#2ecc71' },
     { value: 'recycle', i18nKey: 'tracker.actions.recycle', color: '#e67e22' },
@@ -82,7 +89,7 @@ const getLocName = (obj) => {
 
     if (lang === 'es') {
         if (obj.name_es) return obj.name_es;
-        if (obj.name_fr) return obj.name_fr; // Fallback Fix für alte Daten
+        if (obj.name_fr) return obj.name_fr;
         return obj.name_en || obj.name;
     }
     return obj[`name_${lang}`] || obj.name_en || obj.name;
@@ -102,23 +109,21 @@ const resolveItemName = (itemId, fallbackName) => {
 
 // --- Lifecycle ---
 onMounted(() => {
-    // Initialsprache wird bereits in App.vue / i18n setup gesetzt, 
-    // aber wir lesen hier für Dimensions und Tutorial
-
     nextTick(() => {
         updateDimensions();
         setInitialColumns();
         window.addEventListener('resize', updateDimensions);
     });
 
-    // Load Completed Data
     const savedQuests = localStorage.getItem('arc_tracker_completed_quests');
     if (savedQuests) { try { completedQuests.value = JSON.parse(savedQuests); } catch (e) { } }
 
     const savedProjects = localStorage.getItem('arc_tracker_completed_projects');
     if (savedProjects) { try { completedProjects.value = JSON.parse(savedProjects); } catch (e) { } }
 
-    // Tutorial Check
+    const savedHideout = localStorage.getItem('arc_tracker_completed_hideout_levels');
+    if (savedHideout) { try { completedHideoutLevels.value = JSON.parse(savedHideout); } catch (e) { } }
+
     const tutorialSeen = localStorage.getItem('arc_tracker_tutorial_seen');
     if (!tutorialSeen) {
         setTimeout(() => { tutorialStep.value = 1; }, 800);
@@ -132,7 +137,9 @@ onUnmounted(() => {
 // Watchers
 watch(completedQuests, (newVal) => localStorage.setItem('arc_tracker_completed_quests', JSON.stringify(newVal)), { deep: true });
 watch(completedProjects, (newVal) => localStorage.setItem('arc_tracker_completed_projects', JSON.stringify(newVal)), { deep: true });
-// Kein Watcher mehr für Lang nötig, da computed setter das regelt
+// Speichern der Levels
+watch(completedHideoutLevels, (newVal) => localStorage.setItem('arc_tracker_completed_hideout_levels', JSON.stringify(newVal)), { deep: true });
+
 
 // --- Tutorial Actions ---
 const nextTutorialStep = () => { tutorialStep.value = 2; };
@@ -158,38 +165,90 @@ const columnOptions = computed(() => {
 });
 const gridStyle = computed(() => ({ 'grid-template-columns': `repeat(${itemsPerRow.value}, 1fr)` }));
 
+
+// --- HIDEOUT LOGIC: Reverse Mapping ---
+// Wir erstellen eine Map: ItemID -> Liste der benötigten Hideout-Levels (die noch nicht fertig sind)
+const hideoutRequirementsMap = computed(() => {
+    const map = {};
+    const completedSet = new Set(completedHideoutLevels.value);
+
+    hideoutListRaw.forEach(station => {
+        if (!station.levels) return;
+
+        station.levels.forEach(lvl => {
+            // ID muss exakt so gebaut sein wie im Modal (stationId_Level)
+            const uniqueId = `${station.id}_${lvl.level}`;
+
+            // Wenn dieses Level erledigt ist -> Items NICHT mehr als benötigt markieren
+            if (completedSet.has(uniqueId)) return;
+
+            lvl.requiredItems.forEach(req => {
+                // req.id ist z.B. "rubber_parts"
+                if (!map[req.id]) map[req.id] = [];
+
+                map[req.id].push({
+                    questId: uniqueId,
+                    amount: req.amount,
+                    // Name z.B.: "Sprengstoffstation (Lvl 1)"
+                    questName: `${getLocName(station)} (Lvl ${lvl.level})`,
+                    trader: t('tracker.hideout'), // Zeigt "Unterschlupf" / "Hideout"
+                    type: 'hideout'
+                });
+            });
+        });
+    });
+    return map;
+});
+
+
 // --- CORE LOGIC: Processed Items ---
 const processedItems = computed(() => {
     const allCompletedIds = new Set([...completedQuests.value, ...completedProjects.value]);
 
+    // Hier holen wir uns die berechneten Hideout-Daten
+    const hideoutMap = hideoutRequirementsMap.value;
+
     return lootDataRaw.map(item => {
-        const rawQuests = item.quests || [];
         const activeRequirements = [];
 
+        // 1. Quests & Projekte (stehen direkt im Item in der JSON)
+        const rawQuests = item.quests || [];
         rawQuests.forEach(qRef => {
-            if (allCompletedIds.has(qRef.questId || qRef.id)) return;
+            const idToCheck = (qRef.questId || qRef.id).trim();
 
-            const questId = qRef.questId || qRef.id;
-            const questData = objectivesMap.value[questId];
+            if (allCompletedIds.has(idToCheck)) return;
 
-            if (questData) {
+            const objectiveData = objectivesMap.value[idToCheck];
+            if (objectiveData) {
                 activeRequirements.push({
-                    questId: questId,
+                    questId: idToCheck,
                     amount: qRef.amount,
-                    questName: getLocName(questData),
-                    trader: questData.trader
+                    questName: getLocName(objectiveData),
+                    trader: objectiveData.trader,
+                    type: objectiveData.type
                 });
             } else {
+                // Fallback für alte Daten
                 activeRequirements.push({
-                    questId: questId,
+                    questId: idToCheck,
                     amount: qRef.amount,
-                    questName: qRef.questName || 'Unknown Quest',
-                    trader: '?'
+                    questName: qRef.questName || 'Unknown',
+                    trader: '?',
+                    type: 'unknown'
                 });
             }
         });
 
+        // 2. NEU: Hideout Requirements hinzufügen
+        // Wir schauen in unserer Map nach, ob DIESES Item (item.id) für Hideout gebraucht wird
+        if (hideoutMap[item.id]) {
+            // Wenn ja, fügen wir alle Einträge hinzu
+            activeRequirements.push(...hideoutMap[item.id]);
+        }
+
         const hasActiveReq = activeRequirements.length > 0;
+
+        // Status berechnen (Keep/Sell)
         let dynamicAction = item.action;
         if (hasActiveReq) {
             dynamicAction = 'keep';
@@ -205,7 +264,6 @@ const processedItems = computed(() => {
         };
     });
 });
-
 // --- Filtered Items ---
 const filteredItems = computed(() => {
     let result = processedItems.value.filter(item => {
@@ -243,12 +301,14 @@ const getFilteredList = (sourceList, query, onlyObtains = false) => {
 
 const filteredQuestList = computed(() => getFilteredList(questListRaw, questSearchQuery.value, showOnlyLootQuests.value));
 const filteredProjectList = computed(() => getFilteredList(projectListRaw, projectSearchQuery.value, false));
+// Hideout wird hier direkt genutzt, Filterung erfolgt im Template oder hier
+const filteredHideoutList = computed(() => getFilteredList(hideoutListRaw, hideoutSearchQuery.value, false));
 
+// Toggle Logic Quest/Project (unverändert) ...
 const areAllQuestsVisibleSelected = computed(() => {
     if (filteredQuestList.value.length === 0) return false;
     return filteredQuestList.value.every(q => completedQuests.value.includes(q.id));
 });
-
 const toggleAllQuestsVisible = () => {
     const visibleIds = filteredQuestList.value.map(q => q.id);
     if (areAllQuestsVisibleSelected.value) {
@@ -263,7 +323,6 @@ const areAllProjectsVisibleSelected = computed(() => {
     if (filteredProjectList.value.length === 0) return false;
     return filteredProjectList.value.every(p => completedProjects.value.includes(p.id));
 });
-
 const toggleAllProjectsVisible = () => {
     const visibleIds = filteredProjectList.value.map(p => p.id);
     if (areAllProjectsVisibleSelected.value) {
@@ -274,11 +333,40 @@ const toggleAllProjectsVisible = () => {
     }
 };
 
+// --- Toggle Logic Hideout (alle Levels aller sichtbaren Stationen) ---
+const getAllVisibleHideoutIds = computed(() => {
+    const ids = [];
+    filteredHideoutList.value.forEach(station => {
+        if (station.levels) {
+            station.levels.forEach(lvl => {
+                ids.push(`${station.id}_${lvl.level}`);
+            });
+        }
+    });
+    return ids;
+});
+
+const areAllHideoutVisibleSelected = computed(() => {
+    const visible = getAllVisibleHideoutIds.value;
+    if (visible.length === 0) return false;
+    return visible.every(id => completedHideoutLevels.value.includes(id));
+});
+
+const toggleAllHideoutVisible = () => {
+    const visibleIds = getAllVisibleHideoutIds.value;
+    if (areAllHideoutVisibleSelected.value) {
+        completedHideoutLevels.value = completedHideoutLevels.value.filter(id => !visibleIds.includes(id));
+    } else {
+        // Nur die hinzufügen, die noch fehlen
+        const newIds = visibleIds.filter(id => !completedHideoutLevels.value.includes(id));
+        completedHideoutLevels.value = [...completedHideoutLevels.value, ...newIds];
+    }
+};
+
 // --- Images ---
 const getImageUrl = (id) => `/items/${id}.webp`;
 const handleImageError = (e) => { e.target.src = 'https://placehold.co/200x200/1a1a1a/FFF?text=No+Image'; };
 const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
-
 </script>
 
 <template>
@@ -290,29 +378,32 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
             <div class="top-row">
                 <input type="text" v-model="searchQuery" :placeholder="$t('tracker.searchPlaceholder')"
                     class="search-bar" />
-
                 <select v-model="sortOrder" class="control-select">
                     <option value="name_asc">{{ $t('tracker.sortNameAZ') }}</option>
                     <option value="name_desc">{{ $t('tracker.sortNameZA') }}</option>
                     <option value="rarity_asc">{{ $t('tracker.sortRarityLowHigh') }}</option>
                     <option value="rarity_desc">{{ $t('tracker.sortRarityHighLow') }}</option>
                 </select>
-
                 <select v-model="itemsPerRow" class="control-select columns-select">
                     <option v-for="opt in columnOptions" :key="opt.value" :value="opt.value">
                         {{ opt.label }} {{ $t('tracker.cols') }}
                     </option>
                 </select>
-
                 <select v-model="currentLang" class="control-select lang-select">
                     <option v-for="opt in langOptions" :key="opt.value" :value="opt.value">
                         {{ opt.label }}
                     </option>
                 </select>
 
-                <div class="tutorial-wrapper">
+                <div class="tutorial-wrapper buttons-row">
                     <button @click="showQuestModal = true" class="quest-log-btn">
                         {{ $t('tracker.questLogBtn') }}
+                    </button>
+                    <button @click="showProjectModal = true" class="project-log-btn">
+                        {{ $t('tracker.projectLogBtn') }}
+                    </button>
+                    <button @click="showHideoutModal = true" class="hideout-log-btn">
+                        🏠 {{ $t('tracker.hideoutLogBtn') }}
                     </button>
 
                     <transition name="pop">
@@ -320,11 +411,17 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
                             <div class="arrow-up"></div>
                             <h4>{{ $t('tracker.tutQuestTitle') }} <span class="badge-new">✨</span></h4>
                             <p>{{ $t('tracker.tutQuestDesc') }}</p>
-                            <div class="tut-tip">
-                                💡 {{ $t('tracker.tutQuestTip') }}
-                            </div>
                             <button class="tut-btn" @click.stop="nextTutorialStep">{{ $t('tracker.tutNext') }}
                                 →</button>
+                        </div>
+                    </transition>
+                    <transition name="pop">
+                        <div v-if="tutorialStep === 2" class="tutorial-bubble project-bubble">
+                            <div class="arrow-dynamic"></div>
+                            <h4>{{ $t('tracker.tutProjTitle') }} <span class="badge-new">✨</span></h4>
+                            <p>{{ $t('tracker.tutProjDesc') }}</p>
+                            <button class="tut-btn finish" @click.stop="finishTutorial">✅ {{ $t('tracker.tutFinish')
+                                }}</button>
                         </div>
                     </transition>
                 </div>
@@ -348,22 +445,6 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
                             {{ $t(act.i18nKey) }}
                         </label>
                     </div>
-                </div>
-
-                <div class="project-btn-wrapper tutorial-wrapper">
-                    <button @click="showProjectModal = true" class="project-log-btn">
-                        {{ $t('tracker.projectLogBtn') }}
-                    </button>
-
-                    <transition name="pop">
-                        <div v-if="tutorialStep === 2" class="tutorial-bubble project-bubble">
-                            <div class="arrow-dynamic"></div>
-                            <h4>{{ $t('tracker.tutProjTitle') }} <span class="badge-new">✨</span></h4>
-                            <p>{{ $t('tracker.tutProjDesc') }}</p>
-                            <button class="tut-btn finish" @click.stop="finishTutorial">✅ {{ $t('tracker.tutFinish')
-                                }}</button>
-                        </div>
-                    </transition>
                 </div>
             </div>
         </div>
@@ -441,6 +522,46 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
             </div>
         </div>
 
+        <div v-if="showHideoutModal" class="modal-backdrop" @click.self="showHideoutModal = false">
+            <div class="modal-content hideout-modal">
+                <div class="modal-header hideout-header">
+                    <h2>{{ $t('tracker.hideoutModalTitle') }}</h2>
+                    <button class="close-btn" @click="showHideoutModal = false">✕</button>
+                </div>
+                <div class="modal-controls">
+                    <input type="text" v-model="hideoutSearchQuery" :placeholder="$t('tracker.searchHideout')"
+                        class="modal-search" />
+                    <button class="select-all-btn" @click="toggleAllHideoutVisible"
+                        :class="{ 'active': areAllHideoutVisibleSelected }">
+                        {{ areAllHideoutVisibleSelected ? $t('tracker.deselectAll') : $t('tracker.selectAll') }}
+                    </button>
+                </div>
+
+                <div class="quest-list">
+                    <div v-for="station in filteredHideoutList" :key="station.id" class="hideout-station-group">
+                        <h3 class="hideout-station-title">{{ getLocName(station) }}</h3>
+
+                        <div v-for="lvl in station.levels" :key="lvl.level" class="hideout-level-item">
+                            <label class="quest-checkbox-label">
+                                <input type="checkbox" :value="`${station.id}_${lvl.level}`"
+                                    v-model="completedHideoutLevels" />
+                                <span class="quest-info">
+                                    <span class="quest-name">Level {{ lvl.level }}</span>
+                                </span>
+                            </label>
+
+                            <div class="quest-requirements">
+                                <span v-for="req in lvl.requiredItems" :key="req.id" class="req-badge hideout-badge">
+                                    {{ req.amount }}x {{ resolveItemName(req.id, req.name) }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div v-if="filteredHideoutList.length === 0" class="no-quests">{{ $t('tracker.noResults') }}</div>
+                </div>
+            </div>
+        </div>
+
         <div class="grid" :style="gridStyle" ref="gridRef">
             <div v-for="item in filteredItems" :key="item.id" class="card" :class="getRarityClass(item.rarity)">
                 <div class="action-badge" :class="item.action">
@@ -461,11 +582,13 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
                         <span class="quest-label">{{ $t('tracker.neededFor') }}</span>
                         <ul class="quest-names">
                             <li v-for="q in item.activeQuests" :key="q.questId">
+                                <span v-if="q.type === 'project'">[P] </span>
+                                <span v-else-if="q.type === 'hideout'">[H] </span>
+                                <span v-else>[Q] </span>
                                 {{ q.amount }}x {{ q.questName }}
                             </li>
                         </ul>
                     </div>
-
                     <div v-if="item.action === 'recycle' && getLocYield(item)" class="yield-box">
                         <span class="label">{{ $t('tracker.yieldLabel') }}</span>
                         <p class="yield-text">{{ getLocYield(item) }}</p>
@@ -482,7 +605,6 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
         </div>
     </div>
 </template>
-
 <style scoped>
 /* --- VARIABLES --- */
 .tracker-container {
@@ -527,6 +649,64 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
     margin-bottom: 20px;
     flex-wrap: wrap;
     align-items: center;
+}
+
+.buttons-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hideout-log-btn {
+    background: #8e44ad;
+    /* Violett für Hideout */
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 45px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.hideout-log-btn:hover {
+    background: #732d91;
+}
+
+.modal-header.hideout-header {
+    background: #8e44ad;
+    color: #fff;
+}
+
+.modal-header.hideout-header h2 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header.hideout-header .close-btn {
+    color: white;
+}
+
+.req-badge.hideout-badge {
+    background: rgba(142, 68, 173, 0.2);
+    border: 1px solid rgba(142, 68, 173, 0.4);
+    color: #d2b4de;
+}
+
+/* ... Deine existierenden Styles ... */
+
+/* Mobile Anpassung für die Buttons */
+@media (max-width: 768px) {
+    .buttons-row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hideout-log-btn {
+        width: 100%;
+    }
 }
 
 .search-bar {
@@ -1299,5 +1479,30 @@ const getRarityClass = (rarity) => `rarity-${rarity.toLowerCase()}`;
         right: 2px;
         opacity: 0.8;
     }
+}
+
+.hideout-station-group {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+}
+
+.hideout-station-title {
+    margin: 0 0 10px 0;
+    color: #8e44ad;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.hideout-level-item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hideout-level-item:last-child {
+    border-bottom: none;
 }
 </style>
